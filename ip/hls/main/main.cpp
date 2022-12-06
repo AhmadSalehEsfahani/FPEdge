@@ -5,57 +5,72 @@
 #include "HLS/hls.h"
 #include "HLS/stdio.h"
 
+// SUPPORTED AGGREGATIN FUNCTIONS: COUNT, AVERAGE, MIN, MAX
+#define BUILDIN_AGGREGATION_FUNCTIONS_NUMBER_OF_SUPPORTED 5
+#define BUILDIN_AGGREGATION_FUNCTIONS_CODE_COUNT 0
+#define BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG   1
+#define BUILDIN_AGGREGATION_FUNCTIONS_CODE_MIN   2
+#define BUILDIN_AGGREGATION_FUNCTIONS_CODE_MAX   3
+#define BUILDIN_AGGREGATION_FUNCTIONS_CODE_SUM   4
+
+
 //<gen>
-#define TUPLE_SIZE 4
-#define SELECTION_SIZE 2
-#define SELECTION_FIELD_0 0
-#define SELECTION_FIELD_1 1
+#define TUPLE_DATA_SIZE             4
+#define WINDOWING_k                 4
+#define AGGREGATION_FUNCTION_CODE   1
+#define AGGREGATION_FIELD_CODE      0
+// #define WINDOWING_l             1
+// #define WINDOWING_n             5
+// #define SELECTION_SIZE 2
+// #define SELECTION_FIELD_0 0
+// #define SELECTION_FIELD_1 1
 //</gen>
 
 struct Tuple {
     bool valid;
-    int data[TUPLE_SIZE];
+    int data[TUPLE_DATA_SIZE];
+    bool aggregation_ready;
+    float aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_NUMBER_OF_SUPPORTED];
 };
 
-struct SelectionResult {
-    bool valid;
-    int data[SELECTION_SIZE];
-};
+// struct SelectionResult {
+//     bool valid;
+//     int data[SELECTION_SIZE];
+// };
 
 
-component void selection(
-                        ihc::stream_in<Tuple> &stream_in_tuple, 
-                        ihc::stream_out<SelectionResult> &stream_out_selection_out 
-) {
+// component void selection(
+//                         ihc::stream_in<Tuple> &stream_in_tuple, 
+//                         ihc::stream_out<SelectionResult> &stream_out_selection_out 
+// ) {
 
-    Tuple tuple = stream_in_tuple.read();
-    SelectionResult result;
-    result.valid = tuple.valid;
+//     Tuple tuple = stream_in_tuple.read();
+//     SelectionResult result;
+//     result.valid = tuple.valid;
 
-    //<gen> gen directives
-#ifdef SELECTION_FIELD_0
-    result.data[0] = tuple.data[0];
-#endif
-#ifdef SELECTION_FIELD_1
-    result.data[1] = tuple.data[1];
-#endif
-#ifdef SELECTION_FIELD_2
-    result.data[2] = tuple.data[2];
-#endif
-#ifdef SELECTION_FIELD_3
-    result.data[3] = tuple.data[3];
-#endif 
-    //</gen>
+//     //<gen> gen directives
+// #ifdef SELECTION_FIELD_0
+//     result.data[0] = tuple.data[0];
+// #endif
+// #ifdef SELECTION_FIELD_1
+//     result.data[1] = tuple.data[1];
+// #endif
+// #ifdef SELECTION_FIELD_2
+//     result.data[2] = tuple.data[2];
+// #endif
+// #ifdef SELECTION_FIELD_3
+//     result.data[3] = tuple.data[3];
+// #endif 
+//     //</gen>
 
 
-    stream_out_selection_out.write(result);
+//     stream_out_selection_out.write(result);
 
-    return;
-}
+//     return;
+// }
 
 component void projection(
                         ihc::stream_in<Tuple> &stream_in_tuple,  
-                          
                         ihc::stream_out<Tuple> &stream_out_tuple
 ) {
 
@@ -80,13 +95,86 @@ component void projection(
     return;
 }
 
-// component void windowing (
-//                             ihc::stream_in<bool> &valid_in,
-//                             ihc::stream_in<bool> &eos_in,
-                            
-// ) {
+component Tuple aggregation (
+                        Tuple in_tuple,
+                        int function_code,
+                        int field_code,
+                        bool eos
+){
 
-// }
+    static float count, avg, min, max, sum;
+    Tuple result;
+    result.valid = in_tuple.valid;
+    #pragma unroll
+    for (int i = 0; i < TUPLE_DATA_SIZE; i++){
+        result.data[i] = in_tuple.data[i];
+    }
+
+
+    if (in_tuple.valid) {
+        if (function_code == BUILDIN_AGGREGATION_FUNCTIONS_CODE_COUNT){
+            count = count + 1;
+        }
+        else if (function_code == BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG){
+            sum = sum + in_tuple.data[field_code];
+            count = count + 1;
+            avg = sum / count;
+        }
+        else if (function_code == BUILDIN_AGGREGATION_FUNCTIONS_CODE_MAX){
+            count = count + 1;
+            if (in_tuple.data[field_code] > max){
+                max = in_tuple.data[field_code];
+            }
+        }
+        else if (function_code == BUILDIN_AGGREGATION_FUNCTIONS_CODE_MIN){
+            count = count + 1;
+            if (in_tuple.data[field_code] < min){
+                min = in_tuple.data[field_code];
+            }
+        }
+        else if (function_code == BUILDIN_AGGREGATION_FUNCTIONS_CODE_SUM){
+            count = count + 1;
+            sum = sum + in_tuple.data[field_code];
+        }
+    }
+
+    result.aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_CODE_COUNT] = count;
+    result.aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG] = avg;
+    result.aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_CODE_MAX] = max;
+    result.aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_CODE_MIN] = min;
+    result.aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_CODE_SUM] = sum;
+
+    if (eos) {
+        count = 0;
+        avg = 0;
+        min = FLT_MAX;
+        max = FLT_MIN;
+        sum = 0;
+        result.aggregation_ready = true;
+    }
+
+    return result;
+}
+
+component void windowing (
+                        ihc::stream_in<Tuple> &stream_in_tuple,  
+                        ihc::stream_out<Tuple> &stream_out_tuple
+) {
+
+    Tuple tuple;
+
+    for (int i = 0; i < WINDOWING_k; i++){
+        tuple = stream_in.read();
+        if (!tuple.valid){
+            stream_out.write(tuple);
+            continue;
+        }
+        tuple = aggregation (tuple, AGGREGATION_FUNCTION_CODE, AGGREGATION_FIELD_CODE, i == WINDOWING_k-1);
+        stream_out.write(tuple);
+    }
+    
+    return;
+}
 
 
 int main() {
