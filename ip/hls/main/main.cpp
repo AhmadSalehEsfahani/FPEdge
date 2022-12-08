@@ -4,6 +4,10 @@
 
 #include "HLS/hls.h"
 #include "HLS/stdio.h"
+#include "HLS/hls.h"
+#include "HLS/hls_float.h"
+#include <stdlib.h>
+
 
 // SUPPORTED AGGREGATIN FUNCTIONS: COUNT, AVERAGE, MIN, MAX
 #define BUILDIN_AGGREGATION_FUNCTIONS_NUMBER_OF_SUPPORTED 5
@@ -13,61 +17,24 @@
 #define BUILDIN_AGGREGATION_FUNCTIONS_CODE_MAX   3
 #define BUILDIN_AGGREGATION_FUNCTIONS_CODE_SUM   4
 
+#define BUILDIN_NUMBER_OF_TESTS 100
+#define BUILDIN_ORDER_OF_TESTS  500
+
 
 //<gen>
 #define TUPLE_DATA_SIZE             4
 #define WINDOWING_k                 4
 #define AGGREGATION_FUNCTION_CODE   1
 #define AGGREGATION_FIELD_CODE      0
-// #define WINDOWING_l             1
-// #define WINDOWING_n             5
-// #define SELECTION_SIZE 2
-// #define SELECTION_FIELD_0 0
-// #define SELECTION_FIELD_1 1
 //</gen>
 
 struct Tuple {
-    bool valid;
-    int data[TUPLE_DATA_SIZE];
-    bool aggregation_ready;
-    float aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_NUMBER_OF_SUPPORTED];
+    bool valid = false;
+    int data[TUPLE_DATA_SIZE] = {0};
+    bool aggregation_ready = false;
+    float aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_NUMBER_OF_SUPPORTED] = {0.0};
 };
 
-// struct SelectionResult {
-//     bool valid;
-//     int data[SELECTION_SIZE];
-// };
-
-
-// component void selection(
-//                         ihc::stream_in<Tuple> &stream_in_tuple, 
-//                         ihc::stream_out<SelectionResult> &stream_out_selection_out 
-// ) {
-
-//     Tuple tuple = stream_in_tuple.read();
-//     SelectionResult result;
-//     result.valid = tuple.valid;
-
-//     //<gen> gen directives
-// #ifdef SELECTION_FIELD_0
-//     result.data[0] = tuple.data[0];
-// #endif
-// #ifdef SELECTION_FIELD_1
-//     result.data[1] = tuple.data[1];
-// #endif
-// #ifdef SELECTION_FIELD_2
-//     result.data[2] = tuple.data[2];
-// #endif
-// #ifdef SELECTION_FIELD_3
-//     result.data[3] = tuple.data[3];
-// #endif 
-//     //</gen>
-
-
-//     stream_out_selection_out.write(result);
-
-//     return;
-// }
 
 component void projection(
                         ihc::stream_in<Tuple> &stream_in_tuple,  
@@ -84,8 +51,8 @@ component void projection(
 
 
     //<gen>
-    int left_hand_cond = (tuple.data[0] + tuple.data[1]) * 10;
-    int right_hand_cond = 2000;
+    int left_hand_cond = (tuple.data[0] * tuple.data[1]);
+    int right_hand_cond = 20000;
     bool projection_result = left_hand_cond < right_hand_cond;
     // </gen>
 
@@ -157,52 +124,84 @@ component Tuple aggregation (
 }
 
 component void windowing (
-                        ihc::stream_in<Tuple> &stream_in_tuple,  
+                        ihc::stream_in<Tuple> &stream_in_tuple, 
                         ihc::stream_out<Tuple> &stream_out_tuple
 ) {
 
     Tuple tuple;
+    static int i = 1;
 
-    for (int i = 0; i < WINDOWING_k; i++){
-        tuple = stream_in.read();
-        if (!tuple.valid){
-            stream_out.write(tuple);
-            continue;
-        }
-        tuple = aggregation (tuple, AGGREGATION_FUNCTION_CODE, AGGREGATION_FIELD_CODE, i == WINDOWING_k-1);
-        stream_out.write(tuple);
+    tuple = stream_in_tuple.read();
+    if (!tuple.valid){
+        stream_out_tuple.write(tuple);
+        return;
     }
-    
+
+    tuple = aggregation (tuple, AGGREGATION_FUNCTION_CODE, AGGREGATION_FIELD_CODE, i%WINDOWING_k == 0);
+    stream_out_tuple.write(tuple);
+    i++;
+
     return;
 }
 
+// component void groupBy (){
+
+// } 
 
 int main() {
 
-    ihc::stream_in<Tuple> stream_in;
-    ihc::stream_out<Tuple> stream_out;
-    Tuple tuple;
-    Tuple result;
-    tuple.valid = true;
-    tuple.data[0] = 2;
-    tuple.data[1] = 30;
-    tuple.data[2] = 7;
-    tuple.data[3] = 8;
+    ihc::stream_in<Tuple> stream_in1;
+    ihc::stream_out<Tuple> stream_out1;
+    ihc::stream_in<Tuple> stream_in2;
+    ihc::stream_out<Tuple> stream_out2;
+    Tuple tuple[BUILDIN_NUMBER_OF_TESTS];
+    Tuple results[BUILDIN_NUMBER_OF_TESTS];
 
-    stream_in.write(tuple);
-    projection(stream_in, stream_out);
+    for (int i = 0; i < BUILDIN_NUMBER_OF_TESTS; i++) {
+        tuple[i].valid = true;
+        tuple[i].data[0] = rand() % BUILDIN_ORDER_OF_TESTS;       //price
+        tuple[i].data[1] = rand() % BUILDIN_ORDER_OF_TESTS;      //volume
+        tuple[i].data[2] = rand() % BUILDIN_ORDER_OF_TESTS;       //code
+        tuple[i].data[3] = rand() % BUILDIN_ORDER_OF_TESTS;       //stock
+        tuple[i].aggregation_ready = false;
+        tuple[i].aggregation_results[0] = 0.0;
+        tuple[i].aggregation_results[1] = 0.0;
+        tuple[i].aggregation_results[2] = 0.0;
+        tuple[i].aggregation_results[3] = 0.0;
+        tuple[i].aggregation_results[4] = 0.0;
+    }
+    
 
-    result = stream_out.read();
-    if (result.valid) {
-        printf("accepted \n");
-    }     
-    else {
-        printf("rejected \n");
+    Tuple interTuple;
+    for (int i = 0; i < BUILDIN_NUMBER_OF_TESTS; i++) {
+
+        
+        stream_in1.write(tuple[i]);
+        projection(stream_in1, stream_out1);
+        interTuple = stream_out1.read();
+        stream_in2.write(interTuple);
+        
+        windowing(stream_in2, stream_out2);
+
+        results[i] = stream_out2.read();
+        
+
+        if (results[i].valid) {
+            printf("accepted: price:%d, volume:%d, code:%d, stock:%d, count:%f, avg:%f, min:%f, max:%f, sum:%f, readyag:%d \n",
+             results[i].data[0], results[i].data[1], results[i].data[2], results[i].data[3],
+             results[i].aggregation_results[0], results[i].aggregation_results[1], 
+             results[i].aggregation_results[2], results[i].aggregation_results[3],
+             results[i].aggregation_results[4], results[i].aggregation_ready);
+        }     
+        else {
+            printf("rejected: price:%d, volume:%d, code:%d, stock:%d, count:%f, avg:%f, min:%f, max:%f, sum:%f, readyag:%d \n",
+             results[i].data[0], results[i].data[1], results[i].data[2], results[i].data[3],
+             results[i].aggregation_results[0], results[i].aggregation_results[1], 
+             results[i].aggregation_results[2], results[i].aggregation_results[3],
+             results[i].aggregation_results[4], results[i].aggregation_ready);
+        }
     }
 
     return 0;
 
 }
-
-
-
