@@ -28,6 +28,7 @@
 #define AGGREGATION_FIELD_CODE      0
 //</gen>
 
+
 struct Tuple {
     bool valid = false;
     int data[TUPLE_DATA_SIZE] = {0};
@@ -62,21 +63,14 @@ component void projection(
     return;
 }
 
-component Tuple aggregation (
+Tuple aggregation (
                         Tuple in_tuple,
                         int function_code,
                         int field_code,
                         bool eos
 ){
 
-    static float count, avg, min, max, sum;
-    Tuple result;
-    result.valid = in_tuple.valid;
-    #pragma unroll
-    for (int i = 0; i < TUPLE_DATA_SIZE; i++){
-        result.data[i] = in_tuple.data[i];
-    }
-
+    static float count=0.0, avg=0.0, min=0.0, max=0.0, sum=0.0;
 
     if (in_tuple.valid) {
         if (function_code == BUILDIN_AGGREGATION_FUNCTIONS_CODE_COUNT){
@@ -105,11 +99,11 @@ component Tuple aggregation (
         }
     }
 
-    result.aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_CODE_COUNT] = count;
-    result.aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG] = avg;
-    result.aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_CODE_MAX] = max;
-    result.aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_CODE_MIN] = min;
-    result.aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_CODE_SUM] = sum;
+    in_tuple.aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_CODE_COUNT] = count;
+    in_tuple.aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG] = avg;
+    in_tuple.aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_CODE_MAX] = max;
+    in_tuple.aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_CODE_MIN] = min;
+    in_tuple.aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_CODE_SUM] = sum;
 
     if (eos) {
         count = 0;
@@ -117,10 +111,10 @@ component Tuple aggregation (
         min = FLT_MAX;
         max = FLT_MIN;
         sum = 0;
-        result.aggregation_ready = true;
+        in_tuple.aggregation_ready = true;
     }
 
-    return result;
+    return in_tuple;
 }
 
 component void windowing (
@@ -128,8 +122,8 @@ component void windowing (
                         ihc::stream_out<Tuple> &stream_out_tuple
 ) {
 
-    Tuple tuple;
     static int i = 1;
+    Tuple tuple;
 
     tuple = stream_in_tuple.read();
     if (!tuple.valid){
@@ -137,7 +131,10 @@ component void windowing (
         return;
     }
 
-    tuple = aggregation (tuple, AGGREGATION_FUNCTION_CODE, AGGREGATION_FIELD_CODE, i%WINDOWING_k == 0);
+    //tuple = aggregation (tuple, AGGREGATION_FUNCTION_CODE, AGGREGATION_FIELD_CODE, i%WINDOWING_k == 0);
+    ihc::launch<aggregation>(tuple, AGGREGATION_FUNCTION_CODE, AGGREGATION_FIELD_CODE, i%WINDOWING_k == 0);
+    tuple = ihc::collect<aggregation>();
+
     stream_out_tuple.write(tuple);
     i++;
 

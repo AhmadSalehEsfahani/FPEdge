@@ -1,0 +1,774 @@
+{
+  "nodes":
+  [
+    {
+      "name":"projection"
+      , "id":1589598072
+      , "type":"component"
+      , "children":
+      [
+        {
+          "name":"Local Memory"
+          , "id":1
+          , "type":"memtype"
+          , "children":
+          [
+            {
+              "name":"tuple"
+              , "id":2
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                          , "line":"46"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Additional information":"This variable is carried through the pipeline in registers (rather than being stored in RAM)"
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                    , "line":46
+                  }
+                ]
+              ]
+              , "type":"reg"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"windowing"
+      , "id":1589599192
+      , "type":"component"
+      , "children":
+      [
+        {
+          "name":"Local Memory"
+          , "id":3
+          , "type":"memtype"
+          , "children":
+          [
+            {
+              "name":"tuple"
+              , "id":4
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                          , "line":"126"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Requested size":"44 bytes"
+                  , "Implemented size":"64 bytes = (1 word per bank) x (64 bytes per word)"
+                  , "Memory Usage":"32 RAMs"
+                  , "Additional information":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"Shallow memory implemented in RAMs instead of MLABs because MLABs cannot be configured in true dual-port mode."
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"RAM usage is increased from 16 RAMs to 32 RAMs because the width of individual RAM blocks in true dual-port mode is limited to 20 bits."
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"In each private copy:</br>  Variable 'tuple' occupies memory words [0-0] and has 1 array element per memory word."
+                    }
+                  ]
+                  , "Number of banks":"1"
+                  , "Bank width (word size)":"64 bytes"
+                  , "Bank depth":"1 word"
+                  , "Number of replicates":"1"
+                  , "Number of private copies":"1"
+                  , "RAM Mode":"True dual-port"
+                  , "Pump configuration":"Single-pumped"
+                  , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr></table>"
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                    , "line":126
+                  }
+                ]
+              ]
+              , "type":"memsys"
+              , "children":
+              [
+                {
+                  "name":"Bank 0"
+                  , "id":5
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "Memory Usage":"32 RAMs"
+                      , "Bank width":"64 bytes"
+                      , "Bank depth":"1 word"
+                      , "Implemented bank size":"64 bytes = (1 word) x (64 bytes per word)"
+                      , "Number of active ports":"2"
+                      , "Number of write ports":"1"
+                      , "Number of shared (RW) ports":"1"
+                      , "Additional information":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Shallow memory implemented in RAMs instead of MLABs because MLABs cannot be configured in true dual-port mode."
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"RAM usage is increased from 16 RAMs to 32 RAMs because the width of individual RAM blocks in true dual-port mode is limited to 20 bits."
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"In each private copy:</br>  Variable 'tuple' occupies memory words [0-0] and has 1 array element per memory word."
+                        }
+                      ]
+                      , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr></table>"
+                    }
+                  ]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                        , "line":126
+                      }
+                    ]
+                  ]
+                  , "type":"bank"
+                  , "children":
+                  [
+                    {
+                      "name":"Replicate 0"
+                      , "id":6
+                      , "padding":"0"
+                      , "depth":"1"
+                      , "details":
+                      [
+                        {
+                          "type":"table"
+                          , "Implemented size":"64 bytes = (1 word) x (64 bytes per word)"
+                          , "Memory Usage":"32 RAMs"
+                          , "Number of physical ports":"2"
+                          , "Number of read ports":"0"
+                          , "Number of write ports":"1"
+                          , "Number of shared (RW) ports":"1"
+                          , "Additional information":
+                          [
+                            {
+                              "type":"text"
+                              , "text":"Shallow memory implemented in RAMs instead of MLABs because MLABs cannot be configured in true dual-port mode."
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"RAM usage is increased from 16 RAMs to 32 RAMs because the width of individual RAM blocks in true dual-port mode is limited to 20 bits."
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"In each private copy:</br>  Variable 'tuple' occupies memory words [0-0] and has 1 array element per memory word."
+                            }
+                          ]
+                          , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr></table>"
+                        }
+                      ]
+                      , "debug":
+                      [
+                        [
+                          {
+                            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                            , "line":126
+                          }
+                        ]
+                      ]
+                      , "type":"replicate"
+                      , "children":
+                      [
+                        {
+                          "name":"RW"
+                          , "id":7
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"W"
+                          , "id":9
+                          , "type":"port"
+                        }
+                      ]
+                      , "copies":
+                      {
+                        "num":1
+                        , "details":
+                        [
+                          {
+                            "type":"table"
+                            , "Width":"64 bytes"
+                            , "Depth per copy (including padding)":"1 word"
+                            , "Number of private copies":"1"
+                            , "Additional information":"In each private copy:</br>  Variable 'tuple' occupies memory words [0-0] and has 1 array element per memory word."
+                            , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr></table>"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"Load"
+          , "id":1590333304
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Stall-free":"No"
+              , "Type":"Pipelined"
+              , "Loads from":"tuple"
+              , "Start cycle":"16"
+              , "Latency":"7"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Reference Manual"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Store"
+          , "id":1593109384
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"64 bits"
+              , "Stall-free":"No"
+              , "Type":"Pipelined"
+              , "Stores to":"tuple"
+              , "Start cycle":"3"
+              , "Latency":"7"
+              , "Inlined Debug Locations":
+              [
+                {
+                  "type":"text"
+                  , "text":"%L > %L"
+                  , "links":
+                  [
+                    {
+                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                      , "line":"33"
+                    }
+                    , {
+                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                      , "line":"126"
+                    }
+                  ]
+                }
+              ]
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Reference Manual"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                , "line":33
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Store"
+          , "id":1593109864
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"No"
+              , "Type":"Pipelined"
+              , "Stores to":"tuple"
+              , "Start cycle":"5"
+              , "Latency":"7"
+              , "Inlined Debug Locations":
+              [
+                {
+                  "type":"text"
+                  , "text":"%L > %L"
+                  , "links":
+                  [
+                    {
+                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                      , "line":"34"
+                    }
+                    , {
+                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                      , "line":"126"
+                    }
+                  ]
+                }
+              ]
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Reference Manual"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                , "line":34
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Store"
+          , "id":1590340648
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"8 bits"
+              , "Stall-free":"No"
+              , "Type":"Pipelined"
+              , "Stores to":"tuple"
+              , "Start cycle":"1"
+              , "Latency":"7"
+              , "Inlined Debug Locations":
+              [
+                {
+                  "type":"text"
+                  , "text":"%L > %L"
+                  , "links":
+                  [
+                    {
+                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                      , "line":"35"
+                    }
+                    , {
+                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                      , "line":"126"
+                    }
+                  ]
+                }
+              ]
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Reference Manual"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                , "line":35
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Store"
+          , "id":1590341128
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"No"
+              , "Type":"Pipelined"
+              , "Stores to":"tuple"
+              , "Start cycle":"1"
+              , "Latency":"7"
+              , "Inlined Debug Locations":
+              [
+                {
+                  "type":"text"
+                  , "text":"%L > %L"
+                  , "links":
+                  [
+                    {
+                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                      , "line":"36"
+                    }
+                    , {
+                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                      , "line":"126"
+                    }
+                  ]
+                }
+              ]
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Reference Manual"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                , "line":36
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Store"
+          , "id":1593191784
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"No"
+              , "Type":"Pipelined"
+              , "Stores to":"tuple"
+              , "Start cycle":"5"
+              , "Latency":"7"
+              , "Inlined Debug Locations":
+              [
+                {
+                  "type":"text"
+                  , "text":"%L > %L"
+                  , "links":
+                  [
+                    {
+                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                      , "line":"36"
+                    }
+                    , {
+                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                      , "line":"126"
+                    }
+                  ]
+                }
+              ]
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Reference Manual"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                , "line":36
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Store"
+          , "id":1590332056
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Stall-free":"No"
+              , "Type":"Pipelined"
+              , "Stores to":"tuple"
+              , "Start cycle":"2"
+              , "Latency":"7"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Reference Manual"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                , "line":128
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Store"
+          , "id":1593181496
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Stall-free":"No"
+              , "Type":"Pipelined"
+              , "Stores to":"tuple"
+              , "Start cycle":"9"
+              , "Latency":"7"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Reference Manual"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                , "line":136
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ARB"
+          , "id":8
+          , "details":
+          [
+            {
+              "type":"table"
+            }
+          ]
+          , "type":"arb"
+        }
+        , {
+          "name":"ARB"
+          , "id":10
+          , "details":
+          [
+            {
+              "type":"table"
+            }
+          ]
+          , "type":"arb"
+        }
+      ]
+    }
+    , {
+      "name":"aggregation"
+      , "id":1592213784
+      , "type":"component"
+      , "children":
+      [
+        {
+          "name":"Local Memory"
+          , "id":11
+          , "type":"memtype"
+          , "children":
+          [
+            {
+              "name":"in_tuple"
+              , "id":12
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                          , "line":"67"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Additional information":"This variable is carried through the pipeline in registers (rather than being stored in RAM)"
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                    , "line":67
+                  }
+                ]
+              ]
+              , "type":"reg"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+    {
+      "from":7
+      , "to":8
+    }
+    , {
+      "from":8
+      , "to":7
+    }
+    , {
+      "from":8
+      , "to":1590333304
+    }
+    , {
+      "from":1593109864
+      , "to":8
+    }
+    , {
+      "from":1590341128
+      , "to":8
+    }
+    , {
+      "from":1590332056
+      , "to":8
+    }
+    , {
+      "from":10
+      , "to":9
+    }
+    , {
+      "from":1593109384
+      , "to":10
+    }
+    , {
+      "from":1590340648
+      , "to":10
+    }
+    , {
+      "from":1593191784
+      , "to":10
+    }
+    , {
+      "from":1593181496
+      , "to":10
+    }
+  ]
+}

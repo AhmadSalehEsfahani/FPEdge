@@ -1,0 +1,127 @@
+{
+  "functionNameMapping":
+  {
+    "name":"Synthesized Function Name Mapping"
+    , "columns":
+    ["User-defined Function Name", "Mapped Function Name"]
+    , "children":
+    [
+      {
+        "name":"struct Tuple __cdecl aggregation(struct Tuple, int, int, bool)"
+        , "data":
+        ["aggregation"]
+        , "debug":
+        [
+          [
+            {
+              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+              , "line":66
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"void __cdecl projection(class ihc::stream_in<struct Tuple> &, class ihc::stream_out<struct Tuple> &)"
+        , "data":
+        ["projection"]
+        , "debug":
+        [
+          [
+            {
+              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+              , "line":40
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"void __cdecl windowing(class ihc::stream_in<struct Tuple> &, class ihc::stream_out<struct Tuple> &)"
+        , "data":
+        ["windowing"]
+        , "debug":
+        [
+          [
+            {
+              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+              , "line":120
+            }
+          ]
+        ]
+      }
+    ]
+  }
+  , "estimatedResources":
+  {
+    "name":"Estimated Resource Usage"
+    , "columns":
+    ["Function Name", "ALUTs ", "FFs  ", "RAMs ", "DSPs ", "MLABs"]
+    , "children":
+    [
+      {
+        "name":"aggregation"
+        , "data":
+        [6454, 9426, 16, 3.5, 35]
+        , "debug":
+        [
+          [
+            {
+              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+              , "line":66
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"projection"
+        , "data":
+        [487, 834, 0, 2, 18]
+        , "debug":
+        [
+          [
+            {
+              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+              , "line":40
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"windowing"
+        , "data":
+        [15891, 5872, 32, 0, 123]
+        , "debug":
+        [
+          [
+            {
+              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+              , "line":120
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Total"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [22832, 16132, 48, 5, 176]
+        , "data_percent":
+        [20.8374, 7.36137, 9.33852, 5.35714]
+      }
+      , {
+        "name":"Available"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [109572, 219144, 514, 112, 0]
+      }
+    ]
+  }
+  , "compileWarnings":
+  {
+    "name":"Compile Warnings"
+    , "children":
+    [
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dd:/project/ip/hls/main/streamV1.prj/verification/tb/simulation
+vhls_sim_clock_reset
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1670746448
+!i10b 1
+!s100 l_UcCA_?XOh4C29>g]Sgd0
+IFVC1IeJ7i0ZOEVb40VSNT1
+VDg1SIo80bB@j0V0VzS_@n1
+!s105 hls_sim_clock_reset_sv_unit
+S1
+R0
+w1670746380
+8./submodules/hls_sim_clock_reset.sv
+F./submodules/hls_sim_clock_reset.sv
+L0 21
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1670746448.000000
+!s107 ./submodules/hls_sim_clock_reset.sv|
+!s90 -sv|+incdir+.|+define+COSIM_LIB|-suppress|14408|./submodules/hls_sim_clock_reset.sv|-work|clock_reset_inst|
+!i113 1
+o-suppress 14408 -sv -work clock_reset_inst
+!s92 -suppress 14408 -sv +incdir+. +define+COSIM_LIB -work clock_reset_inst
+tCvgOpt 0

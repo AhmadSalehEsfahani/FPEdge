@@ -1,0 +1,149 @@
+Info: Starting: Create simulation model
+Info: qsys-generate D:\project\ip\hls\main\streamV1.prj\verification\tb.qsys --simulation=VERILOG --allow-mixed-language-simulation --output-directory=D:\project\ip\hls\main\streamV1.prj\verification\tb\simulation --family="Cyclone V" --part=5CGXFC7C7F23C8
+Progress: Loading verification/tb.qsys
+Progress: Reading input file
+Progress: Adding clock_reset_inst [hls_sim_clock_reset 1.0]
+Progress: Parameterizing module clock_reset_inst
+Progress: Adding component_dpi_controller_projection_inst [hls_sim_component_dpi_controller 1.0]
+Progress: Parameterizing module component_dpi_controller_projection_inst
+Progress: Adding component_dpi_controller_windowing_inst [hls_sim_component_dpi_controller 1.0]
+Progress: Parameterizing module component_dpi_controller_windowing_inst
+Progress: Adding concatenate_component_done_inst [avalon_concatenate_singlebit_conduits 1.0]
+Progress: Parameterizing module concatenate_component_done_inst
+Progress: Adding concatenate_component_wait_for_stream_writes_inst [avalon_concatenate_singlebit_conduits 1.0]
+Progress: Parameterizing module concatenate_component_wait_for_stream_writes_inst
+Progress: Adding main_dpi_controller_inst [hls_sim_main_dpi_controller 1.0]
+Progress: Parameterizing module main_dpi_controller_inst
+Progress: Adding projection_component_dpi_controller_bind_conduit_fanout_inst [avalon_conduit_fanout 1.0]
+Progress: Parameterizing module projection_component_dpi_controller_bind_conduit_fanout_inst
+Progress: Adding projection_component_dpi_controller_enable_conduit_fanout_inst [avalon_conduit_fanout 1.0]
+Progress: Parameterizing module projection_component_dpi_controller_enable_conduit_fanout_inst
+Progress: Adding projection_component_dpi_controller_stream_active_concatenate_inst [avalon_concatenate_singlebit_conduits 1.0]
+Progress: Parameterizing module projection_component_dpi_controller_stream_active_concatenate_inst
+Progress: Adding projection_inst [projection 1.0]
+Progress: Parameterizing module projection_inst
+Progress: Adding split_component_start_inst [avalon_split_multibit_conduit 1.0]
+Progress: Parameterizing module split_component_start_inst
+Progress: Adding stream_sink_dpi_bfm_projection_stream_out_tuple_inst [hls_sim_stream_sink_dpi_bfm 1.0]
+Progress: Parameterizing module stream_sink_dpi_bfm_projection_stream_out_tuple_inst
+Progress: Adding stream_sink_dpi_bfm_windowing_stream_out_tuple_inst [hls_sim_stream_sink_dpi_bfm 1.0]
+Progress: Parameterizing module stream_sink_dpi_bfm_windowing_stream_out_tuple_inst
+Progress: Adding stream_source_dpi_bfm_projection_stream_in_tuple_inst [hls_sim_stream_source_dpi_bfm 1.0]
+Progress: Parameterizing module stream_source_dpi_bfm_projection_stream_in_tuple_inst
+Progress: Adding stream_source_dpi_bfm_windowing_stream_in_tuple_inst [hls_sim_stream_source_dpi_bfm 1.0]
+Progress: Parameterizing module stream_source_dpi_bfm_windowing_stream_in_tuple_inst
+Progress: Adding windowing_component_dpi_controller_bind_conduit_fanout_inst [avalon_conduit_fanout 1.0]
+Progress: Parameterizing module windowing_component_dpi_controller_bind_conduit_fanout_inst
+Progress: Adding windowing_component_dpi_controller_enable_conduit_fanout_inst [avalon_conduit_fanout 1.0]
+Progress: Parameterizing module windowing_component_dpi_controller_enable_conduit_fanout_inst
+Progress: Adding windowing_component_dpi_controller_stream_active_concatenate_inst [avalon_concatenate_singlebit_conduits 1.0]
+Progress: Parameterizing module windowing_component_dpi_controller_stream_active_concatenate_inst
+Progress: Adding windowing_inst [windowing 1.0]
+Progress: Parameterizing module windowing_inst
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: tb.component_dpi_controller_projection_inst.dpi_control_agents_ready: Interface has no signals
+Warning: tb.component_dpi_controller_projection_inst.dpi_control_agents_done: Interface has no signals
+Warning: tb.component_dpi_controller_windowing_inst.dpi_control_agents_ready: Interface has no signals
+Warning: tb.component_dpi_controller_windowing_inst.dpi_control_agents_done: Interface has no signals
+Warning: tb.component_dpi_controller_projection_inst: component_dpi_controller_projection_inst.dpi_control_agents_ready must be exported, or connected to a matching conduit.
+Warning: tb.component_dpi_controller_projection_inst: component_dpi_controller_projection_inst.dpi_control_agents_done must be exported, or connected to a matching conduit.
+Warning: tb.component_dpi_controller_projection_inst: component_dpi_controller_projection_inst.agent_busy must be exported, or connected to a matching conduit.
+Warning: tb.component_dpi_controller_projection_inst: component_dpi_controller_projection_inst.read_implicit_streams must be exported, or connected to a matching conduit.
+Warning: tb.component_dpi_controller_projection_inst: component_dpi_controller_projection_inst.readback_from_agents must be exported, or connected to a matching conduit.
+Warning: tb.component_dpi_controller_projection_inst: component_dpi_controller_projection_inst.returndata must be exported, or connected to a matching conduit.
+Warning: tb.component_dpi_controller_windowing_inst: component_dpi_controller_windowing_inst.dpi_control_agents_ready must be exported, or connected to a matching conduit.
+Warning: tb.component_dpi_controller_windowing_inst: component_dpi_controller_windowing_inst.dpi_control_agents_done must be exported, or connected to a matching conduit.
+Warning: tb.component_dpi_controller_windowing_inst: component_dpi_controller_windowing_inst.agent_busy must be exported, or connected to a matching conduit.
+Warning: tb.component_dpi_controller_windowing_inst: component_dpi_controller_windowing_inst.read_implicit_streams must be exported, or connected to a matching conduit.
+Warning: tb.component_dpi_controller_windowing_inst: component_dpi_controller_windowing_inst.readback_from_agents must be exported, or connected to a matching conduit.
+Warning: tb.component_dpi_controller_windowing_inst: component_dpi_controller_windowing_inst.returndata must be exported, or connected to a matching conduit.
+Info: tb: Generating tb "tb" for SIM_VERILOG
+Info: clock_reset_inst: "tb" instantiated hls_sim_clock_reset "clock_reset_inst"
+Info: component_dpi_controller_projection_inst: "tb" instantiated hls_sim_component_dpi_controller "component_dpi_controller_projection_inst"
+Info: concatenate_component_done_inst: "tb" instantiated avalon_concatenate_singlebit_conduits "concatenate_component_done_inst"
+Info: main_dpi_controller_inst: "tb" instantiated hls_sim_main_dpi_controller "main_dpi_controller_inst"
+Info: projection_component_dpi_controller_bind_conduit_fanout_inst: "tb" instantiated avalon_conduit_fanout "projection_component_dpi_controller_bind_conduit_fanout_inst"
+Info: projection_component_dpi_controller_stream_active_concatenate_inst: "tb" instantiated avalon_concatenate_singlebit_conduits "projection_component_dpi_controller_stream_active_concatenate_inst"
+Info: projection_inst: "tb" instantiated projection "projection_inst"
+Info: split_component_start_inst: "tb" instantiated avalon_split_multibit_conduit "split_component_start_inst"
+Info: stream_sink_dpi_bfm_projection_stream_out_tuple_inst: "tb" instantiated hls_sim_stream_sink_dpi_bfm "stream_sink_dpi_bfm_projection_stream_out_tuple_inst"
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/hls_sim_stream_sink_dpi_bfm.sv
+Info: stream_source_dpi_bfm_projection_stream_in_tuple_inst: "tb" instantiated hls_sim_stream_source_dpi_bfm "stream_source_dpi_bfm_projection_stream_in_tuple_inst"
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/hls_sim_stream_source_dpi_bfm.sv
+Info: windowing_inst: "tb" instantiated windowing "windowing_inst"
+Info: irq_mapper: "tb" instantiated altera_irq_mapper "irq_mapper"
+Info: projection_internal_inst: "projection_inst" instantiated projection_internal "projection_internal_inst"
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/hld_sim_latency_tracker.sv
+Info: windowing_internal_inst: "windowing_inst" instantiated windowing_internal "windowing_internal_inst"
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/dspba_library_ver.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_ecc_pkg.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_data_fifo.v
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_fifo.v
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_altera_syncram_wrapped.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_scfifo_wrapped.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_ecc_decoder.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_ecc_encoder.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_ll_fifo.v
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_ll_ram_fifo.v
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_valid_fifo_counter.v
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_dspba_valid_fifo_counter.v
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_staging_reg.v
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/hld_fifo.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_mid_speed_fifo.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_latency_one_ram_fifo.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_latency_zero_ram_fifo.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/hld_fifo_zero_width.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_high_speed_fifo.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_low_latency_fifo.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_zero_latency_fifo.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_fanout_pipeline.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_std_synchronizer_nocut.v
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_tessellated_incr_decr_threshold.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_tessellated_incr_lookahead.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_reset_handler.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_lfsr.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_mlab_fifo.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_parameter_assert.svh
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_pop.v
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_push.v
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_token_fifo_counter.v
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_pipeline.v
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_dspba_buffer.v
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_enable_sink.v
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/hld_memory_depth_quantization_pkg.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/hld_iord.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/hld_iord_stall_latency.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/hld_iord_stall_valid.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_shift_register_no_reset.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/hld_iowr.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/hld_iowr_stall_latency.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/hld_iowr_stall_valid.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/hld_loop_profiler.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/hld_sim_latency_tracker.sv
+Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/acl_reset_wire.v
+Info: tb: Done "tb" with 15 modules, 342 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=D:\project\ip\hls\main\streamV1.prj\verification\tb\tb.spd --output-directory=D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=D:\project\ip\hls\main\streamV1.prj\verification\tb\tb.spd --output-directory=D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	14 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create Modelsim Project.

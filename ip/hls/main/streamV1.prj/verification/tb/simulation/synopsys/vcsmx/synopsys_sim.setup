@@ -1,0 +1,26 @@
+
+WORK > DEFAULT
+DEFAULT:                                                            ./libraries/work/                                                              
+work:                                                               ./libraries/work/                                                              
+windowing_internal_inst:                                            ./libraries/windowing_internal_inst/                                           
+projection_internal_inst:                                           ./libraries/projection_internal_inst/                                          
+irq_mapper:                                                         ./libraries/irq_mapper/                                                        
+windowing_inst:                                                     ./libraries/windowing_inst/                                                    
+stream_source_dpi_bfm_projection_stream_in_tuple_inst:              ./libraries/stream_source_dpi_bfm_projection_stream_in_tuple_inst/             
+stream_sink_dpi_bfm_projection_stream_out_tuple_inst:               ./libraries/stream_sink_dpi_bfm_projection_stream_out_tuple_inst/              
+split_component_start_inst:                                         ./libraries/split_component_start_inst/                                        
+projection_inst:                                                    ./libraries/projection_inst/                                                   
+projection_component_dpi_controller_stream_active_concatenate_inst: ./libraries/projection_component_dpi_controller_stream_active_concatenate_inst/
+projection_component_dpi_controller_bind_conduit_fanout_inst:       ./libraries/projection_component_dpi_controller_bind_conduit_fanout_inst/      
+main_dpi_controller_inst:                                           ./libraries/main_dpi_controller_inst/                                          
+concatenate_component_done_inst:                                    ./libraries/concatenate_component_done_inst/                                   
+component_dpi_controller_projection_inst:                           ./libraries/component_dpi_controller_projection_inst/                          
+clock_reset_inst:                                                   ./libraries/clock_reset_inst/                                                  
+altera_ver:                                                         ./libraries/altera_ver/                                                        
+lpm_ver:                                                            ./libraries/lpm_ver/                                                           
+sgate_ver:                                                          ./libraries/sgate_ver/                                                         
+altera_mf_ver:                                                      ./libraries/altera_mf_ver/                                                     
+altera_lnsim_ver:                                                   ./libraries/altera_lnsim_ver/                                                  
+cyclonev_ver:                                                       ./libraries/cyclonev_ver/                                                      
+cyclonev_hssi_ver:                                                  ./libraries/cyclonev_hssi_ver/                                                 
+cyclonev_pcie_hip_ver:                                              ./libraries/cyclonev_pcie_hip_ver/                                             
