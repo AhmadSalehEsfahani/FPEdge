@@ -29,20 +29,18 @@
 // ------------------------------------------
 // Generation parameters:
 //   output_name:       tb_concatenate_component_done_inst
-//   multibit_width:    2
+//   multibit_width:    1
 //
 // ------------------------------------------
 
 module tb_concatenate_component_done_inst
 #(
-    parameter MULTIBIT_WIDTH = 2
+    parameter MULTIBIT_WIDTH = 1
 )
 (
 
 // Interface: in_conduit_0
  input                    in_conduit_0,
-// Interface: in_conduit_1
- input                    in_conduit_1,
 
 // Interface: out_conduit
  output    [MULTIBIT_WIDTH-1:0]               out_conduit
@@ -50,7 +48,6 @@ module tb_concatenate_component_done_inst
 );
 
    assign  out_conduit[0] = in_conduit_0;
-   assign  out_conduit[1] = in_conduit_1;
 
 endmodule //
 

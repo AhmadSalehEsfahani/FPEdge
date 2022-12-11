@@ -2,10 +2,121 @@
   "bottlenecks":
   [
     {
+      "name":"'i'"
+      , "id":4294967295
+      , "src":"4205111328"
+      , "dst":"4205117280"
+      , "type":"fMAX/II"
+      , "brief":"Data dependency"
+      , "loop":"windowing.B1.start"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"'i'"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Data dependency"
+          , "Estimated fmax reduced to: ":"175.0"
+          , "Loop feedback path that lowered II and Fmax: ":
+          [
+            {
+              "type":"text"
+              , "text":"+(%L)"
+              , "links":
+              [
+                {
+                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                  , "line":"138"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"'i'"
+          , "id":4205111328
+          , "start":"2.00"
+          , "parent":"windowing.B1.start"
+          , "debug":
+          [
+            [
+              {
+                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                , "line":138
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"+"
+          , "id":4205111136
+          , "debug":
+          [
+            [
+              {
+                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                , "line":138
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":4205117280
+          , "end":"2.00"
+          , "parent":"windowing.B1.start"
+          , "debug":
+          [
+            [
+              {
+                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                , "line":138
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":4205111328
+          , "to":4205111136
+        }
+        , {
+          "from":4205111136
+          , "to":4205117280
+        }
+        , {
+          "from":4205111328
+          , "to":4205117280
+          , "reverse":1
+        }
+      ]
+    }
+    , {
       "name":"'sum'"
       , "id":4294967295
-      , "src":"1656420144"
-      , "dst":"1656462960"
+      , "src":"4205314480"
+      , "dst":"4205358000"
       , "type":"fMAX/II"
       , "brief":"Data dependency"
       , "loop":"aggregation.B1.start"
@@ -39,7 +150,7 @@
               [
                 {
                   "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"77"
+                  , "line":"82"
                 }
               ]
             }
@@ -50,7 +161,18 @@
               [
                 {
                   "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"80"
+                  , "line":"85"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Select(%L)"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
                 }
               ]
             }
@@ -72,7 +194,18 @@
               [
                 {
                   "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"77"
+                  , "line":"78"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Select(%L)"
+              , "links":
+              [
+                {
+                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                  , "line":"113"
                 }
               ]
             }
@@ -83,7 +216,7 @@
               [
                 {
                   "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"73"
+                  , "line":"82"
                 }
               ]
             }
@@ -94,29 +227,7 @@
               [
                 {
                   "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"108"
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Select(%L)"
-              , "links":
-              [
-                {
-                  "filename":"Unknown location"
-                  , "line":"0"
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Select(%L)"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"108"
+                  , "line":"113"
                 }
               ]
             }
@@ -127,7 +238,7 @@
       [
         {
           "name":"'sum'"
-          , "id":1656420144
+          , "id":4205314480
           , "start":"43.00"
           , "parent":"aggregation.B1.start"
           , "debug":
@@ -135,7 +246,7 @@
             [
               {
                 "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":73
+                , "line":78
               }
             ]
           ]
@@ -143,13 +254,13 @@
         }
         , {
           "name":"f32 +"
-          , "id":1656428784
+          , "id":4205316208
           , "debug":
           [
             [
               {
                 "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":77
+                , "line":82
               }
             ]
           ]
@@ -157,13 +268,13 @@
         }
         , {
           "name":"f32 +"
-          , "id":1656426096
+          , "id":4205311024
           , "debug":
           [
             [
               {
                 "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":80
+                , "line":85
               }
             ]
           ]
@@ -171,18 +282,37 @@
         }
         , {
           "name":"Select"
-          , "id":1656422640
+          , "id":4205337168
+          , "type":"inst"
+        }
+        , {
+          "name":"Select"
+          , "id":4205335632
           , "type":"inst"
         }
         , {
           "name":"case"
-          , "id":1656421296
+          , "id":4205338320
           , "debug":
           [
             [
               {
                 "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":77
+                , "line":78
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Select"
+          , "id":4205371760
+          , "debug":
+          [
+            [
+              {
+                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                , "line":113
               }
             ]
           ]
@@ -190,13 +320,13 @@
         }
         , {
           "name":"case"
-          , "id":1656419376
+          , "id":4205336016
           , "debug":
           [
             [
               {
                 "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":73
+                , "line":82
               }
             ]
           ]
@@ -204,32 +334,13 @@
         }
         , {
           "name":"Select"
-          , "id":1656435312
+          , "id":4205374448
           , "debug":
           [
             [
               {
                 "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":108
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"Select"
-          , "id":1656429168
-          , "type":"inst"
-        }
-        , {
-          "name":"Select"
-          , "id":1656432048
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":108
+                , "line":113
               }
             ]
           ]
@@ -237,7 +348,7 @@
         }
         , {
           "name":"Feedback"
-          , "id":1656462960
+          , "id":4205358000
           , "end":"68.00"
           , "parent":"aggregation.B1.start"
           , "debug":
@@ -245,7 +356,7 @@
             [
               {
                 "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":108
+                , "line":113
               }
             ]
           ]
@@ -255,1148 +366,44 @@
       , "links":
       [
         {
-          "from":1656420144
-          , "to":1656426096
+          "from":4205314480
+          , "to":4205311024
         }
         , {
-          "from":1656428784
-          , "to":1656422640
+          "from":4205311024
+          , "to":4205337168
         }
         , {
-          "from":1656422640
-          , "to":1656421296
+          "from":4205314480
+          , "to":4205337168
         }
         , {
-          "from":1656420144
-          , "to":1656419376
+          "from":4205316208
+          , "to":4205335632
         }
         , {
-          "from":1656419376
-          , "to":1656435312
+          "from":4205314480
+          , "to":4205338320
         }
         , {
-          "from":1656420144
-          , "to":1656429168
+          "from":4205337168
+          , "to":4205338320
         }
         , {
-          "from":1656426096
-          , "to":1656429168
+          "from":4205335632
+          , "to":4205336016
         }
         , {
-          "from":1656421296
-          , "to":1656432048
+          "from":4205338320
+          , "to":4205374448
         }
         , {
-          "from":1656435312
-          , "to":1656462960
+          "from":4205374448
+          , "to":4205358000
         }
         , {
-          "from":1656420144
-          , "to":1656462960
-          , "reverse":1
-        }
-      ]
-    }
-    , {
-      "name":"'i'"
-      , "id":4294967295
-      , "src":"1655817248"
-      , "dst":"1656320176"
-      , "type":"fMAX/II"
-      , "brief":"Data dependency"
-      , "loop":"windowing.B5"
-      , "details":
-      [
-        {
-          "type":"table"
-          , "Variable on critical loop carried feedback path: ":"'i'"
-          , "Declared at: ":
-          [
-            {
-              "type":"text"
-              , "text":"%L"
-              , "links":
-              [
-                {
-                  "filename":"Unknown location"
-                  , "line":"0"
-                }
-              ]
-            }
-          ]
-          , "Dependency: ":"Data dependency"
-          , "Estimated fmax reduced to: ":"175.0"
-          , "Loop feedback path that lowered II and Fmax: ":
-          [
-            {
-              "type":"text"
-              , "text":"+(%L)"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"125"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-      , "nodes":
-      [
-        {
-          "name":"'i'"
-          , "id":1655817248
-          , "start":"1.00"
-          , "parent":"windowing.B5"
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":125
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"+"
-          , "id":1655818976
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":125
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"Feedback"
-          , "id":1656320176
-          , "end":"1.00"
-          , "parent":"windowing.B5"
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":125
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-      ]
-      , "links":
-      [
-        {
-          "from":1655817248
-          , "to":1655818976
-        }
-        , {
-          "from":1655818976
-          , "to":1656320176
-        }
-        , {
-          "from":1655817248
-          , "to":1656320176
-          , "reverse":1
-        }
-      ]
-    }
-    , {
-      "name":"tuple"
-      , "id":4294967295
-      , "src":"1626611024"
-      , "dst":"1599266944"
-      , "concurrency":"1"
-      , "type":"Occupancy limiter"
-      , "brief":"Memory dependency"
-      , "loop":"windowing.B1.start"
-      , "details":
-      [
-        {
-          "type":"table"
-          , "Variable on critical loop carried feedback path: ":"tuple"
-          , "Declared at: ":
-          [
-            {
-              "type":"text"
-              , "text":"%L"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"126"
-                }
-              ]
-            }
-          ]
-          , "Dependency: ":"Memory dependency"
-          , "Concurrency value: ":"1"
-          , "Loop feedback path that lowered occupancy: ":
-          [
-            {
-              "type":"text"
-              , "text":"Loop: windowing.B2(%L)"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"34"
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Basic block: windowing.B3(%L)"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"36"
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Loop: windowing.B4(%L)"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"36"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-      , "nodes":
-      [
-        {
-          "name":"tuple"
-          , "id":1626611024
-          , "start":"1.00"
-          , "parent":"windowing.B1.start"
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":36
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"windowing.B2"
-          , "id":1650690928
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":34
-              }
-            ]
-          ]
-          , "type":"loop"
-        }
-        , {
-          "name":"windowing.B3"
-          , "id":1650693808
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":36
-              }
-            ]
-          ]
-          , "type":"bb"
-        }
-        , {
-          "name":"windowing.B4"
-          , "id":1650680272
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":36
-              }
-            ]
-          ]
-          , "type":"loop"
-        }
-        , {
-          "name":"Feedback"
-          , "id":1599266944
-          , "end":"1.00"
-          , "parent":"windowing.B5"
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":36
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-      ]
-      , "links":
-      [
-        {
-          "from":1650690928
-          , "to":1650690928
-        }
-        , {
-          "from":1650690928
-          , "to":1650693808
-        }
-        , {
-          "from":1650680272
-          , "to":1650680272
-        }
-        , {
-          "from":1650693808
-          , "to":1650680272
-        }
-        , {
-          "from":1626611024
-          , "to":1650690928
-        }
-        , {
-          "from":1650680272
-          , "to":1599266944
-        }
-        , {
-          "from":1626611024
-          , "to":1599266944
-          , "reverse":1
-        }
-      ]
-    }
-    , {
-      "name":"tuple"
-      , "id":4294967295
-      , "src":"1626609296"
-      , "dst":"1599269632"
-      , "concurrency":"1"
-      , "type":"Occupancy limiter"
-      , "brief":"Memory dependency"
-      , "loop":"windowing.B1.start"
-      , "details":
-      [
-        {
-          "type":"table"
-          , "Variable on critical loop carried feedback path: ":"tuple"
-          , "Declared at: ":
-          [
-            {
-              "type":"text"
-              , "text":"%L"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"126"
-                }
-              ]
-            }
-          ]
-          , "Dependency: ":"Memory dependency"
-          , "Concurrency value: ":"1"
-          , "Loop feedback path that lowered occupancy: ":
-          [
-            {
-              "type":"text"
-              , "text":"Loop: windowing.B2(%L)"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"34"
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Basic block: windowing.B3(%L)"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"36"
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Loop: windowing.B4(%L)"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"36"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-      , "nodes":
-      [
-        {
-          "name":"tuple"
-          , "id":1626609296
-          , "start":"1.00"
-          , "parent":"windowing.B1.start"
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":136
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"windowing.B2"
-          , "id":1650690928
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":34
-              }
-            ]
-          ]
-          , "type":"loop"
-        }
-        , {
-          "name":"windowing.B3"
-          , "id":1650693808
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":36
-              }
-            ]
-          ]
-          , "type":"bb"
-        }
-        , {
-          "name":"windowing.B4"
-          , "id":1650680272
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":36
-              }
-            ]
-          ]
-          , "type":"loop"
-        }
-        , {
-          "name":"Feedback"
-          , "id":1599269632
-          , "end":"17.00"
-          , "parent":"windowing.B5"
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":136
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-      ]
-      , "links":
-      [
-        {
-          "from":1650690928
-          , "to":1650690928
-        }
-        , {
-          "from":1650690928
-          , "to":1650693808
-        }
-        , {
-          "from":1650680272
-          , "to":1650680272
-        }
-        , {
-          "from":1650693808
-          , "to":1650680272
-        }
-        , {
-          "from":1626609296
-          , "to":1650690928
-        }
-        , {
-          "from":1650680272
-          , "to":1599269632
-        }
-        , {
-          "from":1626609296
-          , "to":1599269632
-          , "reverse":1
-        }
-      ]
-    }
-    , {
-      "name":"tuple"
-      , "id":4294967295
-      , "src":"1626606224"
-      , "dst":"1599269968"
-      , "concurrency":"1"
-      , "type":"Occupancy limiter"
-      , "brief":"Memory dependency"
-      , "loop":"windowing.B1.start"
-      , "details":
-      [
-        {
-          "type":"table"
-          , "Variable on critical loop carried feedback path: ":"tuple"
-          , "Declared at: ":
-          [
-            {
-              "type":"text"
-              , "text":"%L"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"126"
-                }
-              ]
-            }
-          ]
-          , "Dependency: ":"Memory dependency"
-          , "Concurrency value: ":"1"
-          , "Loop feedback path that lowered occupancy: ":
-          [
-            {
-              "type":"text"
-              , "text":"Loop: windowing.B2(%L)"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"34"
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Basic block: windowing.B3(%L)"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"36"
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Loop: windowing.B4(%L)"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"36"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-      , "nodes":
-      [
-        {
-          "name":"tuple"
-          , "id":1626606224
-          , "start":"1.00"
-          , "parent":"windowing.B1.start"
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":128
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"windowing.B2"
-          , "id":1650690928
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":34
-              }
-            ]
-          ]
-          , "type":"loop"
-        }
-        , {
-          "name":"windowing.B3"
-          , "id":1650693808
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":36
-              }
-            ]
-          ]
-          , "type":"bb"
-        }
-        , {
-          "name":"windowing.B4"
-          , "id":1650680272
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":36
-              }
-            ]
-          ]
-          , "type":"loop"
-        }
-        , {
-          "name":"Feedback"
-          , "id":1599269968
-          , "end":"10.00"
-          , "parent":"windowing.B5"
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":128
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-      ]
-      , "links":
-      [
-        {
-          "from":1650690928
-          , "to":1650690928
-        }
-        , {
-          "from":1650690928
-          , "to":1650693808
-        }
-        , {
-          "from":1650680272
-          , "to":1650680272
-        }
-        , {
-          "from":1650693808
-          , "to":1650680272
-        }
-        , {
-          "from":1626606224
-          , "to":1650690928
-        }
-        , {
-          "from":1650680272
-          , "to":1599269968
-        }
-        , {
-          "from":1626606224
-          , "to":1599269968
-          , "reverse":1
-        }
-      ]
-    }
-    , {
-      "name":"tuple"
-      , "id":4294967295
-      , "src":"1626609104"
-      , "dst":"1599270304"
-      , "concurrency":"1"
-      , "type":"Occupancy limiter"
-      , "brief":"Memory dependency"
-      , "loop":"windowing.B1.start"
-      , "details":
-      [
-        {
-          "type":"table"
-          , "Variable on critical loop carried feedback path: ":"tuple"
-          , "Declared at: ":
-          [
-            {
-              "type":"text"
-              , "text":"%L"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"126"
-                }
-              ]
-            }
-          ]
-          , "Dependency: ":"Memory dependency"
-          , "Concurrency value: ":"1"
-          , "Loop feedback path that lowered occupancy: ":
-          [
-            {
-              "type":"text"
-              , "text":"Loop: windowing.B2(%L)"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"34"
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Basic block: windowing.B3(%L)"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"36"
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Loop: windowing.B4(%L)"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"36"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-      , "nodes":
-      [
-        {
-          "name":"tuple"
-          , "id":1626609104
-          , "start":"2.00"
-          , "parent":"windowing.B1.start"
-          , "type":"inst"
-        }
-        , {
-          "name":"windowing.B2"
-          , "id":1650690928
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":34
-              }
-            ]
-          ]
-          , "type":"loop"
-        }
-        , {
-          "name":"windowing.B3"
-          , "id":1650693808
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":36
-              }
-            ]
-          ]
-          , "type":"bb"
-        }
-        , {
-          "name":"windowing.B4"
-          , "id":1650680272
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":36
-              }
-            ]
-          ]
-          , "type":"loop"
-        }
-        , {
-          "name":"Feedback"
-          , "id":1599270304
-          , "end":"25.00"
-          , "parent":"windowing.B5"
-          , "type":"inst"
-        }
-      ]
-      , "links":
-      [
-        {
-          "from":1650690928
-          , "to":1650690928
-        }
-        , {
-          "from":1650690928
-          , "to":1650693808
-        }
-        , {
-          "from":1650680272
-          , "to":1650680272
-        }
-        , {
-          "from":1650693808
-          , "to":1650680272
-        }
-        , {
-          "from":1626609104
-          , "to":1650690928
-        }
-        , {
-          "from":1650680272
-          , "to":1599270304
-        }
-        , {
-          "from":1626609104
-          , "to":1599270304
-          , "reverse":1
-        }
-      ]
-    }
-    , {
-      "name":"tuple"
-      , "id":4294967295
-      , "src":"1655814560"
-      , "dst":"1655831024"
-      , "type":"fMAX/II"
-      , "brief":"Data dependency"
-      , "loop":"windowing.B4"
-      , "details":
-      [
-        {
-          "type":"table"
-          , "Variable on critical loop carried feedback path: ":"tuple"
-          , "Declared at: ":
-          [
-            {
-              "type":"text"
-              , "text":"%L"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"126"
-                }
-              ]
-            }
-          ]
-          , "Dependency: ":"Data dependency"
-          , "Estimated fmax reduced to: ":"194.4"
-          , "Loop feedback path that lowered II and Fmax: ":
-          [
-            {
-              "type":"text"
-              , "text":"+(%L)"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"36"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-      , "nodes":
-      [
-        {
-          "name":"tuple"
-          , "id":1655814560
-          , "start":"2.00"
-          , "parent":"windowing.B4"
-          , "type":"inst"
-        }
-        , {
-          "name":"+"
-          , "id":1655823968
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":36
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"Feedback"
-          , "id":1655831024
-          , "end":"2.00"
-          , "parent":"windowing.B4"
-          , "type":"inst"
-        }
-      ]
-      , "links":
-      [
-        {
-          "from":1655823968
-          , "to":1655823968
-        }
-        , {
-          "from":1655814560
-          , "to":1655831024
-          , "reverse":1
-        }
-      ]
-    }
-    , {
-      "name":"tuple"
-      , "id":4294967295
-      , "src":"1655554880"
-      , "dst":"1655734656"
-      , "type":"fMAX/II"
-      , "brief":"Data dependency"
-      , "loop":"windowing.B2"
-      , "details":
-      [
-        {
-          "type":"table"
-          , "Variable on critical loop carried feedback path: ":"tuple"
-          , "Declared at: ":
-          [
-            {
-              "type":"text"
-              , "text":"%L"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"126"
-                }
-              ]
-            }
-          ]
-          , "Dependency: ":"Data dependency"
-          , "Estimated fmax reduced to: ":"194.4"
-          , "Loop feedback path that lowered II and Fmax: ":
-          [
-            {
-              "type":"text"
-              , "text":"+(%L)"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"34"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-      , "nodes":
-      [
-        {
-          "name":"Loop Orch"
-          , "id":1655554880
-          , "start":"n/a"
-          , "parent":"Loop Orch"
-          , "type":"inst"
-        }
-        , {
-          "name":"+"
-          , "id":1655561600
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":34
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"Loop Orch"
-          , "id":1655734656
-          , "end":"n/a"
-          , "parent":"Loop Orch"
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":34
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-      ]
-      , "links":
-      [
-        {
-          "from":1655554880
-          , "to":1655734656
-          , "reverse":1
-        }
-      ]
-    }
-    , {
-      "name":"tuple"
-      , "id":4294967295
-      , "src":"1626608336"
-      , "dst":"1599271984"
-      , "concurrency":"1"
-      , "type":"Occupancy limiter"
-      , "brief":"Memory dependency"
-      , "loop":"windowing.B1.start"
-      , "details":
-      [
-        {
-          "type":"table"
-          , "Variable on critical loop carried feedback path: ":"tuple"
-          , "Declared at: ":
-          [
-            {
-              "type":"text"
-              , "text":"%L"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"126"
-                }
-              ]
-            }
-          ]
-          , "Dependency: ":"Memory dependency"
-          , "Concurrency value: ":"1"
-          , "Loop feedback path that lowered occupancy: ":
-          [
-            {
-              "type":"text"
-              , "text":"Loop: windowing.B2(%L)"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"34"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-      , "nodes":
-      [
-        {
-          "name":"tuple"
-          , "id":1626608336
-          , "start":"1.00"
-          , "parent":"windowing.B1.start"
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":34
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"windowing.B2"
-          , "id":1650690928
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":34
-              }
-            ]
-          ]
-          , "type":"loop"
-        }
-        , {
-          "name":"Feedback"
-          , "id":1599271984
-          , "end":"1.00"
-          , "parent":"windowing.B3"
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":34
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-      ]
-      , "links":
-      [
-        {
-          "from":1650690928
-          , "to":1650690928
-        }
-        , {
-          "from":1626608336
-          , "to":1650690928
-        }
-        , {
-          "from":1650690928
-          , "to":1599271984
-        }
-        , {
-          "from":1626608336
-          , "to":1599271984
+          "from":4205314480
+          , "to":4205358000
           , "reverse":1
         }
       ]

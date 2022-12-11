@@ -2,19 +2,19 @@
   "nodes":
   [
     {
-      "name":"projection"
-      , "id":1589598072
+      "name":"streamer"
+      , "id":4165634392
       , "type":"component"
       , "children":
       [
         {
-          "name":"Stream Read"
-          , "id":1590328512
+          "name":"Stream Write"
+          , "id":4165642904
           , "details":
           [
             {
               "type":"table"
-              , "Basic Block":"projection.B1.start"
+              , "Basic Block":"streamer.B1.start"
               , "Width":"1 bit"
               , "Depth":"0"
               , "Stall-free":"No"
@@ -25,33 +25,8 @@
           [
             [
               {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":40
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"Stream Read"
-          , "id":1592240920
-          , "details":
-          [
-            {
-              "type":"table"
-              , "Basic Block":"projection.B1.start"
-              , "Width":"352 bits"
-              , "Depth":"0"
-              , "Stall-free":"No"
-              , "Latency":"0"
-            }
-          ]
-          , "debug":
-          [
-            [
-              {
-                "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
-                , "line":591
+                "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
+                , "line":62
               }
             ]
           ]
@@ -59,154 +34,13 @@
         }
         , {
           "name":"Stream Write"
-          , "id":1590333680
+          , "id":4165873448
           , "details":
           [
             {
               "type":"table"
-              , "Basic Block":"projection.B1.start"
-              , "Width":"352 bits"
-              , "Depth":"0"
-              , "Stall-free":"No"
-              , "Latency":"0"
-            }
-          ]
-          , "debug":
-          [
-            [
-              {
-                "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
-                , "line":725
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"Stream Write"
-          , "id":1592695488
-          , "details":
-          [
-            {
-              "type":"table"
-              , "Basic Block":"projection.B1.start"
+              , "Basic Block":"streamer.B1.start"
               , "Width":"1 bit"
-              , "Depth":"0"
-              , "Stall-free":"No"
-              , "Latency":"0"
-            }
-          ]
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":64
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-      ]
-    }
-    , {
-      "name":"aggregation"
-      , "id":1592213784
-      , "type":"task"
-      , "children":
-      [
-        {
-          "name":"Stream Read"
-          , "id":1593298624
-          , "details":
-          [
-            {
-              "type":"table"
-              , "Basic Block":"aggregation.B1.start"
-              , "Width":"448 bits"
-              , "Depth":"0"
-              , "Stall-free":"No"
-              , "Latency":"0"
-            }
-          ]
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":66
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"Stream Write"
-          , "id":1593182592
-          , "details":
-          [
-            {
-              "type":"table"
-              , "Basic Block":"aggregation.B1.start"
-              , "Width":"352 bits"
-              , "Depth":"0"
-              , "Stall-free":"No"
-              , "Latency":"0"
-            }
-          ]
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":117
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-      ]
-    }
-    , {
-      "name":"windowing"
-      , "id":1589599192
-      , "type":"component"
-      , "children":
-      [
-        {
-          "name":"Stream Read"
-          , "id":1593192200
-          , "details":
-          [
-            {
-              "type":"table"
-              , "Basic Block":"windowing.B5"
-              , "Width":"352 bits"
-              , "Depth":"0"
-              , "Stall-free":"No"
-              , "Latency":"0"
-            }
-          ]
-          , "debug":
-          [
-            [
-              {
-                "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
-                , "line":591
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"Stream Write"
-          , "id":1590332472
-          , "details":
-          [
-            {
-              "type":"table"
-              , "Basic Block":"windowing.B5"
-              , "Width":"448 bits"
               , "Depth":"0"
               , "Stall-free":"No"
               , "Latency":"0"
@@ -225,12 +59,120 @@
         }
         , {
           "name":"Stream Read"
-          , "id":1590332888
+          , "id":4162031904
           , "details":
           [
             {
               "type":"table"
-              , "Basic Block":"windowing.B5"
+              , "Basic Block":"streamer.B1.start"
+              , "Width":"1 bit"
+              , "Depth":"0"
+              , "Stall-free":"No"
+              , "Latency":"0"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                , "line":147
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Stream Read"
+          , "id":4166227784
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Basic Block":"streamer.B1.start"
+              , "Width":"1 bit"
+              , "Depth":"0"
+              , "Stall-free":"No"
+              , "Latency":"0"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
+                , "line":67
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Stream Write"
+          , "id":4162033008
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Basic Block":"streamer.B1.start"
+              , "Width":"1 bit"
+              , "Depth":"0"
+              , "Stall-free":"No"
+              , "Latency":"0"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                , "line":154
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Stream Read"
+          , "id":4166227368
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Basic Block":"streamer.B1.start"
+              , "Width":"1 bit"
+              , "Depth":"0"
+              , "Stall-free":"No"
+              , "Latency":"0"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
+                , "line":67
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+    }
+    , {
+      "name":"windowing"
+      , "id":4161900712
+      , "type":"task"
+      , "children":
+      [
+        {
+          "name":"Stream Read"
+          , "id":4165928120
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Basic Block":"windowing.B1.start"
               , "Width":"352 bits"
               , "Depth":"0"
               , "Stall-free":"No"
@@ -250,12 +192,37 @@
         }
         , {
           "name":"Stream Write"
-          , "id":1593181856
+          , "id":4162556184
           , "details":
           [
             {
               "type":"table"
-              , "Basic Block":"windowing.B5"
+              , "Basic Block":"windowing.B1.start"
+              , "Width":"448 bits"
+              , "Depth":"0"
+              , "Stall-free":"No"
+              , "Latency":"0"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
+                , "line":62
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Stream Write"
+          , "id":4162034480
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Basic Block":"windowing.B1.start"
               , "Width":"352 bits"
               , "Depth":"0"
               , "Stall-free":"No"
@@ -274,14 +241,14 @@
           , "type":"inst"
         }
         , {
-          "name":"Stream Write"
-          , "id":1593182224
+          "name":"Stream Read"
+          , "id":4165652952
           , "details":
           [
             {
               "type":"table"
-              , "Basic Block":"windowing.B5"
-              , "Width":"1 bit"
+              , "Basic Block":"windowing.B1.start"
+              , "Width":"352 bits"
               , "Depth":"0"
               , "Stall-free":"No"
               , "Latency":"0"
@@ -291,8 +258,8 @@
           [
             [
               {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":142
+                "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
+                , "line":845
               }
             ]
           ]
@@ -300,7 +267,7 @@
         }
         , {
           "name":"Stream Read"
-          , "id":1593145168
+          , "id":4162033376
           , "details":
           [
             {
@@ -317,7 +284,32 @@
             [
               {
                 "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":120
+                , "line":125
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Stream Write"
+          , "id":4162032272
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Basic Block":"windowing.B1.start"
+              , "Width":"1 bit"
+              , "Depth":"0"
+              , "Stall-free":"No"
+              , "Latency":"0"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                , "line":141
               }
             ]
           ]
@@ -326,27 +318,174 @@
       ]
     }
     , {
-      "name":"call.aggregation"
-      , "id":1589521232
-      , "details":
+      "name":"projection"
+      , "id":4165635832
+      , "type":"task"
+      , "children":
       [
         {
-          "type":"table"
-          , "Width":"448 bits"
-          , "Depth":"0"
-          , "Ready Latency":"0"
-          , "Bits per Symbol":"448 bits"
-          , "Uses Packets":"No"
-          , "Uses Valid":"Yes"
-          , "Uses Empty":"No"
-          , "First symbol in high order bits":"No"
+          "name":"Stream Read"
+          , "id":4162033744
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Basic Block":"projection.B1.start"
+              , "Width":"1 bit"
+              , "Depth":"0"
+              , "Stall-free":"No"
+              , "Latency":"0"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                , "line":48
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Stream Write"
+          , "id":4162032640
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Basic Block":"projection.B1.start"
+              , "Width":"352 bits"
+              , "Depth":"0"
+              , "Stall-free":"No"
+              , "Latency":"0"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
+                , "line":853
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Stream Read"
+          , "id":4165691608
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Basic Block":"projection.B1.start"
+              , "Width":"352 bits"
+              , "Depth":"0"
+              , "Stall-free":"No"
+              , "Latency":"0"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
+                , "line":591
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Stream Write"
+          , "id":4162034112
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Basic Block":"projection.B1.start"
+              , "Width":"1 bit"
+              , "Depth":"0"
+              , "Stall-free":"No"
+              , "Latency":"0"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                , "line":69
+              }
+            ]
+          ]
+          , "type":"inst"
         }
       ]
-      , "type":"stream"
     }
     , {
-      "name":"return.windowing"
-      , "id":1589521488
+      "name":"aggregation"
+      , "id":4165635992
+      , "type":"task"
+      , "children":
+      [
+        {
+          "name":"Stream Read"
+          , "id":4162031168
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Basic Block":"aggregation.B1.start"
+              , "Width":"448 bits"
+              , "Depth":"0"
+              , "Stall-free":"No"
+              , "Latency":"0"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                , "line":71
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Stream Write"
+          , "id":4162031536
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Basic Block":"aggregation.B1.start"
+              , "Width":"352 bits"
+              , "Depth":"0"
+              , "Stall-free":"No"
+              , "Latency":"0"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                , "line":122
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+    }
+    , {
+      "name":"return.streamer"
+      , "id":4161825008
       , "details":
       [
         {
@@ -364,27 +503,8 @@
       , "type":"stream"
     }
     , {
-      "name":"call.windowing"
-      , "id":1589522128
-      , "details":
-      [
-        {
-          "type":"table"
-          , "Width":"1 bit"
-          , "Depth":"0"
-          , "Ready Latency":"0"
-          , "Bits per Symbol":"1 bit"
-          , "Uses Packets":"No"
-          , "Uses Valid":"Yes"
-          , "Uses Empty":"No"
-          , "First symbol in high order bits":"No"
-        }
-      ]
-      , "type":"stream"
-    }
-    , {
       "name":"return.aggregation"
-      , "id":1589522256
+      , "id":4161825904
       , "details":
       [
         {
@@ -403,7 +523,7 @@
     }
     , {
       "name":"call.projection"
-      , "id":1589522384
+      , "id":4161826288
       , "details":
       [
         {
@@ -422,7 +542,7 @@
     }
     , {
       "name":"return.projection"
-      , "id":1589522768
+      , "id":4161826416
       , "details":
       [
         {
@@ -440,27 +560,8 @@
       , "type":"stream"
     }
     , {
-      "name":"stream_in_tuple"
-      , "id":1590476640
-      , "details":
-      [
-        {
-          "type":"table"
-          , "Width":"352 bits"
-          , "Depth":"0"
-          , "Ready Latency":"0"
-          , "Bits per Symbol":"352 bits"
-          , "Uses Packets":"No"
-          , "Uses Valid":"Yes"
-          , "Uses Empty":"No"
-          , "First symbol in high order bits":"No"
-        }
-      ]
-      , "type":"stream"
-    }
-    , {
-      "name":"stream_out_tuple"
-      , "id":1590476680
+      "name":"s_out"
+      , "id":4161826672
       , "details":
       [
         {
@@ -478,8 +579,27 @@
       , "type":"stream"
     }
     , {
-      "name":"stream_in_tuple"
-      , "id":1593093808
+      "name":"s0"
+      , "id":4161826928
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Width":"352 bits"
+          , "Depth":"0"
+          , "Ready Latency":"0"
+          , "Bits per Symbol":"352 bits"
+          , "Uses Packets":"No"
+          , "Uses Ready":"Yes"
+          , "Uses Empty":"No"
+          , "First symbol in high order bits":"No"
+        }
+      ]
+      , "type":"stream"
+    }
+    , {
+      "name":"s_in"
+      , "id":4161827184
       , "details":
       [
         {
@@ -497,16 +617,73 @@
       , "type":"stream"
     }
     , {
-      "name":"stream_out_tuple"
-      , "id":1593093848
+      "name":"call.windowing"
+      , "id":4161827312
       , "details":
       [
         {
           "type":"table"
-          , "Width":"352 bits"
+          , "Width":"1 bit"
           , "Depth":"0"
           , "Ready Latency":"0"
-          , "Bits per Symbol":"352 bits"
+          , "Bits per Symbol":"1 bit"
+          , "Uses Packets":"No"
+          , "Uses Valid":"Yes"
+          , "Uses Empty":"No"
+          , "First symbol in high order bits":"No"
+        }
+      ]
+      , "type":"stream"
+    }
+    , {
+      "name":"call.aggregation"
+      , "id":4161827440
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Width":"448 bits"
+          , "Depth":"0"
+          , "Ready Latency":"0"
+          , "Bits per Symbol":"448 bits"
+          , "Uses Packets":"No"
+          , "Uses Valid":"Yes"
+          , "Uses Empty":"No"
+          , "First symbol in high order bits":"No"
+        }
+      ]
+      , "type":"stream"
+    }
+    , {
+      "name":"call.streamer"
+      , "id":4161827696
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Width":"1 bit"
+          , "Depth":"0"
+          , "Ready Latency":"0"
+          , "Bits per Symbol":"1 bit"
+          , "Uses Packets":"No"
+          , "Uses Valid":"Yes"
+          , "Uses Empty":"No"
+          , "First symbol in high order bits":"No"
+        }
+      ]
+      , "type":"stream"
+    }
+    , {
+      "name":"return.windowing"
+      , "id":4161828464
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Width":"1 bit"
+          , "Depth":"0"
+          , "Ready Latency":"0"
+          , "Bits per Symbol":"1 bit"
           , "Uses Packets":"No"
           , "Uses Ready":"Yes"
           , "Uses Empty":"No"
@@ -519,100 +696,144 @@
   , "links":
   [
     {
-      "from":1590332472
-      , "to":1589521232
+      "from":4162033008
+      , "to":4161825008
     }
     , {
-      "from":1589521232
-      , "to":1593298624
+      "from":4162031536
+      , "to":4161825904
     }
     , {
-      "from":1593182224
-      , "to":1589521488
+      "from":4161825904
+      , "to":4165928120
     }
     , {
-      "from":1589522128
-      , "to":1593145168
+      "from":4165873448
+      , "to":4161826288
     }
     , {
-      "from":1593182592
-      , "to":1589522256
+      "from":4161826288
+      , "to":4162033744
     }
     , {
-      "from":1589522256
-      , "to":1590332888
+      "from":4162034112
+      , "to":4161826416
     }
     , {
-      "from":1589522384
-      , "to":1590328512
+      "from":4161826416
+      , "to":4166227368
     }
     , {
-      "from":1592695488
-      , "to":1589522768
+      "from":4162034480
+      , "to":4161826672
     }
     , {
-      "from":1590476640
-      , "to":1592240920
+      "from":4162032640
+      , "to":4161826928
     }
     , {
-      "from":1590333680
-      , "to":1590476680
+      "from":4161826928
+      , "to":4165652952
     }
     , {
-      "from":1593093808
-      , "to":1593192200
+      "from":4161827184
+      , "to":4165691608
     }
     , {
-      "from":1593181856
-      , "to":1593093848
+      "from":4165642904
+      , "to":4161827312
     }
     , {
-      "from":1590328512
-      , "to":1592240920
+      "from":4161827312
+      , "to":4162033376
     }
     , {
-      "from":1590332472
-      , "to":1590332888
+      "from":4162556184
+      , "to":4161827440
     }
     , {
-      "from":1590332888
-      , "to":1593181856
+      "from":4161827440
+      , "to":4162031168
     }
     , {
-      "from":1590332888
-      , "to":1593182224
+      "from":4161827696
+      , "to":4162031904
     }
     , {
-      "from":1590333680
-      , "to":1592695488
+      "from":4162032272
+      , "to":4161828464
     }
     , {
-      "from":1592240920
-      , "to":1590333680
+      "from":4161828464
+      , "to":4166227784
     }
     , {
-      "from":1593181856
-      , "to":1593182224
+      "from":4162031168
+      , "to":4162031536
     }
     , {
-      "from":1593192200
-      , "to":1590332472
+      "from":4162031904
+      , "to":4165642904
     }
     , {
-      "from":1593192200
-      , "to":1590332888
+      "from":4162031904
+      , "to":4165873448
     }
     , {
-      "from":1593192200
-      , "to":1593181856
+      "from":4162032640
+      , "to":4162034112
     }
     , {
-      "from":1593298624
-      , "to":1593182592
+      "from":4162033376
+      , "to":4165652952
     }
     , {
-      "from":1593145168
-      , "to":1593182224
+      "from":4162033744
+      , "to":4165691608
+    }
+    , {
+      "from":4162034480
+      , "to":4162032272
+    }
+    , {
+      "from":4162556184
+      , "to":4165928120
+    }
+    , {
+      "from":4165642904
+      , "to":4166227784
+    }
+    , {
+      "from":4165652952
+      , "to":4162034480
+    }
+    , {
+      "from":4165652952
+      , "to":4162556184
+    }
+    , {
+      "from":4165652952
+      , "to":4165928120
+    }
+    , {
+      "from":4165691608
+      , "to":4162032640
+    }
+    , {
+      "from":4165873448
+      , "to":4166227368
+    }
+    , {
+      "from":4165928120
+      , "to":4162034480
+    }
+    , {
+      "from":4166227368
+      , "to":4162033008
+    }
+    , {
+      "from":4166227784
+      , "to":4162033008
     }
   ]
 }

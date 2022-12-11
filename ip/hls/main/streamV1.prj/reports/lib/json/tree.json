@@ -2,133 +2,120 @@
   "nodes":
   [
     {
-      "name":"projection"
-      , "id":1589598072
+      "name":"streamer"
+      , "id":4165634392
       , "type":"component"
       , "children":
       [
         {
-          "name":"projection.B1.start"
-          , "id":1590403408
+          "name":"streamer.B1.start"
+          , "id":4162666400
           , "type":"bb"
           , "children":
           [
             {
-              "name":"Cluster 1"
-              , "id":1595180384
-              , "type":"cluster"
-            }
-            , {
               "name":"Cluster 0"
-              , "id":1595164336
+              , "id":4168881168
               , "type":"cluster"
             }
           ]
         }
         , {
-          "name":"projection.B0.runOnce"
-          , "id":1590401392
-          , "type":"bb"
-        }
-      ]
-    }
-    , {
-      "name":"aggregation"
-      , "id":1592213784
-      , "type":"component"
-      , "children":
-      [
-        {
-          "name":"aggregation.B1.start"
-          , "id":1590404656
-          , "type":"bb"
-          , "children":
-          [
-            {
-              "name":"Cluster 6"
-              , "id":1597803824
-              , "type":"cluster"
-            }
-            , {
-              "name":"Cluster 7"
-              , "id":1597799792
-              , "type":"cluster"
-            }
-          ]
-        }
-        , {
-          "name":"aggregation.B0.runOnce"
-          , "id":1590401776
+          "name":"streamer.B0.runOnce"
+          , "id":4162665920
           , "type":"bb"
         }
       ]
     }
     , {
       "name":"windowing"
-      , "id":1589599192
+      , "id":4161900712
       , "type":"component"
       , "children":
       [
         {
-          "name":"windowing.B5"
-          , "id":1590403120
-          , "type":"bb"
-          , "children":
-          [
-            {
-              "name":"Cluster 5"
-              , "id":1606430736
-              , "type":"cluster"
-            }
-          ]
-        }
-        , {
-          "name":"windowing.B4"
-          , "id":1590400912
-          , "type":"bb"
-          , "children":
-          [
-            {
-              "name":"Cluster 4"
-              , "id":1605235104
-              , "type":"cluster"
-            }
-          ]
-        }
-        , {
           "name":"windowing.B1.start"
-          , "id":1590403600
+          , "id":4162661024
           , "type":"bb"
           , "children":
           [
             {
+              "name":"Cluster 1"
+              , "id":4170085840
+              , "type":"cluster"
+            }
+            , {
               "name":"Cluster 2"
-              , "id":1596444352
+              , "id":4170382464
               , "type":"cluster"
             }
           ]
         }
         , {
           "name":"windowing.B0.runOnce"
-          , "id":1590402160
+          , "id":4162660352
           , "type":"bb"
         }
-        , {
-          "name":"windowing.B2"
-          , "id":1590401584
+      ]
+    }
+    , {
+      "name":"projection"
+      , "id":4165635832
+      , "type":"component"
+      , "children":
+      [
+        {
+          "name":"projection.B1.start"
+          , "id":4162663136
           , "type":"bb"
           , "children":
           [
             {
+              "name":"Cluster 4"
+              , "id":4171700736
+              , "type":"cluster"
+            }
+            , {
               "name":"Cluster 3"
-              , "id":1604529904
+              , "id":4171507648
               , "type":"cluster"
             }
           ]
         }
         , {
-          "name":"windowing.B3"
-          , "id":1590404752
+          "name":"projection.B0.runOnce"
+          , "id":4162663040
+          , "type":"bb"
+        }
+      ]
+    }
+    , {
+      "name":"aggregation"
+      , "id":4165635992
+      , "type":"component"
+      , "children":
+      [
+        {
+          "name":"aggregation.B1.start"
+          , "id":4162666592
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 5"
+              , "id":4172670480
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 6"
+              , "id":4172672320
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"aggregation.B0.runOnce"
+          , "id":4162667360
           , "type":"bb"
         }
       ]

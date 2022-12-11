@@ -1,1 +1,1 @@
-{"compileInfo":{"nodes":[{"command":"i++ -march=cycloneV main.cpp -ghdl -o streamV1.1","family":"CycloneV, 5CGXFC7C7F23C8","id":1,"name":"./streamV1","product":"HLS","quartus":"21.1.1 Build 850 Standard","time":"Sun Dec 11 11:42:22 2022","version":"22.3.0 Build 116.1"}]}}
+{"compileInfo":{"nodes":[{"command":"i++ -march=cycloneV main.cpp -ghdl -o streamV1.1","family":"CycloneV, 5CGXFC7C7F23C8","id":1,"name":"./streamV1","product":"HLS","quartus":"21.1.1 Build 850 Standard","time":"Sun Dec 11 14:23:40 2022","version":"22.3.0 Build 116.1"}]}}

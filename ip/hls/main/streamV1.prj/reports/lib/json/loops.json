@@ -4,7 +4,7 @@
   , "children":
   [
     {
-      "name":"Component: projection"
+      "name":"Component: streamer"
       , "data":
       ["", "", ""]
       , "debug":
@@ -12,7 +12,437 @@
         [
           {
             "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":40
+            , "line":147
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"brief"
+          , "text":"Task function"
+        }
+        , {
+          "type":"text"
+          , "text":"Task function"
+        }
+        , {
+          "type":"text"
+          , "text":"Fmax bottlenck block: None"
+        }
+        , {
+          "type":"text"
+          , "text":"See %L for more information"
+          , "links":
+          [
+            {
+              "guide":"Reference Manual : Component"
+              , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html#ewa1462820640727"
+            }
+          ]
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"streamer.B1.start"
+          , "data":
+          ["Yes", "~1", "n/a"]
+          , "debug":
+          [
+            [
+              {
+                "filename":"Component invocation"
+                , "line":0
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"brief"
+              , "text":" "
+            }
+            , {
+              "type":"text"
+              , "text":"II is an approximation due to the following stallable instructions:"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Stream Read Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                      , "line":"147"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"Stream Write Operation (%L > %L > %L > %L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                      , "line":"149"
+                    }
+                    , {
+                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
+                      , "line":"121"
+                    }
+                    , {
+                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
+                      , "line":"74"
+                    }
+                    , {
+                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
+                      , "line":"62"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"Stream Write Operation (%L > %L > %L > %L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                      , "line":"150"
+                    }
+                    , {
+                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
+                      , "line":"121"
+                    }
+                    , {
+                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
+                      , "line":"74"
+                    }
+                    , {
+                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
+                      , "line":"62"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"Stream Read Operation (%L > %L > %L > %L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                      , "line":"151"
+                    }
+                    , {
+                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
+                      , "line":"129"
+                    }
+                    , {
+                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
+                      , "line":"81"
+                    }
+                    , {
+                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
+                      , "line":"67"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"Stream Read Operation (%L > %L > %L > %L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                      , "line":"152"
+                    }
+                    , {
+                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
+                      , "line":"129"
+                    }
+                    , {
+                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
+                      , "line":"81"
+                    }
+                    , {
+                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
+                      , "line":"67"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"Stream Write Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                      , "line":"154"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Maximum concurrent iterations: Capacity of loop"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Use the %L viewer to estimate capacity"
+                  , "links":
+                  [
+                    {
+                      "view":"Fmax II Report"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"See %L for more information"
+              , "links":
+              [
+                {
+                  "guide":"Reference Manual : Loops in Components"
+                  , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html#ewa1462826976357"
+                }
+              ]
+            }
+          ]
+          , "children":
+          [
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"Task: windowing"
+      , "data":
+      ["", "", ""]
+      , "debug":
+      [
+        [
+          {
+            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+            , "line":125
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"brief"
+          , "text":"Task function"
+        }
+        , {
+          "type":"text"
+          , "text":"Task function"
+        }
+        , {
+          "type":"text"
+          , "text":"Fmax bottlenck block: windowing.B1.start"
+        }
+        , {
+          "type":"text"
+          , "text":"Use the %L report to view more details"
+          , "links":
+          [
+            {
+              "view":"Fmax II Report"
+            }
+          ]
+        }
+        , {
+          "type":"text"
+          , "text":"See %L for more information"
+          , "links":
+          [
+            {
+              "guide":"Reference Manual : Component"
+              , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html#ewa1462820640727"
+            }
+          ]
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"windowing.B1.start"
+          , "data":
+          ["Yes", "~1", "n/a"]
+          , "debug":
+          [
+            [
+              {
+                "filename":"Component invocation"
+                , "line":0
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"brief"
+              , "text":" "
+            }
+            , {
+              "type":"text"
+              , "text":"II is an approximation due to the following stallable instructions:"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Stream Read Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                      , "line":"125"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"Stream Read Operation (%L > %L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                      , "line":"128"
+                    }
+                    , {
+                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
+                      , "line":"845"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"Stream Write Operation (%L > %L > %L > %L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                      , "line":"134"
+                    }
+                    , {
+                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
+                      , "line":"121"
+                    }
+                    , {
+                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
+                      , "line":"74"
+                    }
+                    , {
+                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
+                      , "line":"62"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"Stream Read Operation (%L > %L > %L > %L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                      , "line":"135"
+                    }
+                    , {
+                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
+                      , "line":"129"
+                    }
+                    , {
+                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
+                      , "line":"81"
+                    }
+                    , {
+                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
+                      , "line":"67"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"Stream Write Operation (%L > %L, %L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                      , "line":"130"
+                    }
+                    , {
+                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
+                      , "line":"725"
+                    }
+                    , {
+                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                      , "line":"137"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"Stream Write Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                      , "line":"141"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Maximum concurrent iterations: Capacity of loop"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Use the %L viewer to estimate capacity"
+                  , "links":
+                  [
+                    {
+                      "view":"Fmax II Report"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"See %L for more information"
+              , "links":
+              [
+                {
+                  "guide":"Reference Manual : Loops in Components"
+                  , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html#ewa1462826976357"
+                }
+              ]
+            }
+          ]
+          , "children":
+          [
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"Task: projection"
+      , "data":
+      ["", "", ""]
+      , "debug":
+      [
+        [
+          {
+            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+            , "line":48
           }
         ]
       ]
@@ -75,7 +505,7 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"40"
+                      , "line":"48"
                     }
                   ]
                 }
@@ -86,7 +516,7 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"46"
+                      , "line":"51"
                     }
                     , {
                       "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
@@ -101,15 +531,15 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"49"
+                      , "line":"54"
                     }
                     , {
                       "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
-                      , "line":"725"
+                      , "line":"853"
                     }
                     , {
                       "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"61"
+                      , "line":"66"
                     }
                   ]
                 }
@@ -120,7 +550,7 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"64"
+                      , "line":"69"
                     }
                   ]
                 }
@@ -157,1005 +587,6 @@
           ]
           , "children":
           [
-          ]
-        }
-      ]
-    }
-    , {
-      "name":"Component: windowing"
-      , "data":
-      ["", "", ""]
-      , "debug":
-      [
-        [
-          {
-            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":120
-          }
-        ]
-      ]
-      , "details":
-      [
-        {
-          "type":"brief"
-          , "text":"Task function"
-        }
-        , {
-          "type":"text"
-          , "text":"Task function"
-        }
-        , {
-          "type":"text"
-          , "text":"Fmax bottlenck blocks: windowing.B2, windowing.B4, windowing.B5"
-        }
-        , {
-          "type":"text"
-          , "text":"Use the %L report to view more details"
-          , "links":
-          [
-            {
-              "view":"Fmax II Report"
-            }
-          ]
-        }
-        , {
-          "type":"text"
-          , "text":"See %L for more information"
-          , "links":
-          [
-            {
-              "guide":"Reference Manual : Component"
-              , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html#ewa1462820640727"
-            }
-          ]
-        }
-      ]
-      , "children":
-      [
-        {
-          "name":"windowing.B1.start"
-          , "data":
-          ["Yes", ">=1", "n/a"]
-          , "debug":
-          [
-            [
-              {
-                "filename":"Component invocation"
-                , "line":0
-              }
-            ]
-          ]
-          , "details":
-          [
-            {
-              "type":"brief"
-              , "text":"Serial exe: Memory dependency"
-            }
-            , {
-              "type":"text"
-              , "text":"Iteration executed serially across windowing.B2, windowing.B4. Only a single loop iteration will execute inside this region due to memory dependency:"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"From: Load Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"Unknown location"
-                      , "line":"0"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"To: Store Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"128"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Iteration executed serially across windowing.B2, windowing.B4. Only a single loop iteration will execute inside this region due to memory dependency:"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"From: Store Operation (%L > %L, %L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"126"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"33"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"34"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"To: Load Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"Unknown location"
-                      , "line":"0"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Iteration executed serially across windowing.B2. Only a single loop iteration will execute inside this region due to memory dependency:"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"From: Store Operation (%L > %L, %L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"126"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"33"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"34"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"To: Store Operation (%L > %L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"126"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"34"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Iteration executed serially across windowing.B2, windowing.B4. Only a single loop iteration will execute inside this region due to memory dependency:"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"From: Store Operation (%L > %L, %L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"126"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"33"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"34"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"To: Store Operation (%L > %L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"126"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"36"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Iteration executed serially due to memory dependency:"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"From: Store Operation (%L > %L, %L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"126"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"33"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"34"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"To: Store Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"128"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Iteration executed serially due to memory dependency:"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"From: Store Operation (%L > %L, %L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"126"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"33"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"34"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"To: Store Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"136"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Iteration executed serially across windowing.B2, windowing.B4. Only a single loop iteration will execute inside this region due to memory dependency:"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"From: Store Operation (%L > %L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"126"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"34"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"To: Load Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"Unknown location"
-                      , "line":"0"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Iteration executed serially due to memory dependency:"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"From: Store Operation (%L > %L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"126"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"34"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"To: Store Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"128"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Iteration executed serially due to memory dependency:"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"From: Store Operation (%L > %L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"126"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"34"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"To: Store Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"136"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Iteration executed serially across windowing.B2, windowing.B4. Only a single loop iteration will execute inside this region due to memory dependency:"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"From: Store Operation (%L > %L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"126"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"35"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"To: Load Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"Unknown location"
-                      , "line":"0"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Iteration executed serially due to memory dependency:"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"From: Store Operation (%L > %L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"126"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"35"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"To: Store Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"128"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Iteration executed serially due to memory dependency:"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"From: Store Operation (%L > %L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"126"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"35"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"To: Store Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"136"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Iteration executed serially across windowing.B2, windowing.B4. Only a single loop iteration will execute inside this region due to memory dependency:"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"From: Store Operation (%L > %L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"126"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"36"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"To: Load Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"Unknown location"
-                      , "line":"0"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Iteration executed serially due to memory dependency:"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"From: Store Operation (%L > %L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"126"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"36"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"To: Store Operation (%L > %L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"126"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"36"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Iteration executed serially due to memory dependency:"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"From: Store Operation (%L > %L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"126"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"36"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"To: Store Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"128"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Iteration executed serially due to memory dependency:"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"From: Store Operation (%L > %L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"126"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"36"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"To: Store Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"136"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Iteration executed serially across windowing.B2, windowing.B4. Only a single loop iteration will execute inside this region due to memory dependency:"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"From: Store Operation (%L > %L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"126"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"36"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"To: Load Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"Unknown location"
-                      , "line":"0"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Iteration executed serially due to memory dependency:"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"From: Store Operation (%L > %L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"126"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"36"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"To: Store Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"128"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Iteration executed serially due to memory dependency:"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"From: Store Operation (%L > %L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"126"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"36"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"To: Store Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"136"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Iteration executed serially across windowing.B2, windowing.B4. Only a single loop iteration will execute inside this region due to memory dependency:"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"From: Store Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"128"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"To: Load Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"Unknown location"
-                      , "line":"0"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Iteration executed serially due to memory dependency:"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"From: Store Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"128"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"To: Store Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"136"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Iteration executed serially across windowing.B2, windowing.B4. Only a single loop iteration will execute inside this region due to memory dependency:"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"From: Store Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"136"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"To: Load Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"Unknown location"
-                      , "line":"0"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Stallable instruction: n/a"
-            }
-            , {
-              "type":"text"
-              , "text":"Maximum concurrent iterations: Capacity of loop"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"Use the %L viewer to estimate capacity"
-                  , "links":
-                  [
-                    {
-                      "view":"Fmax II Report"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"See %L for more information"
-              , "links":
-              [
-                {
-                  "guide":"Reference Manual : Loops in Components"
-                  , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html#ewa1462826976357"
-                }
-              ]
-            }
-          ]
-          , "children":
-          [
-            {
-              "name":"windowing.B2"
-              , "data":
-              ["Yes", "~1", "1"]
-              , "debug":
-              [
-                [
-                  {
-                    "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                    , "line":34
-                  }
-                ]
-              ]
-              , "details":
-              [
-                {
-                  "type":"brief"
-                  , "text":" "
-                }
-                , {
-                  "type":"text"
-                  , "text":"II is an approximation due to the following stallable instruction:"
-                  , "details":
-                  [
-                    {
-                      "type":"text"
-                      , "text":"Store Operation (%L > %L)"
-                      , "links":
-                      [
-                        {
-                          "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                          , "line":"126"
-                        }
-                        , {
-                          "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                          , "line":"34"
-                        }
-                      ]
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"Maximum concurrent iterations: Capacity of loop"
-                  , "details":
-                  [
-                    {
-                      "type":"text"
-                      , "text":"Use the %L viewer to estimate capacity"
-                      , "links":
-                      [
-                        {
-                          "view":"Fmax II Report"
-                        }
-                      ]
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"See %L for more information"
-                  , "links":
-                  [
-                    {
-                      "guide":"Reference Manual : Loops in Components"
-                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html#ewa1462826976357"
-                    }
-                  ]
-                }
-              ]
-              , "children":
-              [
-              ]
-            }
-            , {
-              "name":"windowing.B4"
-              , "data":
-              ["Yes", "~1", "1"]
-              , "debug":
-              [
-                [
-                  {
-                    "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                    , "line":36
-                  }
-                ]
-              ]
-              , "details":
-              [
-                {
-                  "type":"brief"
-                  , "text":" "
-                }
-                , {
-                  "type":"text"
-                  , "text":"II is an approximation due to the following stallable instruction:"
-                  , "details":
-                  [
-                    {
-                      "type":"text"
-                      , "text":"Store Operation (%L > %L)"
-                      , "links":
-                      [
-                        {
-                          "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                          , "line":"126"
-                        }
-                        , {
-                          "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                          , "line":"36"
-                        }
-                      ]
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"Maximum concurrent iterations: Capacity of loop"
-                  , "details":
-                  [
-                    {
-                      "type":"text"
-                      , "text":"Use the %L viewer to estimate capacity"
-                      , "links":
-                      [
-                        {
-                          "view":"Fmax II Report"
-                        }
-                      ]
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"See %L for more information"
-                  , "links":
-                  [
-                    {
-                      "guide":"Reference Manual : Loops in Components"
-                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html#ewa1462826976357"
-                    }
-                  ]
-                }
-              ]
-              , "children":
-              [
-              ]
-            }
           ]
         }
       ]
@@ -1169,7 +600,7 @@
         [
           {
             "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":66
+            , "line":71
           }
         ]
       ]
@@ -1227,12 +658,12 @@
               [
                 {
                   "type":"text"
-                  , "text":"count (%L)"
+                  , "text":"sum (%L)"
                   , "links":
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"73"
+                      , "line":"78"
                     }
                   ]
                 }
@@ -1250,7 +681,7 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"80"
+                      , "line":"85"
                     }
                   ]
                 }
@@ -1261,7 +692,7 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"77"
+                      , "line":"82"
                     }
                   ]
                 }
@@ -1272,7 +703,7 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"108"
+                      , "line":"113"
                     }
                   ]
                 }
@@ -1283,53 +714,31 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"77"
+                      , "line":"82"
                     }
                     , {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"81"
+                      , "line":"86"
                     }
                     , {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"85"
+                      , "line":"90"
                     }
                     , {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"91"
+                      , "line":"96"
                     }
                     , {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"97"
+                      , "line":"102"
                     }
                     , {
                       "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"66"
+                      , "line":"71"
                     }
                     , {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"73"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"1.00 clock cycle 32-bit Select Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"Unknown location"
-                      , "line":"0"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"1.00 clock cycle 32-bit Select Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"Unknown location"
-                      , "line":"0"
+                      , "line":"78"
                     }
                   ]
                 }
@@ -1340,19 +749,19 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"80"
+                      , "line":"85"
                     }
                     , {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"98"
+                      , "line":"103"
                     }
                     , {
                       "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"66"
+                      , "line":"71"
                     }
                     , {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"73"
+                      , "line":"78"
                     }
                   ]
                 }
@@ -1363,7 +772,29 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"108"
+                      , "line":"113"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"1.00 clock cycle 32-bit Select Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"Unknown location"
+                      , "line":"0"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"1.00 clock cycle 32-bit Select Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"Unknown location"
+                      , "line":"0"
                     }
                   ]
                 }
@@ -1376,12 +807,12 @@
               [
                 {
                   "type":"text"
-                  , "text":"sum (%L)"
+                  , "text":"count (%L)"
                   , "links":
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"73"
+                      , "line":"78"
                     }
                   ]
                 }
@@ -1399,7 +830,7 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"80"
+                      , "line":"85"
                     }
                   ]
                 }
@@ -1410,7 +841,7 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"77"
+                      , "line":"82"
                     }
                   ]
                 }
@@ -1421,7 +852,7 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"108"
+                      , "line":"113"
                     }
                   ]
                 }
@@ -1432,53 +863,31 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"77"
+                      , "line":"82"
                     }
                     , {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"81"
+                      , "line":"86"
                     }
                     , {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"85"
+                      , "line":"90"
                     }
                     , {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"91"
+                      , "line":"96"
                     }
                     , {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"97"
+                      , "line":"102"
                     }
                     , {
                       "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"66"
+                      , "line":"71"
                     }
                     , {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"73"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"1.00 clock cycle 32-bit Select Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"Unknown location"
-                      , "line":"0"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"1.00 clock cycle 32-bit Select Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"Unknown location"
-                      , "line":"0"
+                      , "line":"78"
                     }
                   ]
                 }
@@ -1489,19 +898,19 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"80"
+                      , "line":"85"
                     }
                     , {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"98"
+                      , "line":"103"
                     }
                     , {
                       "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"66"
+                      , "line":"71"
                     }
                     , {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"73"
+                      , "line":"78"
                     }
                   ]
                 }
@@ -1512,7 +921,29 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"108"
+                      , "line":"113"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"1.00 clock cycle 32-bit Select Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"Unknown location"
+                      , "line":"0"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"1.00 clock cycle 32-bit Select Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"Unknown location"
+                      , "line":"0"
                     }
                   ]
                 }
@@ -1530,7 +961,7 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"66"
+                      , "line":"71"
                     }
                   ]
                 }
@@ -1541,7 +972,7 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"117"
+                      , "line":"122"
                     }
                   ]
                 }

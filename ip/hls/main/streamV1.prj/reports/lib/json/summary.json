@@ -15,13 +15,13 @@
           [
             {
               "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":66
+              , "line":71
             }
           ]
         ]
       }
       , {
-        "name":"void __cdecl projection(class ihc::stream_in<struct Tuple> &, class ihc::stream_out<struct Tuple> &)"
+        "name":"void __cdecl projection<class ihc::stream_in<struct Tuple> s_in, class ihc::stream<struct Tuple> s0>(void)"
         , "data":
         ["projection"]
         , "debug":
@@ -29,13 +29,27 @@
           [
             {
               "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":40
+              , "line":48
             }
           ]
         ]
       }
       , {
-        "name":"void __cdecl windowing(class ihc::stream_in<struct Tuple> &, class ihc::stream_out<struct Tuple> &)"
+        "name":"void __cdecl streamer(void)"
+        , "data":
+        ["streamer"]
+        , "debug":
+        [
+          [
+            {
+              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+              , "line":147
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"void __cdecl windowing<class ihc::stream<struct Tuple> s0, class ihc::stream_out<struct Tuple> s_out>(void)"
         , "data":
         ["windowing"]
         , "debug":
@@ -43,7 +57,7 @@
           [
             {
               "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":120
+              , "line":125
             }
           ]
         ]
@@ -60,13 +74,13 @@
       {
         "name":"aggregation"
         , "data":
-        [6454, 9426, 16, 3.5, 35]
+        [6450, 9434, 16, 3.5, 35]
         , "debug":
         [
           [
             {
               "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":66
+              , "line":71
             }
           ]
         ]
@@ -80,7 +94,21 @@
           [
             {
               "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":40
+              , "line":48
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"streamer"
+        , "data":
+        [23, 13, 0, 0, 0]
+        , "debug":
+        [
+          [
+            {
+              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+              , "line":147
             }
           ]
         ]
@@ -88,13 +116,13 @@
       , {
         "name":"windowing"
         , "data":
-        [15891, 5872, 32, 0, 123]
+        [732, 1270, 0, 0, 0]
         , "debug":
         [
           [
             {
               "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":120
+              , "line":125
             }
           ]
         ]
@@ -104,9 +132,9 @@
         , "classes":
         ["summary-highlight", "nohover"]
         , "data":
-        [22832, 16132, 48, 5, 176]
+        [7692, 11551, 16, 5, 53]
         , "data_percent":
-        [20.8374, 7.36137, 9.33852, 5.35714]
+        [7.02004, 5.27096, 3.11284, 5.35714]
       }
       , {
         "name":"Available"

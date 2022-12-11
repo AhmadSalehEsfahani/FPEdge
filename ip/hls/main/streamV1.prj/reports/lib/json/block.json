@@ -1,196 +1,11 @@
 {
-  "1590400912":
-  {
-    "nodes":
-    [
-      {
-        "name":"Cluster 4"
-        , "id":1605235104
-        , "start":"1.00"
-        , "end":"5.00"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Cluster Name":"i_sfc_s_c0_in_arrayinit_body6_i_windowings_c0_enter10115_windowing1"
-            , "Cluster Type":"Stall-Free"
-            , "Cluster Start Cycle":"1"
-            , "Cluster Latency":"4"
-          }
-        ]
-        , "type":"cluster"
-        , "children":
-        [
-          {
-            "name":"Logic"
-            , "id":1597283584
-            , "subtype":"entry"
-            , "details":
-            [
-              {
-                "type":"table"
-                , "Cluster Logic Start Cycle":"1"
-                , "Cluster Logic Latency":"1"
-              }
-            ]
-            , "type":"inst"
-          }
-          , {
-            "name":"Exit"
-            , "id":1601040864
-            , "subtype":"exit"
-            , "details":
-            [
-              {
-                "type":"table"
-                , "Start Cycle":"2"
-                , "Latency":"3"
-                , "Exit FIFO Depth":"32"
-                , "Exit FIFO Width":"192"
-                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
-              }
-            ]
-            , "type":"inst"
-          }
-        ]
-      }
-      , {
-        "name":"Loop Input"
-        , "id":1618219536
-        , "subtype":"default"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Loop Input"
-            , "Preceding Blocks":"windowing.B4, windowing.B3"
-          }
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"ST"
-        , "id":1626615824
-        , "start":"5.00"
-        , "end":"12.00"
-        , "subtype":"load/store"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Store"
-            , "Width":"32 bits"
-            , "LSU Style":"Pipelined"
-            , "Stall-free":"No"
-            , "Global Memory":"No"
-            , "Start Cycle":"5"
-            , "Latency":"7"
-          }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":36
-            }
-          ]
-        ]
-        , "type":"inst"
-      }
-    ]
-    , "links":
-    [
-      {
-        "from":1597283584
-        , "to":1601040864
-      }
-      , {
-        "from":1618219536
-        , "to":1597283584
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1"
-          }
-        ]
-      }
-      , {
-        "from":1618219536
-        , "to":1597283584
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1"
-          }
-        ]
-      }
-      , {
-        "from":1618219536
-        , "to":1597283584
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1"
-          }
-        ]
-      }
-      , {
-        "from":1618219536
-        , "to":1597283584
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1"
-          }
-        ]
-      }
-      , {
-        "from":1618219536
-        , "to":1597283584
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1"
-          }
-        ]
-      }
-      , {
-        "from":1618219536
-        , "to":1597283584
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1"
-          }
-        ]
-      }
-      , {
-        "from":1601040864
-        , "to":1626615824
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"192"
-          }
-        ]
-      }
-    ]
-  }
-  , "1590401392":
+  "4162660352":
   {
     "nodes":
     [
       {
         "name":"Feedback"
-        , "id":1599271648
+        , "id":4179527376
         , "start":"1.00"
         , "end":"2.00"
         , "subtype":"push"
@@ -210,7 +25,7 @@
       }
       , {
         "name":"?"
-        , "id":1618220688
+        , "id":4181000816
         , "start":"1.00"
         , "end":"2.00"
         , "subtype":"pop"
@@ -230,8 +45,8 @@
     , "links":
     [
       {
-        "from":1599271648
-        , "to":1618220688
+        "from":4179527376
+        , "to":4181000816
         , "details":
         [
           {
@@ -242,334 +57,56 @@
       }
     ]
   }
-  , "1590401584":
+  , "4162661024":
   {
     "nodes":
     [
       {
-        "name":"Cluster 3"
-        , "id":1604529904
+        "name":"Cluster 1"
+        , "id":4170085840
         , "start":"1.00"
-        , "end":"5.00"
+        , "end":"1.00"
         , "details":
         [
           {
             "type":"table"
-            , "Cluster Name":"i_sfc_s_c0_in_arrayinit_body_i_windowings_c0_enter8814_windowing1"
-            , "Cluster Type":"Stall-Free"
-            , "Cluster Start Cycle":"1"
-            , "Cluster Latency":"4"
-          }
-        ]
-        , "type":"cluster"
-        , "children":
-        [
-          {
-            "name":"Logic"
-            , "id":1597287936
-            , "subtype":"entry"
-            , "details":
-            [
-              {
-                "type":"table"
-                , "Cluster Logic Start Cycle":"1"
-                , "Cluster Logic Latency":"1"
-              }
-            ]
-            , "type":"inst"
-          }
-          , {
-            "name":"Exit"
-            , "id":1601040336
-            , "subtype":"exit"
-            , "details":
-            [
-              {
-                "type":"table"
-                , "Start Cycle":"2"
-                , "Latency":"3"
-                , "Exit FIFO Depth":"32"
-                , "Exit FIFO Width":"192"
-                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
-              }
-            ]
-            , "type":"inst"
-          }
-        ]
-      }
-      , {
-        "name":"Loop Input"
-        , "id":1618219344
-        , "subtype":"default"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Loop Input"
-            , "Preceding Blocks":"windowing.B2, windowing.B1.start"
-          }
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"ST"
-        , "id":1626615632
-        , "start":"5.00"
-        , "end":"12.00"
-        , "subtype":"load/store"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Store"
-            , "Width":"32 bits"
-            , "LSU Style":"Pipelined"
-            , "Stall-free":"No"
-            , "Global Memory":"No"
-            , "Start Cycle":"5"
-            , "Latency":"7"
-          }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":34
-            }
-          ]
-        ]
-        , "type":"inst"
-      }
-    ]
-    , "links":
-    [
-      {
-        "from":1597287936
-        , "to":1601040336
-      }
-      , {
-        "from":1618219344
-        , "to":1597287936
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1"
-          }
-        ]
-      }
-      , {
-        "from":1618219344
-        , "to":1597287936
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1"
-          }
-        ]
-      }
-      , {
-        "from":1618219344
-        , "to":1597287936
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1"
-          }
-        ]
-      }
-      , {
-        "from":1618219344
-        , "to":1597287936
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1"
-          }
-        ]
-      }
-      , {
-        "from":1618219344
-        , "to":1597287936
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1"
-          }
-        ]
-      }
-      , {
-        "from":1618219344
-        , "to":1597287936
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1"
-          }
-        ]
-      }
-      , {
-        "from":1618219344
-        , "to":1597287936
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1"
-          }
-        ]
-      }
-      , {
-        "from":1601040336
-        , "to":1626615632
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"192"
-          }
-        ]
-      }
-    ]
-  }
-  , "1590401776":
-  {
-    "nodes":
-    [
-      {
-        "name":"Feedback"
-        , "id":1599270640
-        , "start":"1.00"
-        , "end":"2.00"
-        , "subtype":"push"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Feedback Write"
-            , "Variable":"Unknown variable"
-            , "Feedback FIFO Depth":"1"
-            , "Feedback FIFO Width":"1"
-            , "Start Cycle":"1"
-            , "Latency":"1"
-          }
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"?"
-        , "id":1654541680
-        , "start":"1.00"
-        , "end":"2.00"
-        , "subtype":"pop"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Feedback Read"
-            , "Variable":"Unknown variable"
-            , "Start Cycle":"1"
-            , "Latency":"1"
-          }
-        ]
-        , "type":"inst"
-      }
-    ]
-    , "links":
-    [
-      {
-        "from":1599270640
-        , "to":1654541680
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1"
-          }
-        ]
-      }
-    ]
-  }
-  , "1590402160":
-  {
-    "nodes":
-    [
-      {
-        "name":"Feedback"
-        , "id":1599268288
-        , "start":"1.00"
-        , "end":"2.00"
-        , "subtype":"push"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Feedback Write"
-            , "Variable":"Unknown variable"
-            , "Feedback FIFO Depth":"1"
-            , "Feedback FIFO Width":"1"
-            , "Start Cycle":"1"
-            , "Latency":"1"
-          }
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"?"
-        , "id":1626610640
-        , "start":"1.00"
-        , "end":"2.00"
-        , "subtype":"pop"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Feedback Read"
-            , "Variable":"Unknown variable"
-            , "Start Cycle":"1"
-            , "Latency":"1"
-          }
-        ]
-        , "type":"inst"
-      }
-    ]
-    , "links":
-    [
-      {
-        "from":1599268288
-        , "to":1626610640
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1"
-          }
-        ]
-      }
-    ]
-  }
-  , "1590403120":
-  {
-    "nodes":
-    [
-      {
-        "name":"Cluster 5"
-        , "id":1606430736
-        , "start":"0.00"
-        , "end":"2.00"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Cluster Name":"i_sfc_s_c0_in_0tuple_qeaa_xz_exit_windowings_c0_enter129_windowing4"
+            , "Cluster Name":"i_sfc_s_c0_in_wt_entry_windowings_c0_enter1_windowing1"
             , "Cluster Type":"Stall-Enable"
-            , "Cluster Start Cycle":"0"
+            , "Cluster Start Cycle":"1"
+            , "Cluster Latency":"0"
+          }
+        ]
+        , "type":"cluster"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":4166358352
+            , "subtype":"entry"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Logic Start Cycle":"1"
+                , "Cluster Logic Latency":"0"
+              }
+            ]
+            , "type":"inst"
+          }
+        ]
+      }
+      , {
+        "name":"Cluster 2"
+        , "id":4170382464
+        , "start":"1.00"
+        , "end":"3.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c1_in_wt_entry_windowings_c1_enter_windowing6"
+            , "Cluster Type":"Stall-Enable"
+            , "Cluster Start Cycle":"1"
             , "Cluster Latency":"2"
           }
         ]
@@ -578,13 +115,13 @@
         [
           {
             "name":"Logic"
-            , "id":1597281408
+            , "id":4166361888
             , "subtype":"entry"
             , "details":
             [
               {
                 "type":"table"
-                , "Cluster Logic Start Cycle":"0"
+                , "Cluster Logic Start Cycle":"1"
                 , "Cluster Logic Latency":"2"
               }
             ]
@@ -593,221 +130,10 @@
         ]
       }
       , {
-        "name":"Feedback"
-        , "id":1599266944
-        , "start":"0.00"
-        , "end":"1.00"
-        , "subtype":"push"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Feedback Write"
-            , "Variable":"tuple"
-            , "Feedback FIFO Depth":"2"
-            , "Feedback FIFO Width":"1"
-            , "Start Cycle":"0"
-            , "Latency":"1"
-          }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":36
-            }
-          ]
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"Feedback"
-        , "id":1599269632
-        , "start":"16.00"
-        , "end":"17.00"
-        , "subtype":"push"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Feedback Write"
-            , "Variable":"tuple"
-            , "Feedback FIFO Depth":"2"
-            , "Feedback FIFO Width":"1"
-            , "Start Cycle":"16"
-            , "Latency":"1"
-          }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":136
-            }
-          ]
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"Feedback"
-        , "id":1599269968
-        , "start":"9.00"
-        , "end":"10.00"
-        , "subtype":"push"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Feedback Write"
-            , "Variable":"tuple"
-            , "Feedback FIFO Depth":"2"
-            , "Feedback FIFO Width":"1"
-            , "Start Cycle":"9"
-            , "Latency":"1"
-          }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":128
-            }
-          ]
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"Feedback"
-        , "id":1599270304
-        , "start":"24.00"
-        , "end":"25.00"
-        , "subtype":"push"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Feedback Write"
-            , "Variable":"tuple"
-            , "Feedback FIFO Depth":"2"
-            , "Feedback FIFO Width":"1"
-            , "Start Cycle":"24"
-            , "Latency":"1"
-          }
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"Input"
-        , "id":1618225488
-        , "subtype":"default"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Input"
-            , "Preceding Blocks":"windowing.B4"
-          }
-        ]
-        , "type":"inst"
-      }
-      , {
         "name":"RD"
-        , "id":1626605648
-        , "start":"0.00"
-        , "end":"0.00"
-        , "subtype":"default"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Stream Read"
-            , "Width":"352 bits"
-            , "Depth":"0"
-            , "Stream Name":"stream_in_tuple"
-            , "Stall-free":"No"
-            , "Start Cycle":"0"
-            , "Latency":"0"
-          }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
-              , "line":591
-            }
-          ]
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"WR"
-        , "id":1626617552
-        , "start":"2.00"
-        , "end":"2.00"
-        , "subtype":"default"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Stream Write"
-            , "Width":"448 bits"
-            , "Depth":"0"
-            , "Stream Name":"call.aggregation"
-            , "Stall-free":"No"
-            , "Start Cycle":"2"
-            , "Latency":"0"
-          }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
-              , "line":62
-            }
-          ]
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"ST"
-        , "id":1626618320
-        , "start":"2.00"
-        , "end":"9.00"
-        , "subtype":"load/store"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Store"
-            , "Width":"512 bits"
-            , "LSU Style":"Pipelined"
-            , "Stall-free":"No"
-            , "Global Memory":"No"
-            , "Start Cycle":"2"
-            , "Latency":"7"
-          }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":128
-            }
-          ]
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"RD"
-        , "id":1626618512
-        , "start":"9.00"
-        , "end":"9.00"
+        , "id":4168414448
+        , "start":"3.00"
+        , "end":"3.00"
         , "subtype":"default"
         , "details":
         [
@@ -818,7 +144,7 @@
             , "Depth":"0"
             , "Stream Name":"return.aggregation"
             , "Stall-free":"No"
-            , "Start Cycle":"9"
+            , "Start Cycle":"3"
             , "Latency":"0"
           }
         ]
@@ -834,83 +160,57 @@
         , "type":"inst"
       }
       , {
-        "name":"bit.shuffle"
-        , "id":1626618896
-        , "start":"9.00"
-        , "end":"9.00"
+        "name":"WR"
+        , "id":4168417904
+        , "start":"3.00"
+        , "end":"3.00"
         , "subtype":"default"
         , "details":
         [
           {
             "type":"table"
-            , "Instruction":"bit.shuffle"
-            , "Start Cycle":"9"
-            , "Latency":"0"
-          }
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"Or"
-        , "id":1654532272
-        , "start":"16.00"
-        , "end":"16.00"
-        , "subtype":"default"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"1-bit Or"
-            , "Start Cycle":"16"
-            , "Latency":"0"
-          }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":128
-            }
-          ]
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"ST"
-        , "id":1654534576
-        , "start":"9.00"
-        , "end":"16.00"
-        , "subtype":"load/store"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Store"
-            , "Width":"512 bits"
-            , "LSU Style":"Pipelined"
+            , "Instruction":"Stream Write"
+            , "Width":"448 bits"
+            , "Depth":"0"
+            , "Stream Name":"call.aggregation"
             , "Stall-free":"No"
-            , "Global Memory":"No"
-            , "Start Cycle":"9"
-            , "Latency":"7"
+            , "Start Cycle":"3"
+            , "Latency":"0"
           }
         ]
         , "debug":
         [
           [
             {
-              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":136
+              "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
+              , "line":62
             }
           ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Select"
+        , "id":4168861504
+        , "start":"3.00"
+        , "end":"3.00"
+        , "subtype":"select"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Select"
+            , "Start Cycle":"3"
+            , "Latency":"0"
+          }
         ]
         , "type":"inst"
       }
       , {
         "name":"WR"
-        , "id":1654539952
-        , "start":"24.00"
-        , "end":"24.00"
+        , "id":4168862656
+        , "start":"3.00"
+        , "end":"3.00"
         , "subtype":"default"
         , "details":
         [
@@ -919,9 +219,9 @@
             , "Instruction":"Stream Write"
             , "Width":"352 bits"
             , "Depth":"0"
-            , "Stream Name":"stream_out_tuple"
+            , "Stream Name":"s_out"
             , "Stall-free":"No"
-            , "Start Cycle":"24"
+            , "Start Cycle":"3"
             , "Latency":"0"
           }
         ]
@@ -937,10 +237,84 @@
         , "type":"inst"
       }
       , {
+        "name":"RD"
+        , "id":4180997360
+        , "start":"1.00"
+        , "end":"1.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Stream Read"
+            , "Width":"352 bits"
+            , "Depth":"0"
+            , "Stream Name":"s0"
+            , "Stall-free":"No"
+            , "Start Cycle":"1"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
+              , "line":845
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"RD"
+        , "id":4180998896
+        , "start":"1.00"
+        , "end":"1.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Stream Read"
+            , "Width":"1 bit"
+            , "Depth":"0"
+            , "Stream Name":"call.windowing"
+            , "Stall-free":"No"
+            , "Start Cycle":"1"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+              , "line":125
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Loop Input"
+        , "id":4181002544
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Loop Input"
+            , "Preceding Blocks":"windowing.B1.start, windowing.B0.runOnce"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
         "name":"WR"
-        , "id":1654540144
-        , "start":"24.00"
-        , "end":"24.00"
+        , "id":4204614864
+        , "start":"3.00"
+        , "end":"3.00"
         , "subtype":"default"
         , "details":
         [
@@ -951,7 +325,7 @@
             , "Depth":"0"
             , "Stream Name":"return.windowing"
             , "Stall-free":"No"
-            , "Start Cycle":"24"
+            , "Start Cycle":"3"
             , "Latency":"0"
           }
         ]
@@ -960,30 +334,9 @@
           [
             {
               "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":142
+              , "line":141
             }
           ]
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"LD"
-        , "id":1654541104
-        , "start":"16.00"
-        , "end":"24.00"
-        , "subtype":"load/store"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Load"
-            , "Width":"512 bits"
-            , "LSU Style":"Pipelined"
-            , "Stall-free":"No"
-            , "Global Memory":"No"
-            , "Start Cycle":"16"
-            , "Latency":"8"
-          }
         ]
         , "type":"inst"
       }
@@ -991,30 +344,8 @@
     , "links":
     [
       {
-        "from":1618225488
-        , "to":1597281408
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1"
-          }
-        ]
-      }
-      , {
-        "from":1618225488
-        , "to":1654532272
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1"
-          }
-        ]
-      }
-      , {
-        "from":1626605648
-        , "to":1597281408
+        "from":4168414448
+        , "to":4168861504
         , "details":
         [
           {
@@ -1024,173 +355,8 @@
         ]
       }
       , {
-        "from":1626617552
-        , "to":1626618512
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1"
-          }
-        ]
-      }
-      , {
-        "from":1597281408
-        , "to":1626617552
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1024"
-          }
-        ]
-      }
-      , {
-        "from":1626618320
-        , "to":1599269968
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1"
-          }
-        ]
-      }
-      , {
-        "from":1626618320
-        , "to":1654534576
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1"
-          }
-        ]
-      }
-      , {
-        "from":1597281408
-        , "to":1626618320
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1024"
-          }
-        ]
-      }
-      , {
-        "from":1626618512
-        , "to":1654534576
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"352"
-          }
-        ]
-      }
-      , {
-        "from":1626618512
-        , "to":1654540144
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"352"
-          }
-        ]
-      }
-      , {
-        "from":1597281408
-        , "to":1626618512
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1024"
-          }
-        ]
-      }
-      , {
-        "from":1626618896
-        , "to":1654534576
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"64"
-          }
-        ]
-      }
-      , {
-        "from":1597281408
-        , "to":1626618896
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1024"
-          }
-        ]
-      }
-      , {
-        "from":1654532272
-        , "to":1654541104
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1"
-          }
-        ]
-      }
-      , {
-        "from":1654534576
-        , "to":1599269632
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1"
-          }
-        ]
-      }
-      , {
-        "from":1654534576
-        , "to":1654532272
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1"
-          }
-        ]
-      }
-      , {
-        "from":1597281408
-        , "to":1654534576
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1024"
-          }
-        ]
-      }
-      , {
-        "from":1654539952
-        , "to":1654540144
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1"
-          }
-        ]
-      }
-      , {
-        "from":1654541104
-        , "to":1599270304
+        "from":4166361888
+        , "to":4168414448
         , "details":
         [
           {
@@ -1200,25 +366,189 @@
         ]
       }
       , {
-        "from":1654541104
-        , "to":1654539952
+        "from":4168417904
+        , "to":4168414448
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":4166361888
+        , "to":4168417904
         , "details":
         [
           {
             "type":"table"
             , "Width":"512"
+          }
+        ]
+      }
+      , {
+        "from":4168861504
+        , "to":4168862656
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"352"
+          }
+        ]
+      }
+      , {
+        "from":4166361888
+        , "to":4168861504
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"512"
+          }
+        ]
+      }
+      , {
+        "from":4168862656
+        , "to":4204614864
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":4180997360
+        , "to":4168861504
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"352"
+          }
+        ]
+      }
+      , {
+        "from":4180997360
+        , "to":4166361888
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"352"
+          }
+        ]
+      }
+      , {
+        "from":4180998896
+        , "to":4180997360
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":4181002544
+        , "to":4166358352
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
           }
         ]
       }
     ]
   }
-  , "1590403408":
+  , "4162663040":
   {
     "nodes":
     [
       {
-        "name":"Cluster 1"
-        , "id":1595180384
+        "name":"Feedback"
+        , "id":4179527712
+        , "start":"1.00"
+        , "end":"2.00"
+        , "subtype":"push"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Write"
+            , "Variable":"Unknown variable"
+            , "Feedback FIFO Depth":"1"
+            , "Feedback FIFO Width":"1"
+            , "Start Cycle":"1"
+            , "Latency":"1"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+              , "line":48
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"?"
+        , "id":4204619280
+        , "start":"1.00"
+        , "end":"2.00"
+        , "subtype":"pop"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Read"
+            , "Variable":"Unknown variable"
+            , "Start Cycle":"1"
+            , "Latency":"1"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+              , "line":48
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":4179527712
+        , "to":4204619280
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+    ]
+  }
+  , "4162663136":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 4"
+        , "id":4171700736
         , "start":"1.00"
         , "end":"7.00"
         , "details":
@@ -1236,7 +566,7 @@
         [
           {
             "name":"Logic"
-            , "id":1590280368
+            , "id":4161963008
             , "subtype":"entry"
             , "details":
             [
@@ -1251,8 +581,8 @@
         ]
       }
       , {
-        "name":"Cluster 0"
-        , "id":1595164336
+        "name":"Cluster 3"
+        , "id":4171507648
         , "start":"1.00"
         , "end":"1.00"
         , "details":
@@ -1270,7 +600,7 @@
         [
           {
             "name":"Logic"
-            , "id":1590282544
+            , "id":4166361344
             , "subtype":"entry"
             , "details":
             [
@@ -1286,7 +616,7 @@
       }
       , {
         "name":"RD"
-        , "id":1618220880
+        , "id":4204614288
         , "start":"1.00"
         , "end":"1.00"
         , "subtype":"default"
@@ -1308,7 +638,37 @@
           [
             {
               "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":40
+              , "line":48
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"WR"
+        , "id":4204615056
+        , "start":"7.00"
+        , "end":"7.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Stream Write"
+            , "Width":"352 bits"
+            , "Depth":"0"
+            , "Stream Name":"s0"
+            , "Stall-free":"No"
+            , "Start Cycle":"7"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
+              , "line":853
             }
           ]
         ]
@@ -1316,7 +676,7 @@
       }
       , {
         "name":"RD"
-        , "id":1618221264
+        , "id":4204618128
         , "start":"1.00"
         , "end":"1.00"
         , "subtype":"default"
@@ -1327,7 +687,7 @@
             , "Instruction":"Stream Read"
             , "Width":"352 bits"
             , "Depth":"0"
-            , "Stream Name":"stream_in_tuple"
+            , "Stream Name":"s_in"
             , "Stall-free":"No"
             , "Start Cycle":"1"
             , "Latency":"0"
@@ -1346,37 +706,7 @@
       }
       , {
         "name":"WR"
-        , "id":1626604112
-        , "start":"7.00"
-        , "end":"7.00"
-        , "subtype":"default"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Stream Write"
-            , "Width":"352 bits"
-            , "Depth":"0"
-            , "Stream Name":"stream_out_tuple"
-            , "Stall-free":"No"
-            , "Start Cycle":"7"
-            , "Latency":"0"
-          }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
-              , "line":725
-            }
-          ]
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"WR"
-        , "id":1626610448
+        , "id":4204621008
         , "start":"7.00"
         , "end":"7.00"
         , "subtype":"default"
@@ -1398,7 +728,7 @@
           [
             {
               "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":64
+              , "line":69
             }
           ]
         ]
@@ -1408,8 +738,8 @@
     , "links":
     [
       {
-        "from":1618220880
-        , "to":1618221264
+        "from":4204614288
+        , "to":4204618128
         , "details":
         [
           {
@@ -1419,19 +749,8 @@
         ]
       }
       , {
-        "from":1618221264
-        , "to":1590280368
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"352"
-          }
-        ]
-      }
-      , {
-        "from":1626604112
-        , "to":1626610448
+        "from":4204615056
+        , "to":4204621008
         , "details":
         [
           {
@@ -1441,8 +760,8 @@
         ]
       }
       , {
-        "from":1590280368
-        , "to":1626604112
+        "from":4161963008
+        , "to":4204615056
         , "details":
         [
           {
@@ -1451,22 +770,109 @@
           }
         ]
       }
+      , {
+        "from":4204618128
+        , "to":4161963008
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"352"
+          }
+        ]
+      }
     ]
   }
-  , "1590403600":
+  , "4162665920":
   {
     "nodes":
     [
       {
-        "name":"Cluster 2"
-        , "id":1596444352
+        "name":"Feedback"
+        , "id":4179526032
+        , "start":"1.00"
+        , "end":"2.00"
+        , "subtype":"push"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Write"
+            , "Variable":"Unknown variable"
+            , "Feedback FIFO Depth":"1"
+            , "Feedback FIFO Width":"1"
+            , "Start Cycle":"1"
+            , "Latency":"1"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+              , "line":147
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"?"
+        , "id":4181000240
+        , "start":"1.00"
+        , "end":"2.00"
+        , "subtype":"pop"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Read"
+            , "Variable":"Unknown variable"
+            , "Start Cycle":"1"
+            , "Latency":"1"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+              , "line":147
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":4179526032
+        , "to":4181000240
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+    ]
+  }
+  , "4162666400":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 0"
+        , "id":4168881168
         , "start":"1.00"
         , "end":"1.00"
         , "details":
         [
           {
             "type":"table"
-            , "Cluster Name":"i_sfc_s_c0_in_wt_entry_windowings_c0_enter13_windowing1"
+            , "Cluster Name":"i_sfc_s_c0_in_wt_entry_streamers_c0_enter1_streamer0"
             , "Cluster Type":"Stall-Enable"
             , "Cluster Start Cycle":"1"
             , "Cluster Latency":"0"
@@ -1477,7 +883,7 @@
         [
           {
             "name":"Logic"
-            , "id":1597289024
+            , "id":4166357808
             , "subtype":"entry"
             , "details":
             [
@@ -1492,140 +898,60 @@
         ]
       }
       , {
-        "name":"Loop Input"
-        , "id":1618226832
+        "name":"WR"
+        , "id":4180998320
+        , "start":"1.00"
+        , "end":"1.00"
         , "subtype":"default"
         , "details":
         [
           {
             "type":"table"
-            , "Instruction":"Loop Input"
-            , "Preceding Blocks":"windowing.B5, windowing.B0.runOnce"
-          }
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"tuple"
-        , "id":1626606224
-        , "start":"1.00"
-        , "end":"2.00"
-        , "subtype":"pop"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Feedback Read"
-            , "Variable":"tuple"
+            , "Instruction":"Stream Write"
+            , "Width":"1 bit"
+            , "Depth":"0"
+            , "Stream Name":"call.windowing"
+            , "Stall-free":"No"
             , "Start Cycle":"1"
-            , "Latency":"1"
+            , "Latency":"0"
           }
         ]
         , "debug":
         [
           [
             {
-              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":128
+              "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
+              , "line":62
             }
           ]
         ]
         , "type":"inst"
       }
       , {
-        "name":"tuple"
-        , "id":1626608336
+        "name":"WR"
+        , "id":4180999280
         , "start":"1.00"
-        , "end":"2.00"
-        , "subtype":"pop"
+        , "end":"1.00"
+        , "subtype":"default"
         , "details":
         [
           {
             "type":"table"
-            , "Instruction":"Feedback Read"
-            , "Variable":"tuple"
+            , "Instruction":"Stream Write"
+            , "Width":"1 bit"
+            , "Depth":"0"
+            , "Stream Name":"call.projection"
+            , "Stall-free":"No"
             , "Start Cycle":"1"
-            , "Latency":"1"
+            , "Latency":"0"
           }
         ]
         , "debug":
         [
           [
             {
-              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":34
-            }
-          ]
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"tuple"
-        , "id":1626609104
-        , "start":"2.00"
-        , "end":"3.00"
-        , "subtype":"pop"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Feedback Read"
-            , "Variable":"tuple"
-            , "Start Cycle":"2"
-            , "Latency":"1"
-          }
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"tuple"
-        , "id":1626609296
-        , "start":"1.00"
-        , "end":"2.00"
-        , "subtype":"pop"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Feedback Read"
-            , "Variable":"tuple"
-            , "Start Cycle":"1"
-            , "Latency":"1"
-          }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":136
-            }
-          ]
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"tuple"
-        , "id":1626611024
-        , "start":"1.00"
-        , "end":"2.00"
-        , "subtype":"pop"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Feedback Read"
-            , "Variable":"tuple"
-            , "Start Cycle":"1"
-            , "Latency":"1"
-          }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":36
+              "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
+              , "line":62
             }
           ]
         ]
@@ -1633,9 +959,9 @@
       }
       , {
         "name":"RD"
-        , "id":1626611408
-        , "start":"10.00"
-        , "end":"10.00"
+        , "id":4181000432
+        , "start":"1.00"
+        , "end":"1.00"
         , "subtype":"default"
         , "details":
         [
@@ -1644,9 +970,9 @@
             , "Instruction":"Stream Read"
             , "Width":"1 bit"
             , "Depth":"0"
-            , "Stream Name":"call.windowing"
+            , "Stream Name":"call.streamer"
             , "Stall-free":"No"
-            , "Start Cycle":"10"
+            , "Start Cycle":"1"
             , "Latency":"0"
           }
         ]
@@ -1655,29 +981,59 @@
           [
             {
               "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":120
+              , "line":147
             }
           ]
         ]
         , "type":"inst"
       }
       , {
-        "name":"ST"
-        , "id":1626612944
-        , "start":"3.00"
-        , "end":"10.00"
-        , "subtype":"load/store"
+        "name":"RD"
+        , "id":4181000624
+        , "start":"1.00"
+        , "end":"1.00"
+        , "subtype":"default"
         , "details":
         [
           {
             "type":"table"
-            , "Instruction":"Store"
-            , "Width":"64 bits"
-            , "LSU Style":"Pipelined"
+            , "Instruction":"Stream Read"
+            , "Width":"1 bit"
+            , "Depth":"0"
+            , "Stream Name":"return.windowing"
             , "Stall-free":"No"
-            , "Global Memory":"No"
-            , "Start Cycle":"3"
-            , "Latency":"7"
+            , "Start Cycle":"1"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
+              , "line":67
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"WR"
+        , "id":4181001008
+        , "start":"1.00"
+        , "end":"1.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Stream Write"
+            , "Width":"1 bit"
+            , "Depth":"0"
+            , "Stream Name":"return.streamer"
+            , "Stall-free":"No"
+            , "Start Cycle":"1"
+            , "Latency":"0"
           }
         ]
         , "debug":
@@ -1685,7 +1041,37 @@
           [
             {
               "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":33
+              , "line":154
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"RD"
+        , "id":4181002736
+        , "start":"1.00"
+        , "end":"1.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Stream Read"
+            , "Width":"1 bit"
+            , "Depth":"0"
+            , "Stream Name":"return.projection"
+            , "Stall-free":"No"
+            , "Start Cycle":"1"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
+              , "line":67
             }
           ]
         ]
@@ -1695,8 +1081,8 @@
     , "links":
     [
       {
-        "from":1618226832
-        , "to":1597289024
+        "from":4180998320
+        , "to":4181000624
         , "details":
         [
           {
@@ -1706,8 +1092,8 @@
         ]
       }
       , {
-        "from":1626606224
-        , "to":1626612944
+        "from":4180999280
+        , "to":4181002736
         , "details":
         [
           {
@@ -1717,19 +1103,8 @@
         ]
       }
       , {
-        "from":1597289024
-        , "to":1626606224
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"24"
-          }
-        ]
-      }
-      , {
-        "from":1626608336
-        , "to":1626612944
+        "from":4181000432
+        , "to":4180998320
         , "details":
         [
           {
@@ -1739,19 +1114,8 @@
         ]
       }
       , {
-        "from":1597289024
-        , "to":1626608336
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"24"
-          }
-        ]
-      }
-      , {
-        "from":1626609104
-        , "to":1626612944
+        "from":4181000432
+        , "to":4180999280
         , "details":
         [
           {
@@ -1761,19 +1125,8 @@
         ]
       }
       , {
-        "from":1597289024
-        , "to":1626609104
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"24"
-          }
-        ]
-      }
-      , {
-        "from":1626609296
-        , "to":1626612944
+        "from":4181000624
+        , "to":4181001008
         , "details":
         [
           {
@@ -1783,47 +1136,25 @@
         ]
       }
       , {
-        "from":1597289024
-        , "to":1626609296
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"24"
-          }
-        ]
-      }
-      , {
-        "from":1626611024
-        , "to":1626612944
+        "from":4181002736
+        , "to":4181001008
         , "details":
         [
           {
             "type":"table"
             , "Width":"1"
-          }
-        ]
-      }
-      , {
-        "from":1597289024
-        , "to":1626611024
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"24"
           }
         ]
       }
     ]
   }
-  , "1590404656":
+  , "4162666592":
   {
     "nodes":
     [
       {
-        "name":"Cluster 6"
-        , "id":1597803824
+        "name":"Cluster 5"
+        , "id":4172670480
         , "start":"1.00"
         , "end":"25.00"
         , "details":
@@ -1841,7 +1172,7 @@
         [
           {
             "name":"Logic"
-            , "id":1607648288
+            , "id":4171696448
             , "subtype":"entry"
             , "details":
             [
@@ -1856,8 +1187,8 @@
         ]
       }
       , {
-        "name":"Cluster 7"
-        , "id":1597799792
+        "name":"Cluster 6"
+        , "id":4172672320
         , "start":"25.00"
         , "end":"78.00"
         , "details":
@@ -1875,7 +1206,7 @@
         [
           {
             "name":"Logic"
-            , "id":1607650464
+            , "id":4171695088
             , "subtype":"entry"
             , "details":
             [
@@ -1889,7 +1220,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1601049312
+            , "id":4166486192
             , "subtype":"exit"
             , "details":
             [
@@ -1908,7 +1239,7 @@
       }
       , {
         "name":"Loop Input"
-        , "id":1618220496
+        , "id":4180996592
         , "subtype":"default"
         , "details":
         [
@@ -1922,7 +1253,7 @@
       }
       , {
         "name":"RD"
-        , "id":1654530544
+        , "id":4204620048
         , "start":"25.00"
         , "end":"25.00"
         , "subtype":"default"
@@ -1944,7 +1275,7 @@
           [
             {
               "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":66
+              , "line":71
             }
           ]
         ]
@@ -1952,7 +1283,7 @@
       }
       , {
         "name":"WR"
-        , "id":1654542064
+        , "id":4204620240
         , "start":"78.00"
         , "end":"78.00"
         , "subtype":"default"
@@ -1974,7 +1305,7 @@
           [
             {
               "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":117
+              , "line":122
             }
           ]
         ]
@@ -1984,12 +1315,12 @@
     , "links":
     [
       {
-        "from":1607650464
-        , "to":1601049312
+        "from":4171695088
+        , "to":4166486192
       }
       , {
-        "from":1618220496
-        , "to":1607648288
+        "from":4180996592
+        , "to":4171696448
         , "details":
         [
           {
@@ -1999,8 +1330,8 @@
         ]
       }
       , {
-        "from":1654530544
-        , "to":1607650464
+        "from":4204620048
+        , "to":4171695088
         , "details":
         [
           {
@@ -2010,8 +1341,8 @@
         ]
       }
       , {
-        "from":1601049312
-        , "to":1654542064
+        "from":4166486192
+        , "to":4204620240
         , "details":
         [
           {
@@ -2022,110 +1353,45 @@
       }
     ]
   }
-  , "1590404752":
+  , "4162667360":
   {
     "nodes":
     [
       {
         "name":"Feedback"
-        , "id":1599271984
-        , "start":"0.00"
-        , "end":"1.00"
+        , "id":4179529392
+        , "start":"1.00"
+        , "end":"2.00"
         , "subtype":"push"
         , "details":
         [
           {
             "type":"table"
             , "Instruction":"Feedback Write"
-            , "Variable":"tuple"
-            , "Feedback FIFO Depth":"2"
+            , "Variable":"Unknown variable"
+            , "Feedback FIFO Depth":"1"
             , "Feedback FIFO Width":"1"
-            , "Start Cycle":"0"
+            , "Start Cycle":"1"
             , "Latency":"1"
           }
         ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":34
-            }
-          ]
-        ]
         , "type":"inst"
       }
       , {
-        "name":"Input"
-        , "id":1618220304
-        , "subtype":"default"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Input"
-            , "Preceding Blocks":"windowing.B2"
-          }
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"ST"
-        , "id":1626606800
+        "name":"?"
+        , "id":4204616976
         , "start":"1.00"
-        , "end":"8.00"
-        , "subtype":"load/store"
+        , "end":"2.00"
+        , "subtype":"pop"
         , "details":
         [
           {
             "type":"table"
-            , "Instruction":"Store"
-            , "Width":"32 bits"
-            , "LSU Style":"Pipelined"
-            , "Stall-free":"No"
-            , "Global Memory":"No"
+            , "Instruction":"Feedback Read"
+            , "Variable":"Unknown variable"
             , "Start Cycle":"1"
-            , "Latency":"7"
+            , "Latency":"1"
           }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":36
-            }
-          ]
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"ST"
-        , "id":1626608144
-        , "start":"1.00"
-        , "end":"8.00"
-        , "subtype":"load/store"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Store"
-            , "Width":"8 bits"
-            , "LSU Style":"Pipelined"
-            , "Stall-free":"No"
-            , "Global Memory":"No"
-            , "Start Cycle":"1"
-            , "Latency":"7"
-          }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-              , "line":35
-            }
-          ]
         ]
         , "type":"inst"
       }
@@ -2133,8 +1399,8 @@
     , "links":
     [
       {
-        "from":1618220304
-        , "to":1626606800
+        "from":4179529392
+        , "to":4204616976
         , "details":
         [
           {

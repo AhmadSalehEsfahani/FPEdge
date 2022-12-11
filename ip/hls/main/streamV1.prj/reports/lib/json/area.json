@@ -4,9 +4,9 @@
   , "debug_enabled":"true"
   , "type":"module"
   , "total_percent":
-  [28.3476, 24.0499, 7.36137, 9.33852, 5.35714]
+  [12.5235, 7.98744, 5.27096, 3.11284, 5.35714]
   , "total":
-  [22832, 16132, 48, 6, 176]
+  [7692, 11551, 16, 6, 53]
   , "name":"System"
   , "max_resources":
   [109572, 219144, 514, 112, 5478]
@@ -17,9 +17,9 @@
       , "compute_units":1
       , "type":"function"
       , "total_percent":
-      [10.2289, 6.52904, 4.30128, 3.11284, 3.57143]
+      [10.2298, 6.52539, 4.30493, 3.11284, 3.57143]
       , "total_kernel_resources":
-      [6454, 9426, 16, 3.5, 35]
+      [6450, 9434, 16, 3.5, 35]
       , "details":
       [
         {
@@ -68,7 +68,7 @@
           ]
         }
         , {
-          "name":"Variable: \n - 'avg' (main.cpp:73)"
+          "name":"Variable: \n - 'avg' (main.cpp:78)"
           , "type":"resource"
           , "data":
           [0, 0, 0, 0, 2]
@@ -77,7 +77,7 @@
             [
               {
                 "filename":"main.cpp"
-                , "line":73
+                , "line":78
               }
             ]
           ]
@@ -105,7 +105,7 @@
           ]
         }
         , {
-          "name":"Variable: \n - 'count' (main.cpp:73)"
+          "name":"Variable: \n - 'count' (main.cpp:78)"
           , "type":"resource"
           , "data":
           [85, 156, 0, 0, 2]
@@ -114,7 +114,7 @@
             [
               {
                 "filename":"main.cpp"
-                , "line":73
+                , "line":78
               }
             ]
           ]
@@ -142,7 +142,7 @@
           ]
         }
         , {
-          "name":"Variable: \n - 'max' (main.cpp:73)"
+          "name":"Variable: \n - 'max' (main.cpp:78)"
           , "type":"resource"
           , "data":
           [0, 0, 0, 0, 2]
@@ -151,7 +151,7 @@
             [
               {
                 "filename":"main.cpp"
-                , "line":73
+                , "line":78
               }
             ]
           ]
@@ -179,7 +179,7 @@
           ]
         }
         , {
-          "name":"Variable: \n - 'min' (main.cpp:73)"
+          "name":"Variable: \n - 'min' (main.cpp:78)"
           , "type":"resource"
           , "data":
           [0, 0, 0, 0, 2]
@@ -188,7 +188,7 @@
             [
               {
                 "filename":"main.cpp"
-                , "line":73
+                , "line":78
               }
             ]
           ]
@@ -216,7 +216,7 @@
           ]
         }
         , {
-          "name":"Variable: \n - 'sum' (main.cpp:73)"
+          "name":"Variable: \n - 'sum' (main.cpp:78)"
           , "type":"resource"
           , "data":
           [85, 156, 0, 0, 2]
@@ -225,7 +225,7 @@
             [
               {
                 "filename":"main.cpp"
-                , "line":73
+                , "line":78
               }
             ]
           ]
@@ -261,7 +261,7 @@
               "name":"State"
               , "type":"resource"
               , "data":
-              [496, 2214, 4, 0, 14]
+              [492, 2222, 4, 0, 14]
               , "details":
               [
                 {
@@ -294,7 +294,7 @@
                   "name":"No Source Line"
                   , "type":"resource"
                   , "data":
-                  [496, 2214, 4, 0, 14]
+                  [492, 2222, 4, 0, 14]
                 }
               ]
             }
@@ -324,7 +324,7 @@
               , "children":
               [
                 {
-                  "name":"main.cpp:66 > main.cpp:73"
+                  "name":"main.cpp:71 > main.cpp:78"
                   , "type":"resource"
                   , "data":
                   [44, 48, 0, 0, 1]
@@ -333,11 +333,11 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":66
+                        , "line":71
                       }
                       , {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":73
+                        , "line":78
                       }
                     ]
                   ]
@@ -392,7 +392,7 @@
                   ]
                 }
                 , {
-                  "name":"main.cpp:66 > main.cpp:73"
+                  "name":"main.cpp:71 > main.cpp:78"
                   , "type":"resource"
                   , "data":
                   [81.0833, 17.75, 0, 0, 0]
@@ -401,11 +401,11 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":66
+                        , "line":71
                       }
                       , {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":73
+                        , "line":78
                       }
                     ]
                   ]
@@ -443,7 +443,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:66"
+                  "name":"main.cpp:71"
                   , "type":"resource"
                   , "data":
                   [1, 0, 0, 0, 0]
@@ -452,7 +452,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":66
+                        , "line":71
                       }
                     ]
                   ]
@@ -469,7 +469,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:75"
+                  "name":"main.cpp:80"
                   , "type":"resource"
                   , "data":
                   [0.5, 0.5, 0, 0, 0]
@@ -478,7 +478,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":75
+                        , "line":80
                       }
                     ]
                   ]
@@ -495,7 +495,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:76"
+                  "name":"main.cpp:81"
                   , "type":"resource"
                   , "data":
                   [1, 1, 0, 0, 0]
@@ -504,7 +504,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":76
+                        , "line":81
                       }
                     ]
                   ]
@@ -521,7 +521,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:77"
+                  "name":"main.cpp:82"
                   , "type":"resource"
                   , "data":
                   [991, 1113.33, 0, 0, 3]
@@ -530,7 +530,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":77
+                        , "line":82
                       }
                     ]
                   ]
@@ -554,7 +554,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:79"
+                  "name":"main.cpp:84"
                   , "type":"resource"
                   , "data":
                   [0.5, 0.5, 0, 0, 0]
@@ -563,7 +563,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":79
+                        , "line":84
                       }
                     ]
                   ]
@@ -580,7 +580,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:80"
+                  "name":"main.cpp:85"
                   , "type":"resource"
                   , "data":
                   [1373, 1722.67, 0, 0, 3]
@@ -589,7 +589,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":80
+                        , "line":85
                       }
                     ]
                   ]
@@ -620,7 +620,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:81"
+                  "name":"main.cpp:86"
                   , "type":"resource"
                   , "data":
                   [16, 5.33333, 0, 0, 0]
@@ -629,7 +629,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":81
+                        , "line":86
                       }
                     ]
                   ]
@@ -646,7 +646,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:82"
+                  "name":"main.cpp:87"
                   , "type":"resource"
                   , "data":
                   [540, 863, 4, 3.5, 1]
@@ -655,7 +655,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":82
+                        , "line":87
                       }
                     ]
                   ]
@@ -679,7 +679,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:84"
+                  "name":"main.cpp:89"
                   , "type":"resource"
                   , "data":
                   [1.5, 1.5, 0, 0, 0]
@@ -688,7 +688,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":84
+                        , "line":89
                       }
                     ]
                   ]
@@ -705,7 +705,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:85"
+                  "name":"main.cpp:90"
                   , "type":"resource"
                   , "data":
                   [16, 5.33333, 0, 0, 0]
@@ -714,7 +714,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":85
+                        , "line":90
                       }
                     ]
                   ]
@@ -731,7 +731,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:86"
+                  "name":"main.cpp:91"
                   , "type":"resource"
                   , "data":
                   [556.833, 649, 0, 0, 0]
@@ -740,7 +740,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":86
+                        , "line":91
                       }
                     ]
                   ]
@@ -792,7 +792,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:90"
+                  "name":"main.cpp:95"
                   , "type":"resource"
                   , "data":
                   [0.75, 0.75, 0, 0, 0]
@@ -801,7 +801,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":90
+                        , "line":95
                       }
                     ]
                   ]
@@ -818,7 +818,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:91"
+                  "name":"main.cpp:96"
                   , "type":"resource"
                   , "data":
                   [16, 5.33333, 0, 0, 0]
@@ -827,7 +827,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":91
+                        , "line":96
                       }
                     ]
                   ]
@@ -844,7 +844,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:92"
+                  "name":"main.cpp:97"
                   , "type":"resource"
                   , "data":
                   [493.833, 618, 0, 0, 0]
@@ -853,7 +853,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":92
+                        , "line":97
                       }
                     ]
                   ]
@@ -898,7 +898,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:97"
+                  "name":"main.cpp:102"
                   , "type":"resource"
                   , "data":
                   [16, 5.33333, 0, 0, 0]
@@ -907,7 +907,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":97
+                        , "line":102
                       }
                     ]
                   ]
@@ -924,7 +924,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:98"
+                  "name":"main.cpp:103"
                   , "type":"resource"
                   , "data":
                   [1373, 1722.67, 0, 0, 3]
@@ -933,7 +933,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":98
+                        , "line":103
                       }
                     ]
                   ]
@@ -964,7 +964,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:108"
+                  "name":"main.cpp:113"
                   , "type":"resource"
                   , "data":
                   [134, 0, 0, 0, 0]
@@ -973,7 +973,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":108
+                        , "line":113
                       }
                     ]
                   ]
@@ -997,7 +997,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:117"
+                  "name":"main.cpp:122"
                   , "type":"resource"
                   , "data":
                   [3, 2, 0, 0, 0]
@@ -1006,7 +1006,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":117
+                        , "line":122
                       }
                     ]
                   ]
@@ -1050,41 +1050,7 @@
       , "children":
       [
         {
-          "name":"Component call"
-          , "type":"resource"
-          , "data":
-          [0, 0, 0, 0, 0]
-          , "details":
-          [
-            {
-              "type":"text"
-              , "text":"Stream implemented 1 bit wide with a buffer size of 0 elements."
-            }
-            , {
-              "type":"brief"
-              , "text":"1b wide with 0 elements."
-            }
-          ]
-        }
-        , {
-          "name":"Component return"
-          , "type":"resource"
-          , "data":
-          [0, 0, 0, 0, 0]
-          , "details":
-          [
-            {
-              "type":"text"
-              , "text":"Stream implemented 1 bit wide with a buffer size of 0 elements."
-            }
-            , {
-              "type":"brief"
-              , "text":"1b wide with 0 elements."
-            }
-          ]
-        }
-        , {
-          "name":"Stream 'stream_in_tuple'"
+          "name":"Stream 's0'"
           , "type":"resource"
           , "data":
           [0, 0, 0, 0, 0]
@@ -1101,7 +1067,7 @@
           ]
         }
         , {
-          "name":"Stream 'stream_out_tuple'"
+          "name":"Stream 's_in'"
           , "type":"resource"
           , "data":
           [0, 0, 0, 0, 0]
@@ -1114,6 +1080,40 @@
             , {
               "type":"brief"
               , "text":"352b wide with 0 elements."
+            }
+          ]
+        }
+        , {
+          "name":"Task call"
+          , "type":"resource"
+          , "data":
+          [0, 0, 0, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Stream implemented 1 bit wide with a buffer size of 0 elements."
+            }
+            , {
+              "type":"brief"
+              , "text":"1b wide with 0 elements."
+            }
+          ]
+        }
+        , {
+          "name":"Task return"
+          , "type":"resource"
+          , "data":
+          [0, 0, 0, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Stream implemented 1 bit wide with a buffer size of 0 elements."
+            }
+            , {
+              "type":"brief"
+              , "text":"1b wide with 0 elements."
             }
           ]
         }
@@ -1189,10 +1189,19 @@
               , "children":
               [
                 {
-                  "name":"No Source Line"
+                  "name":"main.cpp:48"
                   , "type":"resource"
                   , "data":
                   [7, 7, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                        , "line":48
+                      }
+                    ]
+                  ]
                 }
               ]
             }
@@ -1244,7 +1253,7 @@
                   ]
                 }
                 , {
-                  "name":"main.cpp:46 > _stream.h:591"
+                  "name":"main.cpp:51 > _stream.h:591"
                   , "type":"resource"
                   , "data":
                   [3, 0, 0, 0, 0]
@@ -1253,7 +1262,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":46
+                        , "line":51
                       }
                       , {
                         "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
@@ -1274,7 +1283,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:49 > _stream.h:725"
+                  "name":"main.cpp:54 > _stream.h:853"
                   , "type":"resource"
                   , "data":
                   [1.5, 1, 0, 0, 0]
@@ -1283,11 +1292,11 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":49
+                        , "line":54
                       }
                       , {
                         "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
-                        , "line":725
+                        , "line":853
                       }
                     ]
                   ]
@@ -1304,7 +1313,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:61 > _stream.h:725"
+                  "name":"main.cpp:66 > _stream.h:853"
                   , "type":"resource"
                   , "data":
                   [1.5, 1, 0, 0, 0]
@@ -1313,11 +1322,11 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":61
+                        , "line":66
                       }
                       , {
                         "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
-                        , "line":725
+                        , "line":853
                       }
                     ]
                   ]
@@ -1334,7 +1343,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:40"
+                  "name":"main.cpp:48"
                   , "type":"resource"
                   , "data":
                   [1, 0, 0, 0, 0]
@@ -1343,7 +1352,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":40
+                        , "line":48
                       }
                     ]
                   ]
@@ -1360,7 +1369,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:55"
+                  "name":"main.cpp:60"
                   , "type":"resource"
                   , "data":
                   [68, 35, 0, 2, 0]
@@ -1369,7 +1378,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":55
+                        , "line":60
                       }
                     ]
                   ]
@@ -1386,7 +1395,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:57"
+                  "name":"main.cpp:62"
                   , "type":"resource"
                   , "data":
                   [35, 1, 0, 0, 0]
@@ -1395,7 +1404,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":57
+                        , "line":62
                       }
                     ]
                   ]
@@ -1412,7 +1421,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:64"
+                  "name":"main.cpp:69"
                   , "type":"resource"
                   , "data":
                   [3, 2, 0, 0, 0]
@@ -1421,7 +1430,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":64
+                        , "line":69
                       }
                     ]
                   ]
@@ -1444,13 +1453,13 @@
       ]
     }
     , {
-      "name":"windowing"
+      "name":"streamer"
       , "compute_units":1
       , "type":"function"
       , "total_percent":
-      [17.0492, 16.7479, 2.67952, 6.22568, 0]
+      [0.0241996, 0.0209908, 0.00593217, 0, 0]
       , "total_kernel_resources":
-      [15891, 5872, 32, 0, 123]
+      [23, 13, 0, 0, 0]
       , "details":
       [
         {
@@ -1499,176 +1508,15 @@
           ]
         }
         , {
-          "name":"Stream 'stream_in_tuple'"
-          , "type":"resource"
-          , "data":
-          [0, 0, 0, 0, 0]
-          , "details":
-          [
-            {
-              "type":"text"
-              , "text":"Stream implemented 352 bits wide with a buffer size of 0 elements."
-            }
-            , {
-              "type":"brief"
-              , "text":"352b wide with 0 elements."
-            }
-          ]
-        }
-        , {
-          "name":"Stream 'stream_out_tuple'"
-          , "type":"resource"
-          , "data":
-          [0, 0, 0, 0, 0]
-          , "details":
-          [
-            {
-              "type":"text"
-              , "text":"Stream implemented 352 bits wide with a buffer size of 0 elements."
-            }
-            , {
-              "type":"brief"
-              , "text":"352b wide with 0 elements."
-            }
-          ]
-        }
-        , {
-          "name":"Variable: \n - 'i' (main.cpp:125)"
-          , "type":"resource"
-          , "data":
-          [7, 36, 0, 0, 0]
-          , "debug":
-          [
-            [
-              {
-                "filename":"main.cpp"
-                , "line":125
-              }
-            ]
-          ]
-          , "details":
-          [
-            {
-              "type":"text"
-              , "text":"Type: Register"
-            }
-            , {
-              "type":"text"
-              , "text":"1 register of width 32 bits and depth 1"
-            }
-            , {
-              "type":"brief"
-              , "text":"Register,\n1 reg, 32 width by 1 depth"
-            }
-          ]
-        }
-        , {
-          "name":"main.cpp:126 (tuple)"
-          , "type":"resource"
-          , "data":
-          [0, 0, 32, 0, 0]
-          , "debug":
-          [
-            [
-              {
-                "filename":"main.cpp"
-                , "line":126
-              }
-            ]
-          ]
-          , "details":
-          [
-            {
-              "type":"table"
-              , "Memory system":"Potentially inefficient configuration"
-              , "Requested size":"44 bytes"
-              , "Implemented size":"64 bytes"
-              , "Memory Usage":"32 RAMs"
-              , "Number of banks":"1"
-              , "Bank width":"512 bits"
-              , "Bank depth":"1 word"
-              , "Number of replicates":"1"
-              , "Number of private copies":"1"
-              , "Additional information":
-              [
-                {
-                  "type":"text"
-                  , "text":"Shallow memory implemented in RAMs instead of MLABs because MLABs cannot be configured in true dual-port mode."
-                }
-                , {
-                  "type":"text"
-                  , "text":"RAM usage is increased from 16 RAMs to 32 RAMs because the width of individual RAM blocks in true dual-port mode is limited to 20 bits."
-                }
-                , {
-                  "type":"text"
-                  , "text":"Requested size 44 bytes, implemented size 64 bytes, <b>stallable</b>, 1 read and 7 writes. "
-                  , "details":
-                  [
-                    {
-                      "type":"text"
-                      , "text":"Reduce the number of write accesses or fix banking to make this memory system stall-free. Banking may be improved by using compile-time known indexing on lowest array dimension."
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"brief"
-              , "text":"Potentially inefficient configuration,\n44B requested,\n64B implemented."
-            }
-          ]
-        }
-        , {
-          "name":"windowing.B1.start"
+          "name":"streamer.B1.start"
           , "type":"basicblock"
           , "children":
           [
             {
-              "name":"State"
-              , "type":"resource"
-              , "data":
-              [39, 43, 0, 0, 1]
-              , "details":
-              [
-                {
-                  "type":"brief"
-                  , "text":"Live values and control logic"
-                }
-                , {
-                  "type":"text"
-                  , "text":"Resources for live values and control logic. To reduce this area:"
-                  , "details":
-                  [
-                    {
-                      "type":"text"
-                      , "text":"reduce size of local variables"
-                    }
-                    , {
-                      "type":"text"
-                      , "text":"reduce scope of local variables, localizing them as much as possible"
-                    }
-                    , {
-                      "type":"text"
-                      , "text":"reduce number of nested loops"
-                    }
-                  ]
-                }
-              ]
-              , "children":
-              [
-                {
-                  "name":"No Source Line"
-                  , "type":"resource"
-                  , "data":
-                  [39, 43, 0, 0, 1]
-                }
-              ]
-            }
-            , {
               "name":"Feedback"
               , "type":"resource"
               , "data":
-              [42, 17, 0, 0, 0]
+              [7, 7, 0, 0, 0]
               , "details":
               [
                 {
@@ -1690,13 +1538,7 @@
               , "children":
               [
                 {
-                  "name":"No Source Line"
-                  , "type":"resource"
-                  , "data":
-                  [7, 2, 0, 0, 0]
-                }
-                , {
-                  "name":"main.cpp:120 > main.cpp:125"
+                  "name":"main.cpp:147"
                   , "type":"resource"
                   , "data":
                   [7, 7, 0, 0, 0]
@@ -1704,80 +1546,8 @@
                   [
                     [
                       {
-                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":120
-                      }
-                      , {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":125
-                      }
-                    ]
-                  ]
-                }
-                , {
-                  "name":"main.cpp:126 > main.cpp:34"
-                  , "type":"resource"
-                  , "data":
-                  [7, 2, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":126
-                      }
-                      , {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":34
-                      }
-                    ]
-                  ]
-                }
-                , {
-                  "name":"main.cpp:126 > main.cpp:36"
-                  , "type":"resource"
-                  , "data":
-                  [7, 2, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":126
-                      }
-                      , {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":36
-                      }
-                    ]
-                  ]
-                }
-                , {
-                  "name":"main.cpp:128"
-                  , "type":"resource"
-                  , "data":
-                  [7, 2, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":128
-                      }
-                    ]
-                  ]
-                }
-                , {
-                  "name":"main.cpp:136"
-                  , "type":"resource"
-                  , "data":
-                  [7, 2, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":136
+                        , "line":147
                       }
                     ]
                   ]
@@ -1807,1265 +1577,7 @@
               , "children":
               [
                 {
-                  "name":"main.cpp:126 > main.cpp:33"
-                  , "type":"resource"
-                  , "data":
-                  [120.5, 184.5, 0, 0, 3]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":126
-                      }
-                      , {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":33
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"Store"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [120.5, 184.5, 0, 0, 3]
-                      , "details":
-                      [
-                        {
-                          "type":"text"
-                          , "text":"Store uses a Pipelined LSU"
-                        }
-                        , {
-                          "type":"brief"
-                          , "text":"Pipelined LSU"
-                        }
-                        , {
-                          "type":"text"
-                          , "text":"Stallable write to memory declared on %L."
-                          , "links":
-                          [
-                            {
-                              "filename":"main.cpp"
-                              , "line":"126"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:126 > main.cpp:34"
-                  , "type":"resource"
-                  , "data":
-                  [121.5, 185, 0, 0, 3]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":126
-                      }
-                      , {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":34
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"1-bit Or"
-                      , "type":"resource"
-                      , "count":4
-                      , "data":
-                      [1, 0.5, 0, 0, 0]
-                    }
-                    , {
-                      "name":"Store"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [120.5, 184.5, 0, 0, 3]
-                      , "details":
-                      [
-                        {
-                          "type":"text"
-                          , "text":"Store uses a Pipelined LSU"
-                        }
-                        , {
-                          "type":"brief"
-                          , "text":"Pipelined LSU"
-                        }
-                        , {
-                          "type":"text"
-                          , "text":"Stallable write to memory declared on %L."
-                          , "links":
-                          [
-                            {
-                              "filename":"main.cpp"
-                              , "line":"126"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:126 > main.cpp:36"
-                  , "type":"resource"
-                  , "data":
-                  [1, 0.5, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":126
-                      }
-                      , {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":36
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"1-bit Or"
-                      , "type":"resource"
-                      , "count":4
-                      , "data":
-                      [1, 0.5, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:120"
-                  , "type":"resource"
-                  , "data":
-                  [1, 0, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":120
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"Stream Read"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [1, 0, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:128"
-                  , "type":"resource"
-                  , "data":
-                  [1, 0.5, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":128
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"1-bit Or"
-                      , "type":"resource"
-                      , "count":4
-                      , "data":
-                      [1, 0.5, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:136"
-                  , "type":"resource"
-                  , "data":
-                  [1, 0.5, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":136
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"1-bit Or"
-                      , "type":"resource"
-                      , "count":4
-                      , "data":
-                      [1, 0.5, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-              ]
-            }
-          ]
-        }
-        , {
-          "name":"windowing.B2"
-          , "type":"basicblock"
-          , "children":
-          [
-            {
-              "name":"State"
-              , "type":"resource"
-              , "data":
-              [28, 58, 0, 0, 0]
-              , "details":
-              [
-                {
-                  "type":"brief"
-                  , "text":"Live values and control logic"
-                }
-                , {
-                  "type":"text"
-                  , "text":"Resources for live values and control logic. To reduce this area:"
-                  , "details":
-                  [
-                    {
-                      "type":"text"
-                      , "text":"reduce size of local variables"
-                    }
-                    , {
-                      "type":"text"
-                      , "text":"reduce scope of local variables, localizing them as much as possible"
-                    }
-                    , {
-                      "type":"text"
-                      , "text":"reduce number of nested loops"
-                    }
-                  ]
-                }
-              ]
-              , "children":
-              [
-                {
-                  "name":"No Source Line"
-                  , "type":"resource"
-                  , "data":
-                  [28, 58, 0, 0, 0]
-                }
-              ]
-            }
-            , {
-              "name":"Feedback"
-              , "type":"resource"
-              , "data":
-              [96, 133, 0, 0, 0]
-              , "details":
-              [
-                {
-                  "type":"brief"
-                  , "text":"Loop-carried dependencies"
-                }
-                , {
-                  "type":"text"
-                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
-                  , "details":
-                  [
-                    {
-                      "type":"text"
-                      , "text":"reduce number and size of loop-carried variables"
-                    }
-                  ]
-                }
-              ]
-              , "children":
-              [
-                {
-                  "name":"No Source Line"
-                  , "type":"resource"
-                  , "data":
-                  [25, 78, 0, 0, 0]
-                }
-                , {
-                  "name":"main.cpp:126 > main.cpp:34"
-                  , "type":"resource"
-                  , "data":
-                  [41, 36.25, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":126
-                      }
-                      , {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":34
-                      }
-                    ]
-                  ]
-                }
-                , {
-                  "name":"main.cpp:126 > main.cpp:36"
-                  , "type":"resource"
-                  , "data":
-                  [10, 6.25, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":126
-                      }
-                      , {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":36
-                      }
-                    ]
-                  ]
-                }
-                , {
-                  "name":"main.cpp:128"
-                  , "type":"resource"
-                  , "data":
-                  [10, 6.25, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":128
-                      }
-                    ]
-                  ]
-                }
-                , {
-                  "name":"main.cpp:136"
-                  , "type":"resource"
-                  , "data":
-                  [10, 6.25, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":136
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-            , {
-              "name":"Cluster logic"
-              , "type":"resource"
-              , "data":
-              [8, 6, 0, 0, 4]
-              , "details":
-              [
-                {
-                  "type":"brief"
-                  , "text":"Logic required to efficiently support sets of operations that do not stall"
-                }
-                , {
-                  "type":"text"
-                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
-                }
-              ]
-            }
-            , {
-              "name":"Computation"
-              , "type":"resource"
-              , "children":
-              [
-                {
-                  "name":"main.cpp:126 > main.cpp:34"
-                  , "type":"resource"
-                  , "data":
-                  [6671, 186, 0, 0, 4]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":126
-                      }
-                      , {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":34
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"1-bit And"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [1, 0, 0, 0, 0]
-                    }
-                    , {
-                      "name":"1-bit Or"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [1, 0, 0, 0, 0]
-                    }
-                    , {
-                      "name":"2-bit Select"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [2, 0, 0, 0, 0]
-                    }
-                    , {
-                      "name":"Store"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [6667, 186, 0, 0, 4]
-                      , "details":
-                      [
-                        {
-                          "type":"text"
-                          , "text":"Store uses a Pipelined LSU"
-                        }
-                        , {
-                          "type":"brief"
-                          , "text":"Pipelined LSU"
-                        }
-                        , {
-                          "type":"text"
-                          , "text":"Stallable write to memory declared on %L."
-                          , "links":
-                          [
-                            {
-                              "filename":"main.cpp"
-                              , "line":"126"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:128"
-                  , "type":"resource"
-                  , "data":
-                  [0.5, 0, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":128
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"1-bit Or"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [0.5, 0, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:136"
-                  , "type":"resource"
-                  , "data":
-                  [0.5, 0, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":136
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"1-bit Or"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [0.5, 0, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-              ]
-            }
-          ]
-        }
-        , {
-          "name":"windowing.B3"
-          , "type":"basicblock"
-          , "children":
-          [
-            {
-              "name":"State"
-              , "type":"resource"
-              , "data":
-              [42, 55, 0, 0, 1]
-              , "details":
-              [
-                {
-                  "type":"brief"
-                  , "text":"Live values and control logic"
-                }
-                , {
-                  "type":"text"
-                  , "text":"Resources for live values and control logic. To reduce this area:"
-                  , "details":
-                  [
-                    {
-                      "type":"text"
-                      , "text":"reduce size of local variables"
-                    }
-                    , {
-                      "type":"text"
-                      , "text":"reduce scope of local variables, localizing them as much as possible"
-                    }
-                    , {
-                      "type":"text"
-                      , "text":"reduce number of nested loops"
-                    }
-                  ]
-                }
-              ]
-              , "children":
-              [
-                {
-                  "name":"No Source Line"
-                  , "type":"resource"
-                  , "data":
-                  [42, 55, 0, 0, 1]
-                }
-              ]
-            }
-            , {
-              "name":"Feedback"
-              , "type":"resource"
-              , "data":
-              [27, 19, 0, 0, 0]
-              , "details":
-              [
-                {
-                  "type":"brief"
-                  , "text":"Loop-carried dependencies"
-                }
-                , {
-                  "type":"text"
-                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
-                  , "details":
-                  [
-                    {
-                      "type":"text"
-                      , "text":"reduce number and size of loop-carried variables"
-                    }
-                  ]
-                }
-              ]
-              , "children":
-              [
-                {
-                  "name":"main.cpp:126 > main.cpp:34"
-                  , "type":"resource"
-                  , "data":
-                  [27, 19, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":126
-                      }
-                      , {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":34
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-            , {
-              "name":"Computation"
-              , "type":"resource"
-              , "children":
-              [
-                {
-                  "name":"main.cpp:126 > main.cpp:35"
-                  , "type":"resource"
-                  , "data":
-                  [6666, 184, 0, 0, 2]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":126
-                      }
-                      , {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":35
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"Store"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [6666, 184, 0, 0, 2]
-                      , "details":
-                      [
-                        {
-                          "type":"text"
-                          , "text":"Store uses a Pipelined LSU"
-                        }
-                        , {
-                          "type":"brief"
-                          , "text":"Pipelined LSU"
-                        }
-                        , {
-                          "type":"text"
-                          , "text":"Stallable write to memory declared on %L."
-                          , "links":
-                          [
-                            {
-                              "filename":"main.cpp"
-                              , "line":"126"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:126 > main.cpp:36"
-                  , "type":"resource"
-                  , "data":
-                  [255, 261, 0, 0, 4]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":126
-                      }
-                      , {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":36
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"1-bit Or"
-                      , "type":"resource"
-                      , "count":3
-                      , "data":
-                      [1, 0, 0, 0, 0]
-                    }
-                    , {
-                      "name":"Store"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [254, 261, 0, 0, 4]
-                      , "details":
-                      [
-                        {
-                          "type":"text"
-                          , "text":"Store uses a Pipelined LSU"
-                        }
-                        , {
-                          "type":"brief"
-                          , "text":"Pipelined LSU"
-                        }
-                        , {
-                          "type":"text"
-                          , "text":"Stallable write to memory declared on %L."
-                          , "links":
-                          [
-                            {
-                              "filename":"main.cpp"
-                              , "line":"126"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:128"
-                  , "type":"resource"
-                  , "data":
-                  [1, 0, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":128
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"1-bit Or"
-                      , "type":"resource"
-                      , "count":3
-                      , "data":
-                      [1, 0, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:136"
-                  , "type":"resource"
-                  , "data":
-                  [1, 0, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":136
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"1-bit Or"
-                      , "type":"resource"
-                      , "count":3
-                      , "data":
-                      [1, 0, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-              ]
-            }
-          ]
-        }
-        , {
-          "name":"windowing.B4"
-          , "type":"basicblock"
-          , "children":
-          [
-            {
-              "name":"State"
-              , "type":"resource"
-              , "data":
-              [21, 43, 0, 0, 0]
-              , "details":
-              [
-                {
-                  "type":"brief"
-                  , "text":"Live values and control logic"
-                }
-                , {
-                  "type":"text"
-                  , "text":"Resources for live values and control logic. To reduce this area:"
-                  , "details":
-                  [
-                    {
-                      "type":"text"
-                      , "text":"reduce size of local variables"
-                    }
-                    , {
-                      "type":"text"
-                      , "text":"reduce scope of local variables, localizing them as much as possible"
-                    }
-                    , {
-                      "type":"text"
-                      , "text":"reduce number of nested loops"
-                    }
-                  ]
-                }
-              ]
-              , "children":
-              [
-                {
-                  "name":"No Source Line"
-                  , "type":"resource"
-                  , "data":
-                  [21, 43, 0, 0, 0]
-                }
-              ]
-            }
-            , {
-              "name":"Feedback"
-              , "type":"resource"
-              , "data":
-              [88, 128, 0, 0, 0]
-              , "details":
-              [
-                {
-                  "type":"brief"
-                  , "text":"Loop-carried dependencies"
-                }
-                , {
-                  "type":"text"
-                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
-                  , "details":
-                  [
-                    {
-                      "type":"text"
-                      , "text":"reduce number and size of loop-carried variables"
-                    }
-                  ]
-                }
-              ]
-              , "children":
-              [
-                {
-                  "name":"No Source Line"
-                  , "type":"resource"
-                  , "data":
-                  [25, 78, 0, 0, 0]
-                }
-                , {
-                  "name":"main.cpp:126 > main.cpp:36"
-                  , "type":"resource"
-                  , "data":
-                  [41.6667, 36.6667, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":126
-                      }
-                      , {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":36
-                      }
-                    ]
-                  ]
-                }
-                , {
-                  "name":"main.cpp:128"
-                  , "type":"resource"
-                  , "data":
-                  [14.6667, 9.16667, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":128
-                      }
-                    ]
-                  ]
-                }
-                , {
-                  "name":"main.cpp:136"
-                  , "type":"resource"
-                  , "data":
-                  [6.66667, 4.16667, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":136
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-            , {
-              "name":"Cluster logic"
-              , "type":"resource"
-              , "data":
-              [8, 6, 0, 0, 4]
-              , "details":
-              [
-                {
-                  "type":"brief"
-                  , "text":"Logic required to efficiently support sets of operations that do not stall"
-                }
-                , {
-                  "type":"text"
-                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
-                }
-              ]
-            }
-            , {
-              "name":"Computation"
-              , "type":"resource"
-              , "children":
-              [
-                {
-                  "name":"main.cpp:126 > main.cpp:36"
-                  , "type":"resource"
-                  , "data":
-                  [279, 272, 0, 0, 4]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":126
-                      }
-                      , {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":36
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"1-bit And"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [1, 0, 0, 0, 0]
-                    }
-                    , {
-                      "name":"1-bit Or"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [1, 0, 0, 0, 0]
-                    }
-                    , {
-                      "name":"2-bit Select"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [2, 0, 0, 0, 0]
-                    }
-                    , {
-                      "name":"Store"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [275, 272, 0, 0, 4]
-                      , "details":
-                      [
-                        {
-                          "type":"text"
-                          , "text":"Store uses a Pipelined LSU"
-                        }
-                        , {
-                          "type":"brief"
-                          , "text":"Pipelined LSU"
-                        }
-                        , {
-                          "type":"text"
-                          , "text":"Stallable write to memory declared on %L."
-                          , "links":
-                          [
-                            {
-                              "filename":"main.cpp"
-                              , "line":"126"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-              ]
-            }
-          ]
-        }
-        , {
-          "name":"windowing.B5"
-          , "type":"basicblock"
-          , "children":
-          [
-            {
-              "name":"State"
-              , "type":"resource"
-              , "data":
-              [239, 705, 0, 0, 3]
-              , "details":
-              [
-                {
-                  "type":"brief"
-                  , "text":"Live values and control logic"
-                }
-                , {
-                  "type":"text"
-                  , "text":"Resources for live values and control logic. To reduce this area:"
-                  , "details":
-                  [
-                    {
-                      "type":"text"
-                      , "text":"reduce size of local variables"
-                    }
-                    , {
-                      "type":"text"
-                      , "text":"reduce scope of local variables, localizing them as much as possible"
-                    }
-                    , {
-                      "type":"text"
-                      , "text":"reduce number of nested loops"
-                    }
-                  ]
-                }
-              ]
-              , "children":
-              [
-                {
-                  "name":"No Source Line"
-                  , "type":"resource"
-                  , "data":
-                  [239, 705, 0, 0, 3]
-                }
-              ]
-            }
-            , {
-              "name":"Feedback"
-              , "type":"resource"
-              , "data":
-              [109, 76, 0, 0, 0]
-              , "details":
-              [
-                {
-                  "type":"brief"
-                  , "text":"Loop-carried dependencies"
-                }
-                , {
-                  "type":"text"
-                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
-                  , "details":
-                  [
-                    {
-                      "type":"text"
-                      , "text":"reduce number and size of loop-carried variables"
-                    }
-                  ]
-                }
-              ]
-              , "children":
-              [
-                {
-                  "name":"No Source Line"
-                  , "type":"resource"
-                  , "data":
-                  [27, 19, 0, 0, 0]
-                }
-                , {
-                  "name":"main.cpp:120 > main.cpp:125"
-                  , "type":"resource"
-                  , "data":
-                  [1, 0, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":120
-                      }
-                      , {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":125
-                      }
-                    ]
-                  ]
-                }
-                , {
-                  "name":"main.cpp:126 > main.cpp:36"
-                  , "type":"resource"
-                  , "data":
-                  [27, 19, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":126
-                      }
-                      , {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":36
-                      }
-                    ]
-                  ]
-                }
-                , {
-                  "name":"main.cpp:128"
-                  , "type":"resource"
-                  , "data":
-                  [27, 19, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":128
-                      }
-                    ]
-                  ]
-                }
-                , {
-                  "name":"main.cpp:136"
-                  , "type":"resource"
-                  , "data":
-                  [27, 19, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":136
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-            , {
-              "name":"Cluster logic"
-              , "type":"resource"
-              , "data":
-              [1, 0, 0, 0, 0]
-              , "details":
-              [
-                {
-                  "type":"brief"
-                  , "text":"Logic required to efficiently support sets of operations that do not stall"
-                }
-                , {
-                  "type":"text"
-                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
-                }
-              ]
-            }
-            , {
-              "name":"Computation"
-              , "type":"resource"
-              , "children":
-              [
-                {
-                  "name":"No Source Line"
-                  , "type":"resource"
-                  , "data":
-                  [602, 695, 0, 0, 28]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":""
-                        , "line":0
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"Load"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [602, 695, 0, 0, 28]
-                      , "details":
-                      [
-                        {
-                          "type":"text"
-                          , "text":"Load uses a Pipelined LSU"
-                        }
-                        , {
-                          "type":"brief"
-                          , "text":"Pipelined LSU"
-                        }
-                        , {
-                          "type":"text"
-                          , "text":"Stallable read from memory declared on %L."
-                          , "links":
-                          [
-                            {
-                              "filename":"main.cpp"
-                              , "line":"126"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-                , {
-                  "name":"main.cpp:128 > _stream.h:591"
-                  , "type":"resource"
-                  , "data":
-                  [1, 0, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":128
-                      }
-                      , {
-                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
-                        , "line":591
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"Stream Read"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [1, 0, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:130 > _stream.h:725"
+                  "name":"main.cpp:149 > _task.h:121 > \n_task.h:74 > _task_FPGA.h:62"
                   , "type":"resource"
                   , "data":
                   [3, 2, 0, 0, 0]
@@ -3074,37 +1586,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":130
-                      }
-                      , {
-                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
-                        , "line":725
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"Stream Write"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [3, 2, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:135 > _task.h:121 > \n_task.h:74 > _task_FPGA.h:62"
-                  , "type":"resource"
-                  , "data":
-                  [3, 2, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":135
+                        , "line":149
                       }
                       , {
                         "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
@@ -3133,16 +1615,54 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:136 > _task.h:129 > \n_task.h:81 > _task_FPGA.h:67"
+                  "name":"main.cpp:150 > _task.h:121 > \n_task.h:74 > _task_FPGA.h:62"
                   , "type":"resource"
                   , "data":
-                  [2, 0, 0, 0, 0]
+                  [3, 2, 0, 0, 0]
                   , "debug":
                   [
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":136
+                        , "line":150
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
+                        , "line":121
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
+                        , "line":74
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
+                        , "line":62
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Stream Write"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 2, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"main.cpp:151 > _task.h:129 > \n_task.h:81 > _task_FPGA.h:67"
+                  , "type":"resource"
+                  , "data":
+                  [1.5, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                        , "line":151
                       }
                       , {
                         "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
@@ -3165,7 +1685,7 @@
                       , "type":"resource"
                       , "count":1
                       , "data":
-                      [1, 0, 0, 0, 0]
+                      [0.5, 0, 0, 0, 0]
                     }
                     , {
                       "name":"Stream Read"
@@ -3178,16 +1698,28 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:128"
+                  "name":"main.cpp:152 > _task.h:129 > \n_task.h:81 > _task_FPGA.h:67"
                   , "type":"resource"
                   , "data":
-                  [200.5, 1286, 0, 0, 31]
+                  [3.5, 0, 0, 0, 0]
                   , "debug":
                   [
                     [
                       {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":128
+                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                        , "line":152
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
+                        , "line":129
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
+                        , "line":81
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
+                        , "line":67
                       }
                     ]
                   ]
@@ -3196,44 +1728,22 @@
                     {
                       "name":"1-bit Or"
                       , "type":"resource"
-                      , "count":2
+                      , "count":1
                       , "data":
-                      [1.5, 0, 0, 0, 0]
+                      [0.5, 0, 0, 0, 0]
                     }
                     , {
-                      "name":"Store"
+                      "name":"Stream Read"
                       , "type":"resource"
                       , "count":1
                       , "data":
-                      [199, 1286, 0, 0, 31]
-                      , "details":
-                      [
-                        {
-                          "type":"text"
-                          , "text":"Store uses a Pipelined LSU"
-                        }
-                        , {
-                          "type":"brief"
-                          , "text":"Pipelined LSU"
-                        }
-                        , {
-                          "type":"text"
-                          , "text":"Stallable write to memory declared on %L."
-                          , "links":
-                          [
-                            {
-                              "filename":"main.cpp"
-                              , "line":"126"
-                            }
-                          ]
-                        }
-                      ]
+                      [3, 0, 0, 0, 0]
                     }
                   ]
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:135"
+                  "name":"main.cpp:147"
                   , "type":"resource"
                   , "data":
                   [1, 0, 0, 0, 0]
@@ -3242,7 +1752,530 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                        , "line":147
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Stream Read"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"main.cpp:154"
+                  , "type":"resource"
+                  , "data":
+                  [3, 2, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                        , "line":154
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Stream Write"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 2, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"windowing"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [1.19998, 0.668054, 0.579528, 0, 0]
+      , "total_kernel_resources":
+      [732, 1270, 0, 0, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+        , {
+          "type":"brief"
+          , "text":"1 compute unit."
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Stream 's0'"
+          , "type":"resource"
+          , "data":
+          [0, 0, 0, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Stream implemented 352 bits wide with a buffer size of 0 elements."
+            }
+            , {
+              "type":"brief"
+              , "text":"352b wide with 0 elements."
+            }
+          ]
+        }
+        , {
+          "name":"Stream 's_out'"
+          , "type":"resource"
+          , "data":
+          [0, 0, 0, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Stream implemented 352 bits wide with a buffer size of 0 elements."
+            }
+            , {
+              "type":"brief"
+              , "text":"352b wide with 0 elements."
+            }
+          ]
+        }
+        , {
+          "name":"Task call"
+          , "type":"resource"
+          , "data":
+          [0, 0, 0, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Stream implemented 1 bit wide with a buffer size of 0 elements."
+            }
+            , {
+              "type":"brief"
+              , "text":"1b wide with 0 elements."
+            }
+          ]
+        }
+        , {
+          "name":"Task return"
+          , "type":"resource"
+          , "data":
+          [0, 0, 0, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Stream implemented 1 bit wide with a buffer size of 0 elements."
+            }
+            , {
+              "type":"brief"
+              , "text":"1b wide with 0 elements."
+            }
+          ]
+        }
+        , {
+          "name":"Variable: \n - 'i' (main.cpp:127)"
+          , "type":"resource"
+          , "data":
+          [7, 36, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"main.cpp"
+                , "line":127
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 32 bits and depth 1"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n1 reg, 32 width by 1 depth"
+            }
+          ]
+        }
+        , {
+          "name":"windowing.B1.start"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [452, 1221, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [452, 1221, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [8, 7, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"main.cpp:125 > main.cpp:127"
+                  , "type":"resource"
+                  , "data":
+                  [7.5, 7, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                        , "line":125
+                      }
+                      , {
+                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                        , "line":127
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"main.cpp:138"
+                  , "type":"resource"
+                  , "data":
+                  [0.5, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                        , "line":138
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [2, 0, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [248, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [248, 0, 0, 0, 0]
+                    }
+                  ]
+                }
+                , {
+                  "name":"main.cpp:128 > _stream.h:845"
+                  , "type":"resource"
+                  , "data":
+                  [1, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                        , "line":128
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
+                        , "line":845
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Stream Read"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"main.cpp:130 > _stream.h:725"
+                  , "type":"resource"
+                  , "data":
+                  [1.5, 1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                        , "line":130
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
+                        , "line":725
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Stream Write"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1.5, 1, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"main.cpp:134 > _task.h:121 > \n_task.h:74 > _task_FPGA.h:62"
+                  , "type":"resource"
+                  , "data":
+                  [3, 2, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                        , "line":134
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
+                        , "line":121
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
+                        , "line":74
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
+                        , "line":62
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Stream Write"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 2, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"main.cpp:135 > _task.h:129 > \n_task.h:81 > _task_FPGA.h:67"
+                  , "type":"resource"
+                  , "data":
+                  [3, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
                         , "line":135
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
+                        , "line":129
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
+                        , "line":81
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
+                        , "line":67
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Stream Read"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"main.cpp:137 > _stream.h:725"
+                  , "type":"resource"
+                  , "data":
+                  [1.5, 1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                        , "line":137
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
+                        , "line":725
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Stream Write"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1.5, 1, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"main.cpp:125"
+                  , "type":"resource"
+                  , "data":
+                  [1, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                        , "line":125
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Stream Read"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"main.cpp:134"
+                  , "type":"resource"
+                  , "data":
+                  [1, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                        , "line":134
                       }
                     ]
                   ]
@@ -3259,62 +2292,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:136"
-                  , "type":"resource"
-                  , "data":
-                  [199.5, 1286, 0, 0, 31]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":136
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"1-bit Or"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [0.5, 0, 0, 0, 0]
-                    }
-                    , {
-                      "name":"Store"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [199, 1286, 0, 0, 31]
-                      , "details":
-                      [
-                        {
-                          "type":"text"
-                          , "text":"Store uses a Pipelined LSU"
-                        }
-                        , {
-                          "type":"brief"
-                          , "text":"Pipelined LSU"
-                        }
-                        , {
-                          "type":"text"
-                          , "text":"Stallable write to memory declared on %L."
-                          , "links":
-                          [
-                            {
-                              "filename":"main.cpp"
-                              , "line":"126"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:142"
+                  "name":"main.cpp:141"
                   , "type":"resource"
                   , "data":
                   [3, 2, 0, 0, 0]
@@ -3323,7 +2301,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":142
+                        , "line":141
                       }
                     ]
                   ]

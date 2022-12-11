@@ -9,6 +9,7 @@
 #include <stdlib.h>
 
 
+
 // SUPPORTED AGGREGATIN FUNCTIONS: COUNT, AVERAGE, MIN, MAX
 #define BUILDIN_AGGREGATION_FUNCTIONS_NUMBER_OF_SUPPORTED 5
 #define BUILDIN_AGGREGATION_FUNCTIONS_CODE_COUNT 0
@@ -37,13 +38,17 @@ struct Tuple {
 };
 
 
-component void projection(
-                        ihc::stream_in<Tuple> &stream_in_tuple,  
-                        ihc::stream_out<Tuple> &stream_out_tuple
-) {
+ihc::stream_in<Tuple> s_in;
+ihc::stream_out<Tuple> s_out;
+//<gen>
+ihc::stream<Tuple> s0;
+//</gen>
+
+
+template <auto &stream_in_tuple, auto &stream_out_tuple> void projection() {
 
         
-    Tuple tuple = stream_in_tuple.read();
+    auto tuple = stream_in_tuple.read();
 
     if (!tuple.valid){
         stream_out_tuple.write(tuple);
@@ -117,21 +122,15 @@ Tuple aggregation (
     return in_tuple;
 }
 
-component void windowing (
-                        ihc::stream_in<Tuple> &stream_in_tuple, 
-                        ihc::stream_out<Tuple> &stream_out_tuple
-) {
+template <auto &stream_in_tuple, auto &stream_out_tuple> void windowing () {
 
     static int i = 1;
-    Tuple tuple;
-
-    tuple = stream_in_tuple.read();
+    auto tuple = stream_in_tuple.read();
     if (!tuple.valid){
         stream_out_tuple.write(tuple);
         return;
     }
 
-    //tuple = aggregation (tuple, AGGREGATION_FUNCTION_CODE, AGGREGATION_FIELD_CODE, i%WINDOWING_k == 0);
     ihc::launch<aggregation>(tuple, AGGREGATION_FUNCTION_CODE, AGGREGATION_FIELD_CODE, i%WINDOWING_k == 0);
     tuple = ihc::collect<aggregation>();
 
@@ -145,12 +144,17 @@ component void windowing (
 
 // } 
 
+component void streamer (){
+    //<gen>
+    ihc::launch<projection<s_in, s0>>();
+    ihc::launch<windowing<s0, s_out>>();
+    ihc::collect<projection<s_in, s0>>();
+    ihc::collect<windowing<s0, s_out>>();
+    //</gen>
+}
+
 int main() {
 
-    ihc::stream_in<Tuple> stream_in1;
-    ihc::stream_out<Tuple> stream_out1;
-    ihc::stream_in<Tuple> stream_in2;
-    ihc::stream_out<Tuple> stream_out2;
     Tuple tuple[BUILDIN_NUMBER_OF_TESTS];
     Tuple results[BUILDIN_NUMBER_OF_TESTS];
 
@@ -173,14 +177,9 @@ int main() {
     for (int i = 0; i < BUILDIN_NUMBER_OF_TESTS; i++) {
 
         
-        stream_in1.write(tuple[i]);
-        projection(stream_in1, stream_out1);
-        interTuple = stream_out1.read();
-        stream_in2.write(interTuple);
-        
-        windowing(stream_in2, stream_out2);
-
-        results[i] = stream_out2.read();
+        s_in.write(tuple[i]);
+        streamer();
+        results[i] = s_out.read();
         
 
         if (results[i].valid) {

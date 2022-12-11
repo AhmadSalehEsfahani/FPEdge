@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 21.1 850 win32 2022.12.11.11:43:06
+# ACDS 21.1 850 win32 2022.12.11.14:24:18
 
 # ----------------------------------------
 # vcs - auto-generated simulation script
@@ -94,7 +94,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 21.1 850 win32 2022.12.11.11:43:06
+# ACDS 21.1 850 win32 2022.12.11.14:24:18
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="tb"
@@ -130,10 +130,10 @@ fi
 # ----------------------------------------
 # copy RAM/ROM files to simulation directory
 if [ $SKIP_FILE_COPY -eq 0 ]; then
-  cp -f $QSYS_SIMDIR/submodules/windowing_flt_i_sfc_logic_s_c1_in_wt_ent0000113_invTables_lutmem.hex ./
-  cp -f $QSYS_SIMDIR/submodules/windowing_flt_i_sfc_logic_s_c1_in_wt_ent0000114_invTables_lutmem.hex ./
-  cp -f $QSYS_SIMDIR/submodules/windowing_flt_i_sfc_logic_s_c1_in_wt_ent0000117_invTables_lutmem.hex ./
-  cp -f $QSYS_SIMDIR/submodules/windowing_flt_i_sfc_logic_s_c1_in_wt_ent0000121_invTables_lutmem.hex ./
+  cp -f $QSYS_SIMDIR/submodules/streamer_flt_i_sfc_logic_s_c1_in_wt_entr0000113_invTables_lutmem.hex ./
+  cp -f $QSYS_SIMDIR/submodules/streamer_flt_i_sfc_logic_s_c1_in_wt_entr0000114_invTables_lutmem.hex ./
+  cp -f $QSYS_SIMDIR/submodules/streamer_flt_i_sfc_logic_s_c1_in_wt_entr0000117_invTables_lutmem.hex ./
+  cp -f $QSYS_SIMDIR/submodules/streamer_flt_i_sfc_logic_s_c1_in_wt_entr0000121_invTables_lutmem.hex ./
 fi
 
 vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS \
@@ -189,299 +189,155 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPT
   $QSYS_SIMDIR/submodules/hld_iord_stall_latency.sv \
   $QSYS_SIMDIR/submodules/hld_iord_stall_valid.sv \
   $QSYS_SIMDIR/submodules/acl_shift_register_no_reset.sv \
-  $QSYS_SIMDIR/submodules/lsu_top.v \
-  $QSYS_SIMDIR/submodules/lsu_permute_address.v \
-  $QSYS_SIMDIR/submodules/lsu_pipelined.v \
-  $QSYS_SIMDIR/submodules/lsu_enabled.v \
-  $QSYS_SIMDIR/submodules/lsu_basic_coalescer.v \
-  $QSYS_SIMDIR/submodules/lsu_simple.v \
-  $QSYS_SIMDIR/submodules/lsu_streaming.v \
-  $QSYS_SIMDIR/submodules/lsu_burst_host.v \
-  $QSYS_SIMDIR/submodules/lsu_bursting_load_stores.v \
-  $QSYS_SIMDIR/submodules/lsu_non_aligned_write.v \
-  $QSYS_SIMDIR/submodules/lsu_read_cache.v \
-  $QSYS_SIMDIR/submodules/lsu_atomic.v \
-  $QSYS_SIMDIR/submodules/lsu_prefetch_block.v \
-  $QSYS_SIMDIR/submodules/lsu_wide_wrapper.v \
-  $QSYS_SIMDIR/submodules/lsu_streaming_prefetch.v \
-  $QSYS_SIMDIR/submodules/acl_aligned_burst_coalesced_lsu.v \
-  $QSYS_SIMDIR/submodules/acl_toggle_detect.v \
-  $QSYS_SIMDIR/submodules/acl_debug_mem.v \
-  $QSYS_SIMDIR/submodules/lsu_burst_coalesced_pipelined_write.sv \
-  $QSYS_SIMDIR/submodules/lsu_burst_coalesced_pipelined_read.sv \
-  $QSYS_SIMDIR/submodules/acl_fifo_stall_valid_lookahead.sv \
-  $QSYS_SIMDIR/submodules/hld_global_load_store.sv \
-  $QSYS_SIMDIR/submodules/hld_lsu.sv \
-  $QSYS_SIMDIR/submodules/hld_lsu_burst_coalescer.sv \
-  $QSYS_SIMDIR/submodules/hld_lsu_coalescer_dynamic_timeout.sv \
-  $QSYS_SIMDIR/submodules/hld_lsu_data_aligner.sv \
-  $QSYS_SIMDIR/submodules/hld_lsu_read_cache.sv \
-  $QSYS_SIMDIR/submodules/hld_lsu_read_data_alignment.sv \
-  $QSYS_SIMDIR/submodules/hld_lsu_unaligned_controller.sv \
-  $QSYS_SIMDIR/submodules/hld_lsu_word_coalescer.sv \
-  $QSYS_SIMDIR/submodules/hld_lsu_write_data_alignment.sv \
-  $QSYS_SIMDIR/submodules/hld_lsu_write_kernel_downstream.sv \
-  $QSYS_SIMDIR/submodules/acl_full_detector.v \
-  $QSYS_SIMDIR/submodules/acl_tessellated_incr_decr_decr.sv \
   $QSYS_SIMDIR/submodules/hld_iowr.sv \
   $QSYS_SIMDIR/submodules/hld_iowr_stall_latency.sv \
   $QSYS_SIMDIR/submodules/hld_iowr_stall_valid.sv \
   $QSYS_SIMDIR/submodules/hld_loop_profiler.sv \
   $QSYS_SIMDIR/submodules/hld_sim_latency_tracker.sv \
-  $QSYS_SIMDIR/submodules/acl_loop_limiter.v \
+  $QSYS_SIMDIR/submodules/acl_full_detector.v \
+  $QSYS_SIMDIR/submodules/acl_tessellated_incr_decr_decr.sv \
   $QSYS_SIMDIR/submodules/acl_reset_wire.v \
-  $QSYS_SIMDIR/submodules/windowing_function_wrapper.sv \
-  $QSYS_SIMDIR/submodules/windowing_aggregation_function.sv \
-  $QSYS_SIMDIR/submodules/windowing_bb_aggregation_B1_start_sr_1.sv \
-  $QSYS_SIMDIR/submodules/windowing_bb_aggregation_B0_runOnce.sv \
-  $QSYS_SIMDIR/submodules/windowing_aggregation_B0_runOnce_branch.sv \
-  $QSYS_SIMDIR/submodules/windowing_aggregation_B0_runOnce_merge.sv \
-  $QSYS_SIMDIR/submodules/windowing_bb_aggregation_B0_runOnce_stall_region.sv \
-  $QSYS_SIMDIR/submodules/windowing_aggregation_B0_runOnce_merge_reg.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_token_i1_wt_limpop_aggregation0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_token_i1_wt_limpop_aggregation0_reg.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_token_i1_wt_limpush_aggregation0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_token_i1_wt_limpush_aggregation1_reg.sv \
-  $QSYS_SIMDIR/submodules/windowing_bb_aggregation_B1_start.sv \
-  $QSYS_SIMDIR/submodules/windowing_aggregation_B1_start_branch.sv \
-  $QSYS_SIMDIR/submodules/windowing_aggregation_B1_start_merge.sv \
-  $QSYS_SIMDIR/submodules/windowing_bb_aggregation_B1_start_stall_region.sv \
-  $QSYS_SIMDIR/submodules/windowing_aggregation_B1_start_merge_reg.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_iord_bl_call_aggregation_unn0000gation1_aggregation0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_iowr_bl_return_aggregation_u0000gation2_aggregation0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_sfc_s_c0_in_wt_entry_aggrega0000_enter1_aggregation1.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_sfc_exit_s_c0_out_0000c0_exit_aggregation0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_sfc_logic_s_c0_in_wt_entry_a0000_enter1_aggregation0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pipeline_keep_going_aggregation0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i1_notexitcond_aggregation0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_sfc_s_c1_in_wt_entry_aggrega00001_enter_aggregation5.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_sfc_exit_s_c1_out_0000c1_exit_aggregation0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_sfc_exit_s_c1_out_0000gregation1_data_fifo.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_sfc_exit_s_c1_out_0000ation1_full_detector.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_sfc_logic_s_c1_in_wt_entry_a00001_enter_aggregation0.sv \
-  $QSYS_SIMDIR/submodules/windowing_flt_i_sfc_logic_s_c1_in_wt_ent00003a0054c2a6344c246w65.sv \
-  $QSYS_SIMDIR/submodules/windowing_flt_i_sfc_logic_s_c1_in_wt_ent00006uq0cp0ju20cp0jo0ouz.sv \
-  $QSYS_SIMDIR/submodules/windowing_flt_i_sfc_logic_s_c1_in_wt_ent0000b0c2463a0054c2a6355y.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_f32_avg_1_aggr0000_0_pop4_aggregation0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_f32_count_1_ag0000_0_pop3_aggregation0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_f32_max_1_aggr0000_0_pop6_aggregation0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_f32_min_1_aggr0000_0_pop5_aggregation0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_f32_sum_1_aggr0000_0_pop7_aggregation0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_f32_avg_1_agg00000_push4_aggregation0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_f32_count_1_a00000_push3_aggregation0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_f32_max_1_agg00000_push6_aggregation0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_f32_min_1_agg00000_push5_aggregation0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_f32_sum_1_agg00000_push7_aggregation0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pipeline_keep_going_aggregation2_sr.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pipeline_keep_goin0000regation2_valid_fifo.sv \
-  $QSYS_SIMDIR/submodules/windowing_function.sv \
-  $QSYS_SIMDIR/submodules/windowing_bb_B2_sr_1.sv \
-  $QSYS_SIMDIR/submodules/windowing_bb_B3_sr_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_bb_B4_sr_1.sv \
-  $QSYS_SIMDIR/submodules/windowing_bb_B5_sr_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_bb_B0_runOnce.sv \
-  $QSYS_SIMDIR/submodules/windowing_bb_B0_runOnce_stall_region.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_token_i1_wt_limpop_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_token_i1_wt_limpop_0_reg.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_token_i1_wt_limpush_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_token_i1_wt_limpush_1_reg.sv \
-  $QSYS_SIMDIR/submodules/windowing_B0_runOnce_merge_reg.sv \
-  $QSYS_SIMDIR/submodules/windowing_B0_runOnce_branch.sv \
-  $QSYS_SIMDIR/submodules/windowing_B0_runOnce_merge.sv \
-  $QSYS_SIMDIR/submodules/windowing_bb_B1_start.sv \
-  $QSYS_SIMDIR/submodules/windowing_bb_B1_start_stall_region.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_mem_memdep_8_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_sfc_s_c0_in_wt_entry_s_c0_enter13_windowing1.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_sfc_exit_s_c0_out_0000s_c0_exit_windowing0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_sfc_logic_s_c0_in_wt_entry_s_c0_enter13_windowing0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pipeline_keep_going49_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i1_notexitcond50_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_B1_start_merge_reg.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_iord_bl_call_unnamed_windowing1_windowing0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i1_memdep_phi15_pop9_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i1_memdep_phi15_pop9_5_reg.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i1_memdep_phi16_pop10_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i1_memdep_phi16_pop10_6_reg.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i1_memdep_phi18_pop11_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i1_memdep_phi18_pop11_7_reg.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i1_memdep_phi23_pop12_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i1_memdep_phi23_pop12_8_reg.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i1_memdep_phi_pop8_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i1_memdep_phi_pop8_4_reg.sv \
-  $QSYS_SIMDIR/submodules/windowing_B1_start_branch.sv \
-  $QSYS_SIMDIR/submodules/windowing_B1_start_merge.sv \
-  $QSYS_SIMDIR/submodules/windowing_bb_B2.sv \
-  $QSYS_SIMDIR/submodules/windowing_bb_B2_stall_region.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_sfc_s_c0_in_arrayinit_body_i0000enter8814_windowing1.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_sfc_exit_s_c0_out_0000c0_exit92_windowing0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_sfc_exit_s_c0_out_0000windowing1_data_fifo.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_sfc_exit_s_c0_out_0000owing1_full_detector.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_sfc_logic_s_c0_in_arrayinit_0000enter8814_windowing0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pipeline_keep_going36_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i1_forked5152_pop17_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i1_memdep_phi15_pop954_pop18_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i1_memdep_phi16_pop1055_pop19_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i1_memdep_phi18_pop1157_pop20_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i1_memdep_phi23_pop1259_pop22_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i1_reduction_158_pop21_windowing0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i2_cleanups39_pop16_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i2_initerations34_pop15_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i3_fpga_indvars_iv_pop13_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_p64i32_arrayinit_cur_i_pop14_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i1_forked5152_push17_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i1_lastiniteration38_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i1_memdep_phi15_pop954_push18_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i1_memdep_phi16_pop1055_push19_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i1_memdep_phi18_pop1157_push20_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i1_memdep_phi23_pop1259_push22_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i1_notexitcond46_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i1_reduction_158_push21_windowing0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i2_cleanups39_push16_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i2_initerations34_push15_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i3_fpga_indvars_iv_push13_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_p64i32_arrayinit_cur_i_push14_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_B2_merge_reg.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_mem_memdep_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_B2_branch.sv \
-  $QSYS_SIMDIR/submodules/windowing_B2_merge.sv \
-  $QSYS_SIMDIR/submodules/windowing_bb_B3.sv \
-  $QSYS_SIMDIR/submodules/windowing_bb_B3_stall_region.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_mem_memdep_12_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_mem_memdep_13_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i1_memdep_phi_push8_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i1_memdep_phi_push8_1_reg.sv \
-  $QSYS_SIMDIR/submodules/windowing_B3_branch.sv \
-  $QSYS_SIMDIR/submodules/windowing_B3_merge.sv \
-  $QSYS_SIMDIR/submodules/windowing_bb_B4.sv \
-  $QSYS_SIMDIR/submodules/windowing_bb_B4_stall_region.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_sfc_s_c0_in_arrayinit_body6_0000nter10115_windowing1.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_sfc_exit_s_c0_out_00000_exit117_windowing0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_sfc_exit_s_c0_out_0001windowing1_data_fifo.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_sfc_exit_s_c0_out_0001owing1_full_detector.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_sfc_logic_s_c0_in_arrayinit_0000nter10115_windowing0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pipeline_keep_going_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i1_forked5153_pop27_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i1_memdep_phi16_pop1056_pop28_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i1_memdep_phi23_or2461_pop30_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i1_memdep_phi23_pop1260_pop29_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i1_reduction_562_pop31_windowing0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i2_cleanups_pop26_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i2_initerations_pop25_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i3_fpga_indvars_iv30_pop23_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_p64f32_arrayinit_cur7_i_pop24_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i1_forked5153_push27_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i1_lastiniteration_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i1_memdep_phi16_pop1056_push28_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i1_memdep_phi23_or2461_push30_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i1_memdep_phi23_pop1260_push29_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i1_notexitcond_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i1_reduction_562_push31_windowing0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i2_cleanups_push26_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i2_initerations_push25_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i3_fpga_indvars_iv30_push23_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_p64f32_arrayinit_cur7_i_push24_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_B4_merge_reg.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_mem_memdep_14_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_B4_branch.sv \
-  $QSYS_SIMDIR/submodules/windowing_B4_merge.sv \
-  $QSYS_SIMDIR/submodules/windowing_bb_B5.sv \
-  $QSYS_SIMDIR/submodules/windowing_bb_B5_stall_region.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_mem_memcoalesce_lo0000ique_1211_windowing0.sv \
-  $QSYS_SIMDIR/submodules/windowing_readdata_reg_memcoalesce_load_0000ique_1211_windowing0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_iord_bl_return_aggregation_unnamed_4_windowing0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_iord_bl_stream_in_tuple_unnamed_2_windowing0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_iowr_bl_call_aggregation_unnamed_3_windowing0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_iowr_bl_stream_out_tuple_or_6_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_mem_memdep_19_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_mem_memdep_310_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_sfc_s_c0_in_0tuple_qeaa_xz_e0000_enter129_windowing4.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_sfc_exit_s_c0_out_00000_exit136_windowing0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_sfc_logic_s_c0_in_0tuple_qea0000_enter129_windowing0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pop_i32_i_1_yaxaea0000ic_0_pop7_windowing0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i32_i_1_yaxae0000c_0_push7_windowing0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_iowr_bl_return_unnamed_windowing5_windowing0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i1_memdep_phi15_push9_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i1_memdep_phi15_push9_1_reg.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i1_memdep_phi16_push10_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i1_memdep_phi16_push10_10_reg.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i1_memdep_phi18_push11_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i1_memdep_phi18_push11_27_reg.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i1_memdep_phi23_push12_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_push_i1_memdep_phi23_push12_44_reg.sv \
-  $QSYS_SIMDIR/submodules/windowing_B5_branch.sv \
-  $QSYS_SIMDIR/submodules/windowing_B5_merge.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pipeline_keep_going36_6_sr.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pipeline_keep_going36_6_valid_fifo.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pipeline_keep_going49_2_sr.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pipeline_keep_going49_2_valid_fifo.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pipeline_keep_going_6_sr.sv \
-  $QSYS_SIMDIR/submodules/windowing_i_llvm_fpga_pipeline_keep_going_6_valid_fifo.sv \
-  $QSYS_SIMDIR/submodules/windowing_loop_limiter_0.sv \
-  $QSYS_SIMDIR/submodules/windowing_loop_limiter_1.sv \
-  $QSYS_SIMDIR/submodules/acl_avm_to_ic.v \
-  $QSYS_SIMDIR/submodules/acl_mem1x.v \
-  $QSYS_SIMDIR/submodules/hld_ram.sv \
-  $QSYS_SIMDIR/submodules/hld_ram_ecc.sv \
-  $QSYS_SIMDIR/submodules/hld_ram_tall_depth_stitch.sv \
-  $QSYS_SIMDIR/submodules/hld_ram_remaining_width.sv \
-  $QSYS_SIMDIR/submodules/hld_ram_bits_per_enable.sv \
-  $QSYS_SIMDIR/submodules/hld_ram_generic_two_way_depth_stitch.sv \
-  $QSYS_SIMDIR/submodules/hld_ram_generic_three_way_depth_stitch.sv \
-  $QSYS_SIMDIR/submodules/hld_ram_short_depth_stitch.sv \
-  $QSYS_SIMDIR/submodules/hld_ram_bottom_width_stitch.sv \
-  $QSYS_SIMDIR/submodules/hld_ram_bottom_depth_stitch.sv \
-  $QSYS_SIMDIR/submodules/hld_ram_lower.sv \
-  $QSYS_SIMDIR/submodules/hld_ram_lower_mlab_simple_dual_port.sv \
-  $QSYS_SIMDIR/submodules/hld_ram_lower_m20k_simple_dual_port.sv \
-  $QSYS_SIMDIR/submodules/hld_ram_lower_m20k_true_dual_port.sv \
-  $QSYS_SIMDIR/submodules/acl_ic_local_mem_router.v \
-  $QSYS_SIMDIR/submodules/acl_ic_host_endpoint.v \
-  $QSYS_SIMDIR/submodules/acl_arb_intf.v \
-  $QSYS_SIMDIR/submodules/acl_ic_intf.v \
-  $QSYS_SIMDIR/submodules/acl_ic_agent_endpoint.v \
-  $QSYS_SIMDIR/submodules/acl_ic_agent_rrp.v \
-  $QSYS_SIMDIR/submodules/acl_ic_agent_wrp.v \
-  $QSYS_SIMDIR/submodules/acl_arb2.v \
-  $QSYS_SIMDIR/submodules/windowing_internal.v \
-  $QSYS_SIMDIR/submodules/projection_function_wrapper.sv \
-  $QSYS_SIMDIR/submodules/projection_function.sv \
-  $QSYS_SIMDIR/submodules/projection_bb_B0_runOnce.sv \
-  $QSYS_SIMDIR/submodules/projection_bb_B0_runOnce_stall_region.sv \
-  $QSYS_SIMDIR/submodules/projection_i_llvm_fpga_pop_token_i1_wt_limpop_0.sv \
-  $QSYS_SIMDIR/submodules/projection_i_llvm_fpga_pop_token_i1_wt_limpop_0_reg.sv \
-  $QSYS_SIMDIR/submodules/projection_i_llvm_fpga_push_token_i1_wt_limpush_0.sv \
-  $QSYS_SIMDIR/submodules/projection_i_llvm_fpga_push_token_i1_wt_limpush_1_reg.sv \
-  $QSYS_SIMDIR/submodules/projection_B0_runOnce_merge_reg.sv \
-  $QSYS_SIMDIR/submodules/projection_B0_runOnce_branch.sv \
-  $QSYS_SIMDIR/submodules/projection_B0_runOnce_merge.sv \
-  $QSYS_SIMDIR/submodules/projection_bb_B1_start.sv \
-  $QSYS_SIMDIR/submodules/projection_bb_B1_start_stall_region.sv \
-  $QSYS_SIMDIR/submodules/projection_i_iord_bl_stream_in_tuple_unnamed_3_projection0.sv \
-  $QSYS_SIMDIR/submodules/projection_i_iowr_bl_stream_out_tuple_or_4_0.sv \
-  $QSYS_SIMDIR/submodules/projection_i_sfc_s_c0_in_wt_entry_s_c0_enter1_projection0.sv \
-  $QSYS_SIMDIR/submodules/projection_i_llvm_fpga_sfc_exit_s_c0_out0000_c0_exit_projection0.sv \
-  $QSYS_SIMDIR/submodules/projection_i_sfc_logic_s_c0_in_wt_entry_s_c0_enter1_projection0.sv \
-  $QSYS_SIMDIR/submodules/projection_i_llvm_fpga_pipeline_keep_going_0.sv \
-  $QSYS_SIMDIR/submodules/projection_i_llvm_fpga_push_i1_notexitcond_0.sv \
-  $QSYS_SIMDIR/submodules/projection_i_sfc_s_c1_in_wt_entry_s_c1_enter_projection4.sv \
-  $QSYS_SIMDIR/submodules/projection_i_llvm_fpga_sfc_exit_s_c1_out0000_c1_exit_projection0.sv \
-  $QSYS_SIMDIR/submodules/projection_i_sfc_logic_s_c1_in_wt_entry_s_c1_enter_projection0.sv \
-  $QSYS_SIMDIR/submodules/projection_i_iord_bl_call_unnamed_projection2_projection0.sv \
-  $QSYS_SIMDIR/submodules/projection_i_iowr_bl_return_unnamed_projection4_projection0.sv \
-  $QSYS_SIMDIR/submodules/projection_B1_start_merge_reg.sv \
-  $QSYS_SIMDIR/submodules/projection_B1_start_branch.sv \
-  $QSYS_SIMDIR/submodules/projection_B1_start_merge.sv \
-  $QSYS_SIMDIR/submodules/projection_i_llvm_fpga_pipeline_keep_going_1_sr.sv \
-  $QSYS_SIMDIR/submodules/projection_i_llvm_fpga_pipeline_keep_going_1_valid_fifo.sv \
-  $QSYS_SIMDIR/submodules/projection_internal.v \
+  $QSYS_SIMDIR/submodules/streamer_function_wrapper.sv \
+  $QSYS_SIMDIR/submodules/streamer_aggregation_function.sv \
+  $QSYS_SIMDIR/submodules/streamer_bb_aggregation_B1_start_sr_1.sv \
+  $QSYS_SIMDIR/submodules/streamer_bb_aggregation_B0_runOnce.sv \
+  $QSYS_SIMDIR/submodules/streamer_aggregation_B0_runOnce_branch.sv \
+  $QSYS_SIMDIR/submodules/streamer_aggregation_B0_runOnce_merge.sv \
+  $QSYS_SIMDIR/submodules/streamer_bb_aggregation_B0_runOnce_stall_region.sv \
+  $QSYS_SIMDIR/submodules/streamer_aggregation_B0_runOnce_merge_reg.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_pop_token_i1_wt_limpop_aggregation0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_pop_token_i1_wt_limpop_aggregation0_reg.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_push_token_i1_wt_limpush_aggregation0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_push_token_i1_wt_limpush_aggregation1_reg.sv \
+  $QSYS_SIMDIR/submodules/streamer_bb_aggregation_B1_start.sv \
+  $QSYS_SIMDIR/submodules/streamer_aggregation_B1_start_branch.sv \
+  $QSYS_SIMDIR/submodules/streamer_aggregation_B1_start_merge.sv \
+  $QSYS_SIMDIR/submodules/streamer_bb_aggregation_B1_start_stall_region.sv \
+  $QSYS_SIMDIR/submodules/streamer_aggregation_B1_start_merge_reg.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_iord_bl_call_aggregation_unna0000gation1_aggregation0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_iowr_bl_return_aggregation_un0000gation2_aggregation0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_sfc_s_c0_in_wt_entry_aggregat0000_enter1_aggregation1.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_sfc_exit_s_c0_out_w0000c0_exit_aggregation0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_sfc_logic_s_c0_in_wt_entry_ag0000_enter1_aggregation0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_pipeline_keep_going_aggregation0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_push_i1_notexitcond_aggregation0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_sfc_s_c1_in_wt_entry_aggregat00001_enter_aggregation5.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_sfc_exit_s_c1_out_w0000c1_exit_aggregation0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_sfc_exit_s_c1_out_w0000gregation1_data_fifo.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_sfc_exit_s_c1_out_w0000ation1_full_detector.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_sfc_logic_s_c1_in_wt_entry_ag00001_enter_aggregation0.sv \
+  $QSYS_SIMDIR/submodules/streamer_flt_i_sfc_logic_s_c1_in_wt_entr00003a0054c2a6344c246w65.sv \
+  $QSYS_SIMDIR/submodules/streamer_flt_i_sfc_logic_s_c1_in_wt_entr00006uq0cp0ju20cp0jo0ouz.sv \
+  $QSYS_SIMDIR/submodules/streamer_flt_i_sfc_logic_s_c1_in_wt_entr0000b0c2463a0054c2a6355y.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_pop_f32_avg_1_aggre0000_0_pop5_aggregation0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_pop_f32_count_1_agg0000_0_pop3_aggregation0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_pop_f32_max_1_aggre0000_0_pop6_aggregation0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_pop_f32_min_1_aggre0000_0_pop7_aggregation0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_pop_f32_sum_1_aggre0000_0_pop4_aggregation0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_push_f32_avg_1_aggr00000_push5_aggregation0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_push_f32_count_1_ag00000_push3_aggregation0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_push_f32_max_1_aggr00000_push6_aggregation0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_push_f32_min_1_aggr00000_push7_aggregation0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_push_f32_sum_1_aggr00000_push4_aggregation0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_pipeline_keep_going_aggregation2_sr.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_pipeline_keep_going_aggregation2_valid_fifo.sv \
+  $QSYS_SIMDIR/submodules/streamer_projection_function.sv \
+  $QSYS_SIMDIR/submodules/streamer_bb_projection_B0_runOnce.sv \
+  $QSYS_SIMDIR/submodules/streamer_bb_projection_B0_runOnce_stall_region.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_pop_token_i1_wt_limpop_projection0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_pop_token_i1_wt_limpop_projection0_reg.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_push_token_i1_wt_limpush_projection0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_push_token_i1_wt_limpush_projection1_reg.sv \
+  $QSYS_SIMDIR/submodules/streamer_projection_B0_runOnce_merge_reg.sv \
+  $QSYS_SIMDIR/submodules/streamer_projection_B0_runOnce_branch.sv \
+  $QSYS_SIMDIR/submodules/streamer_projection_B0_runOnce_merge.sv \
+  $QSYS_SIMDIR/submodules/streamer_bb_projection_B1_start.sv \
+  $QSYS_SIMDIR/submodules/streamer_bb_projection_B1_start_stall_region.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_iord_bl_s_in_unnamed_projection3_projection0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_iowr_bl_s0_or_4_projection0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_sfc_s_c0_in_wt_entry_projecti00000_enter1_projection0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_sfc_exit_s_c0_out_w0000_c0_exit_projection0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_sfc_logic_s_c0_in_wt_entry_pr00000_enter1_projection0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_pipeline_keep_going_projection0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_push_i1_notexitcond_projection0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_sfc_exit_s_c1_out_w0000_c1_exit_projection0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_sfc_logic_s_c1_in_wt_entry_pr0000c1_enter_projection0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_iord_bl_call_projection_unnam0000jection2_projection0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_iowr_bl_return_projection_unn0000jection4_projection0.sv \
+  $QSYS_SIMDIR/submodules/streamer_projection_B1_start_merge_reg.sv \
+  $QSYS_SIMDIR/submodules/streamer_projection_B1_start_branch.sv \
+  $QSYS_SIMDIR/submodules/streamer_projection_B1_start_merge.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_pipeline_keep_going_projection1_sr.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_pipeline_keep_going_projection1_valid_fifo.sv \
+  $QSYS_SIMDIR/submodules/streamer_function.sv \
+  $QSYS_SIMDIR/submodules/streamer_bb_B0_runOnce.sv \
+  $QSYS_SIMDIR/submodules/streamer_bb_B0_runOnce_stall_region.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_pop_token_i1_wt_limpop_0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_pop_token_i1_wt_limpop_0_reg.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_push_token_i1_wt_limpush_0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_push_token_i1_wt_limpush_1_reg.sv \
+  $QSYS_SIMDIR/submodules/streamer_B0_runOnce_merge_reg.sv \
+  $QSYS_SIMDIR/submodules/streamer_B0_runOnce_branch.sv \
+  $QSYS_SIMDIR/submodules/streamer_B0_runOnce_merge.sv \
+  $QSYS_SIMDIR/submodules/streamer_bb_B1_start.sv \
+  $QSYS_SIMDIR/submodules/streamer_bb_B1_start_stall_region.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_sfc_s_c0_in_wt_entry_s_c0_enter1_streamer0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_sfc_exit_s_c0_out_w0000_s_c0_exit_streamer0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_sfc_logic_s_c0_in_wt_entry_s_c0_enter1_streamer0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_pipeline_keep_going_0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_push_i1_notexitcond_0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_iord_bl_call_unnamed_streamer2_streamer0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_iord_bl_return_projection_unnamed_5_streamer0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_iord_bl_return_windowing_unnamed_6_streamer0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_iowr_bl_call_projection_unnamed_3_streamer0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_iowr_bl_call_windowing_unnamed_4_streamer0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_iowr_bl_return_unnamed_streamer7_streamer0.sv \
+  $QSYS_SIMDIR/submodules/streamer_B1_start_merge_reg.sv \
+  $QSYS_SIMDIR/submodules/streamer_B1_start_branch.sv \
+  $QSYS_SIMDIR/submodules/streamer_B1_start_merge.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_pipeline_keep_going_1_sr.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_pipeline_keep_going_1_valid_fifo.sv \
+  $QSYS_SIMDIR/submodules/streamer_windowing_function.sv \
+  $QSYS_SIMDIR/submodules/streamer_bb_windowing_B0_runOnce.sv \
+  $QSYS_SIMDIR/submodules/streamer_bb_windowing_B0_runOnce_stall_region.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_pop_token_i1_wt_limpop_windowing0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_pop_token_i1_wt_limpop_windowing0_reg.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_push_token_i1_wt_limpush_windowing0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_push_token_i1_wt_limpush_windowing1_reg.sv \
+  $QSYS_SIMDIR/submodules/streamer_windowing_B0_runOnce_merge_reg.sv \
+  $QSYS_SIMDIR/submodules/streamer_windowing_B0_runOnce_branch.sv \
+  $QSYS_SIMDIR/submodules/streamer_windowing_B0_runOnce_merge.sv \
+  $QSYS_SIMDIR/submodules/streamer_bb_windowing_B1_start.sv \
+  $QSYS_SIMDIR/submodules/streamer_bb_windowing_B1_start_stall_region.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_iord_bl_return_aggregation_un0000indowing4_windowing0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_iord_bl_s0_unnamed_windowing2_windowing0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_iowr_bl_call_aggregation_unna0000indowing3_windowing0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_iowr_bl_s_out_or_6_windowing0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_sfc_s_c0_in_wt_entry_windowings_c0_enter1_windowing1.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_sfc_exit_s_c0_out_w0000s_c0_exit_windowing0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_sfc_logic_s_c0_in_wt_entry_wi0000c0_enter1_windowing0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_pipeline_keep_going_windowing0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_push_i1_notexitcond_windowing0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_sfc_s_c1_in_wt_entry_windowings_c1_enter_windowing6.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_sfc_exit_s_c1_out_w0000s_c1_exit_windowing0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_sfc_logic_s_c1_in_wt_entry_wi0000_c1_enter_windowing0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_pop_i32_i_1_windowi0000ic_0_pop3_windowing0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_push_i32_i_1_window0000c_0_push3_windowing0.sv \
+  $QSYS_SIMDIR/submodules/streamer_windowing_B1_start_merge_reg.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_iord_bl_call_windowing_unnamed_windowing1_windowing0.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_iowr_bl_return_windowing_unna0000indowing5_windowing0.sv \
+  $QSYS_SIMDIR/submodules/streamer_windowing_B1_start_branch.sv \
+  $QSYS_SIMDIR/submodules/streamer_windowing_B1_start_merge.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_pipeline_keep_going_windowing2_sr.sv \
+  $QSYS_SIMDIR/submodules/streamer_i_llvm_fpga_pipeline_keep_going_windowing2_valid_fifo.sv \
+  $QSYS_SIMDIR/submodules/streamer_internal.v \
   $QSYS_SIMDIR/submodules/tb_irq_mapper.sv \
-  $QSYS_SIMDIR/submodules/tb_windowing_inst.v \
+  $QSYS_SIMDIR/submodules/tb_streamer_inst.v \
+  $QSYS_SIMDIR/submodules/tb_streamer_component_dpi_controller_bind_conduit_fanout_inst.sv \
   $QSYS_SIMDIR/submodules/hls_sim_stream_source_dpi_bfm.sv \
   $QSYS_SIMDIR/submodules/hls_sim_stream_sink_dpi_bfm.sv \
   $QSYS_SIMDIR/submodules/tb_split_component_start_inst.sv \
-  $QSYS_SIMDIR/submodules/tb_projection_inst.v \
-  $QSYS_SIMDIR/submodules/tb_projection_component_dpi_controller_stream_active_concatenate_inst.sv \
-  $QSYS_SIMDIR/submodules/tb_projection_component_dpi_controller_bind_conduit_fanout_inst.sv \
   $QSYS_SIMDIR/submodules/hls_sim_main_dpi_controller.sv \
   $QSYS_SIMDIR/submodules/tb_concatenate_component_done_inst.sv \
   $QSYS_SIMDIR/submodules/hls_sim_component_dpi_controller.sv \

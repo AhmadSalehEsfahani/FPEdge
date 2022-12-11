@@ -29,20 +29,18 @@
 // ------------------------------------------
 // Generation parameters:
 //   output_name:       tb_split_component_start_inst
-//   multibit_width:    2
+//   multibit_width:    1
 //
 // ------------------------------------------
 
 module tb_split_component_start_inst
 #(
-    parameter MULTIBIT_WIDTH = 2
+    parameter MULTIBIT_WIDTH = 1
 )
 (
 
 // Interface: out_conduit_0
  output                    out_conduit_0,
-// Interface: out_conduit_1
- output                    out_conduit_1,
 
 // Interface: in_conduit
  input    [MULTIBIT_WIDTH-1:0]               in_conduit
@@ -50,7 +48,6 @@ module tb_split_component_start_inst
 );
 
    assign  out_conduit_0 = in_conduit[0];
-   assign  out_conduit_1 = in_conduit[1];
 
 endmodule //
 

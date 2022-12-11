@@ -5,7 +5,7 @@
   [
     {
       "name":"projection"
-      , "id":1593376416
+      , "id":4171154096
       , "clk":"No"
       , "fmax":"240.00"
       , "debug":
@@ -13,16 +13,16 @@
         [
           {
             "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":43
+            , "line":48
           }
         ]
       ]
-      , "type":"component"
+      , "type":"kernel"
       , "children":
       [
         {
           "name":"projection.B0.runOnce"
-          , "id":1590401392
+          , "id":4162663040
           , "af":"240.00"
           , "br":"0"
           , "ci":"0"
@@ -38,7 +38,7 @@
         }
         , {
           "name":"projection.B1.start"
-          , "id":1590403408
+          , "id":4162663136
           , "af":"240.00"
           , "br":"0"
           , "ci":"1"
@@ -62,7 +62,7 @@
             [
               {
                 "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":43
+                , "line":48
               }
             ]
           ]
@@ -72,7 +72,7 @@
     }
     , {
       "name":"aggregation"
-      , "id":1607664368
+      , "id":4172023536
       , "clk":"No"
       , "fmax":"240.00"
       , "debug":
@@ -80,7 +80,7 @@
         [
           {
             "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":71
+            , "line":76
           }
         ]
       ]
@@ -89,7 +89,7 @@
       [
         {
           "name":"aggregation.B0.runOnce"
-          , "id":1590401776
+          , "id":4162667360
           , "af":"240.00"
           , "br":"0"
           , "ci":"0"
@@ -105,7 +105,7 @@
         }
         , {
           "name":"aggregation.B1.start"
-          , "id":1590404656
+          , "id":4162666592
           , "af":"240.00"
           , "br":"0"
           , "ci":"1"
@@ -129,7 +129,7 @@
             [
               {
                 "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":71
+                , "line":76
               }
             ]
           ]
@@ -139,7 +139,7 @@
     }
     , {
       "name":"windowing"
-      , "id":1604455728
+      , "id":4169787024
       , "clk":"No"
       , "fmax":"240.00"
       , "debug":
@@ -147,16 +147,16 @@
         [
           {
             "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":123
+            , "line":125
           }
         ]
       ]
-      , "type":"component"
+      , "type":"kernel"
       , "children":
       [
         {
           "name":"windowing.B0.runOnce"
-          , "id":1590402160
+          , "id":4162660352
           , "af":"240.00"
           , "br":"0"
           , "ci":"0"
@@ -172,14 +172,14 @@
         }
         , {
           "name":"windowing.B1.start"
-          , "id":1590403600
-          , "af":"240.00"
+          , "id":4162661024
+          , "af":"174.96"
           , "br":"0"
           , "ci":"1"
           , "fo":"Disabled"
           , "ii":"1"
           , "ll":"1"
-          , "lt":"10.000000"
+          , "lt":"3.000000"
           , "mi":"1"
           , "pl":"Yes"
           , "tc":"0"
@@ -196,110 +196,78 @@
             [
               {
                 "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":123
+                , "line":125
               }
             ]
           ]
           , "type":"loop"
-          , "children":
-          [
-            {
-              "name":"windowing.B2"
-              , "id":1590401584
-              , "af":"194.40"
-              , "br":"1"
-              , "ci":"0"
-              , "fo":"Disabled"
-              , "ii":"1"
-              , "ll":"2"
-              , "lt":"12.000000"
-              , "mi":"1"
-              , "pl":"Yes"
-              , "tc":"3"
-              , "tn":"1"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"Hyper-Optimized loop structure: n/a"
-                }
-              ]
-              , "debug":
-              [
-                [
-                  {
-                    "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                    , "line":34
-                  }
-                ]
-              ]
-              , "type":"loop"
-            }
-            , {
-              "name":"windowing.B3"
-              , "id":1590404752
-              , "af":"240.00"
-              , "br":"0"
-              , "ci":"0"
-              , "fo":"Disabled"
-              , "ii":"1"
-              , "ll":"2"
-              , "lt":"8.000000"
-              , "mi":"n/a"
-              , "pl":"Yes"
-              , "tc":"0"
-              , "tn":"1"
-              , "type":"bb"
-            }
-            , {
-              "name":"windowing.B4"
-              , "id":1590400912
-              , "af":"194.40"
-              , "br":"1"
-              , "ci":"0"
-              , "fo":"Disabled"
-              , "ii":"1"
-              , "ll":"2"
-              , "lt":"12.000000"
-              , "mi":"1"
-              , "pl":"Yes"
-              , "tc":"4"
-              , "tn":"1"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"Hyper-Optimized loop structure: n/a"
-                }
-              ]
-              , "debug":
-              [
-                [
-                  {
-                    "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                    , "line":36
-                  }
-                ]
-              ]
-              , "type":"loop"
-            }
-          ]
         }
-        , {
-          "name":"windowing.B5"
-          , "id":1590403120
-          , "af":"174.96"
+      ]
+    }
+    , {
+      "name":"streamer"
+      , "id":4168435808
+      , "clk":"No"
+      , "fmax":"240.00"
+      , "debug":
+      [
+        [
+          {
+            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+            , "line":147
+          }
+        ]
+      ]
+      , "type":"component"
+      , "children":
+      [
+        {
+          "name":"streamer.B0.runOnce"
+          , "id":4162665920
+          , "af":"240.00"
           , "br":"0"
           , "ci":"0"
           , "fo":"Disabled"
           , "ii":"1"
           , "ll":"1"
-          , "lt":"25.000000"
+          , "lt":"2.000000"
           , "mi":"n/a"
           , "pl":"Yes"
           , "tc":"0"
           , "tn":"1"
           , "type":"bb"
+        }
+        , {
+          "name":"streamer.B1.start"
+          , "id":4162666400
+          , "af":"240.00"
+          , "br":"0"
+          , "ci":"1"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"1.000000"
+          , "mi":"1"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Hyper-Optimized loop structure: n/a"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                , "line":147
+              }
+            ]
+          ]
+          , "type":"loop"
         }
       ]
     }
