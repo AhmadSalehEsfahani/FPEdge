@@ -39,7 +39,9 @@ struct Tuple {
 
 
 //<gen>
-ihc::stream<Tuple> s0, s1, s2;
+ihc::stream_in<Tuple> s_in;
+ihc::stream_out<Tuple> s_out;
+ihc::stream<Tuple> s0;
 //</gen>
 
 
@@ -142,68 +144,36 @@ template <auto &stream_in_tuple, auto &stream_out_tuple> void windowing () {
 
 // } 
 
-component void streamer (
-    ihc::stream_in<int> &stream_in,
-    ihc::stream_out<float> &stream_out
-){
+component void streamer (){
 
-    Tuple tuple;
-    for (int i = 0; i < TUPLE_DATA_SIZE; i++) {
-        tuple.data[i] = stream_in.read();
-    }
-    tuple.valid = true;
     
     //<gen>
-    s0.write(tuple);
-    ihc::launch<projection<s0, s1>>();
-    ihc::launch<windowing<s1, s2>>();
-    ihc::collect<projection<s0, s1>>();
-    ihc::collect<windowing<s1, s2>>();
-    tuple = s2.read();
+    ihc::launch<projection<s_in, s0>>();
+    ihc::launch<windowing<s0, s_out>>();
+    ihc::collect<projection<s_in, s0>>();
+    ihc::collect<windowing<s0, s_out>>();
     //</gen>
 
-    stream_out.write(tuple.valid);
-
-    for (int i = 0; i < TUPLE_DATA_SIZE; i++){
-        stream_out.write(tuple.data[i]);
-    }
-
-    stream_out.write(tuple.aggregation_ready);
-
-    if (tuple.aggregation_ready) {
-        for (int i = 0; i < BUILDIN_AGGREGATION_FUNCTIONS_NUMBER_OF_SUPPORTED; i++) {
-            stream_out.write(tuple.aggregation_results[i]);
-        }
-    }
 }
 
 int main() {
 
-    ihc::stream_in<int> s_in;
-    ihc::stream_out<float> s_out;
+    Tuple tuples[BUILDIN_NUMBER_OF_TESTS];
     Tuple results[BUILDIN_NUMBER_OF_TESTS];
 
     for (int i = 0; i < BUILDIN_NUMBER_OF_TESTS; i++) {
 
-        s_in.write(rand() % BUILDIN_ORDER_OF_TESTS);       //price
-        s_in.write(rand() % BUILDIN_ORDER_OF_TESTS);       //volume
-        s_in.write(rand() % BUILDIN_ORDER_OF_TESTS);       //code
-        s_in.write(rand() % BUILDIN_ORDER_OF_TESTS);       //stock
+        tuples[i].valid = true;
+        tuples[i].data[0] = (rand() % BUILDIN_ORDER_OF_TESTS);       //price
+        tuples[i].data[1] = (rand() % BUILDIN_ORDER_OF_TESTS);       //volume
+        tuples[i].data[2] = (rand() % BUILDIN_ORDER_OF_TESTS);       //code
+        tuples[i].data[3] = (rand() % BUILDIN_ORDER_OF_TESTS);       //stock
 
-        streamer(s_in, s_out);
+        s_in.write(tuples[i]);
 
-        results[i].valid = s_out.read();
+        streamer();
 
-        for (int j = 0; j < TUPLE_DATA_SIZE; j++){
-            results[i].data[j] = s_out.read();
-        }
-
-        results[i].aggregation_ready = s_out.read();
-        if (results[i].aggregation_ready) {
-            for (int j = 0; j < BUILDIN_AGGREGATION_FUNCTIONS_NUMBER_OF_SUPPORTED; j++) {
-                results[i].aggregation_results[j] = s_out.read();
-            }
-        }
+        results[i] = s_out.read();
     }
     
 
