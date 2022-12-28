@@ -25,27 +25,28 @@
 //<gen>
 #define TUPLE_DATA_SIZE             4
 #define WINDOWING_k                 4
-#define AGGREGATION_FUNCTION_CODE   1
-#define AGGREGATION_FIELD_CODE      0
+
+//#define AGGREGATION_FUNCTION_CODE   1
+//#define AGGREGATION_FIELD_CODE      0
+
+#define PROJECTION_CODE_1           1
 //</gen>
 
 
 struct Tuple {
     bool valid = false;
     int data[TUPLE_DATA_SIZE] = {0};
-    bool aggregation_ready = false;
+    bool aggregation_ready[BUILDIN_AGGREGATION_FUNCTIONS_NUMBER_OF_SUPPORTED] = {0};
     float aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_NUMBER_OF_SUPPORTED] = {0.0};
 };
 
 
 //<gen>
-ihc::stream_in<Tuple> s_in;
-ihc::stream_out<Tuple> s_out;
-ihc::stream<Tuple> s0;
+ihc::stream<Tuple> s0, s1, s2;
 //</gen>
 
 
-template <auto &stream_in_tuple, auto &stream_out_tuple> void projection() {
+template <auto &stream_in_tuple, auto &stream_out_tuple> void projection(int code) {
 
         
     auto tuple = stream_in_tuple.read();
@@ -56,13 +57,18 @@ template <auto &stream_in_tuple, auto &stream_out_tuple> void projection() {
     }
 
 
+    int left_hand_cond, right_hand_cond;
+    bool projection_result = true;
+
     //<gen>
-    int left_hand_cond = (tuple.data[0] * tuple.data[1]);
-    int right_hand_cond = 20000;
-    bool projection_result = left_hand_cond < right_hand_cond;
+    if(code == PROJECTION_CODE_1) {
+        left_hand_cond = (tuple.data[0] * tuple.data[1]);
+        right_hand_cond = 20000;
+        projection_result = projection_result & (left_hand_cond < right_hand_cond);
+    }    
     // </gen>
 
-    tuple.valid = projection_result;
+    tuple.valid = tuple.valid & projection_result;
     stream_out_tuple.write(tuple);
 
     return;
@@ -116,13 +122,13 @@ Tuple aggregation (
         min = FLT_MAX;
         max = FLT_MIN;
         sum = 0;
-        in_tuple.aggregation_ready = true;
+        in_tuple.aggregation_ready[function_code] = true;
     }
 
     return in_tuple;
 }
 
-template <auto &stream_in_tuple, auto &stream_out_tuple> void windowing () {
+template <auto &stream_in_tuple, auto &stream_out_tuple> void windowing (int aggr_function_code, int aggr_field_code) {
 
     static int i = 1;
     auto tuple = stream_in_tuple.read();
@@ -131,7 +137,7 @@ template <auto &stream_in_tuple, auto &stream_out_tuple> void windowing () {
         return;
     }
 
-    ihc::launch<aggregation>(tuple, AGGREGATION_FUNCTION_CODE, AGGREGATION_FIELD_CODE, i%WINDOWING_k == 0);
+    ihc::launch<aggregation>(tuple, aggr_function_code, aggr_field_code, i%WINDOWING_k == 0);
     tuple = ihc::collect<aggregation>();
 
     stream_out_tuple.write(tuple);
@@ -144,16 +150,19 @@ template <auto &stream_in_tuple, auto &stream_out_tuple> void windowing () {
 
 // } 
 
-component void streamer (){
-
+hls_avalon_agent_component
+component Tuple streamer (hls_avalon_agent_register_argument Tuple tuple){
     
     //<gen>
-    ihc::launch<projection<s_in, s0>>();
-    ihc::launch<windowing<s0, s_out>>();
-    ihc::collect<projection<s_in, s0>>();
-    ihc::collect<windowing<s0, s_out>>();
+    s0.write(tuple);
+    ihc::launch<projection<s0, s1>>(PROJECTION_CODE_1);
+    ihc::launch<windowing<s1, s2>>(BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG, 0);
+    ihc::collect<projection<s0, s1>>();
+    ihc::collect<windowing<s1, s2>>();
+    tuple = s2.read();
     //</gen>
 
+    return tuple;
 }
 
 int main() {
@@ -169,15 +178,7 @@ int main() {
         tuples[i].data[2] = (rand() % BUILDIN_ORDER_OF_TESTS);       //code
         tuples[i].data[3] = (rand() % BUILDIN_ORDER_OF_TESTS);       //stock
 
-        s_in.write(tuples[i]);
-
-        streamer();
-
-        results[i] = s_out.read();
-    }
-    
-
-    for (int i = 0; i < BUILDIN_NUMBER_OF_TESTS; i++) {
+        results[i] = streamer(tuples[i]);
         
 
         if (results[i].valid) {
@@ -185,16 +186,17 @@ int main() {
              results[i].data[0], results[i].data[1], results[i].data[2], results[i].data[3],
              results[i].aggregation_results[0], results[i].aggregation_results[1], 
              results[i].aggregation_results[2], results[i].aggregation_results[3],
-             results[i].aggregation_results[4], results[i].aggregation_ready);
+             results[i].aggregation_results[4], results[i].aggregation_ready[BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG]);
         }     
         else {
             printf("rejected: price:%d, volume:%d, code:%d, stock:%d, count:%f, avg:%f, min:%f, max:%f, sum:%f, readyag:%d \n",
              results[i].data[0], results[i].data[1], results[i].data[2], results[i].data[3],
              results[i].aggregation_results[0], results[i].aggregation_results[1], 
              results[i].aggregation_results[2], results[i].aggregation_results[3],
-             results[i].aggregation_results[4], results[i].aggregation_ready);
+             results[i].aggregation_results[4], results[i].aggregation_ready[BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG]);
         }
     }
+    
 
     return 0;
 
