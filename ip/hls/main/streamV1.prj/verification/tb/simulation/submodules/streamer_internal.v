@@ -23,36 +23,32 @@ module streamer_internal
 (
    input logic clock,
    input logic resetn,
-   // AVST s_in
-   input logic s_in_valid,
-   output logic s_in_ready,
-   input logic [351:0] s_in_data,
-   // AVST s_out
-   output logic s_out_valid,
-   input logic s_out_ready,
-   output logic [351:0] s_out_data,
-   input logic start,
-   output logic busy,
-   output logic done,
-   input logic stall
+   output logic done_irq,
+   // AVS avs_cra
+   input logic avs_cra_enable,
+   input logic avs_cra_read,
+   input logic avs_cra_write,
+   input logic [3:0] avs_cra_address,
+   input logic [63:0] avs_cra_writedata,
+   input logic [7:0] avs_cra_byteenable,
+   output logic [63:0] avs_cra_readdata,
+   output logic avs_cra_readdatavalid
 );
    // INST streamer_internal of streamer_function_wrapper
    streamer_function_wrapper streamer_internal
    (
       .clock(clock),
       .resetn(resetn),
-      // AVST avst_iord_bl_s_in
-      .avst_iord_bl_s_in_valid(s_in_valid),
-      .avst_iord_bl_s_in_ready(s_in_ready),
-      .avst_iord_bl_s_in_data(s_in_data),
-      // AVST avst_iowr_bl_s_out
-      .avst_iowr_bl_s_out_valid(s_out_valid),
-      .avst_iowr_bl_s_out_ready(s_out_ready),
-      .avst_iowr_bl_s_out_data(s_out_data),
-      .start(start),
-      .busy(busy),
-      .done(done),
-      .stall(stall)
+      .done_irq(done_irq),
+      // AVS avs_cra
+      .avs_cra_enable(avs_cra_enable),
+      .avs_cra_read(avs_cra_read),
+      .avs_cra_write(avs_cra_write),
+      .avs_cra_address(avs_cra_address),
+      .avs_cra_writedata(avs_cra_writedata),
+      .avs_cra_byteenable(avs_cra_byteenable),
+      .avs_cra_readdata(avs_cra_readdata),
+      .avs_cra_readdatavalid(avs_cra_readdatavalid)
    );
 
 endmodule

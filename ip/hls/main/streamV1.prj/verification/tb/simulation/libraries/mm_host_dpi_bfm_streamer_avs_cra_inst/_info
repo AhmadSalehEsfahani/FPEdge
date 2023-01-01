@@ -1,0 +1,65 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dd:/project/ip/hls/main/streamV1.prj/verification/tb/simulation
+valtera_avalon_mm_master_bfm
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 DXx25 altera_common_sv_packages 13 verbosity_pkg 0 22 jIUTbB:z06UGk7e:X_Cc:3
+Z3 DXx25 altera_common_sv_packages 13 avalon_mm_pkg 0 22 _WJ`ZYGj2n3d33>EO06Hi3
+DXx25 altera_common_sv_packages 20 avalon_utilities_pkg 0 22 :g=^gzPbc2?NSg>fo5GZH2
+Z4 !s110 1672567453
+!i10b 1
+!s100 BbLTPKXB:Y;FREOF`bB2J2
+I`NF@RM_T1ZCnac5ZfP]683
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+!s105 altera_avalon_mm_master_bfm_sv_unit
+S1
+R0
+Z6 w1672567364
+8./submodules/altera_avalon_mm_master_bfm.sv
+F./submodules/altera_avalon_mm_master_bfm.sv
+L0 78
+Z7 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z8 !s108 1672567453.000000
+!s107 ./submodules/altera_avalon_mm_master_bfm.sv|
+!s90 -sv|+incdir+.|+define+COSIM_LIB|-suppress|14408|./submodules/altera_avalon_mm_master_bfm.sv|-L|altera_common_sv_packages|-work|mm_host_dpi_bfm_streamer_avs_cra_inst|
+!i113 1
+Z9 o-suppress 14408 -sv -L altera_common_sv_packages -work mm_host_dpi_bfm_streamer_avs_cra_inst
+Z10 !s92 -suppress 14408 -sv +incdir+. +define+COSIM_LIB -L altera_common_sv_packages -work mm_host_dpi_bfm_streamer_avs_cra_inst
+Z11 tCvgOpt 0
+vhls_sim_mm_host_dpi_bfm
+R1
+R2
+R3
+R4
+!i10b 1
+!s100 deThS8=FoM7fnb>DNJ>jM0
+IA^jinmdLJVc4KXVdmWHGU2
+R5
+!s105 hls_sim_mm_host_dpi_bfm_sv_unit
+S1
+R0
+R6
+8./submodules/hls_sim_mm_host_dpi_bfm.sv
+F./submodules/hls_sim_mm_host_dpi_bfm.sv
+L0 22
+R7
+r1
+!s85 0
+31
+R8
+!s107 ./submodules/hls_sim_mm_host_dpi_bfm.sv|
+!s90 -sv|+incdir+.|+define+COSIM_LIB|-suppress|14408|./submodules/hls_sim_mm_host_dpi_bfm.sv|-L|altera_common_sv_packages|-work|mm_host_dpi_bfm_streamer_avs_cra_inst|
+!i113 1
+R9
+R10
+R11

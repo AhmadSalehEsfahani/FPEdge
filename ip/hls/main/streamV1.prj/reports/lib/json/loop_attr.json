@@ -5,7 +5,7 @@
   [
     {
       "name":"projection"
-      , "id":4171154096
+      , "id":114272448
       , "clk":"No"
       , "fmax":"240.00"
       , "debug":
@@ -13,7 +13,7 @@
         [
           {
             "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":48
+            , "line":150
           }
         ]
       ]
@@ -22,7 +22,7 @@
       [
         {
           "name":"projection.B0.runOnce"
-          , "id":4162663040
+          , "id":107332704
           , "af":"240.00"
           , "br":"0"
           , "ci":"0"
@@ -38,7 +38,7 @@
         }
         , {
           "name":"projection.B1.start"
-          , "id":4162663136
+          , "id":107332992
           , "af":"240.00"
           , "br":"0"
           , "ci":"1"
@@ -62,74 +62,7 @@
             [
               {
                 "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":48
-              }
-            ]
-          ]
-          , "type":"loop"
-        }
-      ]
-    }
-    , {
-      "name":"aggregation"
-      , "id":4172023536
-      , "clk":"No"
-      , "fmax":"240.00"
-      , "debug":
-      [
-        [
-          {
-            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":76
-          }
-        ]
-      ]
-      , "type":"kernel"
-      , "children":
-      [
-        {
-          "name":"aggregation.B0.runOnce"
-          , "id":4162667360
-          , "af":"240.00"
-          , "br":"0"
-          , "ci":"0"
-          , "fo":"Disabled"
-          , "ii":"1"
-          , "ll":"1"
-          , "lt":"2.000000"
-          , "mi":"n/a"
-          , "pl":"Yes"
-          , "tc":"0"
-          , "tn":"1"
-          , "type":"bb"
-        }
-        , {
-          "name":"aggregation.B1.start"
-          , "id":4162666592
-          , "af":"240.00"
-          , "br":"0"
-          , "ci":"1"
-          , "fo":"Disabled"
-          , "ii":"25"
-          , "ll":"1"
-          , "lt":"78.000000"
-          , "mi":"1"
-          , "pl":"Yes"
-          , "tc":"0"
-          , "tn":"1"
-          , "details":
-          [
-            {
-              "type":"text"
-              , "text":"Hyper-Optimized loop structure: n/a"
-            }
-          ]
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":76
+                , "line":150
               }
             ]
           ]
@@ -139,7 +72,7 @@
     }
     , {
       "name":"windowing"
-      , "id":4169787024
+      , "id":114451280
       , "clk":"No"
       , "fmax":"240.00"
       , "debug":
@@ -147,7 +80,7 @@
         [
           {
             "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":125
+            , "line":172
           }
         ]
       ]
@@ -156,7 +89,7 @@
       [
         {
           "name":"windowing.B0.runOnce"
-          , "id":4162660352
+          , "id":107329152
           , "af":"240.00"
           , "br":"0"
           , "ci":"0"
@@ -172,14 +105,14 @@
         }
         , {
           "name":"windowing.B1.start"
-          , "id":4162661024
-          , "af":"174.96"
+          , "id":107331456
+          , "af":"240.00"
           , "br":"0"
           , "ci":"1"
           , "fo":"Disabled"
-          , "ii":"1"
+          , "ii":"23"
           , "ll":"1"
-          , "lt":"3.000000"
+          , "lt":"74.000000"
           , "mi":"1"
           , "pl":"Yes"
           , "tc":"0"
@@ -196,7 +129,7 @@
             [
               {
                 "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":125
+                , "line":172
               }
             ]
           ]
@@ -206,7 +139,7 @@
     }
     , {
       "name":"streamer"
-      , "id":4168435808
+      , "id":111052368
       , "clk":"No"
       , "fmax":"240.00"
       , "debug":
@@ -214,7 +147,7 @@
         [
           {
             "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":147
+            , "line":195
           }
         ]
       ]
@@ -223,7 +156,7 @@
       [
         {
           "name":"streamer.B0.runOnce"
-          , "id":4162665920
+          , "id":107329632
           , "af":"240.00"
           , "br":"0"
           , "ci":"0"
@@ -239,7 +172,7 @@
         }
         , {
           "name":"streamer.B1.start"
-          , "id":4162666400
+          , "id":107332416
           , "af":"240.00"
           , "br":"0"
           , "ci":"1"
@@ -263,7 +196,7 @@
             [
               {
                 "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":147
+                , "line":195
               }
             ]
           ]

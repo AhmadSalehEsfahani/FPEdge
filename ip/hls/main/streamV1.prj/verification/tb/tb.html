@@ -67,7 +67,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </table>
   <table class="blueBar">
    <tr>
-    <td class="l">2022.12.11.14:24:14</td>
+    <td class="l">2023.01.01.13:32:35</td>
     <td class="r">Datasheet</td>
    </tr>
   </table>
@@ -82,7 +82,13 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </table>
    </div><span style="display:inline-block ; width:28px"> </span>
    <div style="display:inline-block ; text-align:left"><span>
-     <br/></span>
+     <br/>All Components
+     <br/>&#160;&#160;
+     <a href="#module_streamer_inst"><b>streamer_inst</b>
+     </a> streamer 1.0
+     <br/>&#160;&#160;
+     <a href="#module_streamer_inst_streamer_internal_inst"><b>streamer_inst_streamer_internal_inst</b>
+     </a> streamer_internal 1.0</span>
    </div>
   </div>
   <div style="width:100% ;  height:10px"> </div>
@@ -90,6 +96,35 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   <table class="mmap">
    <tr>
     <td class="empty" rowspan="2"></td>
+    <td class="mastermodule" colspan="1">
+     <a href="#module_mm_host_dpi_bfm_streamer_avs_cra_inst"><b>mm_host_dpi_bfm_streamer_avs_cra_inst</b>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td class="masterlr">&#160;m0</td>
+   </tr>
+   <tr>
+    <td class="slavemodule">&#160;
+     <a href="#module_streamer_inst"><b>streamer_inst</b>
+     </a>
+    </td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slaveb">avs_cra&#160;</td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slavemodule">&#160;
+     <a href="#module_streamer_inst_streamer_internal_inst"><b>streamer_inst_streamer_internal_inst</b>
+     </a>
+    </td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slaveb">avs_cra&#160;</td>
+    <td class="addr"><span style="color:#989898">0x</span>00000000</td>
    </tr>
   </table>
   <a name="module_clock_reset_inst"> </a>
@@ -104,7 +139,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_main_dpi_controller_inst">main_dpi_controller_inst</a>
       </td>
       <td class="from">reset_ctrl&#160;&#160;</td>
-      <td class="main" rowspan="34">clock_reset_inst</td>
+      <td class="main" rowspan="25">clock_reset_inst</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;reset_ctrl</td>
@@ -175,60 +210,14 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td></td>
       <td class="from">clock&#160;&#160;</td>
-      <td class="neighbor" rowspan="6">
-       <a href="#module_stream_source_dpi_bfm_streamer_s_in_inst">stream_source_dpi_bfm_streamer_s_in_inst</a>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_mm_host_dpi_bfm_streamer_avs_cra_inst">mm_host_dpi_bfm_streamer_avs_cra_inst</a>
       </td>
      </tr>
      <tr>
       <td></td>
       <td></td>
       <td class="to">&#160;&#160;clock</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">clock2x&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;clock2x</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">reset&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;reset</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">clock&#160;&#160;</td>
-      <td class="neighbor" rowspan="6">
-       <a href="#module_stream_sink_dpi_bfm_streamer_s_out_inst">stream_sink_dpi_bfm_streamer_s_out_inst</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;clock</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">clock2x&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;clock2x</td>
      </tr>
      <tr>
       <td></td>
@@ -320,7 +309,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_clock_reset_inst">clock_reset_inst</a>
       </td>
       <td class="from">clock&#160;&#160;</td>
-      <td class="main" rowspan="29">component_dpi_controller_streamer_inst</td>
+      <td class="main" rowspan="38">component_dpi_controller_streamer_inst</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clock</td>
@@ -342,13 +331,38 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </tr>
      <tr>
       <td class="neighbor" rowspan="2">
+       <a href="#module_mm_host_dpi_bfm_streamer_avs_cra_inst">mm_host_dpi_bfm_streamer_avs_cra_inst</a>
+      </td>
+      <td class="from">agent_busy_out&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;agent_busy</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
        <a
-               href="#module_streamer_component_dpi_controller_stream_active_concatenate_inst">streamer_component_dpi_controller_stream_active_concatenate_inst</a>
+               href="#module_streamer_component_dpi_controller_agent_done_concatenate_inst">streamer_component_dpi_controller_agent_done_concatenate_inst</a>
       </td>
       <td class="from">out_conduit&#160;&#160;</td>
      </tr>
      <tr>
-      <td class="to">&#160;&#160;dpi_control_stream_writes_active</td>
+      <td class="to">&#160;&#160;dpi_control_agents_done</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a
+               href="#module_streamer_component_dpi_controller_agent_ready_concatenate_inst">streamer_component_dpi_controller_agent_ready_concatenate_inst</a>
+      </td>
+      <td class="from">out_conduit&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;dpi_control_agents_ready</td>
      </tr>
      <tr style="height:6px">
       <td></td>
@@ -361,34 +375,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </tr>
      <tr>
       <td class="to">&#160;&#160;component_enabled</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_streamer_inst_streamer_internal_inst">streamer_inst_streamer_internal_inst</a>
-      </td>
-      <td class="from">return&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;component_return</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">component_call&#160;&#160;</td>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_streamer_inst_streamer_internal_inst">streamer_inst_streamer_internal_inst</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;call</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
      </tr>
      <tr>
       <td></td>
@@ -453,6 +439,56 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="to">&#160;&#160;in_conduit</td>
      </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">read_implicit_streams&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a
+               href="#module_streamer_component_dpi_controller_implicit_ready_conduit_fanout_inst">streamer_component_dpi_controller_implicit_ready_conduit_fanout_inst</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;in_conduit</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">readback_from_agents&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a
+               href="#module_streamer_component_dpi_controller_agent_readback_fanout_inst">streamer_component_dpi_controller_agent_readback_fanout_inst</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;in_conduit</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">component_irq&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_streamer_inst_streamer_internal_inst">streamer_inst_streamer_internal_inst</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;irq</td>
+     </tr>
     </table>
    </div>
    <br/>
@@ -468,7 +504,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">COMPONENT_MANGLED_NAME</td>
-        <td class="parametervalue">\3fstreamer@@YAXXZ</td>
+        <td class="parametervalue">\3fstreamer@@YA\3fAUTuple@@U1@@Z</td>
        </tr>
        <tr>
         <td class="parametername">RETURN_DATAWIDTH</td>
@@ -476,19 +512,19 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">COMPONENT_NUM_AGENTS</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">COMPONENT_HAS_AGENT_RETURN</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">COMPONENT_NUM_OUTPUT_STREAMS</td>
         <td class="parametervalue">1</td>
        </tr>
        <tr>
-        <td class="parametername">AUTO_COMPONENT_IRQ_INTERRUPTS_USED</td>
+        <td class="parametername">COMPONENT_HAS_AGENT_RETURN</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">COMPONENT_NUM_OUTPUT_STREAMS</td>
         <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">AUTO_COMPONENT_IRQ_INTERRUPTS_USED</td>
+        <td class="parametervalue">1</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamily</td>
@@ -751,6 +787,288 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </tr>
    </table>
   </div>
+  <a name="module_mm_host_dpi_bfm_streamer_avs_cra_inst"> </a>
+  <div>
+   <hr/>
+   <h2>mm_host_dpi_bfm_streamer_avs_cra_inst</h2>hls_sim_mm_host_dpi_bfm v1.0
+   <br/>
+   <div class="greydiv">
+    <table class="connectionboxes">
+     <tr>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_clock_reset_inst">clock_reset_inst</a>
+      </td>
+      <td class="from">clock&#160;&#160;</td>
+      <td class="main" rowspan="27">mm_host_dpi_bfm_streamer_avs_cra_inst</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;clock</td>
+     </tr>
+     <tr>
+      <td class="from">reset&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;reset</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a
+               href="#module_streamer_component_dpi_controller_bind_conduit_fanout_inst">streamer_component_dpi_controller_bind_conduit_fanout_inst</a>
+      </td>
+      <td class="from">out_conduit_0&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;dpi_control_bind</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a
+               href="#module_streamer_component_dpi_controller_agent_readback_fanout_inst">streamer_component_dpi_controller_agent_readback_fanout_inst</a>
+      </td>
+      <td class="from">out_conduit_0&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;dpi_control_component_done</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a
+               href="#module_streamer_component_dpi_controller_implicit_ready_conduit_fanout_inst">streamer_component_dpi_controller_implicit_ready_conduit_fanout_inst</a>
+      </td>
+      <td class="from">out_conduit_0&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;dpi_control_component_started</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a
+               href="#module_streamer_component_dpi_controller_enable_conduit_fanout_inst">streamer_component_dpi_controller_enable_conduit_fanout_inst</a>
+      </td>
+      <td class="from">out_conduit_0&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;dpi_control_enable</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">m0&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_streamer_inst_streamer_internal_inst">streamer_inst_streamer_internal_inst</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;avs_cra</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">agent_busy_out&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_component_dpi_controller_streamer_inst">component_dpi_controller_streamer_inst</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;agent_busy</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">dpi_control_done_reads&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a
+               href="#module_streamer_component_dpi_controller_agent_done_concatenate_inst">streamer_component_dpi_controller_agent_done_concatenate_inst</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;in_conduit_0</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">dpi_control_done_writes&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a
+               href="#module_streamer_component_dpi_controller_agent_ready_concatenate_inst">streamer_component_dpi_controller_agent_ready_concatenate_inst</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;in_conduit_0</td>
+     </tr>
+    </table>
+   </div>
+   <br/>
+   <br/>
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Parameters</h2>
+      <table>
+       <tr>
+        <td class="parametername">AV_ADDRESS_W</td>
+        <td class="parametervalue">7</td>
+       </tr>
+       <tr>
+        <td class="parametername">AV_SYMBOL_W</td>
+        <td class="parametervalue">8</td>
+       </tr>
+       <tr>
+        <td class="parametername">AV_NUMSYMBOLS</td>
+        <td class="parametervalue">8</td>
+       </tr>
+       <tr>
+        <td class="parametername">AV_BURSTCOUNT_W</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">USE_READ</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">USE_WRITE</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">USE_ADDRESS</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">USE_BYTE_ENABLE</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">USE_BURSTCOUNT</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">USE_READ_DATA</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">USE_READ_DATA_VALID</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">USE_WRITE_DATA</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">USE_BEGIN_TRANSFER</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">USE_BEGIN_BURST_TRANSFER</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">USE_WAIT_REQUEST</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">AV_BURST_LINEWRAP</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">AV_BURST_BNDR_ONLY</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">AV_FIX_READ_LATENCY</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">AV_READ_WAIT_TIME</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">AV_WRITE_WAIT_TIME</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">REGISTER_WAITREQUEST</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">AV_REGISTERINCOMINGSIGNALS</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">ADDRESS_UNITS</td>
+        <td class="parametervalue">SYMBOLS</td>
+       </tr>
+       <tr>
+        <td class="parametername">COMPONENT_NAME</td>
+        <td class="parametervalue">streamer</td>
+       </tr>
+       <tr>
+        <td class="parametername">COMPONENT_HAS_AGENT_RETURN</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">COMPONENT_AGENT_WRITE_INTERFACE_NAME</td>
+        <td class="parametervalue">__ihc_hls_avs_write_stream__</td>
+       </tr>
+       <tr>
+        <td class="parametername">COMPONENT_AGENT_READ_INTERFACE_NAME</td>
+        <td class="parametervalue">$return</td>
+       </tr>
+       <tr>
+        <td class="parametername">COMPONENT_CRA_AGENT</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">NUM_AGENT_MEMORIES</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">deviceFamily</td>
+        <td class="parametervalue">UNKNOWN</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateLegacySim</td>
+        <td class="parametervalue">false</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>&#160;&#160;
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Software Assignments</h2>(none)</td>
+    </tr>
+   </table>
+  </div>
   <a name="module_split_component_start_inst"> </a>
   <div>
    <hr/>
@@ -813,86 +1131,36 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </tr>
    </table>
   </div>
-  <a name="module_stream_sink_dpi_bfm_streamer_s_out_inst"> </a>
+  <a
+     name="module_streamer_component_dpi_controller_agent_done_concatenate_inst"> </a>
   <div>
    <hr/>
-   <h2>stream_sink_dpi_bfm_streamer_s_out_inst</h2>hls_sim_stream_sink_dpi_bfm v1.0
+   <h2>streamer_component_dpi_controller_agent_done_concatenate_inst</h2>avalon_concatenate_singlebit_conduits v1.0
    <br/>
    <div class="greydiv">
     <table class="connectionboxes">
      <tr>
       <td class="neighbor" rowspan="2">
-       <a href="#module_streamer_inst_streamer_internal_inst">streamer_inst_streamer_internal_inst</a>
+       <a href="#module_mm_host_dpi_bfm_streamer_avs_cra_inst">mm_host_dpi_bfm_streamer_avs_cra_inst</a>
       </td>
-      <td class="from">s_out&#160;&#160;</td>
-      <td class="main" rowspan="17">stream_sink_dpi_bfm_streamer_s_out_inst</td>
+      <td class="from">dpi_control_done_reads&#160;&#160;</td>
+      <td class="main" rowspan="4">streamer_component_dpi_controller_agent_done_concatenate_inst</td>
      </tr>
      <tr>
-      <td class="to">&#160;&#160;sink</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td class="neighbor" rowspan="6">
-       <a href="#module_clock_reset_inst">clock_reset_inst</a>
-      </td>
-      <td class="from">clock&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;clock</td>
-     </tr>
-     <tr>
-      <td class="from">clock2x&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;clock2x</td>
-     </tr>
-     <tr>
-      <td class="from">reset&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;reset</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td class="neighbor" rowspan="2">
-       <a
-               href="#module_streamer_component_dpi_controller_bind_conduit_fanout_inst">streamer_component_dpi_controller_bind_conduit_fanout_inst</a>
-      </td>
-      <td class="from">out_conduit_1&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;dpi_control_bind</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td class="neighbor" rowspan="2">
-       <a
-               href="#module_streamer_component_dpi_controller_enable_conduit_fanout_inst">streamer_component_dpi_controller_enable_conduit_fanout_inst</a>
-      </td>
-      <td class="from">out_conduit_1&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;dpi_control_enable</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">dpi_control_stream_active&#160;&#160;</td>
-      <td class="neighbor" rowspan="2">
-       <a
-               href="#module_streamer_component_dpi_controller_stream_active_concatenate_inst">streamer_component_dpi_controller_stream_active_concatenate_inst</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
       <td class="to">&#160;&#160;in_conduit_0</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">out_conduit&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_component_dpi_controller_streamer_inst">component_dpi_controller_streamer_inst</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;dpi_control_agents_done</td>
      </tr>
     </table>
    </div>
@@ -904,36 +1172,8 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <h2>Parameters</h2>
       <table>
        <tr>
-        <td class="parametername">COMPONENT_NAME</td>
-        <td class="parametervalue">streamer</td>
-       </tr>
-       <tr>
-        <td class="parametername">INTERFACE_NAME</td>
-        <td class="parametervalue">@s_out</td>
-       </tr>
-       <tr>
-        <td class="parametername">STREAM_DATAWIDTH</td>
-        <td class="parametervalue">352</td>
-       </tr>
-       <tr>
-        <td class="parametername">READY_LATENCY</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">STREAM_BITSPERSYMBOL</td>
-        <td class="parametervalue">352</td>
-       </tr>
-       <tr>
-        <td class="parametername">USES_PACKETS</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">EMPTY_WIDTH</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">FIRST_SYMBOL_IN_HIGH_ORDER_BITS</td>
-        <td class="parametervalue">0</td>
+        <td class="parametername">multibit_width</td>
+        <td class="parametervalue">1</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamily</td>
@@ -954,73 +1194,36 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </tr>
    </table>
   </div>
-  <a name="module_stream_source_dpi_bfm_streamer_s_in_inst"> </a>
+  <a
+     name="module_streamer_component_dpi_controller_agent_readback_fanout_inst"> </a>
   <div>
    <hr/>
-   <h2>stream_source_dpi_bfm_streamer_s_in_inst</h2>hls_sim_stream_source_dpi_bfm v1.0
+   <h2>streamer_component_dpi_controller_agent_readback_fanout_inst</h2>avalon_conduit_fanout v1.0
    <br/>
    <div class="greydiv">
     <table class="connectionboxes">
      <tr>
-      <td class="neighbor" rowspan="6">
-       <a href="#module_clock_reset_inst">clock_reset_inst</a>
-      </td>
-      <td class="from">clock&#160;&#160;</td>
-      <td class="main" rowspan="14">stream_source_dpi_bfm_streamer_s_in_inst</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;clock</td>
-     </tr>
-     <tr>
-      <td class="from">clock2x&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;clock2x</td>
-     </tr>
-     <tr>
-      <td class="from">reset&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;reset</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
       <td class="neighbor" rowspan="2">
-       <a
-               href="#module_streamer_component_dpi_controller_bind_conduit_fanout_inst">streamer_component_dpi_controller_bind_conduit_fanout_inst</a>
+       <a href="#module_component_dpi_controller_streamer_inst">component_dpi_controller_streamer_inst</a>
       </td>
+      <td class="from">readback_from_agents&#160;&#160;</td>
+      <td class="main" rowspan="4">streamer_component_dpi_controller_agent_readback_fanout_inst</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;in_conduit</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
       <td class="from">out_conduit_0&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;dpi_control_bind</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
       <td class="neighbor" rowspan="2">
-       <a
-               href="#module_streamer_component_dpi_controller_enable_conduit_fanout_inst">streamer_component_dpi_controller_enable_conduit_fanout_inst</a>
-      </td>
-      <td class="from">out_conduit_0&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;dpi_control_enable</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">source&#160;&#160;</td>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_streamer_inst_streamer_internal_inst">streamer_inst_streamer_internal_inst</a>
+       <a href="#module_mm_host_dpi_bfm_streamer_avs_cra_inst">mm_host_dpi_bfm_streamer_avs_cra_inst</a>
       </td>
      </tr>
      <tr>
       <td></td>
       <td></td>
-      <td class="to">&#160;&#160;s_in</td>
+      <td class="to">&#160;&#160;dpi_control_component_done</td>
      </tr>
     </table>
    </div>
@@ -1032,36 +1235,71 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <h2>Parameters</h2>
       <table>
        <tr>
-        <td class="parametername">COMPONENT_NAME</td>
-        <td class="parametervalue">streamer</td>
+        <td class="parametername">numFanOut</td>
+        <td class="parametervalue">1</td>
        </tr>
        <tr>
-        <td class="parametername">INTERFACE_NAME</td>
-        <td class="parametervalue">@s_in</td>
+        <td class="parametername">deviceFamily</td>
+        <td class="parametervalue">UNKNOWN</td>
        </tr>
        <tr>
-        <td class="parametername">STREAM_DATAWIDTH</td>
-        <td class="parametervalue">352</td>
+        <td class="parametername">generateLegacySim</td>
+        <td class="parametervalue">false</td>
        </tr>
+      </table>
+     </td>
+    </tr>
+   </table>&#160;&#160;
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Software Assignments</h2>(none)</td>
+    </tr>
+   </table>
+  </div>
+  <a
+     name="module_streamer_component_dpi_controller_agent_ready_concatenate_inst"> </a>
+  <div>
+   <hr/>
+   <h2>streamer_component_dpi_controller_agent_ready_concatenate_inst</h2>avalon_concatenate_singlebit_conduits v1.0
+   <br/>
+   <div class="greydiv">
+    <table class="connectionboxes">
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_mm_host_dpi_bfm_streamer_avs_cra_inst">mm_host_dpi_bfm_streamer_avs_cra_inst</a>
+      </td>
+      <td class="from">dpi_control_done_writes&#160;&#160;</td>
+      <td class="main" rowspan="4">streamer_component_dpi_controller_agent_ready_concatenate_inst</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;in_conduit_0</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">out_conduit&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_component_dpi_controller_streamer_inst">component_dpi_controller_streamer_inst</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;dpi_control_agents_ready</td>
+     </tr>
+    </table>
+   </div>
+   <br/>
+   <br/>
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Parameters</h2>
+      <table>
        <tr>
-        <td class="parametername">FORCE_STREAM_CONDUIT</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">STREAM_BITSPERSYMBOL</td>
-        <td class="parametervalue">352</td>
-       </tr>
-       <tr>
-        <td class="parametername">USES_PACKETS</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">EMPTY_WIDTH</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">FIRST_SYMBOL_IN_HIGH_ORDER_BITS</td>
-        <td class="parametervalue">0</td>
+        <td class="parametername">multibit_width</td>
+        <td class="parametervalue">1</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamily</td>
@@ -1095,7 +1333,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_component_dpi_controller_streamer_inst">component_dpi_controller_streamer_inst</a>
       </td>
       <td class="from">dpi_control_bind&#160;&#160;</td>
-      <td class="main" rowspan="7">streamer_component_dpi_controller_bind_conduit_fanout_inst</td>
+      <td class="main" rowspan="4">streamer_component_dpi_controller_bind_conduit_fanout_inst</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;in_conduit</td>
@@ -1105,23 +1343,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="from">out_conduit_0&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
-       <a href="#module_stream_source_dpi_bfm_streamer_s_in_inst">stream_source_dpi_bfm_streamer_s_in_inst</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;dpi_control_bind</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">out_conduit_1&#160;&#160;</td>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_stream_sink_dpi_bfm_streamer_s_out_inst">stream_sink_dpi_bfm_streamer_s_out_inst</a>
+       <a href="#module_mm_host_dpi_bfm_streamer_avs_cra_inst">mm_host_dpi_bfm_streamer_avs_cra_inst</a>
       </td>
      </tr>
      <tr>
@@ -1140,7 +1362,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <table>
        <tr>
         <td class="parametername">numFanOut</td>
-        <td class="parametervalue">2</td>
+        <td class="parametervalue">1</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamily</td>
@@ -1174,7 +1396,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_component_dpi_controller_streamer_inst">component_dpi_controller_streamer_inst</a>
       </td>
       <td class="from">dpi_control_enable&#160;&#160;</td>
-      <td class="main" rowspan="7">streamer_component_dpi_controller_enable_conduit_fanout_inst</td>
+      <td class="main" rowspan="4">streamer_component_dpi_controller_enable_conduit_fanout_inst</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;in_conduit</td>
@@ -1184,23 +1406,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="from">out_conduit_0&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
-       <a href="#module_stream_source_dpi_bfm_streamer_s_in_inst">stream_source_dpi_bfm_streamer_s_in_inst</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;dpi_control_enable</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">out_conduit_1&#160;&#160;</td>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_stream_sink_dpi_bfm_streamer_s_out_inst">stream_sink_dpi_bfm_streamer_s_out_inst</a>
+       <a href="#module_mm_host_dpi_bfm_streamer_avs_cra_inst">mm_host_dpi_bfm_streamer_avs_cra_inst</a>
       </td>
      </tr>
      <tr>
@@ -1219,7 +1425,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <table>
        <tr>
         <td class="parametername">numFanOut</td>
-        <td class="parametervalue">2</td>
+        <td class="parametervalue">1</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamily</td>
@@ -1241,35 +1447,35 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    </table>
   </div>
   <a
-     name="module_streamer_component_dpi_controller_stream_active_concatenate_inst"> </a>
+     name="module_streamer_component_dpi_controller_implicit_ready_conduit_fanout_inst"> </a>
   <div>
    <hr/>
-   <h2>streamer_component_dpi_controller_stream_active_concatenate_inst</h2>avalon_concatenate_singlebit_conduits v1.0
+   <h2>streamer_component_dpi_controller_implicit_ready_conduit_fanout_inst</h2>avalon_conduit_fanout v1.0
    <br/>
    <div class="greydiv">
     <table class="connectionboxes">
      <tr>
       <td class="neighbor" rowspan="2">
-       <a href="#module_stream_sink_dpi_bfm_streamer_s_out_inst">stream_sink_dpi_bfm_streamer_s_out_inst</a>
-      </td>
-      <td class="from">dpi_control_stream_active&#160;&#160;</td>
-      <td class="main" rowspan="4">streamer_component_dpi_controller_stream_active_concatenate_inst</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;in_conduit_0</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">out_conduit&#160;&#160;</td>
-      <td class="neighbor" rowspan="2">
        <a href="#module_component_dpi_controller_streamer_inst">component_dpi_controller_streamer_inst</a>
       </td>
+      <td class="from">read_implicit_streams&#160;&#160;</td>
+      <td class="main" rowspan="4">streamer_component_dpi_controller_implicit_ready_conduit_fanout_inst</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;in_conduit</td>
      </tr>
      <tr>
       <td></td>
       <td></td>
-      <td class="to">&#160;&#160;dpi_control_stream_writes_active</td>
+      <td class="from">out_conduit_0&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_mm_host_dpi_bfm_streamer_avs_cra_inst">mm_host_dpi_bfm_streamer_avs_cra_inst</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;dpi_control_component_started</td>
      </tr>
     </table>
    </div>
@@ -1281,7 +1487,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <h2>Parameters</h2>
       <table>
        <tr>
-        <td class="parametername">multibit_width</td>
+        <td class="parametername">numFanOut</td>
         <td class="parametervalue">1</td>
        </tr>
        <tr>
@@ -1317,7 +1523,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <table>
        <tr>
         <td class="parametername">AUTO_GENERATION_ID</td>
-        <td class="parametervalue">1670756053</td>
+        <td class="parametervalue">1672567355</td>
        </tr>
        <tr>
         <td class="parametername">AUTO_UNIQUE_ID</td>
@@ -1375,13 +1581,13 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <table class="connectionboxes">
      <tr>
       <td class="neighbor" rowspan="2">
-       <a href="#module_stream_source_dpi_bfm_streamer_s_in_inst">stream_source_dpi_bfm_streamer_s_in_inst</a>
+       <a href="#module_mm_host_dpi_bfm_streamer_avs_cra_inst">mm_host_dpi_bfm_streamer_avs_cra_inst</a>
       </td>
-      <td class="from">source&#160;&#160;</td>
-      <td class="main" rowspan="15">streamer_inst_streamer_internal_inst</td>
+      <td class="from">m0&#160;&#160;</td>
+      <td class="main" rowspan="10">streamer_inst_streamer_internal_inst</td>
      </tr>
      <tr>
-      <td class="to">&#160;&#160;s_in</td>
+      <td class="to">&#160;&#160;avs_cra</td>
      </tr>
      <tr style="height:6px">
       <td></td>
@@ -1408,39 +1614,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td class="neighbor" rowspan="2">
        <a href="#module_component_dpi_controller_streamer_inst">component_dpi_controller_streamer_inst</a>
       </td>
-      <td class="from">component_call&#160;&#160;</td>
+      <td class="from">component_irq&#160;&#160;</td>
      </tr>
      <tr>
-      <td class="to">&#160;&#160;call</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">s_out&#160;&#160;</td>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_stream_sink_dpi_bfm_streamer_s_out_inst">stream_sink_dpi_bfm_streamer_s_out_inst</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;sink</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">return&#160;&#160;</td>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_component_dpi_controller_streamer_inst">component_dpi_controller_streamer_inst</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;component_return</td>
+      <td class="to">&#160;&#160;irq</td>
      </tr>
     </table>
    </div>
@@ -1472,8 +1649,8 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </div>
   <table class="blueBar">
    <tr>
-    <td class="l">generation took 0.02 seconds</td>
-    <td class="r">rendering took 0.08 seconds</td>
+    <td class="l">generation took 0.01 seconds</td>
+    <td class="r">rendering took 0.10 seconds</td>
    </tr>
   </table>
  </body>

@@ -10,15 +10,15 @@ cModel Technology
 Z0 dd:/project/ip/hls/main/streamV1.prj/verification/tb/simulation
 vhls_sim_main_dpi_controller
 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-!s110 1670756112
+!s110 1672567453
 !i10b 1
 !s100 SLe=dbz8G4WjzgnHLW@312
-IlkF;_2AP8:H=e_;di[^ko1
+IR`hc2dm>P2MM8CXMILfMk0
 VDg1SIo80bB@j0V0VzS_@n1
 !s105 hls_sim_main_dpi_controller_sv_unit
 S1
 R0
-w1670756056
+w1672567364
 8./submodules/hls_sim_main_dpi_controller.sv
 F./submodules/hls_sim_main_dpi_controller.sv
 L0 21
@@ -26,10 +26,10 @@ OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1670756112.000000
+!s108 1672567453.000000
 !s107 ./submodules/hls_sim_main_dpi_controller.sv|
-!s90 -sv|+incdir+.|+define+COSIM_LIB|-suppress|14408|./submodules/hls_sim_main_dpi_controller.sv|-work|main_dpi_controller_inst|
+!s90 -sv|+incdir+.|+define+COSIM_LIB|-suppress|14408|./submodules/hls_sim_main_dpi_controller.sv|-L|altera_common_sv_packages|-work|main_dpi_controller_inst|
 !i113 1
-o-suppress 14408 -sv -work main_dpi_controller_inst
-!s92 -suppress 14408 -sv +incdir+. +define+COSIM_LIB -work main_dpi_controller_inst
+o-suppress 14408 -sv -L altera_common_sv_packages -work main_dpi_controller_inst
+!s92 -suppress 14408 -sv +incdir+. +define+COSIM_LIB -L altera_common_sv_packages -work main_dpi_controller_inst
 tCvgOpt 0

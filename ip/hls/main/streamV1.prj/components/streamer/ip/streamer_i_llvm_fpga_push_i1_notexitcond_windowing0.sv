@@ -16,7 +16,7 @@
 
 // SystemVerilog created from i_llvm_fpga_push_i1_notexitcond_windowing0
 // Created for function/kernel streamer
-// SystemVerilog created on Sun Dec 11 14:23:30 2022
+// SystemVerilog created on Sun Jan  1 13:31:30 2023
 
 
 (* altera_attribute = "-name AUTO_SHIFT_REGISTER_RECOGNITION OFF; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 10037; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 15400; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 12020; -name MESSAGE_DISABLE 12030; -name MESSAGE_DISABLE 12010; -name MESSAGE_DISABLE 12110; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 13410; -name MESSAGE_DISABLE 113007; -name MESSAGE_DISABLE 10958" *)
@@ -71,10 +71,10 @@ module streamer_i_llvm_fpga_push_i1_notexitcond_windowing0 (
     // c_i7_03(CONSTANT,7)
     assign c_i7_03_q = $unsigned(7'b0000000);
 
-    // element_extension2(BITJOIN,8)@1
+    // element_extension2(BITJOIN,8)@23
     assign element_extension2_q = {c_i7_03_q, in_data_in};
 
-    // i_llvm_fpga_push_i1_notexitcond_windowing1(EXTIFACE,11)@1
+    // i_llvm_fpga_push_i1_notexitcond_windowing1(EXTIFACE,11)@23
     assign i_llvm_fpga_push_i1_notexitcond_windowing1_data_in = element_extension2_q[0:0];
     assign i_llvm_fpga_push_i1_notexitcond_windowing1_dir = VCC_q;
     assign i_llvm_fpga_push_i1_notexitcond_windowing1_feedback_stall_in = in_feedback_stall_in_2;
@@ -93,7 +93,7 @@ module streamer_i_llvm_fpga_push_i1_notexitcond_windowing0 (
     assign i_llvm_fpga_push_i1_notexitcond_windowing1_stall_out[0] = i_llvm_fpga_push_i1_notexitcond_windowing1_stall_out_bitsignaltemp;
     assign i_llvm_fpga_push_i1_notexitcond_windowing1_valid_out[0] = i_llvm_fpga_push_i1_notexitcond_windowing1_valid_out_bitsignaltemp;
     acl_push #(
-        .FIFO_DEPTH(0),
+        .FIFO_DEPTH(23),
         .INF_LOOP(0),
         .INF_LOOP_INITIALIZATION(1'b0),
         .MIN_FIFO_LATENCY(0),
@@ -120,7 +120,7 @@ module streamer_i_llvm_fpga_push_i1_notexitcond_windowing0 (
         .resetn(resetn)
     );
 
-    // dupName_0_sync_out_x(GPOUT,3)@1
+    // dupName_0_sync_out_x(GPOUT,3)@23
     assign out_data_out = i_llvm_fpga_push_i1_notexitcond_windowing1_data_out;
     assign out_valid_out = i_llvm_fpga_push_i1_notexitcond_windowing1_valid_out;
 
@@ -128,7 +128,7 @@ module streamer_i_llvm_fpga_push_i1_notexitcond_windowing0 (
     assign out_feedback_out_2 = i_llvm_fpga_push_i1_notexitcond_windowing1_feedback_out;
     assign out_feedback_valid_out_2 = i_llvm_fpga_push_i1_notexitcond_windowing1_feedback_valid_out;
 
-    // sync_out(GPOUT,13)@1
+    // sync_out(GPOUT,13)@23
     assign out_stall_out = i_llvm_fpga_push_i1_notexitcond_windowing1_stall_out;
 
 endmodule

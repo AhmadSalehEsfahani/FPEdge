@@ -21,7 +21,7 @@
    {
       datum _sortIndex
       {
-         value = "5";
+         value = "4";
          type = "int";
       }
    }
@@ -29,7 +29,7 @@
    {
       datum _sortIndex
       {
-         value = "10";
+         value = "12";
          type = "int";
       }
    }
@@ -37,7 +37,7 @@
    {
       datum _sortIndex
       {
-         value = "11";
+         value = "13";
          type = "int";
       }
    }
@@ -49,23 +49,7 @@
          type = "int";
       }
    }
-   element split_component_start_inst
-   {
-      datum _sortIndex
-      {
-         value = "9";
-         type = "int";
-      }
-   }
-   element stream_sink_dpi_bfm_streamer_s_out_inst
-   {
-      datum _sortIndex
-      {
-         value = "4";
-         type = "int";
-      }
-   }
-   element stream_source_dpi_bfm_streamer_s_in_inst
+   element mm_host_dpi_bfm_streamer_avs_cra_inst
    {
       datum _sortIndex
       {
@@ -73,11 +57,43 @@
          type = "int";
       }
    }
+   element split_component_start_inst
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+   element streamer_component_dpi_controller_agent_done_concatenate_inst
+   {
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+   }
+   element streamer_component_dpi_controller_agent_readback_fanout_inst
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
+   element streamer_component_dpi_controller_agent_ready_concatenate_inst
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
    element streamer_component_dpi_controller_bind_conduit_fanout_inst
    {
       datum _sortIndex
       {
-         value = "6";
+         value = "5";
          type = "int";
       }
    }
@@ -85,15 +101,15 @@
    {
       datum _sortIndex
       {
-         value = "7";
+         value = "6";
          type = "int";
       }
    }
-   element streamer_component_dpi_controller_stream_active_concatenate_inst
+   element streamer_component_dpi_controller_implicit_ready_conduit_fanout_inst
    {
       datum _sortIndex
       {
-         value = "8";
+         value = "7";
          type = "int";
       }
    }
@@ -138,12 +154,12 @@
    kind="hls_sim_component_dpi_controller"
    version="1.0"
    enabled="1">
-  <parameter name="AUTO_COMPONENT_IRQ_INTERRUPTS_USED" value="0" />
-  <parameter name="COMPONENT_HAS_AGENT_RETURN" value="0" />
-  <parameter name="COMPONENT_MANGLED_NAME" value="\3fstreamer@@YAXXZ" />
+  <parameter name="AUTO_COMPONENT_IRQ_INTERRUPTS_USED" value="1" />
+  <parameter name="COMPONENT_HAS_AGENT_RETURN" value="1" />
+  <parameter name="COMPONENT_MANGLED_NAME">\3fstreamer@@YA\3fAUTuple@@U1@@Z</parameter>
   <parameter name="COMPONENT_NAME" value="streamer" />
-  <parameter name="COMPONENT_NUM_AGENTS" value="0" />
-  <parameter name="COMPONENT_NUM_OUTPUT_STREAMS" value="1" />
+  <parameter name="COMPONENT_NUM_AGENTS" value="1" />
+  <parameter name="COMPONENT_NUM_OUTPUT_STREAMS" value="0" />
   <parameter name="RETURN_DATAWIDTH" value="64" />
  </module>
  <module
@@ -169,6 +185,41 @@
   <parameter name="NUM_COMPONENTS" value="1" />
  </module>
  <module
+   name="mm_host_dpi_bfm_streamer_avs_cra_inst"
+   kind="hls_sim_mm_host_dpi_bfm"
+   version="1.0"
+   enabled="1">
+  <parameter name="ADDRESS_UNITS" value="SYMBOLS" />
+  <parameter name="AV_ADDRESS_W" value="7" />
+  <parameter name="AV_BURSTCOUNT_W" value="1" />
+  <parameter name="AV_BURST_BNDR_ONLY" value="1" />
+  <parameter name="AV_BURST_LINEWRAP" value="1" />
+  <parameter name="AV_FIX_READ_LATENCY" value="1" />
+  <parameter name="AV_NUMSYMBOLS" value="8" />
+  <parameter name="AV_READ_WAIT_TIME" value="0" />
+  <parameter name="AV_REGISTERINCOMINGSIGNALS" value="0" />
+  <parameter name="AV_SYMBOL_W" value="8" />
+  <parameter name="AV_WRITE_WAIT_TIME" value="0" />
+  <parameter name="COMPONENT_AGENT_READ_INTERFACE_NAME" value="$return" />
+  <parameter name="COMPONENT_AGENT_WRITE_INTERFACE_NAME">__ihc_hls_avs_write_stream__</parameter>
+  <parameter name="COMPONENT_CRA_AGENT" value="1" />
+  <parameter name="COMPONENT_HAS_AGENT_RETURN" value="1" />
+  <parameter name="COMPONENT_NAME" value="streamer" />
+  <parameter name="NUM_AGENT_MEMORIES" value="0" />
+  <parameter name="REGISTER_WAITREQUEST" value="0" />
+  <parameter name="USE_ADDRESS" value="1" />
+  <parameter name="USE_BEGIN_BURST_TRANSFER" value="0" />
+  <parameter name="USE_BEGIN_TRANSFER" value="0" />
+  <parameter name="USE_BURSTCOUNT" value="0" />
+  <parameter name="USE_BYTE_ENABLE" value="1" />
+  <parameter name="USE_READ" value="1" />
+  <parameter name="USE_READ_DATA" value="1" />
+  <parameter name="USE_READ_DATA_VALID" value="1" />
+  <parameter name="USE_WAIT_REQUEST" value="1" />
+  <parameter name="USE_WRITE" value="1" />
+  <parameter name="USE_WRITE_DATA" value="1" />
+ </module>
+ <module
    name="split_component_start_inst"
    kind="avalon_split_multibit_conduit"
    version="1.0"
@@ -176,53 +227,46 @@
   <parameter name="multibit_width" value="1" />
  </module>
  <module
-   name="stream_sink_dpi_bfm_streamer_s_out_inst"
-   kind="hls_sim_stream_sink_dpi_bfm"
+   name="streamer_component_dpi_controller_agent_done_concatenate_inst"
+   kind="avalon_concatenate_singlebit_conduits"
    version="1.0"
    enabled="1">
-  <parameter name="COMPONENT_NAME" value="streamer" />
-  <parameter name="EMPTY_WIDTH" value="0" />
-  <parameter name="FIRST_SYMBOL_IN_HIGH_ORDER_BITS" value="0" />
-  <parameter name="INTERFACE_NAME" value="@s_out" />
-  <parameter name="READY_LATENCY" value="0" />
-  <parameter name="STREAM_BITSPERSYMBOL" value="352" />
-  <parameter name="STREAM_DATAWIDTH" value="352" />
-  <parameter name="USES_PACKETS" value="0" />
+  <parameter name="multibit_width" value="1" />
  </module>
  <module
-   name="stream_source_dpi_bfm_streamer_s_in_inst"
-   kind="hls_sim_stream_source_dpi_bfm"
+   name="streamer_component_dpi_controller_agent_readback_fanout_inst"
+   kind="avalon_conduit_fanout"
    version="1.0"
    enabled="1">
-  <parameter name="COMPONENT_NAME" value="streamer" />
-  <parameter name="EMPTY_WIDTH" value="0" />
-  <parameter name="FIRST_SYMBOL_IN_HIGH_ORDER_BITS" value="0" />
-  <parameter name="FORCE_STREAM_CONDUIT" value="0" />
-  <parameter name="INTERFACE_NAME" value="@s_in" />
-  <parameter name="STREAM_BITSPERSYMBOL" value="352" />
-  <parameter name="STREAM_DATAWIDTH" value="352" />
-  <parameter name="USES_PACKETS" value="0" />
+  <parameter name="numFanOut" value="1" />
+ </module>
+ <module
+   name="streamer_component_dpi_controller_agent_ready_concatenate_inst"
+   kind="avalon_concatenate_singlebit_conduits"
+   version="1.0"
+   enabled="1">
+  <parameter name="multibit_width" value="1" />
  </module>
  <module
    name="streamer_component_dpi_controller_bind_conduit_fanout_inst"
    kind="avalon_conduit_fanout"
    version="1.0"
    enabled="1">
-  <parameter name="numFanOut" value="2" />
+  <parameter name="numFanOut" value="1" />
  </module>
  <module
    name="streamer_component_dpi_controller_enable_conduit_fanout_inst"
    kind="avalon_conduit_fanout"
    version="1.0"
    enabled="1">
-  <parameter name="numFanOut" value="2" />
+  <parameter name="numFanOut" value="1" />
  </module>
  <module
-   name="streamer_component_dpi_controller_stream_active_concatenate_inst"
-   kind="avalon_concatenate_singlebit_conduits"
+   name="streamer_component_dpi_controller_implicit_ready_conduit_fanout_inst"
+   kind="avalon_conduit_fanout"
    version="1.0"
    enabled="1">
-  <parameter name="multibit_width" value="1" />
+  <parameter name="numFanOut" value="1" />
  </module>
  <module name="streamer_inst" kind="streamer" version="1.0" enabled="1">
   <parameter name="AUTO_CLOCK_CLOCK_DOMAIN" value="1" />
@@ -235,15 +279,14 @@
   <parameter name="AUTO_UNIQUE_ID" value="tb_streamer_inst" />
  </module>
  <connection
-   kind="avalon_streaming"
+   kind="avalon"
    version="21.1"
-   start="streamer_inst.s_out"
-   end="stream_sink_dpi_bfm_streamer_s_out_inst.sink" />
- <connection
-   kind="avalon_streaming"
-   version="21.1"
-   start="stream_source_dpi_bfm_streamer_s_in_inst.source"
-   end="streamer_inst.s_in" />
+   start="mm_host_dpi_bfm_streamer_avs_cra_inst.m0"
+   end="streamer_inst.avs_cra">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
  <connection
    kind="clock"
    version="21.1"
@@ -258,12 +301,7 @@
    kind="clock"
    version="21.1"
    start="clock_reset_inst.clock"
-   end="stream_source_dpi_bfm_streamer_s_in_inst.clock" />
- <connection
-   kind="clock"
-   version="21.1"
-   start="clock_reset_inst.clock"
-   end="stream_sink_dpi_bfm_streamer_s_out_inst.clock" />
+   end="mm_host_dpi_bfm_streamer_avs_cra_inst.clock" />
  <connection
    kind="clock"
    version="21.1"
@@ -278,22 +316,12 @@
    kind="clock"
    version="21.1"
    start="clock_reset_inst.clock2x"
-   end="stream_source_dpi_bfm_streamer_s_in_inst.clock2x" />
- <connection
-   kind="clock"
-   version="21.1"
-   start="clock_reset_inst.clock2x"
-   end="stream_sink_dpi_bfm_streamer_s_out_inst.clock2x" />
- <connection
-   kind="clock"
-   version="21.1"
-   start="clock_reset_inst.clock2x"
    end="component_dpi_controller_streamer_inst.clock2x" />
  <connection
    kind="conduit"
    version="21.1"
-   start="component_dpi_controller_streamer_inst.component_call"
-   end="streamer_inst.call">
+   start="mm_host_dpi_bfm_streamer_avs_cra_inst.agent_busy_out"
+   end="component_dpi_controller_streamer_inst.agent_busy">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />
@@ -347,8 +375,8 @@
  <connection
    kind="conduit"
    version="21.1"
-   start="component_dpi_controller_streamer_inst.dpi_control_enable"
-   end="streamer_component_dpi_controller_enable_conduit_fanout_inst.in_conduit">
+   start="mm_host_dpi_bfm_streamer_avs_cra_inst.dpi_control_done_reads"
+   end="streamer_component_dpi_controller_agent_done_concatenate_inst.in_conduit_0">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />
@@ -358,8 +386,19 @@
  <connection
    kind="conduit"
    version="21.1"
-   start="stream_sink_dpi_bfm_streamer_s_out_inst.dpi_control_stream_active"
-   end="streamer_component_dpi_controller_stream_active_concatenate_inst.in_conduit_0">
+   start="mm_host_dpi_bfm_streamer_avs_cra_inst.dpi_control_done_writes"
+   end="streamer_component_dpi_controller_agent_ready_concatenate_inst.in_conduit_0">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="21.1"
+   start="component_dpi_controller_streamer_inst.dpi_control_enable"
+   end="streamer_component_dpi_controller_enable_conduit_fanout_inst.in_conduit">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />
@@ -391,8 +430,19 @@
  <connection
    kind="conduit"
    version="21.1"
-   start="streamer_component_dpi_controller_stream_active_concatenate_inst.out_conduit"
-   end="component_dpi_controller_streamer_inst.dpi_control_stream_writes_active">
+   start="streamer_component_dpi_controller_agent_done_concatenate_inst.out_conduit"
+   end="component_dpi_controller_streamer_inst.dpi_control_agents_done">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="21.1"
+   start="streamer_component_dpi_controller_agent_ready_concatenate_inst.out_conduit"
+   end="component_dpi_controller_streamer_inst.dpi_control_agents_ready">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />
@@ -414,7 +464,29 @@
    kind="conduit"
    version="21.1"
    start="streamer_component_dpi_controller_bind_conduit_fanout_inst.out_conduit_0"
-   end="stream_source_dpi_bfm_streamer_s_in_inst.dpi_control_bind">
+   end="mm_host_dpi_bfm_streamer_avs_cra_inst.dpi_control_bind">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="21.1"
+   start="streamer_component_dpi_controller_agent_readback_fanout_inst.out_conduit_0"
+   end="mm_host_dpi_bfm_streamer_avs_cra_inst.dpi_control_component_done">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="21.1"
+   start="streamer_component_dpi_controller_implicit_ready_conduit_fanout_inst.out_conduit_0"
+   end="mm_host_dpi_bfm_streamer_avs_cra_inst.dpi_control_component_started">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />
@@ -425,7 +497,7 @@
    kind="conduit"
    version="21.1"
    start="streamer_component_dpi_controller_enable_conduit_fanout_inst.out_conduit_0"
-   end="stream_source_dpi_bfm_streamer_s_in_inst.dpi_control_enable">
+   end="mm_host_dpi_bfm_streamer_avs_cra_inst.dpi_control_enable">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />
@@ -435,8 +507,8 @@
  <connection
    kind="conduit"
    version="21.1"
-   start="streamer_component_dpi_controller_bind_conduit_fanout_inst.out_conduit_1"
-   end="stream_sink_dpi_bfm_streamer_s_out_inst.dpi_control_bind">
+   start="component_dpi_controller_streamer_inst.read_implicit_streams"
+   end="streamer_component_dpi_controller_implicit_ready_conduit_fanout_inst.in_conduit">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />
@@ -446,8 +518,8 @@
  <connection
    kind="conduit"
    version="21.1"
-   start="streamer_component_dpi_controller_enable_conduit_fanout_inst.out_conduit_1"
-   end="stream_sink_dpi_bfm_streamer_s_out_inst.dpi_control_enable">
+   start="component_dpi_controller_streamer_inst.readback_from_agents"
+   end="streamer_component_dpi_controller_agent_readback_fanout_inst.in_conduit">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />
@@ -466,15 +538,11 @@
   <parameter name="width" value="0" />
  </connection>
  <connection
-   kind="conduit"
+   kind="interrupt"
    version="21.1"
-   start="streamer_inst.return"
-   end="component_dpi_controller_streamer_inst.component_return">
-  <parameter name="endPort" value="" />
-  <parameter name="endPortLSB" value="0" />
-  <parameter name="startPort" value="" />
-  <parameter name="startPortLSB" value="0" />
-  <parameter name="width" value="0" />
+   start="component_dpi_controller_streamer_inst.component_irq"
+   end="streamer_inst.irq">
+  <parameter name="irqNumber" value="0" />
  </connection>
  <connection
    kind="reset"
@@ -490,12 +558,7 @@
    kind="reset"
    version="21.1"
    start="clock_reset_inst.reset"
-   end="stream_source_dpi_bfm_streamer_s_in_inst.reset" />
- <connection
-   kind="reset"
-   version="21.1"
-   start="clock_reset_inst.reset"
-   end="stream_sink_dpi_bfm_streamer_s_out_inst.reset" />
+   end="mm_host_dpi_bfm_streamer_avs_cra_inst.reset" />
  <connection
    kind="reset"
    version="21.1"

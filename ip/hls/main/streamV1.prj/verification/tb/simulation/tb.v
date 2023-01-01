@@ -6,35 +6,46 @@
 module tb (
 	);
 
-	wire          streamer_inst_s_out_valid;                                                            // streamer_inst:s_out_valid -> stream_sink_dpi_bfm_streamer_s_out_inst:sink_valid
-	wire  [351:0] streamer_inst_s_out_data;                                                             // streamer_inst:s_out_data -> stream_sink_dpi_bfm_streamer_s_out_inst:sink_data
-	wire          streamer_inst_s_out_ready;                                                            // stream_sink_dpi_bfm_streamer_s_out_inst:sink_ready -> streamer_inst:s_out_ready
-	wire          stream_source_dpi_bfm_streamer_s_in_inst_source_valid;                                // stream_source_dpi_bfm_streamer_s_in_inst:source_valid -> streamer_inst:s_in_valid
-	wire  [351:0] stream_source_dpi_bfm_streamer_s_in_inst_source_data;                                 // stream_source_dpi_bfm_streamer_s_in_inst:source_data -> streamer_inst:s_in_data
-	wire          stream_source_dpi_bfm_streamer_s_in_inst_source_ready;                                // streamer_inst:s_in_ready -> stream_source_dpi_bfm_streamer_s_in_inst:source_ready
-	wire          clock_reset_inst_clock_clk;                                                           // clock_reset_inst:clock -> [component_dpi_controller_streamer_inst:clock, irq_mapper:clk, main_dpi_controller_inst:clock, stream_sink_dpi_bfm_streamer_s_out_inst:clock, stream_source_dpi_bfm_streamer_s_in_inst:clock, streamer_inst:clock]
-	wire          clock_reset_inst_clock2x_clk;                                                         // clock_reset_inst:clock2x -> [component_dpi_controller_streamer_inst:clock2x, main_dpi_controller_inst:clock2x, stream_sink_dpi_bfm_streamer_s_out_inst:clock2x, stream_source_dpi_bfm_streamer_s_in_inst:clock2x]
-	wire          component_dpi_controller_streamer_inst_component_call_valid;                          // component_dpi_controller_streamer_inst:start -> streamer_inst:start
-	wire          streamer_inst_call_stall;                                                             // streamer_inst:busy -> component_dpi_controller_streamer_inst:busy
-	wire          component_dpi_controller_streamer_inst_component_done_conduit;                        // component_dpi_controller_streamer_inst:component_done -> concatenate_component_done_inst:in_conduit_0
-	wire    [0:0] main_dpi_controller_inst_component_enabled_conduit;                                   // main_dpi_controller_inst:component_enabled -> split_component_start_inst:in_conduit
-	wire          component_dpi_controller_streamer_inst_component_wait_for_stream_writes_conduit;      // component_dpi_controller_streamer_inst:component_wait_for_stream_writes -> concatenate_component_wait_for_stream_writes_inst:in_conduit_0
-	wire          component_dpi_controller_streamer_inst_dpi_control_bind_conduit;                      // component_dpi_controller_streamer_inst:bind_interfaces -> streamer_component_dpi_controller_bind_conduit_fanout_inst:in_conduit
-	wire          component_dpi_controller_streamer_inst_dpi_control_enable_conduit;                    // component_dpi_controller_streamer_inst:enable_interfaces -> streamer_component_dpi_controller_enable_conduit_fanout_inst:in_conduit
-	wire          stream_sink_dpi_bfm_streamer_s_out_inst_dpi_control_stream_active_conduit;            // stream_sink_dpi_bfm_streamer_s_out_inst:stream_active -> streamer_component_dpi_controller_stream_active_concatenate_inst:in_conduit_0
-	wire          concatenate_component_done_inst_out_conduit_conduit;                                  // concatenate_component_done_inst:out_conduit -> main_dpi_controller_inst:component_done
-	wire          concatenate_component_wait_for_stream_writes_inst_out_conduit_conduit;                // concatenate_component_wait_for_stream_writes_inst:out_conduit -> main_dpi_controller_inst:component_wait_for_stream_writes
-	wire          streamer_component_dpi_controller_stream_active_concatenate_inst_out_conduit_conduit; // streamer_component_dpi_controller_stream_active_concatenate_inst:out_conduit -> component_dpi_controller_streamer_inst:stream_writes_active
-	wire          split_component_start_inst_out_conduit_0_conduit;                                     // split_component_start_inst:out_conduit_0 -> component_dpi_controller_streamer_inst:component_enabled
-	wire          streamer_component_dpi_controller_bind_conduit_fanout_inst_out_conduit_0_conduit;     // streamer_component_dpi_controller_bind_conduit_fanout_inst:out_conduit_0 -> stream_source_dpi_bfm_streamer_s_in_inst:do_bind
-	wire          streamer_component_dpi_controller_enable_conduit_fanout_inst_out_conduit_0_conduit;   // streamer_component_dpi_controller_enable_conduit_fanout_inst:out_conduit_0 -> stream_source_dpi_bfm_streamer_s_in_inst:enable
-	wire          streamer_component_dpi_controller_bind_conduit_fanout_inst_out_conduit_1_conduit;     // streamer_component_dpi_controller_bind_conduit_fanout_inst:out_conduit_1 -> stream_sink_dpi_bfm_streamer_s_out_inst:do_bind
-	wire          streamer_component_dpi_controller_enable_conduit_fanout_inst_out_conduit_1_conduit;   // streamer_component_dpi_controller_enable_conduit_fanout_inst:out_conduit_1 -> stream_sink_dpi_bfm_streamer_s_out_inst:enable
-	wire          main_dpi_controller_inst_reset_ctrl_conduit;                                          // main_dpi_controller_inst:trigger_reset -> clock_reset_inst:trigger_reset
-	wire          streamer_inst_return_valid;                                                           // streamer_inst:done -> component_dpi_controller_streamer_inst:done
-	wire          component_dpi_controller_streamer_inst_component_return_stall;                        // component_dpi_controller_streamer_inst:stall -> streamer_inst:stall
-	wire          clock_reset_inst_reset_reset;                                                         // clock_reset_inst:resetn -> [component_dpi_controller_streamer_inst:resetn, irq_mapper:reset, main_dpi_controller_inst:resetn, stream_sink_dpi_bfm_streamer_s_out_inst:resetn, stream_source_dpi_bfm_streamer_s_in_inst:resetn, streamer_inst:resetn]
-	wire          component_dpi_controller_streamer_inst_component_irq_irq;                             // irq_mapper:sender_irq -> component_dpi_controller_streamer_inst:done_irq
+	wire         clock_reset_inst_clock_clk;                                                                 // clock_reset_inst:clock -> [component_dpi_controller_streamer_inst:clock, irq_mapper:clk, main_dpi_controller_inst:clock, mm_host_dpi_bfm_streamer_avs_cra_inst:clock, mm_interconnect_0:clock_reset_inst_clock_clk, streamer_inst:clock]
+	wire         clock_reset_inst_clock2x_clk;                                                               // clock_reset_inst:clock2x -> [component_dpi_controller_streamer_inst:clock2x, main_dpi_controller_inst:clock2x]
+	wire         mm_host_dpi_bfm_streamer_avs_cra_inst_agent_busy_out_conduit;                               // mm_host_dpi_bfm_streamer_avs_cra_inst:agent_busy_out -> component_dpi_controller_streamer_inst:agent_busy
+	wire         component_dpi_controller_streamer_inst_component_done_conduit;                              // component_dpi_controller_streamer_inst:component_done -> concatenate_component_done_inst:in_conduit_0
+	wire   [0:0] main_dpi_controller_inst_component_enabled_conduit;                                         // main_dpi_controller_inst:component_enabled -> split_component_start_inst:in_conduit
+	wire         component_dpi_controller_streamer_inst_component_wait_for_stream_writes_conduit;            // component_dpi_controller_streamer_inst:component_wait_for_stream_writes -> concatenate_component_wait_for_stream_writes_inst:in_conduit_0
+	wire         component_dpi_controller_streamer_inst_dpi_control_bind_conduit;                            // component_dpi_controller_streamer_inst:bind_interfaces -> streamer_component_dpi_controller_bind_conduit_fanout_inst:in_conduit
+	wire         mm_host_dpi_bfm_streamer_avs_cra_inst_dpi_control_done_reads_conduit;                       // mm_host_dpi_bfm_streamer_avs_cra_inst:done_reads -> streamer_component_dpi_controller_agent_done_concatenate_inst:in_conduit_0
+	wire         mm_host_dpi_bfm_streamer_avs_cra_inst_dpi_control_done_writes_conduit;                      // mm_host_dpi_bfm_streamer_avs_cra_inst:done_writes -> streamer_component_dpi_controller_agent_ready_concatenate_inst:in_conduit_0
+	wire         component_dpi_controller_streamer_inst_dpi_control_enable_conduit;                          // component_dpi_controller_streamer_inst:enable_interfaces -> streamer_component_dpi_controller_enable_conduit_fanout_inst:in_conduit
+	wire         concatenate_component_done_inst_out_conduit_conduit;                                        // concatenate_component_done_inst:out_conduit -> main_dpi_controller_inst:component_done
+	wire         concatenate_component_wait_for_stream_writes_inst_out_conduit_conduit;                      // concatenate_component_wait_for_stream_writes_inst:out_conduit -> main_dpi_controller_inst:component_wait_for_stream_writes
+	wire         streamer_component_dpi_controller_agent_done_concatenate_inst_out_conduit_conduit;          // streamer_component_dpi_controller_agent_done_concatenate_inst:out_conduit -> component_dpi_controller_streamer_inst:agents_done
+	wire         streamer_component_dpi_controller_agent_ready_concatenate_inst_out_conduit_conduit;         // streamer_component_dpi_controller_agent_ready_concatenate_inst:out_conduit -> component_dpi_controller_streamer_inst:agents_ready
+	wire         split_component_start_inst_out_conduit_0_conduit;                                           // split_component_start_inst:out_conduit_0 -> component_dpi_controller_streamer_inst:component_enabled
+	wire         streamer_component_dpi_controller_bind_conduit_fanout_inst_out_conduit_0_conduit;           // streamer_component_dpi_controller_bind_conduit_fanout_inst:out_conduit_0 -> mm_host_dpi_bfm_streamer_avs_cra_inst:do_bind
+	wire         streamer_component_dpi_controller_agent_readback_fanout_inst_out_conduit_0_conduit;         // streamer_component_dpi_controller_agent_readback_fanout_inst:out_conduit_0 -> mm_host_dpi_bfm_streamer_avs_cra_inst:component_done
+	wire         streamer_component_dpi_controller_implicit_ready_conduit_fanout_inst_out_conduit_0_conduit; // streamer_component_dpi_controller_implicit_ready_conduit_fanout_inst:out_conduit_0 -> mm_host_dpi_bfm_streamer_avs_cra_inst:component_started
+	wire         streamer_component_dpi_controller_enable_conduit_fanout_inst_out_conduit_0_conduit;         // streamer_component_dpi_controller_enable_conduit_fanout_inst:out_conduit_0 -> mm_host_dpi_bfm_streamer_avs_cra_inst:enable
+	wire         component_dpi_controller_streamer_inst_read_implicit_streams_conduit;                       // component_dpi_controller_streamer_inst:read_implicit_streams -> streamer_component_dpi_controller_implicit_ready_conduit_fanout_inst:in_conduit
+	wire         component_dpi_controller_streamer_inst_readback_from_agents_conduit;                        // component_dpi_controller_streamer_inst:readback_from_agents -> streamer_component_dpi_controller_agent_readback_fanout_inst:in_conduit
+	wire         main_dpi_controller_inst_reset_ctrl_conduit;                                                // main_dpi_controller_inst:trigger_reset -> clock_reset_inst:trigger_reset
+	wire         clock_reset_inst_reset_reset;                                                               // clock_reset_inst:resetn -> [component_dpi_controller_streamer_inst:resetn, irq_mapper:reset, main_dpi_controller_inst:resetn, mm_host_dpi_bfm_streamer_avs_cra_inst:reset_n, mm_interconnect_0:mm_host_dpi_bfm_streamer_avs_cra_inst_reset_reset_bridge_in_reset_reset, streamer_inst:resetn]
+	wire  [63:0] mm_host_dpi_bfm_streamer_avs_cra_inst_m0_readdata;                                          // mm_interconnect_0:mm_host_dpi_bfm_streamer_avs_cra_inst_m0_readdata -> mm_host_dpi_bfm_streamer_avs_cra_inst:avm_readdata
+	wire         mm_host_dpi_bfm_streamer_avs_cra_inst_m0_waitrequest;                                       // mm_interconnect_0:mm_host_dpi_bfm_streamer_avs_cra_inst_m0_waitrequest -> mm_host_dpi_bfm_streamer_avs_cra_inst:avm_waitrequest
+	wire   [6:0] mm_host_dpi_bfm_streamer_avs_cra_inst_m0_address;                                           // mm_host_dpi_bfm_streamer_avs_cra_inst:avm_address -> mm_interconnect_0:mm_host_dpi_bfm_streamer_avs_cra_inst_m0_address
+	wire         mm_host_dpi_bfm_streamer_avs_cra_inst_m0_read;                                              // mm_host_dpi_bfm_streamer_avs_cra_inst:avm_read -> mm_interconnect_0:mm_host_dpi_bfm_streamer_avs_cra_inst_m0_read
+	wire   [7:0] mm_host_dpi_bfm_streamer_avs_cra_inst_m0_byteenable;                                        // mm_host_dpi_bfm_streamer_avs_cra_inst:avm_byteenable -> mm_interconnect_0:mm_host_dpi_bfm_streamer_avs_cra_inst_m0_byteenable
+	wire         mm_host_dpi_bfm_streamer_avs_cra_inst_m0_readdatavalid;                                     // mm_interconnect_0:mm_host_dpi_bfm_streamer_avs_cra_inst_m0_readdatavalid -> mm_host_dpi_bfm_streamer_avs_cra_inst:avm_readdatavalid
+	wire  [63:0] mm_host_dpi_bfm_streamer_avs_cra_inst_m0_writedata;                                         // mm_host_dpi_bfm_streamer_avs_cra_inst:avm_writedata -> mm_interconnect_0:mm_host_dpi_bfm_streamer_avs_cra_inst_m0_writedata
+	wire         mm_host_dpi_bfm_streamer_avs_cra_inst_m0_write;                                             // mm_host_dpi_bfm_streamer_avs_cra_inst:avm_write -> mm_interconnect_0:mm_host_dpi_bfm_streamer_avs_cra_inst_m0_write
+	wire   [0:0] mm_host_dpi_bfm_streamer_avs_cra_inst_m0_burstcount;                                        // mm_host_dpi_bfm_streamer_avs_cra_inst:avm_burstcount -> mm_interconnect_0:mm_host_dpi_bfm_streamer_avs_cra_inst_m0_burstcount
+	wire  [63:0] mm_interconnect_0_streamer_inst_avs_cra_readdata;                                           // streamer_inst:avs_cra_readdata -> mm_interconnect_0:streamer_inst_avs_cra_readdata
+	wire   [3:0] mm_interconnect_0_streamer_inst_avs_cra_address;                                            // mm_interconnect_0:streamer_inst_avs_cra_address -> streamer_inst:avs_cra_address
+	wire         mm_interconnect_0_streamer_inst_avs_cra_read;                                               // mm_interconnect_0:streamer_inst_avs_cra_read -> streamer_inst:avs_cra_read
+	wire   [7:0] mm_interconnect_0_streamer_inst_avs_cra_byteenable;                                         // mm_interconnect_0:streamer_inst_avs_cra_byteenable -> streamer_inst:avs_cra_byteenable
+	wire         mm_interconnect_0_streamer_inst_avs_cra_write;                                              // mm_interconnect_0:streamer_inst_avs_cra_write -> streamer_inst:avs_cra_write
+	wire  [63:0] mm_interconnect_0_streamer_inst_avs_cra_writedata;                                          // mm_interconnect_0:streamer_inst_avs_cra_writedata -> streamer_inst:avs_cra_writedata
+	wire         irq_mapper_receiver0_irq;                                                                   // streamer_inst:done_irq -> irq_mapper:receiver0_irq
+	wire         component_dpi_controller_streamer_inst_component_irq_irq;                                   // irq_mapper:sender_irq -> component_dpi_controller_streamer_inst:done_irq
 
 	hls_sim_clock_reset #(
 		.RESET_CYCLE_HOLD (4)
@@ -47,30 +58,31 @@ module tb (
 
 	hls_sim_component_dpi_controller #(
 		.COMPONENT_NAME               ("streamer"),
-		.COMPONENT_MANGLED_NAME       ("\\3fstreamer@@YAXXZ"),
+		.COMPONENT_MANGLED_NAME       ("\\3fstreamer@@YA\\3fAUTuple@@U1@@Z"),
 		.RETURN_DATAWIDTH             (64),
-		.COMPONENT_NUM_AGENTS         (0),
-		.COMPONENT_HAS_AGENT_RETURN   (0),
-		.COMPONENT_NUM_OUTPUT_STREAMS (1)
+		.COMPONENT_NUM_AGENTS         (1),
+		.COMPONENT_HAS_AGENT_RETURN   (1),
+		.COMPONENT_NUM_OUTPUT_STREAMS (0)
 	) component_dpi_controller_streamer_inst (
-		.clock                            (clock_reset_inst_clock_clk),                                                           //                            clock.clk
-		.resetn                           (clock_reset_inst_reset_reset),                                                         //                            reset.reset_n
-		.clock2x                          (clock_reset_inst_clock2x_clk),                                                         //                          clock2x.clk
-		.bind_interfaces                  (component_dpi_controller_streamer_inst_dpi_control_bind_conduit),                      //                 dpi_control_bind.conduit
-		.enable_interfaces                (component_dpi_controller_streamer_inst_dpi_control_enable_conduit),                    //               dpi_control_enable.conduit
-		.stream_writes_active             (streamer_component_dpi_controller_stream_active_concatenate_inst_out_conduit_conduit), // dpi_control_stream_writes_active.conduit
-		.component_enabled                (split_component_start_inst_out_conduit_0_conduit),                                     //                component_enabled.conduit
-		.component_done                   (component_dpi_controller_streamer_inst_component_done_conduit),                        //                   component_done.conduit
-		.component_wait_for_stream_writes (component_dpi_controller_streamer_inst_component_wait_for_stream_writes_conduit),      // component_wait_for_stream_writes.conduit
-		.agent_busy                       (),                                                                                     //                       agent_busy.conduit
-		.read_implicit_streams            (),                                                                                     //            read_implicit_streams.conduit
-		.readback_from_agents             (),                                                                                     //             readback_from_agents.conduit
-		.start                            (component_dpi_controller_streamer_inst_component_call_valid),                          //                   component_call.valid
-		.busy                             (streamer_inst_call_stall),                                                             //                                 .stall
-		.done                             (streamer_inst_return_valid),                                                           //                 component_return.valid
-		.stall                            (component_dpi_controller_streamer_inst_component_return_stall),                        //                                 .stall
-		.done_irq                         (component_dpi_controller_streamer_inst_component_irq_irq),                             //                    component_irq.irq
-		.returndata                       ()                                                                                      //                       returndata.data
+		.clock                            (clock_reset_inst_clock_clk),                                                         //                            clock.clk
+		.resetn                           (clock_reset_inst_reset_reset),                                                       //                            reset.reset_n
+		.clock2x                          (clock_reset_inst_clock2x_clk),                                                       //                          clock2x.clk
+		.bind_interfaces                  (component_dpi_controller_streamer_inst_dpi_control_bind_conduit),                    //                 dpi_control_bind.conduit
+		.enable_interfaces                (component_dpi_controller_streamer_inst_dpi_control_enable_conduit),                  //               dpi_control_enable.conduit
+		.agents_ready                     (streamer_component_dpi_controller_agent_ready_concatenate_inst_out_conduit_conduit), //         dpi_control_agents_ready.conduit
+		.agents_done                      (streamer_component_dpi_controller_agent_done_concatenate_inst_out_conduit_conduit),  //          dpi_control_agents_done.conduit
+		.component_enabled                (split_component_start_inst_out_conduit_0_conduit),                                   //                component_enabled.conduit
+		.component_done                   (component_dpi_controller_streamer_inst_component_done_conduit),                      //                   component_done.conduit
+		.component_wait_for_stream_writes (component_dpi_controller_streamer_inst_component_wait_for_stream_writes_conduit),    // component_wait_for_stream_writes.conduit
+		.agent_busy                       (mm_host_dpi_bfm_streamer_avs_cra_inst_agent_busy_out_conduit),                       //                       agent_busy.conduit
+		.read_implicit_streams            (component_dpi_controller_streamer_inst_read_implicit_streams_conduit),               //            read_implicit_streams.conduit
+		.readback_from_agents             (component_dpi_controller_streamer_inst_readback_from_agents_conduit),                //             readback_from_agents.conduit
+		.start                            (),                                                                                   //                   component_call.valid
+		.done                             (),                                                                                   //                 component_return.valid
+		.stall                            (),                                                                                   //                                 .stall
+		.done_irq                         (component_dpi_controller_streamer_inst_component_irq_irq),                           //                    component_irq.irq
+		.returndata                       (),                                                                                   //                       returndata.data
+		.busy                             (1'b0)                                                                                //                      (terminated)
 	);
 
 	tb_concatenate_component_done_inst concatenate_component_done_inst (
@@ -96,88 +108,129 @@ module tb (
 		.trigger_reset                    (main_dpi_controller_inst_reset_ctrl_conduit)                            //                       reset_ctrl.conduit
 	);
 
+	hls_sim_mm_host_dpi_bfm #(
+		.AV_ADDRESS_W                         (7),
+		.AV_SYMBOL_W                          (8),
+		.AV_NUMSYMBOLS                        (8),
+		.AV_BURSTCOUNT_W                      (1),
+		.USE_READ                             (1),
+		.USE_WRITE                            (1),
+		.USE_ADDRESS                          (1),
+		.USE_BYTE_ENABLE                      (1),
+		.USE_BURSTCOUNT                       (0),
+		.USE_READ_DATA                        (1),
+		.USE_READ_DATA_VALID                  (1),
+		.USE_WRITE_DATA                       (1),
+		.USE_BEGIN_TRANSFER                   (0),
+		.USE_BEGIN_BURST_TRANSFER             (0),
+		.USE_WAIT_REQUEST                     (1),
+		.AV_BURST_LINEWRAP                    (1),
+		.AV_BURST_BNDR_ONLY                   (1),
+		.AV_FIX_READ_LATENCY                  (1),
+		.AV_READ_WAIT_TIME                    (0),
+		.AV_WRITE_WAIT_TIME                   (0),
+		.REGISTER_WAITREQUEST                 (0),
+		.AV_REGISTERINCOMINGSIGNALS           (0),
+		.COMPONENT_NAME                       ("streamer"),
+		.COMPONENT_HAS_AGENT_RETURN           (1),
+		.COMPONENT_AGENT_WRITE_INTERFACE_NAME ("__ihc_hls_avs_write_stream__"),
+		.COMPONENT_AGENT_READ_INTERFACE_NAME  ("$return"),
+		.COMPONENT_CRA_AGENT                  (1),
+		.NUM_AGENT_MEMORIES                   (0)
+	) mm_host_dpi_bfm_streamer_avs_cra_inst (
+		.clock              (clock_reset_inst_clock_clk),                                                                 //                          clock.clk
+		.reset_n            (clock_reset_inst_reset_reset),                                                               //                          reset.reset_n
+		.do_bind            (streamer_component_dpi_controller_bind_conduit_fanout_inst_out_conduit_0_conduit),           //               dpi_control_bind.conduit
+		.enable             (streamer_component_dpi_controller_enable_conduit_fanout_inst_out_conduit_0_conduit),         //             dpi_control_enable.conduit
+		.done_writes        (mm_host_dpi_bfm_streamer_avs_cra_inst_dpi_control_done_writes_conduit),                      //        dpi_control_done_writes.conduit
+		.done_reads         (mm_host_dpi_bfm_streamer_avs_cra_inst_dpi_control_done_reads_conduit),                       //         dpi_control_done_reads.conduit
+		.component_started  (streamer_component_dpi_controller_implicit_ready_conduit_fanout_inst_out_conduit_0_conduit), //  dpi_control_component_started.conduit
+		.component_done     (streamer_component_dpi_controller_agent_readback_fanout_inst_out_conduit_0_conduit),         //     dpi_control_component_done.conduit
+		.done_writes_to_cra (),                                                                                           // cra_control_done_writes_to_cra.conduit
+		.agent_busy_out     (mm_host_dpi_bfm_streamer_avs_cra_inst_agent_busy_out_conduit),                               //                 agent_busy_out.conduit
+		.avm_writedata      (mm_host_dpi_bfm_streamer_avs_cra_inst_m0_writedata),                                         //                             m0.writedata
+		.avm_burstcount     (mm_host_dpi_bfm_streamer_avs_cra_inst_m0_burstcount),                                        //                               .burstcount
+		.avm_readdata       (mm_host_dpi_bfm_streamer_avs_cra_inst_m0_readdata),                                          //                               .readdata
+		.avm_address        (mm_host_dpi_bfm_streamer_avs_cra_inst_m0_address),                                           //                               .address
+		.avm_waitrequest    (mm_host_dpi_bfm_streamer_avs_cra_inst_m0_waitrequest),                                       //                               .waitrequest
+		.avm_write          (mm_host_dpi_bfm_streamer_avs_cra_inst_m0_write),                                             //                               .write
+		.avm_read           (mm_host_dpi_bfm_streamer_avs_cra_inst_m0_read),                                              //                               .read
+		.avm_byteenable     (mm_host_dpi_bfm_streamer_avs_cra_inst_m0_byteenable),                                        //                               .byteenable
+		.avm_readdatavalid  (mm_host_dpi_bfm_streamer_avs_cra_inst_m0_readdatavalid)                                      //                               .readdatavalid
+	);
+
 	tb_split_component_start_inst split_component_start_inst (
 		.in_conduit    (main_dpi_controller_inst_component_enabled_conduit), //    in_conduit.conduit
 		.out_conduit_0 (split_component_start_inst_out_conduit_0_conduit)    // out_conduit_0.conduit
 	);
 
-	hls_sim_stream_sink_dpi_bfm #(
-		.COMPONENT_NAME                  ("streamer"),
-		.INTERFACE_NAME                  ("@s_out"),
-		.STREAM_DATAWIDTH                (352),
-		.READY_LATENCY                   (0),
-		.STREAM_BITSPERSYMBOL            (352),
-		.EMPTY_WIDTH                     (0),
-		.FIRST_SYMBOL_IN_HIGH_ORDER_BITS (0)
-	) stream_sink_dpi_bfm_streamer_s_out_inst (
-		.clock              (clock_reset_inst_clock_clk),                                                         //                     clock.clk
-		.resetn             (clock_reset_inst_reset_reset),                                                       //                     reset.reset_n
-		.clock2x            (clock_reset_inst_clock2x_clk),                                                       //                   clock2x.clk
-		.do_bind            (streamer_component_dpi_controller_bind_conduit_fanout_inst_out_conduit_1_conduit),   //          dpi_control_bind.conduit
-		.enable             (streamer_component_dpi_controller_enable_conduit_fanout_inst_out_conduit_1_conduit), //        dpi_control_enable.conduit
-		.stream_active      (stream_sink_dpi_bfm_streamer_s_out_inst_dpi_control_stream_active_conduit),          // dpi_control_stream_active.conduit
-		.sink_data          (streamer_inst_s_out_data),                                                           //                      sink.data
-		.sink_ready         (streamer_inst_s_out_ready),                                                          //                          .ready
-		.sink_valid         (streamer_inst_s_out_valid),                                                          //                          .valid
-		.sink_startofpacket (1'b0),                                                                               //               (terminated)
-		.sink_endofpacket   (1'b0),                                                                               //               (terminated)
-		.sink_empty         (1'b0)                                                                                //               (terminated)
+	tb_concatenate_component_done_inst streamer_component_dpi_controller_agent_done_concatenate_inst (
+		.out_conduit  (streamer_component_dpi_controller_agent_done_concatenate_inst_out_conduit_conduit), //  out_conduit.conduit
+		.in_conduit_0 (mm_host_dpi_bfm_streamer_avs_cra_inst_dpi_control_done_reads_conduit)               // in_conduit_0.conduit
 	);
 
-	hls_sim_stream_source_dpi_bfm #(
-		.COMPONENT_NAME                  ("streamer"),
-		.INTERFACE_NAME                  ("@s_in"),
-		.STREAM_DATAWIDTH                (352),
-		.STREAM_BITSPERSYMBOL            (352),
-		.EMPTY_WIDTH                     (0),
-		.FIRST_SYMBOL_IN_HIGH_ORDER_BITS (0)
-	) stream_source_dpi_bfm_streamer_s_in_inst (
-		.clock        (clock_reset_inst_clock_clk),                                                         //              clock.clk
-		.resetn       (clock_reset_inst_reset_reset),                                                       //              reset.reset_n
-		.clock2x      (clock_reset_inst_clock2x_clk),                                                       //            clock2x.clk
-		.do_bind      (streamer_component_dpi_controller_bind_conduit_fanout_inst_out_conduit_0_conduit),   //   dpi_control_bind.conduit
-		.enable       (streamer_component_dpi_controller_enable_conduit_fanout_inst_out_conduit_0_conduit), // dpi_control_enable.conduit
-		.source_data  (stream_source_dpi_bfm_streamer_s_in_inst_source_data),                               //             source.data
-		.source_ready (stream_source_dpi_bfm_streamer_s_in_inst_source_ready),                              //                   .ready
-		.source_valid (stream_source_dpi_bfm_streamer_s_in_inst_source_valid)                               //                   .valid
+	tb_streamer_component_dpi_controller_agent_readback_fanout_inst streamer_component_dpi_controller_agent_readback_fanout_inst (
+		.in_conduit    (component_dpi_controller_streamer_inst_readback_from_agents_conduit),                //    in_conduit.conduit
+		.out_conduit_0 (streamer_component_dpi_controller_agent_readback_fanout_inst_out_conduit_0_conduit)  // out_conduit_0.conduit
 	);
 
-	tb_streamer_component_dpi_controller_bind_conduit_fanout_inst streamer_component_dpi_controller_bind_conduit_fanout_inst (
+	tb_concatenate_component_done_inst streamer_component_dpi_controller_agent_ready_concatenate_inst (
+		.out_conduit  (streamer_component_dpi_controller_agent_ready_concatenate_inst_out_conduit_conduit), //  out_conduit.conduit
+		.in_conduit_0 (mm_host_dpi_bfm_streamer_avs_cra_inst_dpi_control_done_writes_conduit)               // in_conduit_0.conduit
+	);
+
+	tb_streamer_component_dpi_controller_agent_readback_fanout_inst streamer_component_dpi_controller_bind_conduit_fanout_inst (
 		.in_conduit    (component_dpi_controller_streamer_inst_dpi_control_bind_conduit),                  //    in_conduit.conduit
-		.out_conduit_0 (streamer_component_dpi_controller_bind_conduit_fanout_inst_out_conduit_0_conduit), // out_conduit_0.conduit
-		.out_conduit_1 (streamer_component_dpi_controller_bind_conduit_fanout_inst_out_conduit_1_conduit)  // out_conduit_1.conduit
+		.out_conduit_0 (streamer_component_dpi_controller_bind_conduit_fanout_inst_out_conduit_0_conduit)  // out_conduit_0.conduit
 	);
 
-	tb_streamer_component_dpi_controller_bind_conduit_fanout_inst streamer_component_dpi_controller_enable_conduit_fanout_inst (
+	tb_streamer_component_dpi_controller_agent_readback_fanout_inst streamer_component_dpi_controller_enable_conduit_fanout_inst (
 		.in_conduit    (component_dpi_controller_streamer_inst_dpi_control_enable_conduit),                  //    in_conduit.conduit
-		.out_conduit_0 (streamer_component_dpi_controller_enable_conduit_fanout_inst_out_conduit_0_conduit), // out_conduit_0.conduit
-		.out_conduit_1 (streamer_component_dpi_controller_enable_conduit_fanout_inst_out_conduit_1_conduit)  // out_conduit_1.conduit
+		.out_conduit_0 (streamer_component_dpi_controller_enable_conduit_fanout_inst_out_conduit_0_conduit)  // out_conduit_0.conduit
 	);
 
-	tb_concatenate_component_done_inst streamer_component_dpi_controller_stream_active_concatenate_inst (
-		.out_conduit  (streamer_component_dpi_controller_stream_active_concatenate_inst_out_conduit_conduit), //  out_conduit.conduit
-		.in_conduit_0 (stream_sink_dpi_bfm_streamer_s_out_inst_dpi_control_stream_active_conduit)             // in_conduit_0.conduit
+	tb_streamer_component_dpi_controller_agent_readback_fanout_inst streamer_component_dpi_controller_implicit_ready_conduit_fanout_inst (
+		.in_conduit    (component_dpi_controller_streamer_inst_read_implicit_streams_conduit),                       //    in_conduit.conduit
+		.out_conduit_0 (streamer_component_dpi_controller_implicit_ready_conduit_fanout_inst_out_conduit_0_conduit)  // out_conduit_0.conduit
 	);
 
 	tb_streamer_inst streamer_inst (
-		.start       (component_dpi_controller_streamer_inst_component_call_valid),   //   call.valid
-		.busy        (streamer_inst_call_stall),                                      //       .stall
-		.clock       (clock_reset_inst_clock_clk),                                    //  clock.clk
-		.resetn      (clock_reset_inst_reset_reset),                                  //  reset.reset_n
-		.done        (streamer_inst_return_valid),                                    // return.valid
-		.stall       (component_dpi_controller_streamer_inst_component_return_stall), //       .stall
-		.s_in_data   (stream_source_dpi_bfm_streamer_s_in_inst_source_data),          //   s_in.data
-		.s_in_ready  (stream_source_dpi_bfm_streamer_s_in_inst_source_ready),         //       .ready
-		.s_in_valid  (stream_source_dpi_bfm_streamer_s_in_inst_source_valid),         //       .valid
-		.s_out_data  (streamer_inst_s_out_data),                                      //  s_out.data
-		.s_out_ready (streamer_inst_s_out_ready),                                     //       .ready
-		.s_out_valid (streamer_inst_s_out_valid)                                      //       .valid
+		.avs_cra_read       (mm_interconnect_0_streamer_inst_avs_cra_read),       // avs_cra.read
+		.avs_cra_readdata   (mm_interconnect_0_streamer_inst_avs_cra_readdata),   //        .readdata
+		.avs_cra_write      (mm_interconnect_0_streamer_inst_avs_cra_write),      //        .write
+		.avs_cra_writedata  (mm_interconnect_0_streamer_inst_avs_cra_writedata),  //        .writedata
+		.avs_cra_address    (mm_interconnect_0_streamer_inst_avs_cra_address),    //        .address
+		.avs_cra_byteenable (mm_interconnect_0_streamer_inst_avs_cra_byteenable), //        .byteenable
+		.clock              (clock_reset_inst_clock_clk),                         //   clock.clk
+		.done_irq           (irq_mapper_receiver0_irq),                           //     irq.irq
+		.resetn             (clock_reset_inst_reset_reset)                        //   reset.reset_n
+	);
+
+	tb_mm_interconnect_0 mm_interconnect_0 (
+		.clock_reset_inst_clock_clk                                              (clock_reset_inst_clock_clk),                             //                                            clock_reset_inst_clock.clk
+		.mm_host_dpi_bfm_streamer_avs_cra_inst_reset_reset_bridge_in_reset_reset (~clock_reset_inst_reset_reset),                          // mm_host_dpi_bfm_streamer_avs_cra_inst_reset_reset_bridge_in_reset.reset
+		.mm_host_dpi_bfm_streamer_avs_cra_inst_m0_address                        (mm_host_dpi_bfm_streamer_avs_cra_inst_m0_address),       //                          mm_host_dpi_bfm_streamer_avs_cra_inst_m0.address
+		.mm_host_dpi_bfm_streamer_avs_cra_inst_m0_waitrequest                    (mm_host_dpi_bfm_streamer_avs_cra_inst_m0_waitrequest),   //                                                                  .waitrequest
+		.mm_host_dpi_bfm_streamer_avs_cra_inst_m0_burstcount                     (mm_host_dpi_bfm_streamer_avs_cra_inst_m0_burstcount),    //                                                                  .burstcount
+		.mm_host_dpi_bfm_streamer_avs_cra_inst_m0_byteenable                     (mm_host_dpi_bfm_streamer_avs_cra_inst_m0_byteenable),    //                                                                  .byteenable
+		.mm_host_dpi_bfm_streamer_avs_cra_inst_m0_read                           (mm_host_dpi_bfm_streamer_avs_cra_inst_m0_read),          //                                                                  .read
+		.mm_host_dpi_bfm_streamer_avs_cra_inst_m0_readdata                       (mm_host_dpi_bfm_streamer_avs_cra_inst_m0_readdata),      //                                                                  .readdata
+		.mm_host_dpi_bfm_streamer_avs_cra_inst_m0_readdatavalid                  (mm_host_dpi_bfm_streamer_avs_cra_inst_m0_readdatavalid), //                                                                  .readdatavalid
+		.mm_host_dpi_bfm_streamer_avs_cra_inst_m0_write                          (mm_host_dpi_bfm_streamer_avs_cra_inst_m0_write),         //                                                                  .write
+		.mm_host_dpi_bfm_streamer_avs_cra_inst_m0_writedata                      (mm_host_dpi_bfm_streamer_avs_cra_inst_m0_writedata),     //                                                                  .writedata
+		.streamer_inst_avs_cra_address                                           (mm_interconnect_0_streamer_inst_avs_cra_address),        //                                             streamer_inst_avs_cra.address
+		.streamer_inst_avs_cra_write                                             (mm_interconnect_0_streamer_inst_avs_cra_write),          //                                                                  .write
+		.streamer_inst_avs_cra_read                                              (mm_interconnect_0_streamer_inst_avs_cra_read),           //                                                                  .read
+		.streamer_inst_avs_cra_readdata                                          (mm_interconnect_0_streamer_inst_avs_cra_readdata),       //                                                                  .readdata
+		.streamer_inst_avs_cra_writedata                                         (mm_interconnect_0_streamer_inst_avs_cra_writedata),      //                                                                  .writedata
+		.streamer_inst_avs_cra_byteenable                                        (mm_interconnect_0_streamer_inst_avs_cra_byteenable)      //                                                                  .byteenable
 	);
 
 	tb_irq_mapper irq_mapper (
-		.clk        (clock_reset_inst_clock_clk),                               //       clk.clk
-		.reset      (~clock_reset_inst_reset_reset),                            // clk_reset.reset
-		.sender_irq (component_dpi_controller_streamer_inst_component_irq_irq)  //    sender.irq
+		.clk           (clock_reset_inst_clock_clk),                               //       clk.clk
+		.reset         (~clock_reset_inst_reset_reset),                            // clk_reset.reset
+		.receiver0_irq (irq_mapper_receiver0_irq),                                 // receiver0.irq
+		.sender_irq    (component_dpi_controller_streamer_inst_component_irq_irq)  //    sender.irq
 	);
 
 endmodule

@@ -16,7 +16,7 @@
 
 // SystemVerilog created from i_llvm_fpga_sfc_exit_s_c0_out_wt_entry_windowings_c0_exit_windowing0
 // Created for function/kernel streamer
-// SystemVerilog created on Sun Dec 11 14:23:30 2022
+// SystemVerilog created on Sun Jan  1 13:31:30 2023
 
 
 (* altera_attribute = "-name AUTO_SHIFT_REGISTER_RECOGNITION OFF; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 10037; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 15400; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 12020; -name MESSAGE_DISABLE 12030; -name MESSAGE_DISABLE 12010; -name MESSAGE_DISABLE 12110; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 13410; -name MESSAGE_DISABLE 113007; -name MESSAGE_DISABLE 10958" *)
@@ -104,7 +104,7 @@ module streamer_i_llvm_fpga_sfc_exit_s_c0_out_w0000s_c0_exit_windowing0 (
     assign i_llvm_fpga_sfc_exit_s_c0_out_wt_entry_windowings_c0_exit_windowing1_valid_mask[0] = i_llvm_fpga_sfc_exit_s_c0_out_wt_entry_windowings_c0_exit_windowing1_valid_mask_bitsignaltemp;
     assign i_llvm_fpga_sfc_exit_s_c0_out_wt_entry_windowings_c0_exit_windowing1_valid_out[0] = i_llvm_fpga_sfc_exit_s_c0_out_wt_entry_windowings_c0_exit_windowing1_valid_out_bitsignaltemp;
     acl_enable_sink #(
-        .PIPELINE_DEPTH(0),
+        .PIPELINE_DEPTH(22),
         .SCHEDULEII(1),
         .ASYNC_RESET(1),
         .DATA_WIDTH(24),
@@ -135,7 +135,7 @@ module streamer_i_llvm_fpga_sfc_exit_s_c0_out_w0000s_c0_exit_windowing0 (
     // ip_dsdk_adapt_bitselect11(BITSELECT,14)
     assign ip_dsdk_adapt_bitselect11_b = i_llvm_fpga_sfc_exit_s_c0_out_wt_entry_windowings_c0_exit_windowing1_data_out[0:0];
 
-    // dupName_0_sync_out_aunroll_x(GPOUT,2)@1
+    // dupName_0_sync_out_aunroll_x(GPOUT,2)@23
     assign out_data_out_0_tpl = ip_dsdk_adapt_bitselect11_b;
     assign out_data_out_1_tpl = ip_dsdk_adapt_bitselect13_b;
     assign out_data_out_2_tpl = ip_dsdk_adapt_bitselect15_b;

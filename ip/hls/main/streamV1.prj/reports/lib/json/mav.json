@@ -34,7 +34,7 @@
                 [
                   {
                     "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                    , "line":147
+                    , "line":195
                   }
                 ]
               ]
@@ -42,7 +42,7 @@
               [
                 {
                   "type":"table"
-                  , "Width":"1 bit"
+                  , "Width":"384 bits"
                   , "Depth":"0"
                   , "Stall-free":"No"
                   , "Start Cycle":"1"
@@ -72,8 +72,8 @@
               [
                 [
                   {
-                    "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
-                    , "line":62
+                    "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
+                    , "line":853
                   }
                 ]
               ]
@@ -81,7 +81,7 @@
               [
                 {
                   "type":"table"
-                  , "Width":"1 bit"
+                  , "Width":"384 bits"
                   , "Depth":"0"
                   , "Stall-free":"No"
                   , "Start Cycle":"1"
@@ -145,13 +145,13 @@
             , {
               "type":"inst"
               , "id":11
-              , "name":"Stream Read"
+              , "name":"Stream Write"
               , "debug":
               [
                 [
                   {
                     "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
-                    , "line":67
+                    , "line":62
                   }
                 ]
               ]
@@ -223,13 +223,13 @@
             , {
               "type":"inst"
               , "id":15
-              , "name":"Stream Write"
+              , "name":"Stream Read"
               , "debug":
               [
                 [
                   {
-                    "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                    , "line":154
+                    "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
+                    , "line":67
                   }
                 ]
               ]
@@ -262,6 +262,84 @@
             , {
               "type":"inst"
               , "id":17
+              , "name":"Stream Read"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
+                    , "line":845
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"384 bits"
+                  , "Depth":"0"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"1"
+                  , "Latency":"0"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Reference Manual"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":19
+              , "name":"Non-Blocking Stream Write"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                    , "line":206
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"384 bits"
+                  , "Depth":"0"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"1"
+                  , "Latency":"0"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Reference Manual"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":21
               , "name":"Loop Input"
               , "debug":
               [
@@ -278,13 +356,13 @@
                   "type":"table"
                   , "Start Cycle":"0"
                   , "Latency":"1"
-                  , "Loops To":"18"
+                  , "Loops To":"22"
                 }
               ]
             }
             , {
               "type":"inst"
-              , "id":18
+              , "id":22
               , "name":"Loop End"
               , "details":
               [
@@ -309,17 +387,57 @@
             }
           ]
         }
+        , {
+          "type":"csr"
+          , "id":23
+          , "name":"CSR"
+          , "debug":
+          [
+            [
+              {
+                "filename":"streamV1.prj/components/streamer/streamer_csr.h"
+                , "line":1
+              }
+            ]
+          ]
+          , "children":
+          [
+            {
+              "type":"interface"
+              , "id":24
+              , "name":"tuple"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                    , "line":195
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Stable":"No"
+                  , "Width":"384 bits"
+                  , "Component":"streamer"
+                }
+              ]
+            }
+          ]
+        }
       ]
     }
     , {
       "type":"component"
-      , "id":19
+      , "id":25
       , "name":"windowing"
       , "children":
       [
         {
           "type":"bb"
-          , "id":20
+          , "id":26
           , "name":"windowing.B0.runOnce"
           , "details":
           [
@@ -331,20 +449,20 @@
         }
         , {
           "type":"bb"
-          , "id":21
+          , "id":27
           , "name":"windowing.B1.start"
           , "children":
           [
             {
               "type":"inst"
-              , "id":22
+              , "id":28
               , "name":"Stream Read"
               , "debug":
               [
                 [
                   {
                     "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                    , "line":125
+                    , "line":172
                   }
                 ]
               ]
@@ -355,124 +473,7 @@
                   , "Width":"1 bit"
                   , "Depth":"0"
                   , "Stall-free":"No"
-                  , "Start Cycle":"1"
-                  , "Latency":"0"
-                  , "Reference":
-                  [
-                    {
-                      "type":"text"
-                      , "text":"See %L for more information"
-                      , "links":
-                      [
-                        {
-                          "guide":"Reference Manual"
-                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"inst"
-              , "id":24
-              , "name":"Stream Read"
-              , "debug":
-              [
-                [
-                  {
-                    "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
-                    , "line":845
-                  }
-                ]
-              ]
-              , "details":
-              [
-                {
-                  "type":"table"
-                  , "Width":"352 bits"
-                  , "Depth":"0"
-                  , "Stall-free":"No"
-                  , "Start Cycle":"1"
-                  , "Latency":"0"
-                  , "Reference":
-                  [
-                    {
-                      "type":"text"
-                      , "text":"See %L for more information"
-                      , "links":
-                      [
-                        {
-                          "guide":"Reference Manual"
-                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"inst"
-              , "id":26
-              , "name":"Stream Write"
-              , "debug":
-              [
-                [
-                  {
-                    "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
-                    , "line":62
-                  }
-                ]
-              ]
-              , "details":
-              [
-                {
-                  "type":"table"
-                  , "Width":"448 bits"
-                  , "Depth":"0"
-                  , "Stall-free":"No"
-                  , "Start Cycle":"3"
-                  , "Latency":"0"
-                  , "Reference":
-                  [
-                    {
-                      "type":"text"
-                      , "text":"See %L for more information"
-                      , "links":
-                      [
-                        {
-                          "guide":"Reference Manual"
-                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"inst"
-              , "id":28
-              , "name":"Stream Read"
-              , "debug":
-              [
-                [
-                  {
-                    "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
-                    , "line":67
-                  }
-                ]
-              ]
-              , "details":
-              [
-                {
-                  "type":"table"
-                  , "Width":"352 bits"
-                  , "Depth":"0"
-                  , "Stall-free":"No"
-                  , "Start Cycle":"3"
+                  , "Start Cycle":"23"
                   , "Latency":"0"
                   , "Reference":
                   [
@@ -494,13 +495,13 @@
             , {
               "type":"inst"
               , "id":30
-              , "name":"Stream Write"
+              , "name":"Stream Read"
               , "debug":
               [
                 [
                   {
                     "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
-                    , "line":725
+                    , "line":845
                   }
                 ]
               ]
@@ -508,10 +509,10 @@
               [
                 {
                   "type":"table"
-                  , "Width":"352 bits"
+                  , "Width":"384 bits"
                   , "Depth":"0"
                   , "Stall-free":"No"
-                  , "Start Cycle":"3"
+                  , "Start Cycle":"23"
                   , "Latency":"0"
                   , "Reference":
                   [
@@ -538,8 +539,8 @@
               [
                 [
                   {
-                    "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                    , "line":141
+                    "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
+                    , "line":853
                   }
                 ]
               ]
@@ -547,10 +548,10 @@
               [
                 {
                   "type":"table"
-                  , "Width":"1 bit"
+                  , "Width":"384 bits"
                   , "Depth":"0"
                   , "Stall-free":"No"
-                  , "Start Cycle":"3"
+                  , "Start Cycle":"74"
                   , "Latency":"0"
                   , "Reference":
                   [
@@ -572,89 +573,13 @@
             , {
               "type":"inst"
               , "id":34
-              , "name":"Loop Input"
-              , "debug":
-              [
-                [
-                  {
-                    "filename":""
-                    , "line":0
-                  }
-                ]
-              ]
-              , "details":
-              [
-                {
-                  "type":"table"
-                  , "Start Cycle":"0"
-                  , "Latency":"1"
-                  , "Loops To":"35"
-                }
-              ]
-            }
-            , {
-              "type":"inst"
-              , "id":35
-              , "name":"Loop End"
-              , "details":
-              [
-                {
-                  "type":"table"
-                  , "Start Cycle":"3"
-                  , "Latency":"1"
-                }
-              ]
-            }
-          ]
-          , "details":
-          [
-            {
-              "type":"table"
-              , "Latency":"3"
-              , "II":"1"
-              , "Subloops":"No"
-              , "Pipelined":"Yes"
-              , "Fmax Bottlenecks":"No"
-              , "Loop Info":""
-            }
-          ]
-        }
-      ]
-    }
-    , {
-      "type":"component"
-      , "id":36
-      , "name":"projection"
-      , "children":
-      [
-        {
-          "type":"bb"
-          , "id":37
-          , "name":"projection.B0.runOnce"
-          , "details":
-          [
-            {
-              "type":"table"
-              , "Latency":"2"
-            }
-          ]
-        }
-        , {
-          "type":"bb"
-          , "id":38
-          , "name":"projection.B1.start"
-          , "children":
-          [
-            {
-              "type":"inst"
-              , "id":39
-              , "name":"Stream Read"
+              , "name":"Stream Write"
               , "debug":
               [
                 [
                   {
                     "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                    , "line":48
+                    , "line":188
                   }
                 ]
               ]
@@ -665,7 +590,7 @@
                   , "Width":"1 bit"
                   , "Depth":"0"
                   , "Stall-free":"No"
-                  , "Start Cycle":"1"
+                  , "Start Cycle":"74"
                   , "Latency":"0"
                   , "Reference":
                   [
@@ -686,14 +611,14 @@
             }
             , {
               "type":"inst"
-              , "id":41
-              , "name":"Stream Read"
+              , "id":36
+              , "name":"Loop Input"
               , "debug":
               [
                 [
                   {
-                    "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
-                    , "line":591
+                    "filename":""
+                    , "line":0
                   }
                 ]
               ]
@@ -701,7 +626,83 @@
               [
                 {
                   "type":"table"
-                  , "Width":"352 bits"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"37"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":37
+              , "name":"Loop End"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"74"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"74"
+              , "II":"23"
+              , "Subloops":"No"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":"Loop is pipelined with II of 23. See Loops Analysis for more information."
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "type":"component"
+      , "id":38
+      , "name":"projection"
+      , "children":
+      [
+        {
+          "type":"bb"
+          , "id":39
+          , "name":"projection.B0.runOnce"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"2"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":40
+          , "name":"projection.B1.start"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":41
+              , "name":"Stream Read"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                    , "line":150
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"1 bit"
                   , "Depth":"0"
                   , "Stall-free":"No"
                   , "Start Cycle":"1"
@@ -726,13 +727,13 @@
             , {
               "type":"inst"
               , "id":43
-              , "name":"Stream Write"
+              , "name":"Stream Read"
               , "debug":
               [
                 [
                   {
                     "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
-                    , "line":853
+                    , "line":845
                   }
                 ]
               ]
@@ -740,10 +741,10 @@
               [
                 {
                   "type":"table"
-                  , "Width":"352 bits"
+                  , "Width":"384 bits"
                   , "Depth":"0"
                   , "Stall-free":"No"
-                  , "Start Cycle":"7"
+                  , "Start Cycle":"1"
                   , "Latency":"0"
                   , "Reference":
                   [
@@ -770,8 +771,47 @@
               [
                 [
                   {
+                    "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
+                    , "line":853
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"384 bits"
+                  , "Depth":"0"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"7"
+                  , "Latency":"0"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Reference Manual"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":47
+              , "name":"Stream Write"
+              , "debug":
+              [
+                [
+                  {
                     "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                    , "line":69
+                    , "line":168
                   }
                 ]
               ]
@@ -803,7 +843,7 @@
             }
             , {
               "type":"inst"
-              , "id":47
+              , "id":49
               , "name":"Loop Input"
               , "debug":
               [
@@ -820,13 +860,13 @@
                   "type":"table"
                   , "Start Cycle":"0"
                   , "Latency":"1"
-                  , "Loops To":"48"
+                  , "Loops To":"50"
                 }
               ]
             }
             , {
               "type":"inst"
-              , "id":48
+              , "id":50
               , "name":"Loop End"
               , "details":
               [
@@ -854,225 +894,29 @@
       ]
     }
     , {
-      "type":"component"
-      , "id":49
-      , "name":"aggregation"
-      , "children":
-      [
-        {
-          "type":"bb"
-          , "id":50
-          , "name":"aggregation.B0.runOnce"
-          , "details":
-          [
-            {
-              "type":"table"
-              , "Latency":"2"
-            }
-          ]
-        }
-        , {
-          "type":"bb"
-          , "id":51
-          , "name":"aggregation.B1.start"
-          , "children":
-          [
-            {
-              "type":"inst"
-              , "id":52
-              , "name":"Stream Read"
-              , "debug":
-              [
-                [
-                  {
-                    "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                    , "line":71
-                  }
-                ]
-              ]
-              , "details":
-              [
-                {
-                  "type":"table"
-                  , "Width":"448 bits"
-                  , "Depth":"0"
-                  , "Stall-free":"No"
-                  , "Start Cycle":"25"
-                  , "Latency":"0"
-                  , "Reference":
-                  [
-                    {
-                      "type":"text"
-                      , "text":"See %L for more information"
-                      , "links":
-                      [
-                        {
-                          "guide":"Reference Manual"
-                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"inst"
-              , "id":54
-              , "name":"Stream Write"
-              , "debug":
-              [
-                [
-                  {
-                    "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                    , "line":122
-                  }
-                ]
-              ]
-              , "details":
-              [
-                {
-                  "type":"table"
-                  , "Width":"352 bits"
-                  , "Depth":"0"
-                  , "Stall-free":"No"
-                  , "Start Cycle":"78"
-                  , "Latency":"0"
-                  , "Reference":
-                  [
-                    {
-                      "type":"text"
-                      , "text":"See %L for more information"
-                      , "links":
-                      [
-                        {
-                          "guide":"Reference Manual"
-                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"inst"
-              , "id":56
-              , "name":"Loop Input"
-              , "debug":
-              [
-                [
-                  {
-                    "filename":""
-                    , "line":0
-                  }
-                ]
-              ]
-              , "details":
-              [
-                {
-                  "type":"table"
-                  , "Start Cycle":"0"
-                  , "Latency":"1"
-                  , "Loops To":"57"
-                }
-              ]
-            }
-            , {
-              "type":"inst"
-              , "id":57
-              , "name":"Loop End"
-              , "details":
-              [
-                {
-                  "type":"table"
-                  , "Start Cycle":"78"
-                  , "Latency":"1"
-                }
-              ]
-            }
-          ]
-          , "details":
-          [
-            {
-              "type":"table"
-              , "Latency":"78"
-              , "II":"25"
-              , "Subloops":"No"
-              , "Pipelined":"Yes"
-              , "Fmax Bottlenecks":"No"
-              , "Loop Info":"Loop is pipelined with II of 25. See Loops Analysis for more information."
-            }
-          ]
-        }
-      ]
-    }
-    , {
       "type":"stream"
-      , "id":27
-      , "name":"call.aggregation"
-      , "debug":
-      [
-        [
-          {
-            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":125
-          }
-        ]
-      ]
-    }
-    , {
-      "type":"stream"
-      , "id":53
-      , "name":"call.aggregation"
-      , "debug":
-      [
-        [
-          {
-            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":71
-          }
-        ]
-      ]
-      , "details":
-      [
-        {
-          "type":"table"
-          , "Width":"448 bits"
-          , "Depth":"0"
-          , "Bits per symbol":"448 bits"
-          , "Uses Packets":"No"
-          , "Uses Empty":"No"
-          , "First symbol in high order bits":"No"
-          , "Uses Valid":"Yes"
-          , "Ready Latency":"0"
-        }
-      ]
-    }
-    , {
-      "type":"stream"
-      , "id":8
+      , "id":10
       , "name":"call.projection"
       , "debug":
       [
         [
           {
             "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":147
+            , "line":195
           }
         ]
       ]
     }
     , {
       "type":"stream"
-      , "id":40
+      , "id":42
       , "name":"call.projection"
       , "debug":
       [
         [
           {
             "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":48
+            , "line":150
           }
         ]
       ]
@@ -1100,7 +944,7 @@
         [
           {
             "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":147
+            , "line":195
           }
         ]
       ]
@@ -1108,97 +952,13 @@
       [
         {
           "type":"table"
-          , "Width":"1 bit"
+          , "Width":"384 bits"
           , "Depth":"0"
-          , "Bits per symbol":"1 bit"
+          , "Bits per symbol":"384 bits"
           , "Uses Packets":"No"
           , "Uses Empty":"No"
           , "First symbol in high order bits":"No"
           , "Uses Valid":"Yes"
-          , "Ready Latency":"0"
-        }
-      ]
-    }
-    , {
-      "type":"stream"
-      , "id":23
-      , "name":"call.windowing"
-      , "debug":
-      [
-        [
-          {
-            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":125
-          }
-        ]
-      ]
-      , "details":
-      [
-        {
-          "type":"table"
-          , "Width":"1 bit"
-          , "Depth":"0"
-          , "Bits per symbol":"1 bit"
-          , "Uses Packets":"No"
-          , "Uses Empty":"No"
-          , "First symbol in high order bits":"No"
-          , "Uses Valid":"Yes"
-          , "Ready Latency":"0"
-        }
-      ]
-    }
-    , {
-      "type":"stream"
-      , "id":10
-      , "name":"call.windowing"
-      , "debug":
-      [
-        [
-          {
-            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":147
-          }
-        ]
-      ]
-    }
-    , {
-      "type":"stream"
-      , "id":29
-      , "name":"return.aggregation"
-      , "debug":
-      [
-        [
-          {
-            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":125
-          }
-        ]
-      ]
-    }
-    , {
-      "type":"stream"
-      , "id":55
-      , "name":"return.aggregation"
-      , "debug":
-      [
-        [
-          {
-            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":71
-          }
-        ]
-      ]
-      , "details":
-      [
-        {
-          "type":"table"
-          , "Width":"352 bits"
-          , "Depth":"0"
-          , "Bits per symbol":"352 bits"
-          , "Uses Packets":"No"
-          , "Uses Empty":"No"
-          , "First symbol in high order bits":"No"
-          , "Uses Ready":"Yes"
           , "Ready Latency":"0"
         }
       ]
@@ -1206,27 +966,27 @@
     , {
       "type":"stream"
       , "id":12
-      , "name":"return.projection"
+      , "name":"call.windowing"
       , "debug":
       [
         [
           {
             "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":147
+            , "line":195
           }
         ]
       ]
     }
     , {
       "type":"stream"
-      , "id":46
-      , "name":"return.projection"
+      , "id":29
+      , "name":"call.windowing"
       , "debug":
       [
         [
           {
             "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":48
+            , "line":172
           }
         ]
       ]
@@ -1240,63 +1000,7 @@
           , "Uses Packets":"No"
           , "Uses Empty":"No"
           , "First symbol in high order bits":"No"
-          , "Uses Ready":"Yes"
-          , "Ready Latency":"0"
-        }
-      ]
-    }
-    , {
-      "type":"stream"
-      , "id":16
-      , "name":"return.streamer"
-      , "debug":
-      [
-        [
-          {
-            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":147
-          }
-        ]
-      ]
-      , "details":
-      [
-        {
-          "type":"table"
-          , "Width":"1 bit"
-          , "Depth":"0"
-          , "Bits per symbol":"1 bit"
-          , "Uses Packets":"No"
-          , "Uses Empty":"No"
-          , "First symbol in high order bits":"No"
-          , "Uses Ready":"Yes"
-          , "Ready Latency":"0"
-        }
-      ]
-    }
-    , {
-      "type":"stream"
-      , "id":33
-      , "name":"return.windowing"
-      , "debug":
-      [
-        [
-          {
-            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":125
-          }
-        ]
-      ]
-      , "details":
-      [
-        {
-          "type":"table"
-          , "Width":"1 bit"
-          , "Depth":"0"
-          , "Bits per symbol":"1 bit"
-          , "Uses Packets":"No"
-          , "Uses Empty":"No"
-          , "First symbol in high order bits":"No"
-          , "Uses Ready":"Yes"
+          , "Uses Valid":"Yes"
           , "Ready Latency":"0"
         }
       ]
@@ -1304,27 +1008,27 @@
     , {
       "type":"stream"
       , "id":14
-      , "name":"return.windowing"
+      , "name":"return.projection"
       , "debug":
       [
         [
           {
             "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":147
+            , "line":195
           }
         ]
       ]
     }
     , {
       "type":"stream"
-      , "id":25
-      , "name":"s0"
+      , "id":48
+      , "name":"return.projection"
       , "debug":
       [
         [
           {
             "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":125
+            , "line":150
           }
         ]
       ]
@@ -1332,9 +1036,107 @@
       [
         {
           "type":"table"
-          , "Width":"352 bits"
+          , "Width":"1 bit"
           , "Depth":"0"
-          , "Bits per symbol":"352 bits"
+          , "Bits per symbol":"1 bit"
+          , "Uses Packets":"No"
+          , "Uses Empty":"No"
+          , "First symbol in high order bits":"No"
+          , "Uses Ready":"Yes"
+          , "Ready Latency":"0"
+        }
+      ]
+    }
+    , {
+      "type":"stream"
+      , "id":20
+      , "name":"return.streamer"
+      , "debug":
+      [
+        [
+          {
+            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+            , "line":195
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Width":"384 bits"
+          , "Depth":"0"
+          , "Bits per symbol":"384 bits"
+          , "Uses Packets":"No"
+          , "Uses Empty":"No"
+          , "First symbol in high order bits":"No"
+          , "Uses Ready":"No"
+          , "Ready Latency":"0"
+        }
+      ]
+    }
+    , {
+      "type":"stream"
+      , "id":16
+      , "name":"return.windowing"
+      , "debug":
+      [
+        [
+          {
+            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+            , "line":195
+          }
+        ]
+      ]
+    }
+    , {
+      "type":"stream"
+      , "id":35
+      , "name":"return.windowing"
+      , "debug":
+      [
+        [
+          {
+            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+            , "line":172
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Width":"1 bit"
+          , "Depth":"0"
+          , "Bits per symbol":"1 bit"
+          , "Uses Packets":"No"
+          , "Uses Empty":"No"
+          , "First symbol in high order bits":"No"
+          , "Uses Ready":"Yes"
+          , "Ready Latency":"0"
+        }
+      ]
+    }
+    , {
+      "type":"stream"
+      , "id":8
+      , "name":"s0"
+      , "debug":
+      [
+        [
+          {
+            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+            , "line":195
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Width":"384 bits"
+          , "Depth":"0"
+          , "Bits per symbol":"384 bits"
           , "Uses Packets":"No"
           , "Uses Empty":"No"
           , "First symbol in high order bits":"No"
@@ -1352,7 +1154,7 @@
         [
           {
             "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":48
+            , "line":150
           }
         ]
       ]
@@ -1360,9 +1162,9 @@
       [
         {
           "type":"table"
-          , "Width":"352 bits"
+          , "Width":"384 bits"
           , "Depth":"0"
-          , "Bits per symbol":"352 bits"
+          , "Bits per symbol":"384 bits"
           , "Uses Packets":"No"
           , "Uses Empty":"No"
           , "First symbol in high order bits":"No"
@@ -1373,14 +1175,14 @@
     }
     , {
       "type":"stream"
-      , "id":42
-      , "name":"s_in"
+      , "id":31
+      , "name":"s1"
       , "debug":
       [
         [
           {
             "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":48
+            , "line":172
           }
         ]
       ]
@@ -1388,9 +1190,65 @@
       [
         {
           "type":"table"
-          , "Width":"352 bits"
+          , "Width":"384 bits"
           , "Depth":"0"
-          , "Bits per symbol":"352 bits"
+          , "Bits per symbol":"384 bits"
+          , "Uses Packets":"No"
+          , "Uses Empty":"No"
+          , "First symbol in high order bits":"No"
+          , "Uses Ready":"Yes"
+          , "Ready Latency":"0"
+        }
+      ]
+    }
+    , {
+      "type":"stream"
+      , "id":46
+      , "name":"s1"
+      , "debug":
+      [
+        [
+          {
+            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+            , "line":150
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Width":"384 bits"
+          , "Depth":"0"
+          , "Bits per symbol":"384 bits"
+          , "Uses Packets":"No"
+          , "Uses Empty":"No"
+          , "First symbol in high order bits":"No"
+          , "Uses Ready":"Yes"
+          , "Ready Latency":"0"
+        }
+      ]
+    }
+    , {
+      "type":"stream"
+      , "id":18
+      , "name":"s2"
+      , "debug":
+      [
+        [
+          {
+            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+            , "line":195
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Width":"384 bits"
+          , "Depth":"0"
+          , "Bits per symbol":"384 bits"
           , "Uses Packets":"No"
           , "Uses Empty":"No"
           , "First symbol in high order bits":"No"
@@ -1401,14 +1259,14 @@
     }
     , {
       "type":"stream"
-      , "id":31
-      , "name":"s_out"
+      , "id":33
+      , "name":"s2"
       , "debug":
       [
         [
           {
             "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":125
+            , "line":172
           }
         ]
       ]
@@ -1416,106 +1274,14 @@
       [
         {
           "type":"table"
-          , "Width":"352 bits"
+          , "Width":"384 bits"
           , "Depth":"0"
-          , "Bits per symbol":"352 bits"
+          , "Bits per symbol":"384 bits"
           , "Uses Packets":"No"
           , "Uses Empty":"No"
           , "First symbol in high order bits":"No"
-          , "Uses Ready":"Yes"
+          , "Uses Valid":"Yes"
           , "Ready Latency":"0"
-        }
-      ]
-    }
-    , {
-      "type":"interface"
-      , "id":61
-      , "name":"eos"
-      , "debug":
-      [
-        [
-          {
-            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":71
-          }
-        ]
-      ]
-      , "details":
-      [
-        {
-          "type":"table"
-          , "Stable":"No"
-          , "Width":"1 bit"
-          , "Component":"aggregation"
-        }
-      ]
-    }
-    , {
-      "type":"interface"
-      , "id":60
-      , "name":"field_code"
-      , "debug":
-      [
-        [
-          {
-            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":71
-          }
-        ]
-      ]
-      , "details":
-      [
-        {
-          "type":"table"
-          , "Stable":"No"
-          , "Width":"32 bits"
-          , "Component":"aggregation"
-        }
-      ]
-    }
-    , {
-      "type":"interface"
-      , "id":59
-      , "name":"function_code"
-      , "debug":
-      [
-        [
-          {
-            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":71
-          }
-        ]
-      ]
-      , "details":
-      [
-        {
-          "type":"table"
-          , "Stable":"No"
-          , "Width":"32 bits"
-          , "Component":"aggregation"
-        }
-      ]
-    }
-    , {
-      "type":"interface"
-      , "id":58
-      , "name":"in_tuple"
-      , "debug":
-      [
-        [
-          {
-            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":71
-          }
-        ]
-      ]
-      , "details":
-      [
-        {
-          "type":"table"
-          , "Stable":"No"
-          , "Width":"352 bits"
-          , "Component":"aggregation"
         }
       ]
     }
@@ -1535,51 +1301,71 @@
       , "to":10
     }
     , {
-      "from":12
-      , "to":11
+      "from":11
+      , "to":12
     }
     , {
       "from":14
       , "to":13
     }
     , {
-      "from":15
-      , "to":16
+      "from":16
+      , "to":15
     }
     , {
       "from":18
       , "to":17
     }
     , {
+      "from":19
+      , "to":20
+    }
+    , {
+      "from":24
+      , "to":5
+    }
+    , {
+      "from":22
+      , "to":21
+    }
+    , {
       "from":3
-      , "to":17
+      , "to":21
     }
     , {
       "from":5
-      , "to":18
+      , "to":22
     }
     , {
       "from":7
-      , "to":18
+      , "to":22
     }
     , {
       "from":9
-      , "to":18
+      , "to":22
     }
     , {
       "from":11
-      , "to":18
+      , "to":22
     }
     , {
       "from":13
-      , "to":18
+      , "to":22
     }
     , {
       "from":15
-      , "to":18
+      , "to":22
     }
     , {
       "from":17
+      , "to":22
+    }
+    , {
+      "from":19
+      , "to":22
+    }
+    , {
+      "from":21
       , "to":5
     }
     , {
@@ -1587,11 +1373,11 @@
       , "to":7
     }
     , {
-      "from":5
+      "from":7
       , "to":9
     }
     , {
-      "from":7
+      "from":5
       , "to":11
     }
     , {
@@ -1603,88 +1389,60 @@
       , "to":15
     }
     , {
+      "from":15
+      , "to":17
+    }
+    , {
       "from":13
-      , "to":15
+      , "to":19
     }
     , {
-      "from":23
-      , "to":22
-    }
-    , {
-      "from":25
-      , "to":24
-    }
-    , {
-      "from":26
-      , "to":27
+      "from":17
+      , "to":19
     }
     , {
       "from":29
       , "to":28
     }
     , {
-      "from":30
-      , "to":31
+      "from":31
+      , "to":30
     }
     , {
       "from":32
       , "to":33
     }
     , {
-      "from":35
-      , "to":34
-    }
-    , {
-      "from":20
-      , "to":34
-    }
-    , {
-      "from":22
+      "from":34
       , "to":35
     }
     , {
-      "from":24
-      , "to":35
+      "from":37
+      , "to":36
     }
     , {
       "from":26
-      , "to":35
+      , "to":36
     }
     , {
       "from":28
-      , "to":35
+      , "to":37
     }
     , {
       "from":30
-      , "to":35
+      , "to":37
     }
     , {
       "from":32
-      , "to":35
+      , "to":37
     }
     , {
       "from":34
-      , "to":22
+      , "to":37
     }
     , {
-      "from":22
-      , "to":24
-    }
-    , {
-      "from":24
-      , "to":26
-    }
-    , {
-      "from":24
+      "from":36
       , "to":28
-    }
-    , {
-      "from":26
-      , "to":28
-    }
-    , {
-      "from":24
-      , "to":30
     }
     , {
       "from":28
@@ -1695,51 +1453,51 @@
       , "to":32
     }
     , {
-      "from":40
-      , "to":39
+      "from":32
+      , "to":34
     }
     , {
       "from":42
       , "to":41
     }
     , {
-      "from":43
-      , "to":44
+      "from":44
+      , "to":43
     }
     , {
       "from":45
       , "to":46
     }
     , {
-      "from":48
-      , "to":47
+      "from":47
+      , "to":48
     }
     , {
-      "from":37
-      , "to":47
+      "from":50
+      , "to":49
     }
     , {
       "from":39
-      , "to":48
+      , "to":49
     }
     , {
       "from":41
-      , "to":48
+      , "to":50
     }
     , {
       "from":43
-      , "to":48
+      , "to":50
     }
     , {
       "from":45
-      , "to":48
+      , "to":50
     }
     , {
       "from":47
-      , "to":39
+      , "to":50
     }
     , {
-      "from":39
+      "from":49
       , "to":41
     }
     , {
@@ -1751,52 +1509,8 @@
       , "to":45
     }
     , {
-      "from":53
-      , "to":52
-    }
-    , {
-      "from":54
-      , "to":55
-    }
-    , {
-      "from":58
-      , "to":52
-    }
-    , {
-      "from":59
-      , "to":52
-    }
-    , {
-      "from":60
-      , "to":52
-    }
-    , {
-      "from":61
-      , "to":52
-    }
-    , {
-      "from":57
-      , "to":56
-    }
-    , {
-      "from":50
-      , "to":56
-    }
-    , {
-      "from":52
-      , "to":57
-    }
-    , {
-      "from":54
-      , "to":57
-    }
-    , {
-      "from":56
-      , "to":52
-    }
-    , {
-      "from":52
-      , "to":54
+      "from":45
+      , "to":47
     }
   ]
 }

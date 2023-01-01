@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dd:/project/ip/hls/main/streamV1.prj/verification/tb/simulation
 valt_bidir_buf
-Z1 !s110 1670756062
+Z1 !s110 1672567381
 !i10b 1
 !s100 `k9N_NNE[omlCfHHm=PO53
 IEkON:RaZkfM7PEb7`6^Tb2
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1670756062.000000
+Z7 !s108 1672567381.000000
 Z8 !s107 C:/intelfpga/21.1/quartus/eda/sim_lib/altera_primitives.v|
 Z9 !s90 +incdir+.|+define+COSIM_LIB|-suppress|14408|C:/intelfpga/21.1/quartus/eda/sim_lib/altera_primitives.v|-work|altera_ver|
 !i113 1
@@ -647,7 +647,7 @@ R10
 R11
 R12
 UPRIM_GDFF_HIGH
-Z13 !s110 1670756063
+Z13 !s110 1672567382
 !i10b 1
 !s100 SScBZ?gdYFgRTOVYmj^Jh2
 IPP@@4Fb9k``AkfPj45n<12

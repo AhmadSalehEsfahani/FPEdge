@@ -16,22 +16,22 @@
 
 // SystemVerilog created from bb_projection_B1_start_stall_region
 // Created for function/kernel streamer
-// SystemVerilog created on Sun Dec 11 14:23:30 2022
+// SystemVerilog created on Sun Jan  1 13:31:29 2023
 
 
 (* altera_attribute = "-name AUTO_SHIFT_REGISTER_RECOGNITION OFF; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 10037; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 15400; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 12020; -name MESSAGE_DISABLE 12030; -name MESSAGE_DISABLE 12010; -name MESSAGE_DISABLE 12110; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 13410; -name MESSAGE_DISABLE 113007; -name MESSAGE_DISABLE 10958" *)
 module streamer_bb_projection_B1_start_stall_region (
-    input wire [351:0] in_iord_bl_s_in_i_fifodata,
-    input wire [0:0] in_iord_bl_s_in_i_fifovalid,
+    input wire [383:0] in_iord_bl_s0_i_fifodata,
+    input wire [0:0] in_iord_bl_s0_i_fifovalid,
     output wire [0:0] out_iord_bl_call_projection_o_fifoready,
     output wire [0:0] out_iord_bl_call_projection_o_fifoalmost_full,
     output wire [0:0] out_valid_out,
-    input wire [0:0] in_iowr_bl_s0_i_fifoready,
-    output wire [0:0] out_iord_bl_s_in_o_fifoready,
-    output wire [0:0] out_iord_bl_s_in_o_fifoalmost_full,
+    input wire [0:0] in_iowr_bl_s1_i_fifoready,
+    output wire [0:0] out_iord_bl_s0_o_fifoready,
+    output wire [0:0] out_iord_bl_s0_o_fifoalmost_full,
     input wire [0:0] in_iowr_bl_return_projection_i_fifoready,
-    output wire [351:0] out_iowr_bl_s0_o_fifodata,
-    output wire [0:0] out_iowr_bl_s0_o_fifovalid,
+    output wire [383:0] out_iowr_bl_s1_o_fifodata,
+    output wire [0:0] out_iowr_bl_s1_o_fifovalid,
     output wire [0:0] out_iowr_bl_return_projection_o_fifodata,
     output wire [0:0] out_iowr_bl_return_projection_o_fifovalid,
     input wire [0:0] in_iord_bl_call_projection_i_fifodata,
@@ -48,26 +48,30 @@ module streamer_bb_projection_B1_start_stall_region (
     );
 
     wire [0:0] GND_q;
-    wire [7:0] i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_0_tpl;
-    wire [31:0] i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_1_tpl;
-    wire [31:0] i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_2_tpl;
-    wire [31:0] i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_3_tpl;
-    wire [31:0] i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_4_tpl;
-    wire [7:0] i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_5_tpl;
-    wire [31:0] i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_6_tpl;
-    wire [31:0] i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_7_tpl;
-    wire [31:0] i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_8_tpl;
-    wire [31:0] i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_9_tpl;
-    wire [31:0] i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_10_tpl;
-    wire [0:0] i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_iord_bl_s_in_o_fifoalmost_full;
-    wire [0:0] i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_iord_bl_s_in_o_fifoready;
-    wire [0:0] i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_stall;
-    wire [0:0] i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_valid;
-    wire [351:0] i_iowr_bl_s0_or_4_projection6_aunroll_x_out_iowr_bl_s0_o_fifodata;
-    wire [0:0] i_iowr_bl_s0_or_4_projection6_aunroll_x_out_iowr_bl_s0_o_fifovalid;
-    wire [0:0] i_iowr_bl_s0_or_4_projection6_aunroll_x_out_o_ack;
-    wire [0:0] i_iowr_bl_s0_or_4_projection6_aunroll_x_out_o_stall;
-    wire [0:0] i_iowr_bl_s0_or_4_projection6_aunroll_x_out_o_valid;
+    wire [7:0] i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_0_tpl;
+    wire [31:0] i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_1_tpl;
+    wire [31:0] i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_2_tpl;
+    wire [31:0] i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_3_tpl;
+    wire [31:0] i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_4_tpl;
+    wire [7:0] i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_5_tpl;
+    wire [7:0] i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_6_tpl;
+    wire [7:0] i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_7_tpl;
+    wire [7:0] i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_8_tpl;
+    wire [7:0] i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_9_tpl;
+    wire [31:0] i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_10_tpl;
+    wire [31:0] i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_11_tpl;
+    wire [31:0] i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_12_tpl;
+    wire [31:0] i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_13_tpl;
+    wire [31:0] i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_14_tpl;
+    wire [0:0] i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_iord_bl_s0_o_fifoalmost_full;
+    wire [0:0] i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_iord_bl_s0_o_fifoready;
+    wire [0:0] i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_stall;
+    wire [0:0] i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_valid;
+    wire [383:0] i_iowr_bl_s1_or_4_projection6_aunroll_x_out_iowr_bl_s1_o_fifodata;
+    wire [0:0] i_iowr_bl_s1_or_4_projection6_aunroll_x_out_iowr_bl_s1_o_fifovalid;
+    wire [0:0] i_iowr_bl_s1_or_4_projection6_aunroll_x_out_o_ack;
+    wire [0:0] i_iowr_bl_s1_or_4_projection6_aunroll_x_out_o_stall;
+    wire [0:0] i_iowr_bl_s1_or_4_projection6_aunroll_x_out_o_valid;
     wire [0:0] i_sfc_s_c0_in_wt_entry_projections_c0_enter1_projection0_aunroll_x_out_aclp_to_limiter_i_llvm_fpga_pipeline_keep_going_projection1_exiting_stall_out;
     wire [0:0] i_sfc_s_c0_in_wt_entry_projections_c0_enter1_projection0_aunroll_x_out_aclp_to_limiter_i_llvm_fpga_pipeline_keep_going_projection1_exiting_valid_out;
     wire [0:0] i_sfc_s_c0_in_wt_entry_projections_c0_enter1_projection0_aunroll_x_out_o_stall;
@@ -79,11 +83,15 @@ module streamer_bb_projection_B1_start_stall_region (
     wire [31:0] i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_4_tpl;
     wire [31:0] i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_5_tpl;
     wire [7:0] i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_6_tpl;
-    wire [31:0] i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_7_tpl;
-    wire [31:0] i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_8_tpl;
-    wire [31:0] i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_9_tpl;
-    wire [31:0] i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_10_tpl;
+    wire [7:0] i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_7_tpl;
+    wire [7:0] i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_8_tpl;
+    wire [7:0] i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_9_tpl;
+    wire [7:0] i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_10_tpl;
     wire [31:0] i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_11_tpl;
+    wire [31:0] i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_12_tpl;
+    wire [31:0] i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_13_tpl;
+    wire [31:0] i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_14_tpl;
+    wire [31:0] i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_15_tpl;
     wire [0:0] i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_o_stall;
     wire [0:0] i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_o_valid;
     wire [0:0] i_iord_bl_call_projection_unnamed_projection2_projection1_out_iord_bl_call_projection_o_fifoalmost_full;
@@ -97,50 +105,58 @@ module streamer_bb_projection_B1_start_stall_region (
     wire [0:0] i_iowr_bl_return_projection_unnamed_projection4_projection7_out_o_valid;
     wire [0:0] projection_B1_start_merge_reg_out_stall_out;
     wire [0:0] projection_B1_start_merge_reg_out_valid_out;
-    wire [303:0] bubble_join_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_q;
-    wire [7:0] bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_b;
-    wire [31:0] bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_c;
-    wire [31:0] bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_d;
-    wire [31:0] bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_e;
-    wire [31:0] bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_f;
-    wire [7:0] bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_g;
-    wire [31:0] bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_h;
-    wire [31:0] bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_i;
-    wire [31:0] bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_j;
-    wire [31:0] bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_k;
-    wire [31:0] bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_l;
-    wire [0:0] bubble_join_i_iowr_bl_s0_or_4_projection6_aunroll_x_q;
-    wire [0:0] bubble_select_i_iowr_bl_s0_or_4_projection6_aunroll_x_b;
-    wire [303:0] bubble_join_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_q;
+    wire [335:0] bubble_join_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_q;
+    wire [7:0] bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_b;
+    wire [31:0] bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_c;
+    wire [31:0] bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_d;
+    wire [31:0] bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_e;
+    wire [31:0] bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_f;
+    wire [7:0] bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_g;
+    wire [7:0] bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_h;
+    wire [7:0] bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_i;
+    wire [7:0] bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_j;
+    wire [7:0] bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_k;
+    wire [31:0] bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_l;
+    wire [31:0] bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_m;
+    wire [31:0] bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_n;
+    wire [31:0] bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_o;
+    wire [31:0] bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_p;
+    wire [0:0] bubble_join_i_iowr_bl_s1_or_4_projection6_aunroll_x_q;
+    wire [0:0] bubble_select_i_iowr_bl_s1_or_4_projection6_aunroll_x_b;
+    wire [335:0] bubble_join_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_q;
     wire [7:0] bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_b;
     wire [31:0] bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_c;
     wire [31:0] bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_d;
     wire [31:0] bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_e;
     wire [31:0] bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_f;
     wire [7:0] bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_g;
-    wire [31:0] bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_h;
-    wire [31:0] bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_i;
-    wire [31:0] bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_j;
-    wire [31:0] bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_k;
+    wire [7:0] bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_h;
+    wire [7:0] bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_i;
+    wire [7:0] bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_j;
+    wire [7:0] bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_k;
     wire [31:0] bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_l;
+    wire [31:0] bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_m;
+    wire [31:0] bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_n;
+    wire [31:0] bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_o;
+    wire [31:0] bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_p;
     wire [0:0] bubble_join_i_iord_bl_call_projection_unnamed_projection2_projection1_q;
     wire [0:0] bubble_select_i_iord_bl_call_projection_unnamed_projection2_projection1_b;
-    wire [0:0] SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_wireValid;
-    wire [0:0] SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_wireStall;
-    wire [0:0] SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_StallValid;
-    wire [0:0] SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_toReg0;
-    reg [0:0] SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_fromReg0;
-    wire [0:0] SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_consumed0;
-    wire [0:0] SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_toReg1;
-    reg [0:0] SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_fromReg1;
-    wire [0:0] SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_consumed1;
-    wire [0:0] SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_or0;
-    wire [0:0] SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_backStall;
-    wire [0:0] SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_V0;
-    wire [0:0] SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_V1;
-    wire [0:0] SE_out_i_iowr_bl_s0_or_4_projection6_aunroll_x_wireValid;
-    wire [0:0] SE_out_i_iowr_bl_s0_or_4_projection6_aunroll_x_backStall;
-    wire [0:0] SE_out_i_iowr_bl_s0_or_4_projection6_aunroll_x_V0;
+    wire [0:0] SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_wireValid;
+    wire [0:0] SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_wireStall;
+    wire [0:0] SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_StallValid;
+    wire [0:0] SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_toReg0;
+    reg [0:0] SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_fromReg0;
+    wire [0:0] SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_consumed0;
+    wire [0:0] SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_toReg1;
+    reg [0:0] SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_fromReg1;
+    wire [0:0] SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_consumed1;
+    wire [0:0] SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_or0;
+    wire [0:0] SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_backStall;
+    wire [0:0] SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_V0;
+    wire [0:0] SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_V1;
+    wire [0:0] SE_out_i_iowr_bl_s1_or_4_projection6_aunroll_x_wireValid;
+    wire [0:0] SE_out_i_iowr_bl_s1_or_4_projection6_aunroll_x_backStall;
+    wire [0:0] SE_out_i_iowr_bl_s1_or_4_projection6_aunroll_x_V0;
     wire [0:0] SE_out_i_sfc_s_c0_in_wt_entry_projections_c0_enter1_projection0_aunroll_x_wireValid;
     wire [0:0] SE_out_i_sfc_s_c0_in_wt_entry_projections_c0_enter1_projection0_aunroll_x_backStall;
     wire [0:0] SE_out_i_sfc_s_c0_in_wt_entry_projections_c0_enter1_projection0_aunroll_x_V0;
@@ -231,11 +247,11 @@ module streamer_bb_projection_B1_start_stall_region (
     // Computing multiple Valid(s)
     assign SE_out_i_iowr_bl_return_projection_unnamed_projection4_projection7_wireValid = i_iowr_bl_return_projection_unnamed_projection4_projection7_out_o_valid;
 
-    // bubble_join_i_iowr_bl_s0_or_4_projection6_aunroll_x(BITJOIN,50)
-    assign bubble_join_i_iowr_bl_s0_or_4_projection6_aunroll_x_q = i_iowr_bl_s0_or_4_projection6_aunroll_x_out_o_ack;
+    // bubble_join_i_iowr_bl_s1_or_4_projection6_aunroll_x(BITJOIN,50)
+    assign bubble_join_i_iowr_bl_s1_or_4_projection6_aunroll_x_q = i_iowr_bl_s1_or_4_projection6_aunroll_x_out_o_ack;
 
-    // bubble_select_i_iowr_bl_s0_or_4_projection6_aunroll_x(BITSELECT,51)
-    assign bubble_select_i_iowr_bl_s0_or_4_projection6_aunroll_x_b = $unsigned(bubble_join_i_iowr_bl_s0_or_4_projection6_aunroll_x_q[0:0]);
+    // bubble_select_i_iowr_bl_s1_or_4_projection6_aunroll_x(BITSELECT,51)
+    assign bubble_select_i_iowr_bl_s1_or_4_projection6_aunroll_x_b = $unsigned(bubble_join_i_iowr_bl_s1_or_4_projection6_aunroll_x_q[0:0]);
 
     // i_iowr_bl_return_projection_unnamed_projection4_projection7(BLACKBOX,22)@7
     // in in_i_stall@20000000
@@ -244,9 +260,9 @@ module streamer_bb_projection_B1_start_stall_region (
     // out out_o_stall@20000000
     streamer_i_iowr_bl_return_projection_unn0000jection4_projection0 thei_iowr_bl_return_projection_unnamed_projection4_projection7 (
         .in_i_data(GND_q),
-        .in_i_dependence(bubble_select_i_iowr_bl_s0_or_4_projection6_aunroll_x_b),
+        .in_i_dependence(bubble_select_i_iowr_bl_s1_or_4_projection6_aunroll_x_b),
         .in_i_stall(SE_out_i_iowr_bl_return_projection_unnamed_projection4_projection7_backStall),
-        .in_i_valid(SE_out_i_iowr_bl_s0_or_4_projection6_aunroll_x_V0),
+        .in_i_valid(SE_out_i_iowr_bl_s1_or_4_projection6_aunroll_x_V0),
         .in_iowr_bl_return_projection_i_fifoready(in_iowr_bl_return_projection_i_fifoready),
         .out_iowr_bl_return_projection_o_fifodata(i_iowr_bl_return_projection_unnamed_projection4_projection7_out_iowr_bl_return_projection_o_fifodata),
         .out_iowr_bl_return_projection_o_fifovalid(i_iowr_bl_return_projection_unnamed_projection4_projection7_out_iowr_bl_return_projection_o_fifovalid),
@@ -257,16 +273,16 @@ module streamer_bb_projection_B1_start_stall_region (
         .resetn(resetn)
     );
 
-    // SE_out_i_iowr_bl_s0_or_4_projection6_aunroll_x(STALLENABLE,64)
+    // SE_out_i_iowr_bl_s1_or_4_projection6_aunroll_x(STALLENABLE,64)
     // Valid signal propagation
-    assign SE_out_i_iowr_bl_s0_or_4_projection6_aunroll_x_V0 = SE_out_i_iowr_bl_s0_or_4_projection6_aunroll_x_wireValid;
+    assign SE_out_i_iowr_bl_s1_or_4_projection6_aunroll_x_V0 = SE_out_i_iowr_bl_s1_or_4_projection6_aunroll_x_wireValid;
     // Backward Stall generation
-    assign SE_out_i_iowr_bl_s0_or_4_projection6_aunroll_x_backStall = i_iowr_bl_return_projection_unnamed_projection4_projection7_out_o_stall | ~ (SE_out_i_iowr_bl_s0_or_4_projection6_aunroll_x_wireValid);
+    assign SE_out_i_iowr_bl_s1_or_4_projection6_aunroll_x_backStall = i_iowr_bl_return_projection_unnamed_projection4_projection7_out_o_stall | ~ (SE_out_i_iowr_bl_s1_or_4_projection6_aunroll_x_wireValid);
     // Computing multiple Valid(s)
-    assign SE_out_i_iowr_bl_s0_or_4_projection6_aunroll_x_wireValid = i_iowr_bl_s0_or_4_projection6_aunroll_x_out_o_valid;
+    assign SE_out_i_iowr_bl_s1_or_4_projection6_aunroll_x_wireValid = i_iowr_bl_s1_or_4_projection6_aunroll_x_out_o_valid;
 
     // bubble_join_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x(BITJOIN,54)
-    assign bubble_join_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_q = {i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_11_tpl, i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_10_tpl, i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_9_tpl, i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_8_tpl, i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_7_tpl, i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_6_tpl, i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_5_tpl, i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_4_tpl, i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_3_tpl, i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_2_tpl, i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_1_tpl};
+    assign bubble_join_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_q = {i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_15_tpl, i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_14_tpl, i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_13_tpl, i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_12_tpl, i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_11_tpl, i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_10_tpl, i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_9_tpl, i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_8_tpl, i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_7_tpl, i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_6_tpl, i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_5_tpl, i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_4_tpl, i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_3_tpl, i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_2_tpl, i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_1_tpl};
 
     // bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x(BITSELECT,55)
     assign bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_b = $unsigned(bubble_join_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_q[7:0]);
@@ -275,18 +291,22 @@ module streamer_bb_projection_B1_start_stall_region (
     assign bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_e = $unsigned(bubble_join_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_q[103:72]);
     assign bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_f = $unsigned(bubble_join_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_q[135:104]);
     assign bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_g = $unsigned(bubble_join_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_q[143:136]);
-    assign bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_h = $unsigned(bubble_join_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_q[175:144]);
-    assign bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_i = $unsigned(bubble_join_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_q[207:176]);
-    assign bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_j = $unsigned(bubble_join_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_q[239:208]);
-    assign bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_k = $unsigned(bubble_join_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_q[271:240]);
-    assign bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_l = $unsigned(bubble_join_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_q[303:272]);
+    assign bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_h = $unsigned(bubble_join_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_q[151:144]);
+    assign bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_i = $unsigned(bubble_join_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_q[159:152]);
+    assign bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_j = $unsigned(bubble_join_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_q[167:160]);
+    assign bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_k = $unsigned(bubble_join_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_q[175:168]);
+    assign bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_l = $unsigned(bubble_join_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_q[207:176]);
+    assign bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_m = $unsigned(bubble_join_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_q[239:208]);
+    assign bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_n = $unsigned(bubble_join_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_q[271:240]);
+    assign bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_o = $unsigned(bubble_join_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_q[303:272]);
+    assign bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_p = $unsigned(bubble_join_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_q[335:304]);
 
-    // i_iowr_bl_s0_or_4_projection6_aunroll_x(BLACKBOX,11)@7
+    // i_iowr_bl_s1_or_4_projection6_aunroll_x(BLACKBOX,11)@7
     // in in_i_stall@20000000
-    // out out_iowr_bl_s0_o_fifodata@20000000
-    // out out_iowr_bl_s0_o_fifovalid@20000000
+    // out out_iowr_bl_s1_o_fifodata@20000000
+    // out out_iowr_bl_s1_o_fifovalid@20000000
     // out out_o_stall@20000000
-    streamer_i_iowr_bl_s0_or_4_projection0 thei_iowr_bl_s0_or_4_projection6_aunroll_x (
+    streamer_i_iowr_bl_s1_or_4_projection0 thei_iowr_bl_s1_or_4_projection6_aunroll_x (
         .in_i_data_0_tpl(bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_b),
         .in_i_data_1_tpl(bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_c),
         .in_i_data_2_tpl(bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_d),
@@ -298,14 +318,18 @@ module streamer_bb_projection_B1_start_stall_region (
         .in_i_data_8_tpl(bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_j),
         .in_i_data_9_tpl(bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_k),
         .in_i_data_10_tpl(bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_l),
-        .in_i_stall(SE_out_i_iowr_bl_s0_or_4_projection6_aunroll_x_backStall),
+        .in_i_data_11_tpl(bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_m),
+        .in_i_data_12_tpl(bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_n),
+        .in_i_data_13_tpl(bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_o),
+        .in_i_data_14_tpl(bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_p),
+        .in_i_stall(SE_out_i_iowr_bl_s1_or_4_projection6_aunroll_x_backStall),
         .in_i_valid(SE_out_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_V0),
-        .in_iowr_bl_s0_i_fifoready(in_iowr_bl_s0_i_fifoready),
-        .out_iowr_bl_s0_o_fifodata(i_iowr_bl_s0_or_4_projection6_aunroll_x_out_iowr_bl_s0_o_fifodata),
-        .out_iowr_bl_s0_o_fifovalid(i_iowr_bl_s0_or_4_projection6_aunroll_x_out_iowr_bl_s0_o_fifovalid),
-        .out_o_ack(i_iowr_bl_s0_or_4_projection6_aunroll_x_out_o_ack),
-        .out_o_stall(i_iowr_bl_s0_or_4_projection6_aunroll_x_out_o_stall),
-        .out_o_valid(i_iowr_bl_s0_or_4_projection6_aunroll_x_out_o_valid),
+        .in_iowr_bl_s1_i_fifoready(in_iowr_bl_s1_i_fifoready),
+        .out_iowr_bl_s1_o_fifodata(i_iowr_bl_s1_or_4_projection6_aunroll_x_out_iowr_bl_s1_o_fifodata),
+        .out_iowr_bl_s1_o_fifovalid(i_iowr_bl_s1_or_4_projection6_aunroll_x_out_iowr_bl_s1_o_fifovalid),
+        .out_o_ack(i_iowr_bl_s1_or_4_projection6_aunroll_x_out_o_ack),
+        .out_o_stall(i_iowr_bl_s1_or_4_projection6_aunroll_x_out_o_stall),
+        .out_o_valid(i_iowr_bl_s1_or_4_projection6_aunroll_x_out_o_valid),
         .clock(clock),
         .resetn(resetn)
     );
@@ -314,25 +338,29 @@ module streamer_bb_projection_B1_start_stall_region (
     // Valid signal propagation
     assign SE_out_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_V0 = SE_out_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_wireValid;
     // Backward Stall generation
-    assign SE_out_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_backStall = i_iowr_bl_s0_or_4_projection6_aunroll_x_out_o_stall | ~ (SE_out_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_wireValid);
+    assign SE_out_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_backStall = i_iowr_bl_s1_or_4_projection6_aunroll_x_out_o_stall | ~ (SE_out_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_wireValid);
     // Computing multiple Valid(s)
     assign SE_out_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_wireValid = i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_o_valid;
 
-    // bubble_join_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x(BITJOIN,46)
-    assign bubble_join_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_q = {i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_10_tpl, i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_9_tpl, i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_8_tpl, i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_7_tpl, i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_6_tpl, i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_5_tpl, i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_4_tpl, i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_3_tpl, i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_2_tpl, i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_1_tpl, i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_0_tpl};
+    // bubble_join_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x(BITJOIN,46)
+    assign bubble_join_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_q = {i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_14_tpl, i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_13_tpl, i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_12_tpl, i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_11_tpl, i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_10_tpl, i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_9_tpl, i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_8_tpl, i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_7_tpl, i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_6_tpl, i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_5_tpl, i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_4_tpl, i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_3_tpl, i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_2_tpl, i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_1_tpl, i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_0_tpl};
 
-    // bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x(BITSELECT,47)
-    assign bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_b = $unsigned(bubble_join_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_q[7:0]);
-    assign bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_c = $unsigned(bubble_join_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_q[39:8]);
-    assign bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_d = $unsigned(bubble_join_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_q[71:40]);
-    assign bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_e = $unsigned(bubble_join_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_q[103:72]);
-    assign bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_f = $unsigned(bubble_join_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_q[135:104]);
-    assign bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_g = $unsigned(bubble_join_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_q[143:136]);
-    assign bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_h = $unsigned(bubble_join_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_q[175:144]);
-    assign bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_i = $unsigned(bubble_join_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_q[207:176]);
-    assign bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_j = $unsigned(bubble_join_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_q[239:208]);
-    assign bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_k = $unsigned(bubble_join_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_q[271:240]);
-    assign bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_l = $unsigned(bubble_join_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_q[303:272]);
+    // bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x(BITSELECT,47)
+    assign bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_b = $unsigned(bubble_join_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_q[7:0]);
+    assign bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_c = $unsigned(bubble_join_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_q[39:8]);
+    assign bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_d = $unsigned(bubble_join_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_q[71:40]);
+    assign bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_e = $unsigned(bubble_join_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_q[103:72]);
+    assign bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_f = $unsigned(bubble_join_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_q[135:104]);
+    assign bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_g = $unsigned(bubble_join_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_q[143:136]);
+    assign bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_h = $unsigned(bubble_join_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_q[151:144]);
+    assign bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_i = $unsigned(bubble_join_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_q[159:152]);
+    assign bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_j = $unsigned(bubble_join_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_q[167:160]);
+    assign bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_k = $unsigned(bubble_join_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_q[175:168]);
+    assign bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_l = $unsigned(bubble_join_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_q[207:176]);
+    assign bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_m = $unsigned(bubble_join_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_q[239:208]);
+    assign bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_n = $unsigned(bubble_join_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_q[271:240]);
+    assign bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_o = $unsigned(bubble_join_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_q[303:272]);
+    assign bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_p = $unsigned(bubble_join_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_q[335:304]);
 
     // i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x(BLACKBOX,13)@1
     // in in_i_stall@20000000
@@ -348,23 +376,31 @@ module streamer_bb_projection_B1_start_stall_region (
     // out out_c1_exit_9_tpl@7
     // out out_c1_exit_10_tpl@7
     // out out_c1_exit_11_tpl@7
+    // out out_c1_exit_12_tpl@7
+    // out out_c1_exit_13_tpl@7
+    // out out_c1_exit_14_tpl@7
+    // out out_c1_exit_15_tpl@7
     // out out_o_stall@20000000
     // out out_o_valid@7
     streamer_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4 thei_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x (
         .in_c1_eni1_0_tpl(GND_q),
-        .in_c1_eni1_1_tpl(bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_b),
-        .in_c1_eni1_2_tpl(bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_c),
-        .in_c1_eni1_3_tpl(bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_d),
-        .in_c1_eni1_4_tpl(bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_e),
-        .in_c1_eni1_5_tpl(bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_f),
-        .in_c1_eni1_6_tpl(bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_g),
-        .in_c1_eni1_7_tpl(bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_h),
-        .in_c1_eni1_8_tpl(bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_i),
-        .in_c1_eni1_9_tpl(bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_j),
-        .in_c1_eni1_10_tpl(bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_k),
-        .in_c1_eni1_11_tpl(bubble_select_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_l),
+        .in_c1_eni1_1_tpl(bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_b),
+        .in_c1_eni1_2_tpl(bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_c),
+        .in_c1_eni1_3_tpl(bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_d),
+        .in_c1_eni1_4_tpl(bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_e),
+        .in_c1_eni1_5_tpl(bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_f),
+        .in_c1_eni1_6_tpl(bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_g),
+        .in_c1_eni1_7_tpl(bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_h),
+        .in_c1_eni1_8_tpl(bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_i),
+        .in_c1_eni1_9_tpl(bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_j),
+        .in_c1_eni1_10_tpl(bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_k),
+        .in_c1_eni1_11_tpl(bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_l),
+        .in_c1_eni1_12_tpl(bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_m),
+        .in_c1_eni1_13_tpl(bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_n),
+        .in_c1_eni1_14_tpl(bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_o),
+        .in_c1_eni1_15_tpl(bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_p),
         .in_i_stall(SE_out_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_backStall),
-        .in_i_valid(SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_V1),
+        .in_i_valid(SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_V1),
         .out_c1_exit_0_tpl(),
         .out_c1_exit_1_tpl(i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_1_tpl),
         .out_c1_exit_2_tpl(i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_2_tpl),
@@ -377,44 +413,48 @@ module streamer_bb_projection_B1_start_stall_region (
         .out_c1_exit_9_tpl(i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_9_tpl),
         .out_c1_exit_10_tpl(i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_10_tpl),
         .out_c1_exit_11_tpl(i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_11_tpl),
+        .out_c1_exit_12_tpl(i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_12_tpl),
+        .out_c1_exit_13_tpl(i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_13_tpl),
+        .out_c1_exit_14_tpl(i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_14_tpl),
+        .out_c1_exit_15_tpl(i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_c1_exit_15_tpl),
         .out_o_stall(i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_o_stall),
         .out_o_valid(i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_o_valid),
         .clock(clock),
         .resetn(resetn)
     );
 
-    // SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x(STALLENABLE,62)
+    // SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x(STALLENABLE,62)
     always @ (posedge clock or negedge resetn)
     begin
         if (!resetn)
         begin
-            SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_fromReg0 <= '0;
-            SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_fromReg1 <= '0;
+            SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_fromReg0 <= '0;
+            SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_fromReg1 <= '0;
         end
         else
         begin
             // Successor 0
-            SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_fromReg0 <= SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_toReg0;
+            SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_fromReg0 <= SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_toReg0;
             // Successor 1
-            SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_fromReg1 <= SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_toReg1;
+            SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_fromReg1 <= SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_toReg1;
         end
     end
     // Input Stall processing
-    assign SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_consumed0 = (~ (in_stall_in) & SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_wireValid) | SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_fromReg0;
-    assign SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_consumed1 = (~ (i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_o_stall) & SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_wireValid) | SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_fromReg1;
+    assign SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_consumed0 = (~ (in_stall_in) & SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_wireValid) | SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_fromReg0;
+    assign SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_consumed1 = (~ (i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_out_o_stall) & SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_wireValid) | SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_fromReg1;
     // Consuming
-    assign SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_StallValid = SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_backStall & SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_wireValid;
-    assign SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_toReg0 = SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_StallValid & SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_consumed0;
-    assign SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_toReg1 = SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_StallValid & SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_consumed1;
+    assign SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_StallValid = SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_backStall & SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_wireValid;
+    assign SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_toReg0 = SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_StallValid & SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_consumed0;
+    assign SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_toReg1 = SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_StallValid & SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_consumed1;
     // Backward Stall generation
-    assign SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_or0 = SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_consumed0;
-    assign SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_wireStall = ~ (SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_consumed1 & SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_or0);
-    assign SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_backStall = SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_wireStall;
+    assign SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_or0 = SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_consumed0;
+    assign SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_wireStall = ~ (SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_consumed1 & SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_or0);
+    assign SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_backStall = SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_wireStall;
     // Valid signal propagation
-    assign SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_V0 = SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_wireValid & ~ (SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_fromReg0);
-    assign SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_V1 = SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_wireValid & ~ (SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_fromReg1);
+    assign SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_V0 = SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_wireValid & ~ (SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_fromReg0);
+    assign SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_V1 = SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_wireValid & ~ (SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_fromReg1);
     // Computing multiple Valid(s)
-    assign SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_wireValid = i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_valid;
+    assign SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_wireValid = i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_valid;
 
     // bubble_join_i_iord_bl_call_projection_unnamed_projection2_projection1(BITJOIN,57)
     assign bubble_join_i_iord_bl_call_projection_unnamed_projection2_projection1_q = i_iord_bl_call_projection_unnamed_projection2_projection1_out_o_data;
@@ -422,32 +462,36 @@ module streamer_bb_projection_B1_start_stall_region (
     // bubble_select_i_iord_bl_call_projection_unnamed_projection2_projection1(BITSELECT,58)
     assign bubble_select_i_iord_bl_call_projection_unnamed_projection2_projection1_b = $unsigned(bubble_join_i_iord_bl_call_projection_unnamed_projection2_projection1_q[0:0]);
 
-    // i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x(BLACKBOX,10)@1
+    // i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x(BLACKBOX,10)@1
     // in in_i_stall@20000000
-    // out out_iord_bl_s_in_o_fifoalmost_full@20000000
-    // out out_iord_bl_s_in_o_fifoready@20000000
+    // out out_iord_bl_s0_o_fifoalmost_full@20000000
+    // out out_iord_bl_s0_o_fifoready@20000000
     // out out_o_stall@20000000
-    streamer_i_iord_bl_s_in_unnamed_projection3_projection0 thei_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x (
+    streamer_i_iord_bl_s0_unnamed_projection3_projection0 thei_iord_bl_s0_unnamed_projection3_projection2_aunroll_x (
         .in_i_dependence(bubble_select_i_iord_bl_call_projection_unnamed_projection2_projection1_b),
-        .in_i_stall(SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_backStall),
+        .in_i_stall(SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_backStall),
         .in_i_valid(SE_out_i_iord_bl_call_projection_unnamed_projection2_projection1_V0),
-        .in_iord_bl_s_in_i_fifodata(in_iord_bl_s_in_i_fifodata),
-        .in_iord_bl_s_in_i_fifovalid(in_iord_bl_s_in_i_fifovalid),
-        .out_o_data_0_tpl(i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_0_tpl),
-        .out_o_data_1_tpl(i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_1_tpl),
-        .out_o_data_2_tpl(i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_2_tpl),
-        .out_o_data_3_tpl(i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_3_tpl),
-        .out_o_data_4_tpl(i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_4_tpl),
-        .out_o_data_5_tpl(i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_5_tpl),
-        .out_o_data_6_tpl(i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_6_tpl),
-        .out_o_data_7_tpl(i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_7_tpl),
-        .out_o_data_8_tpl(i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_8_tpl),
-        .out_o_data_9_tpl(i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_9_tpl),
-        .out_o_data_10_tpl(i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_data_10_tpl),
-        .out_iord_bl_s_in_o_fifoalmost_full(i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_iord_bl_s_in_o_fifoalmost_full),
-        .out_iord_bl_s_in_o_fifoready(i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_iord_bl_s_in_o_fifoready),
-        .out_o_stall(i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_stall),
-        .out_o_valid(i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_valid),
+        .in_iord_bl_s0_i_fifodata(in_iord_bl_s0_i_fifodata),
+        .in_iord_bl_s0_i_fifovalid(in_iord_bl_s0_i_fifovalid),
+        .out_o_data_0_tpl(i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_0_tpl),
+        .out_o_data_1_tpl(i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_1_tpl),
+        .out_o_data_2_tpl(i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_2_tpl),
+        .out_o_data_3_tpl(i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_3_tpl),
+        .out_o_data_4_tpl(i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_4_tpl),
+        .out_o_data_5_tpl(i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_5_tpl),
+        .out_o_data_6_tpl(i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_6_tpl),
+        .out_o_data_7_tpl(i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_7_tpl),
+        .out_o_data_8_tpl(i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_8_tpl),
+        .out_o_data_9_tpl(i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_9_tpl),
+        .out_o_data_10_tpl(i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_10_tpl),
+        .out_o_data_11_tpl(i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_11_tpl),
+        .out_o_data_12_tpl(i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_12_tpl),
+        .out_o_data_13_tpl(i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_13_tpl),
+        .out_o_data_14_tpl(i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_data_14_tpl),
+        .out_iord_bl_s0_o_fifoalmost_full(i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_iord_bl_s0_o_fifoalmost_full),
+        .out_iord_bl_s0_o_fifoready(i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_iord_bl_s0_o_fifoready),
+        .out_o_stall(i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_stall),
+        .out_o_valid(i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_valid),
         .clock(clock),
         .resetn(resetn)
     );
@@ -456,7 +500,7 @@ module streamer_bb_projection_B1_start_stall_region (
     // Valid signal propagation
     assign SE_out_i_iord_bl_call_projection_unnamed_projection2_projection1_V0 = SE_out_i_iord_bl_call_projection_unnamed_projection2_projection1_wireValid;
     // Backward Stall generation
-    assign SE_out_i_iord_bl_call_projection_unnamed_projection2_projection1_backStall = i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_o_stall | ~ (SE_out_i_iord_bl_call_projection_unnamed_projection2_projection1_wireValid);
+    assign SE_out_i_iord_bl_call_projection_unnamed_projection2_projection1_backStall = i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_o_stall | ~ (SE_out_i_iord_bl_call_projection_unnamed_projection2_projection1_wireValid);
     // Computing multiple Valid(s)
     assign SE_out_i_iord_bl_call_projection_unnamed_projection2_projection1_wireValid = i_iord_bl_call_projection_unnamed_projection2_projection1_out_o_valid;
 
@@ -484,15 +528,15 @@ module streamer_bb_projection_B1_start_stall_region (
     assign out_iord_bl_call_projection_o_fifoalmost_full = i_iord_bl_call_projection_unnamed_projection2_projection1_out_iord_bl_call_projection_o_fifoalmost_full;
 
     // dupName_0_sync_out_x(GPOUT,4)@1
-    assign out_valid_out = SE_out_i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_V0;
+    assign out_valid_out = SE_out_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_V0;
 
     // dupName_1_ext_sig_sync_out_x(GPOUT,6)
-    assign out_iord_bl_s_in_o_fifoready = i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_iord_bl_s_in_o_fifoready;
-    assign out_iord_bl_s_in_o_fifoalmost_full = i_iord_bl_s_in_unnamed_projection3_projection2_aunroll_x_out_iord_bl_s_in_o_fifoalmost_full;
+    assign out_iord_bl_s0_o_fifoready = i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_iord_bl_s0_o_fifoready;
+    assign out_iord_bl_s0_o_fifoalmost_full = i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_out_iord_bl_s0_o_fifoalmost_full;
 
     // dupName_2_ext_sig_sync_out_x(GPOUT,8)
-    assign out_iowr_bl_s0_o_fifodata = i_iowr_bl_s0_or_4_projection6_aunroll_x_out_iowr_bl_s0_o_fifodata;
-    assign out_iowr_bl_s0_o_fifovalid = i_iowr_bl_s0_or_4_projection6_aunroll_x_out_iowr_bl_s0_o_fifovalid;
+    assign out_iowr_bl_s1_o_fifodata = i_iowr_bl_s1_or_4_projection6_aunroll_x_out_iowr_bl_s1_o_fifodata;
+    assign out_iowr_bl_s1_o_fifovalid = i_iowr_bl_s1_or_4_projection6_aunroll_x_out_iowr_bl_s1_o_fifovalid;
 
     // dupName_3_ext_sig_sync_out_x(GPOUT,9)
     assign out_iowr_bl_return_projection_o_fifodata = i_iowr_bl_return_projection_unnamed_projection4_projection7_out_iowr_bl_return_projection_o_fifodata;

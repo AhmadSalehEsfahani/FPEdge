@@ -16,7 +16,7 @@
 
 // SystemVerilog created from i_sfc_s_c0_in_wt_entry_windowings_c0_enter1_windowing1
 // Created for function/kernel streamer
-// SystemVerilog created on Sun Dec 11 14:23:30 2022
+// SystemVerilog created on Sun Jan  1 13:31:30 2023
 
 
 (* altera_attribute = "-name AUTO_SHIFT_REGISTER_RECOGNITION OFF; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 10037; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 15400; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 12020; -name MESSAGE_DISABLE 12030; -name MESSAGE_DISABLE 12010; -name MESSAGE_DISABLE 12110; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 13410; -name MESSAGE_DISABLE 113007; -name MESSAGE_DISABLE 10958" *)
@@ -67,9 +67,14 @@ module streamer_i_sfc_s_c0_in_wt_entry_windowings_c0_enter1_windowing1 (
     assign input_accepted_and_q = in_i_valid & not_stall_out_q;
 
     // i_sfc_logic_s_c0_in_wt_entry_windowings_c0_enter1_windowing0_aunroll_x(BLACKBOX,5)@1
+    // out out_c0_exi2_0_tpl@23
+    // out out_c0_exi2_1_tpl@23
+    // out out_c0_exi2_2_tpl@23
     // out out_aclp_to_limiter_i_llvm_fpga_pipeline_keep_going_windowing2_exiting_stall_out@20000000
     // out out_aclp_to_limiter_i_llvm_fpga_pipeline_keep_going_windowing2_exiting_valid_out@20000000
+    // out out_o_valid@23
     // out out_pipeline_valid_out@20000000
+    // out out_unnamed_windowing0@23
     streamer_i_sfc_logic_s_c0_in_wt_entry_wi0000c0_enter1_windowing0 thei_sfc_logic_s_c0_in_wt_entry_windowings_c0_enter1_windowing0_aunroll_x (
         .in_c0_eni1_0_tpl(in_c0_eni1_0_tpl),
         .in_c0_eni1_1_tpl(in_c0_eni1_1_tpl),
@@ -88,7 +93,7 @@ module streamer_i_sfc_s_c0_in_wt_entry_windowings_c0_enter1_windowing1 (
         .resetn(resetn)
     );
 
-    // i_llvm_fpga_sfc_exit_s_c0_out_wt_entry_windowings_c0_exit_windowing1_aunroll_x(BLACKBOX,4)@1
+    // i_llvm_fpga_sfc_exit_s_c0_out_wt_entry_windowings_c0_exit_windowing1_aunroll_x(BLACKBOX,4)@23
     // in in_stall_in@20000000
     // out out_stall_entry@20000000
     streamer_i_llvm_fpga_sfc_exit_s_c0_out_w0000s_c0_exit_windowing0 thei_llvm_fpga_sfc_exit_s_c0_out_wt_entry_windowings_c0_exit_windowing1_aunroll_x (
@@ -109,7 +114,7 @@ module streamer_i_sfc_s_c0_in_wt_entry_windowings_c0_enter1_windowing1 (
         .resetn(resetn)
     );
 
-    // dupName_0_sync_out_aunroll_x(GPOUT,2)@1
+    // dupName_0_sync_out_aunroll_x(GPOUT,2)@23
     assign out_c0_exit_0_tpl = i_llvm_fpga_sfc_exit_s_c0_out_wt_entry_windowings_c0_exit_windowing1_aunroll_x_out_data_out_0_tpl;
     assign out_c0_exit_1_tpl = i_llvm_fpga_sfc_exit_s_c0_out_wt_entry_windowings_c0_exit_windowing1_aunroll_x_out_data_out_1_tpl;
     assign out_c0_exit_2_tpl = i_llvm_fpga_sfc_exit_s_c0_out_wt_entry_windowings_c0_exit_windowing1_aunroll_x_out_data_out_2_tpl;

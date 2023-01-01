@@ -8,21 +8,16 @@
 
 streamer streamer_inst (
   // Interface: clock (clock end)
-  .clock      ( ), // 1-bit clk input
+  .clock             ( ), // 1-bit clk input
   // Interface: reset (reset end)
-  .resetn     ( ), // 1-bit reset_n input
-  // Interface: s_in (avalon_streaming sink)
-  .s_in_data  ( ), // 352-bit data input
-  .s_in_ready ( ), // 1-bit ready output
-  .s_in_valid ( ), // 1-bit valid input
-  // Interface: s_out (avalon_streaming source)
-  .s_out_data ( ), // 352-bit data output
-  .s_out_ready( ), // 1-bit ready input
-  .s_out_valid( ), // 1-bit valid output
-  // Interface: call (conduit sink)
-  .start      ( ), // 1-bit valid input
-  .busy       ( ), // 1-bit stall output
-  // Interface: return (conduit source)
-  .done       ( ), // 1-bit valid output
-  .stall      ( )  // 1-bit stall input
+  .resetn            ( ), // 1-bit reset_n input
+  // Interface: irq (interrupt end)
+  .done_irq          ( ), // 1-bit irq output
+  // Interface: avs_cra (avalon end)
+  .avs_cra_read      ( ), // 1-bit read input
+  .avs_cra_readdata  ( ), // 64-bit readdata output
+  .avs_cra_write     ( ), // 1-bit write input
+  .avs_cra_writedata ( ), // 64-bit writedata input
+  .avs_cra_address   ( ), // 4-bit address input
+  .avs_cra_byteenable( )  // 8-bit byteenable input
 );

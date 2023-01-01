@@ -16,7 +16,7 @@
 
 // SystemVerilog created from i_sfc_logic_s_c0_in_wt_entry_windowings_c0_enter1_windowing0
 // Created for function/kernel streamer
-// SystemVerilog created on Sun Dec 11 14:23:30 2022
+// SystemVerilog created on Sun Jan  1 13:31:30 2023
 
 
 (* altera_attribute = "-name AUTO_SHIFT_REGISTER_RECOGNITION OFF; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 10037; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 15400; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 12020; -name MESSAGE_DISABLE 12030; -name MESSAGE_DISABLE 12010; -name MESSAGE_DISABLE 12110; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 13410; -name MESSAGE_DISABLE 113007; -name MESSAGE_DISABLE 10958" *)
@@ -47,13 +47,23 @@ module streamer_i_sfc_logic_s_c0_in_wt_entry_wi0000c0_enter1_windowing0 (
     wire [0:0] i_llvm_fpga_push_i1_notexitcond_windowing3_out_data_out;
     wire [0:0] i_llvm_fpga_push_i1_notexitcond_windowing3_out_feedback_out_2;
     wire [0:0] i_llvm_fpga_push_i1_notexitcond_windowing3_out_feedback_valid_out_2;
+    reg [0:0] redist0_sync_together13_aunroll_x_in_c0_eni1_1_tpl_22_q;
+    reg [0:0] redist1_sync_together13_aunroll_x_in_i_valid_22_q;
     wire [0:0] dupName_0_enable_stall_connector_x_not_enable_q;
 
 
-    // dupName_0_enable_stall_connector_x_not_enable(LOGICAL,17)
+    // redist1_sync_together13_aunroll_x_in_i_valid_22(DELAY,18)
+    dspba_delay_ver #( .width(1), .depth(22), .reset_kind("ASYNC"), .phase(0), .modulus(1), .reset_high(1'b0) )
+    redist1_sync_together13_aunroll_x_in_i_valid_22 ( .xin(in_i_valid), .xout(redist1_sync_together13_aunroll_x_in_i_valid_22_q), .ena(in_enable[0]), .clk(clock), .aclr(resetn) );
+
+    // redist0_sync_together13_aunroll_x_in_c0_eni1_1_tpl_22(DELAY,17)
+    dspba_delay_ver #( .width(1), .depth(22), .reset_kind("ASYNC"), .phase(0), .modulus(1), .reset_high(1'b0) )
+    redist0_sync_together13_aunroll_x_in_c0_eni1_1_tpl_22 ( .xin(in_c0_eni1_1_tpl), .xout(redist0_sync_together13_aunroll_x_in_c0_eni1_1_tpl_22_q), .ena(in_enable[0]), .clk(clock), .aclr(resetn) );
+
+    // dupName_0_enable_stall_connector_x_not_enable(LOGICAL,19)
     assign dupName_0_enable_stall_connector_x_not_enable_q = $unsigned(~ (in_enable));
 
-    // i_llvm_fpga_pipeline_keep_going_windowing2(BLACKBOX,12)@1
+    // i_llvm_fpga_pipeline_keep_going_windowing2(BLACKBOX,12)@23
     // out out_exiting_stall_out@20000000
     // out out_exiting_valid_out@20000000
     // out out_initeration_stall_out@20000000
@@ -67,7 +77,7 @@ module streamer_i_sfc_logic_s_c0_in_wt_entry_wi0000c0_enter1_windowing0 (
         .in_not_exitcond_valid_in(i_llvm_fpga_push_i1_notexitcond_windowing3_out_feedback_valid_out_2),
         .in_pipeline_stall_in(in_pipeline_stall_in),
         .in_stall_in(dupName_0_enable_stall_connector_x_not_enable_q),
-        .in_valid_in(in_i_valid),
+        .in_valid_in(redist1_sync_together13_aunroll_x_in_i_valid_22_q),
         .out_data_out(),
         .out_exiting_stall_out(i_llvm_fpga_pipeline_keep_going_windowing2_out_exiting_stall_out),
         .out_exiting_valid_out(i_llvm_fpga_pipeline_keep_going_windowing2_out_exiting_valid_out),
@@ -83,14 +93,14 @@ module streamer_i_sfc_logic_s_c0_in_wt_entry_wi0000c0_enter1_windowing0 (
     // VCC(CONSTANT,1)
     assign VCC_q = $unsigned(1'b1);
 
-    // i_llvm_fpga_push_i1_notexitcond_windowing3(BLACKBOX,13)@1
+    // i_llvm_fpga_push_i1_notexitcond_windowing3(BLACKBOX,13)@23
     // out out_feedback_out_2@20000000
     // out out_feedback_valid_out_2@20000000
     streamer_i_llvm_fpga_push_i1_notexitcond_windowing0 thei_llvm_fpga_push_i1_notexitcond_windowing3 (
         .in_data_in(VCC_q),
         .in_feedback_stall_in_2(i_llvm_fpga_pipeline_keep_going_windowing2_out_not_exitcond_stall_out),
         .in_stall_in(dupName_0_enable_stall_connector_x_not_enable_q),
-        .in_valid_in(in_i_valid),
+        .in_valid_in(redist1_sync_together13_aunroll_x_in_i_valid_22_q),
         .out_data_out(i_llvm_fpga_push_i1_notexitcond_windowing3_out_data_out),
         .out_feedback_out_2(i_llvm_fpga_push_i1_notexitcond_windowing3_out_feedback_out_2),
         .out_feedback_valid_out_2(i_llvm_fpga_push_i1_notexitcond_windowing3_out_feedback_valid_out_2),
@@ -103,11 +113,11 @@ module streamer_i_sfc_logic_s_c0_in_wt_entry_wi0000c0_enter1_windowing0 (
     // GND(CONSTANT,0)
     assign GND_q = $unsigned(1'b0);
 
-    // sync_out_aunroll_x(GPOUT,3)@1
+    // sync_out_aunroll_x(GPOUT,3)@23
     assign out_c0_exi2_0_tpl = GND_q;
     assign out_c0_exi2_1_tpl = i_llvm_fpga_push_i1_notexitcond_windowing3_out_data_out;
-    assign out_c0_exi2_2_tpl = in_c0_eni1_1_tpl;
-    assign out_o_valid = in_i_valid;
+    assign out_c0_exi2_2_tpl = redist0_sync_together13_aunroll_x_in_c0_eni1_1_tpl_22_q;
+    assign out_o_valid = redist1_sync_together13_aunroll_x_in_i_valid_22_q;
     assign out_unnamed_windowing0 = GND_q;
 
     // ext_sig_sync_out(GPOUT,11)

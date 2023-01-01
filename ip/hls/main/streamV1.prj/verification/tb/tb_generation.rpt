@@ -12,48 +12,56 @@ Progress: Adding concatenate_component_wait_for_stream_writes_inst [avalon_conca
 Progress: Parameterizing module concatenate_component_wait_for_stream_writes_inst
 Progress: Adding main_dpi_controller_inst [hls_sim_main_dpi_controller 1.0]
 Progress: Parameterizing module main_dpi_controller_inst
+Progress: Adding mm_host_dpi_bfm_streamer_avs_cra_inst [hls_sim_mm_host_dpi_bfm 1.0]
+Progress: Parameterizing module mm_host_dpi_bfm_streamer_avs_cra_inst
 Progress: Adding split_component_start_inst [avalon_split_multibit_conduit 1.0]
 Progress: Parameterizing module split_component_start_inst
-Progress: Adding stream_sink_dpi_bfm_streamer_s_out_inst [hls_sim_stream_sink_dpi_bfm 1.0]
-Progress: Parameterizing module stream_sink_dpi_bfm_streamer_s_out_inst
-Progress: Adding stream_source_dpi_bfm_streamer_s_in_inst [hls_sim_stream_source_dpi_bfm 1.0]
-Progress: Parameterizing module stream_source_dpi_bfm_streamer_s_in_inst
+Progress: Adding streamer_component_dpi_controller_agent_done_concatenate_inst [avalon_concatenate_singlebit_conduits 1.0]
+Progress: Parameterizing module streamer_component_dpi_controller_agent_done_concatenate_inst
+Progress: Adding streamer_component_dpi_controller_agent_readback_fanout_inst [avalon_conduit_fanout 1.0]
+Progress: Parameterizing module streamer_component_dpi_controller_agent_readback_fanout_inst
+Progress: Adding streamer_component_dpi_controller_agent_ready_concatenate_inst [avalon_concatenate_singlebit_conduits 1.0]
+Progress: Parameterizing module streamer_component_dpi_controller_agent_ready_concatenate_inst
 Progress: Adding streamer_component_dpi_controller_bind_conduit_fanout_inst [avalon_conduit_fanout 1.0]
 Progress: Parameterizing module streamer_component_dpi_controller_bind_conduit_fanout_inst
 Progress: Adding streamer_component_dpi_controller_enable_conduit_fanout_inst [avalon_conduit_fanout 1.0]
 Progress: Parameterizing module streamer_component_dpi_controller_enable_conduit_fanout_inst
-Progress: Adding streamer_component_dpi_controller_stream_active_concatenate_inst [avalon_concatenate_singlebit_conduits 1.0]
-Progress: Parameterizing module streamer_component_dpi_controller_stream_active_concatenate_inst
+Progress: Adding streamer_component_dpi_controller_implicit_ready_conduit_fanout_inst [avalon_conduit_fanout 1.0]
+Progress: Parameterizing module streamer_component_dpi_controller_implicit_ready_conduit_fanout_inst
 Progress: Adding streamer_inst [streamer 1.0]
 Progress: Parameterizing module streamer_inst
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
-Warning: tb.component_dpi_controller_streamer_inst.dpi_control_agents_ready: Interface has no signals
-Warning: tb.component_dpi_controller_streamer_inst.dpi_control_agents_done: Interface has no signals
-Warning: tb.component_dpi_controller_streamer_inst: component_dpi_controller_streamer_inst.dpi_control_agents_ready must be exported, or connected to a matching conduit.
-Warning: tb.component_dpi_controller_streamer_inst: component_dpi_controller_streamer_inst.dpi_control_agents_done must be exported, or connected to a matching conduit.
-Warning: tb.component_dpi_controller_streamer_inst: component_dpi_controller_streamer_inst.agent_busy must be exported, or connected to a matching conduit.
-Warning: tb.component_dpi_controller_streamer_inst: component_dpi_controller_streamer_inst.read_implicit_streams must be exported, or connected to a matching conduit.
-Warning: tb.component_dpi_controller_streamer_inst: component_dpi_controller_streamer_inst.readback_from_agents must be exported, or connected to a matching conduit.
+Warning: tb.component_dpi_controller_streamer_inst.dpi_control_stream_writes_active: Interface has no signals
+Warning: tb.mm_host_dpi_bfm_streamer_avs_cra_inst.cra_control_agent_memory_writes_done: Interface has no signals
+Warning: tb.component_dpi_controller_streamer_inst: component_dpi_controller_streamer_inst.dpi_control_stream_writes_active must be exported, or connected to a matching conduit.
+Warning: tb.component_dpi_controller_streamer_inst: component_dpi_controller_streamer_inst.component_call must be exported, or connected to a matching conduit.
+Warning: tb.component_dpi_controller_streamer_inst: component_dpi_controller_streamer_inst.component_return must be exported, or connected to a matching conduit.
 Warning: tb.component_dpi_controller_streamer_inst: component_dpi_controller_streamer_inst.returndata must be exported, or connected to a matching conduit.
+Warning: tb.mm_host_dpi_bfm_streamer_avs_cra_inst: mm_host_dpi_bfm_streamer_avs_cra_inst.cra_control_done_writes_to_cra must be exported, or connected to a matching conduit.
+Warning: tb.mm_host_dpi_bfm_streamer_avs_cra_inst: mm_host_dpi_bfm_streamer_avs_cra_inst.cra_control_agent_memory_writes_done must be exported, or connected to a matching conduit.
 Info: tb: Generating tb "tb" for SIM_VERILOG
+Info: Interconnect is inserted between master mm_host_dpi_bfm_streamer_avs_cra_inst.m0 and slave streamer_inst.avs_cra because the master has burstcount signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master mm_host_dpi_bfm_streamer_avs_cra_inst.m0 and slave streamer_inst.avs_cra because the master has address signal 7 bit wide, but the slave is 4 bit wide.
+Info: Interconnect is inserted between master mm_host_dpi_bfm_streamer_avs_cra_inst.m0 and slave streamer_inst.avs_cra because the master has waitrequest signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master mm_host_dpi_bfm_streamer_avs_cra_inst.m0 and slave streamer_inst.avs_cra because the master has readdatavalid signal 1 bit wide, but the slave is 0 bit wide.
 Info: clock_reset_inst: "tb" instantiated hls_sim_clock_reset "clock_reset_inst"
 Info: component_dpi_controller_streamer_inst: "tb" instantiated hls_sim_component_dpi_controller "component_dpi_controller_streamer_inst"
 Info: concatenate_component_done_inst: "tb" instantiated avalon_concatenate_singlebit_conduits "concatenate_component_done_inst"
 Info: main_dpi_controller_inst: "tb" instantiated hls_sim_main_dpi_controller "main_dpi_controller_inst"
+Info: mm_host_dpi_bfm_streamer_avs_cra_inst: "tb" instantiated hls_sim_mm_host_dpi_bfm "mm_host_dpi_bfm_streamer_avs_cra_inst"
 Info: split_component_start_inst: "tb" instantiated avalon_split_multibit_conduit "split_component_start_inst"
-Info: stream_sink_dpi_bfm_streamer_s_out_inst: "tb" instantiated hls_sim_stream_sink_dpi_bfm "stream_sink_dpi_bfm_streamer_s_out_inst"
-Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/hls_sim_stream_sink_dpi_bfm.sv
-Info: stream_source_dpi_bfm_streamer_s_in_inst: "tb" instantiated hls_sim_stream_source_dpi_bfm "stream_source_dpi_bfm_streamer_s_in_inst"
-Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/hls_sim_stream_source_dpi_bfm.sv
-Info: streamer_component_dpi_controller_bind_conduit_fanout_inst: "tb" instantiated avalon_conduit_fanout "streamer_component_dpi_controller_bind_conduit_fanout_inst"
+Info: streamer_component_dpi_controller_agent_readback_fanout_inst: "tb" instantiated avalon_conduit_fanout "streamer_component_dpi_controller_agent_readback_fanout_inst"
 Info: streamer_inst: "tb" instantiated streamer "streamer_inst"
+Info: mm_interconnect_0: "tb" instantiated altera_mm_interconnect "mm_interconnect_0"
 Info: irq_mapper: "tb" instantiated altera_irq_mapper "irq_mapper"
 Info: streamer_internal_inst: "streamer_inst" instantiated streamer_internal "streamer_internal_inst"
 Info: Reusing file D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/submodules/hld_sim_latency_tracker.sv
-Info: tb: Done "tb" with 12 modules, 198 files
+Info: mm_host_dpi_bfm_streamer_avs_cra_inst_m0_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "mm_host_dpi_bfm_streamer_avs_cra_inst_m0_translator"
+Info: streamer_inst_avs_cra_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "streamer_inst_avs_cra_translator"
+Info: tb: Done "tb" with 14 modules, 173 files
 Info: qsys-generate succeeded.
 Info: Finished: Create simulation model
 Info: Starting: Create Modelsim Project.
@@ -70,7 +78,7 @@ Info: Generating the following file(s) for NCSIM simulator in D:/project/ip/hls/
 Info: 	cadence/cds.lib
 Info: 	cadence/hdl.var
 Info: 	cadence/ncsim_setup.sh
-Info: 	11 .cds.lib files in cadence/cds_libs/ directory
+Info: 	14 .cds.lib files in cadence/cds_libs/ directory
 Info: Generating the following file(s) for RIVIERA simulator in D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/ directory:
 Info: 	aldec/rivierapro_setup.tcl
 Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under D:/project/ip/hls/main/streamV1.prj/verification/tb/simulation/.

@@ -2,121 +2,90 @@
   "nodes":
   [
     {
-      "name":"streamer"
-      , "id":4165634392
-      , "type":"component"
-      , "children":
-      [
-        {
-          "name":"streamer.B1.start"
-          , "id":4162666400
-          , "type":"bb"
-          , "children":
-          [
-            {
-              "name":"Cluster 0"
-              , "id":4168881168
-              , "type":"cluster"
-            }
-          ]
-        }
-        , {
-          "name":"streamer.B0.runOnce"
-          , "id":4162665920
-          , "type":"bb"
-        }
-      ]
-    }
-    , {
-      "name":"windowing"
-      , "id":4161900712
-      , "type":"component"
-      , "children":
-      [
-        {
-          "name":"windowing.B1.start"
-          , "id":4162661024
-          , "type":"bb"
-          , "children":
-          [
-            {
-              "name":"Cluster 1"
-              , "id":4170085840
-              , "type":"cluster"
-            }
-            , {
-              "name":"Cluster 2"
-              , "id":4170382464
-              , "type":"cluster"
-            }
-          ]
-        }
-        , {
-          "name":"windowing.B0.runOnce"
-          , "id":4162660352
-          , "type":"bb"
-        }
-      ]
-    }
-    , {
       "name":"projection"
-      , "id":4165635832
+      , "id":106529016
       , "type":"component"
       , "children":
       [
         {
           "name":"projection.B1.start"
-          , "id":4162663136
+          , "id":107332992
           , "type":"bb"
           , "children":
           [
             {
-              "name":"Cluster 4"
-              , "id":4171700736
+              "name":"Cluster 3"
+              , "id":116049488
               , "type":"cluster"
             }
             , {
-              "name":"Cluster 3"
-              , "id":4171507648
+              "name":"Cluster 4"
+              , "id":116333968
               , "type":"cluster"
             }
           ]
         }
         , {
           "name":"projection.B0.runOnce"
-          , "id":4162663040
+          , "id":107332704
           , "type":"bb"
         }
       ]
     }
     , {
-      "name":"aggregation"
-      , "id":4165635992
+      "name":"windowing"
+      , "id":106526456
       , "type":"component"
       , "children":
       [
         {
-          "name":"aggregation.B1.start"
-          , "id":4162666592
+          "name":"windowing.B1.start"
+          , "id":107331456
           , "type":"bb"
           , "children":
           [
             {
-              "name":"Cluster 5"
-              , "id":4172670480
+              "name":"Cluster 2"
+              , "id":115080336
               , "type":"cluster"
             }
             , {
-              "name":"Cluster 6"
-              , "id":4172672320
+              "name":"Cluster 1"
+              , "id":114829520
               , "type":"cluster"
             }
           ]
         }
         , {
-          "name":"aggregation.B0.runOnce"
-          , "id":4162667360
+          "name":"windowing.B0.runOnce"
+          , "id":107329152
           , "type":"bb"
+        }
+      ]
+    }
+    , {
+      "name":"streamer"
+      , "id":106431720
+      , "type":"component"
+      , "children":
+      [
+        {
+          "name":"streamer.B0.runOnce"
+          , "id":107329632
+          , "type":"bb"
+        }
+        , {
+          "name":"streamer.B1.start"
+          , "id":107332416
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 0"
+              , "id":113328784
+              , "type":"cluster"
+            }
+          ]
         }
       ]
     }

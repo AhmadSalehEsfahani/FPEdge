@@ -16,7 +16,7 @@
 
 // SystemVerilog created from projection_function
 // Created for function/kernel streamer
-// SystemVerilog created on Sun Dec 11 14:23:30 2022
+// SystemVerilog created on Sun Jan  1 13:31:29 2023
 
 
 (* altera_attribute = "-name AUTO_SHIFT_REGISTER_RECOGNITION OFF; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 10037; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 15400; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 12020; -name MESSAGE_DISABLE 12030; -name MESSAGE_DISABLE 12010; -name MESSAGE_DISABLE 12110; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 13410; -name MESSAGE_DISABLE 113007; -name MESSAGE_DISABLE 10958" *)
@@ -24,23 +24,23 @@ module streamer_projection_function (
     input wire [63:0] in_arg_call,
     input wire [63:0] in_arg_return,
     input wire [63:0] in_arg_s0_global,
-    input wire [63:0] in_arg_s_in_global,
+    input wire [63:0] in_arg_s1_global,
     input wire [0:0] in_iord_bl_call_projection_i_fifodata,
     input wire [0:0] in_iord_bl_call_projection_i_fifovalid,
-    input wire [351:0] in_iord_bl_s_in_i_fifodata,
-    input wire [0:0] in_iord_bl_s_in_i_fifovalid,
+    input wire [383:0] in_iord_bl_s0_i_fifodata,
+    input wire [0:0] in_iord_bl_s0_i_fifovalid,
     input wire [0:0] in_iowr_bl_return_projection_i_fifoready,
-    input wire [0:0] in_iowr_bl_s0_i_fifoready,
+    input wire [0:0] in_iowr_bl_s1_i_fifoready,
     input wire [0:0] in_stall_in,
     input wire [0:0] in_valid_in,
     output wire [0:0] out_iord_bl_call_projection_o_fifoalmost_full,
     output wire [0:0] out_iord_bl_call_projection_o_fifoready,
-    output wire [0:0] out_iord_bl_s_in_o_fifoalmost_full,
-    output wire [0:0] out_iord_bl_s_in_o_fifoready,
+    output wire [0:0] out_iord_bl_s0_o_fifoalmost_full,
+    output wire [0:0] out_iord_bl_s0_o_fifoready,
     output wire [0:0] out_iowr_bl_return_projection_o_fifodata,
     output wire [0:0] out_iowr_bl_return_projection_o_fifovalid,
-    output wire [351:0] out_iowr_bl_s0_o_fifodata,
-    output wire [0:0] out_iowr_bl_s0_o_fifovalid,
+    output wire [383:0] out_iowr_bl_s1_o_fifodata,
+    output wire [0:0] out_iowr_bl_s1_o_fifovalid,
     output wire [0:0] out_stall_out,
     output wire [0:0] out_valid_out,
     input wire clock,
@@ -52,12 +52,12 @@ module streamer_projection_function (
     wire [0:0] bb_projection_B0_runOnce_out_stall_out_0;
     wire [0:0] bb_projection_B1_start_out_iord_bl_call_projection_o_fifoalmost_full;
     wire [0:0] bb_projection_B1_start_out_iord_bl_call_projection_o_fifoready;
-    wire [0:0] bb_projection_B1_start_out_iord_bl_s_in_o_fifoalmost_full;
-    wire [0:0] bb_projection_B1_start_out_iord_bl_s_in_o_fifoready;
+    wire [0:0] bb_projection_B1_start_out_iord_bl_s0_o_fifoalmost_full;
+    wire [0:0] bb_projection_B1_start_out_iord_bl_s0_o_fifoready;
     wire [0:0] bb_projection_B1_start_out_iowr_bl_return_projection_o_fifodata;
     wire [0:0] bb_projection_B1_start_out_iowr_bl_return_projection_o_fifovalid;
-    wire [351:0] bb_projection_B1_start_out_iowr_bl_s0_o_fifodata;
-    wire [0:0] bb_projection_B1_start_out_iowr_bl_s0_o_fifovalid;
+    wire [383:0] bb_projection_B1_start_out_iowr_bl_s1_o_fifodata;
+    wire [0:0] bb_projection_B1_start_out_iowr_bl_s1_o_fifovalid;
     wire [0:0] bb_projection_B1_start_out_pipeline_valid_out;
     wire [0:0] bb_projection_B1_start_out_stall_in_0;
     wire [0:0] bb_projection_B1_start_out_stall_out_0;
@@ -124,10 +124,10 @@ module streamer_projection_function (
     streamer_bb_projection_B1_start thebb_projection_B1_start (
         .in_iord_bl_call_projection_i_fifodata(in_iord_bl_call_projection_i_fifodata),
         .in_iord_bl_call_projection_i_fifovalid(in_iord_bl_call_projection_i_fifovalid),
-        .in_iord_bl_s_in_i_fifodata(in_iord_bl_s_in_i_fifodata),
-        .in_iord_bl_s_in_i_fifovalid(in_iord_bl_s_in_i_fifovalid),
+        .in_iord_bl_s0_i_fifodata(in_iord_bl_s0_i_fifodata),
+        .in_iord_bl_s0_i_fifovalid(in_iord_bl_s0_i_fifovalid),
         .in_iowr_bl_return_projection_i_fifoready(in_iowr_bl_return_projection_i_fifoready),
-        .in_iowr_bl_s0_i_fifoready(in_iowr_bl_s0_i_fifoready),
+        .in_iowr_bl_s1_i_fifoready(in_iowr_bl_s1_i_fifoready),
         .in_pipeline_stall_in(i_llvm_fpga_pipeline_keep_going_projection1_sr_out_o_stall),
         .in_stall_in_0(GND_q),
         .in_valid_in_0(i_llvm_fpga_pipeline_keep_going_projection1_valid_fifo_out_valid_out),
@@ -136,12 +136,12 @@ module streamer_projection_function (
         .out_exiting_valid_out(),
         .out_iord_bl_call_projection_o_fifoalmost_full(bb_projection_B1_start_out_iord_bl_call_projection_o_fifoalmost_full),
         .out_iord_bl_call_projection_o_fifoready(bb_projection_B1_start_out_iord_bl_call_projection_o_fifoready),
-        .out_iord_bl_s_in_o_fifoalmost_full(bb_projection_B1_start_out_iord_bl_s_in_o_fifoalmost_full),
-        .out_iord_bl_s_in_o_fifoready(bb_projection_B1_start_out_iord_bl_s_in_o_fifoready),
+        .out_iord_bl_s0_o_fifoalmost_full(bb_projection_B1_start_out_iord_bl_s0_o_fifoalmost_full),
+        .out_iord_bl_s0_o_fifoready(bb_projection_B1_start_out_iord_bl_s0_o_fifoready),
         .out_iowr_bl_return_projection_o_fifodata(bb_projection_B1_start_out_iowr_bl_return_projection_o_fifodata),
         .out_iowr_bl_return_projection_o_fifovalid(bb_projection_B1_start_out_iowr_bl_return_projection_o_fifovalid),
-        .out_iowr_bl_s0_o_fifodata(bb_projection_B1_start_out_iowr_bl_s0_o_fifodata),
-        .out_iowr_bl_s0_o_fifovalid(bb_projection_B1_start_out_iowr_bl_s0_o_fifovalid),
+        .out_iowr_bl_s1_o_fifodata(bb_projection_B1_start_out_iowr_bl_s1_o_fifodata),
+        .out_iowr_bl_s1_o_fifovalid(bb_projection_B1_start_out_iowr_bl_s1_o_fifovalid),
         .out_pipeline_valid_out(bb_projection_B1_start_out_pipeline_valid_out),
         .out_stall_in_0(bb_projection_B1_start_out_stall_in_0),
         .out_stall_out_0(bb_projection_B1_start_out_stall_out_0),
@@ -159,11 +159,11 @@ module streamer_projection_function (
     // out_iord_bl_call_projection_o_fifoready(GPOUT,26)
     assign out_iord_bl_call_projection_o_fifoready = bb_projection_B1_start_out_iord_bl_call_projection_o_fifoready;
 
-    // out_iord_bl_s_in_o_fifoalmost_full(GPOUT,27)
-    assign out_iord_bl_s_in_o_fifoalmost_full = bb_projection_B1_start_out_iord_bl_s_in_o_fifoalmost_full;
+    // out_iord_bl_s0_o_fifoalmost_full(GPOUT,27)
+    assign out_iord_bl_s0_o_fifoalmost_full = bb_projection_B1_start_out_iord_bl_s0_o_fifoalmost_full;
 
-    // out_iord_bl_s_in_o_fifoready(GPOUT,28)
-    assign out_iord_bl_s_in_o_fifoready = bb_projection_B1_start_out_iord_bl_s_in_o_fifoready;
+    // out_iord_bl_s0_o_fifoready(GPOUT,28)
+    assign out_iord_bl_s0_o_fifoready = bb_projection_B1_start_out_iord_bl_s0_o_fifoready;
 
     // out_iowr_bl_return_projection_o_fifodata(GPOUT,29)
     assign out_iowr_bl_return_projection_o_fifodata = bb_projection_B1_start_out_iowr_bl_return_projection_o_fifodata;
@@ -171,11 +171,11 @@ module streamer_projection_function (
     // out_iowr_bl_return_projection_o_fifovalid(GPOUT,30)
     assign out_iowr_bl_return_projection_o_fifovalid = bb_projection_B1_start_out_iowr_bl_return_projection_o_fifovalid;
 
-    // out_iowr_bl_s0_o_fifodata(GPOUT,31)
-    assign out_iowr_bl_s0_o_fifodata = bb_projection_B1_start_out_iowr_bl_s0_o_fifodata;
+    // out_iowr_bl_s1_o_fifodata(GPOUT,31)
+    assign out_iowr_bl_s1_o_fifodata = bb_projection_B1_start_out_iowr_bl_s1_o_fifodata;
 
-    // out_iowr_bl_s0_o_fifovalid(GPOUT,32)
-    assign out_iowr_bl_s0_o_fifovalid = bb_projection_B1_start_out_iowr_bl_s0_o_fifovalid;
+    // out_iowr_bl_s1_o_fifovalid(GPOUT,32)
+    assign out_iowr_bl_s1_o_fifovalid = bb_projection_B1_start_out_iowr_bl_s1_o_fifovalid;
 
     // bb_projection_B0_runOnce(BLACKBOX,2)
     streamer_bb_projection_B0_runOnce thebb_projection_B0_runOnce (

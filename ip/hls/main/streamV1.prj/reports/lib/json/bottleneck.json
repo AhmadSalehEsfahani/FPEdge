@@ -2,124 +2,13 @@
   "bottlenecks":
   [
     {
-      "name":"'i'"
+      "name":"'sum'"
       , "id":4294967295
-      , "src":"4205111328"
-      , "dst":"4205117280"
+      , "src":"146454064"
+      , "dst":"146569328"
       , "type":"fMAX/II"
       , "brief":"Data dependency"
       , "loop":"windowing.B1.start"
-      , "details":
-      [
-        {
-          "type":"table"
-          , "Variable on critical loop carried feedback path: ":"'i'"
-          , "Declared at: ":
-          [
-            {
-              "type":"text"
-              , "text":"%L"
-              , "links":
-              [
-                {
-                  "filename":"Unknown location"
-                  , "line":"0"
-                }
-              ]
-            }
-          ]
-          , "Dependency: ":"Data dependency"
-          , "Estimated fmax reduced to: ":"175.0"
-          , "Loop feedback path that lowered II and Fmax: ":
-          [
-            {
-              "type":"text"
-              , "text":"+(%L)"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"138"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-      , "nodes":
-      [
-        {
-          "name":"'i'"
-          , "id":4205111328
-          , "start":"2.00"
-          , "parent":"windowing.B1.start"
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":138
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"+"
-          , "id":4205111136
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":138
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"Feedback"
-          , "id":4205117280
-          , "end":"2.00"
-          , "parent":"windowing.B1.start"
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":138
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-      ]
-      , "links":
-      [
-        {
-          "from":4205111328
-          , "to":4205111136
-        }
-        , {
-          "from":4205111136
-          , "to":4205117280
-        }
-        , {
-          "from":4205111328
-          , "to":4205117280
-          , "reverse":1
-        }
-      ]
-    }
-    , {
-      "name":"'sum'"
-      , "id":4294967295
-      , "src":"4205314480"
-      , "dst":"4205358000"
-      , "type":"fMAX/II"
-      , "brief":"Data dependency"
-      , "loop":"aggregation.B1.start"
       , "details":
       [
         {
@@ -150,51 +39,7 @@
               [
                 {
                   "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"82"
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"f32 +(%L)"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"85"
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Select(%L)"
-              , "links":
-              [
-                {
-                  "filename":"Unknown location"
-                  , "line":"0"
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Select(%L)"
-              , "links":
-              [
-                {
-                  "filename":"Unknown location"
-                  , "line":"0"
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"case(%L)"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"78"
+                  , "line":"95"
                 }
               ]
             }
@@ -205,29 +50,7 @@
               [
                 {
                   "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"113"
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"case(%L)"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"82"
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Select(%L)"
-              , "links":
-              [
-                {
-                  "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                  , "line":"113"
+                  , "line":"91"
                 }
               ]
             }
@@ -238,15 +61,15 @@
       [
         {
           "name":"'sum'"
-          , "id":4205314480
-          , "start":"43.00"
-          , "parent":"aggregation.B1.start"
+          , "id":146454064
+          , "start":"39.00"
+          , "parent":"windowing.B1.start"
           , "debug":
           [
             [
               {
                 "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":78
+                , "line":91
               }
             ]
           ]
@@ -254,27 +77,13 @@
         }
         , {
           "name":"f32 +"
-          , "id":4205316208
+          , "id":146458096
           , "debug":
           [
             [
               {
                 "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":82
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"f32 +"
-          , "id":4205311024
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":85
+                , "line":95
               }
             ]
           ]
@@ -282,65 +91,13 @@
         }
         , {
           "name":"Select"
-          , "id":4205337168
-          , "type":"inst"
-        }
-        , {
-          "name":"Select"
-          , "id":4205335632
-          , "type":"inst"
-        }
-        , {
-          "name":"case"
-          , "id":4205338320
+          , "id":146460592
           , "debug":
           [
             [
               {
                 "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":78
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"Select"
-          , "id":4205371760
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":113
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"case"
-          , "id":4205336016
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":82
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"Select"
-          , "id":4205374448
-          , "debug":
-          [
-            [
-              {
-                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":113
+                , "line":91
               }
             ]
           ]
@@ -348,15 +105,15 @@
         }
         , {
           "name":"Feedback"
-          , "id":4205358000
-          , "end":"68.00"
-          , "parent":"aggregation.B1.start"
+          , "id":146569328
+          , "end":"62.00"
+          , "parent":"windowing.B1.start"
           , "debug":
           [
             [
               {
                 "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":113
+                , "line":91
               }
             ]
           ]
@@ -366,44 +123,20 @@
       , "links":
       [
         {
-          "from":4205314480
-          , "to":4205311024
+          "from":146454064
+          , "to":146458096
         }
         , {
-          "from":4205311024
-          , "to":4205337168
+          "from":146458096
+          , "to":146460592
         }
         , {
-          "from":4205314480
-          , "to":4205337168
+          "from":146460592
+          , "to":146569328
         }
         , {
-          "from":4205316208
-          , "to":4205335632
-        }
-        , {
-          "from":4205314480
-          , "to":4205338320
-        }
-        , {
-          "from":4205337168
-          , "to":4205338320
-        }
-        , {
-          "from":4205335632
-          , "to":4205336016
-        }
-        , {
-          "from":4205338320
-          , "to":4205374448
-        }
-        , {
-          "from":4205374448
-          , "to":4205358000
-        }
-        , {
-          "from":4205314480
-          , "to":4205358000
+          "from":146454064
+          , "to":146569328
           , "reverse":1
         }
       ]

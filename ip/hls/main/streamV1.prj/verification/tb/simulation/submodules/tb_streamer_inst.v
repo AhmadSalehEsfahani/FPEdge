@@ -4,33 +4,27 @@
 
 `timescale 1 ps / 1 ps
 module tb_streamer_inst (
-		input  wire         start,       //   call.valid
-		output wire         busy,        //       .stall
-		input  wire         clock,       //  clock.clk
-		input  wire         resetn,      //  reset.reset_n
-		output wire         done,        // return.valid
-		input  wire         stall,       //       .stall
-		input  wire [351:0] s_in_data,   //   s_in.data
-		output wire         s_in_ready,  //       .ready
-		input  wire         s_in_valid,  //       .valid
-		output wire [351:0] s_out_data,  //  s_out.data
-		input  wire         s_out_ready, //       .ready
-		output wire         s_out_valid  //       .valid
+		input  wire        avs_cra_read,       // avs_cra.read
+		output wire [63:0] avs_cra_readdata,   //        .readdata
+		input  wire        avs_cra_write,      //        .write
+		input  wire [63:0] avs_cra_writedata,  //        .writedata
+		input  wire [3:0]  avs_cra_address,    //        .address
+		input  wire [7:0]  avs_cra_byteenable, //        .byteenable
+		input  wire        clock,              //   clock.clk
+		output wire        done_irq,           //     irq.irq
+		input  wire        resetn              //   reset.reset_n
 	);
 
 	streamer_internal streamer_internal_inst (
-		.clock       (clock),       //  clock.clk
-		.resetn      (resetn),      //  reset.reset_n
-		.s_in_data   (s_in_data),   //   s_in.data
-		.s_in_ready  (s_in_ready),  //       .ready
-		.s_in_valid  (s_in_valid),  //       .valid
-		.s_out_data  (s_out_data),  //  s_out.data
-		.s_out_ready (s_out_ready), //       .ready
-		.s_out_valid (s_out_valid), //       .valid
-		.start       (start),       //   call.valid
-		.busy        (busy),        //       .stall
-		.done        (done),        // return.valid
-		.stall       (stall)        //       .stall
+		.clock              (clock),              //   clock.clk
+		.resetn             (resetn),             //   reset.reset_n
+		.done_irq           (done_irq),           //     irq.irq
+		.avs_cra_read       (avs_cra_read),       // avs_cra.read
+		.avs_cra_readdata   (avs_cra_readdata),   //        .readdata
+		.avs_cra_write      (avs_cra_write),      //        .write
+		.avs_cra_writedata  (avs_cra_writedata),  //        .writedata
+		.avs_cra_address    (avs_cra_address),    //        .address
+		.avs_cra_byteenable (avs_cra_byteenable)  //        .byteenable
 	);
 
 endmodule

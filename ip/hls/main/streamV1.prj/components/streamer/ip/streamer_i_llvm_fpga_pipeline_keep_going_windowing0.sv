@@ -16,7 +16,7 @@
 
 // SystemVerilog created from i_llvm_fpga_pipeline_keep_going_windowing0
 // Created for function/kernel streamer
-// SystemVerilog created on Sun Dec 11 14:23:30 2022
+// SystemVerilog created on Sun Jan  1 13:31:30 2023
 
 
 (* altera_attribute = "-name AUTO_SHIFT_REGISTER_RECOGNITION OFF; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 10037; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 15400; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 12020; -name MESSAGE_DISABLE 12030; -name MESSAGE_DISABLE 12010; -name MESSAGE_DISABLE 12110; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 13410; -name MESSAGE_DISABLE 113007; -name MESSAGE_DISABLE 10958" *)
@@ -77,7 +77,7 @@ module streamer_i_llvm_fpga_pipeline_keep_going_windowing0 (
     wire passthru_buffer_out_bitsignaltemp;
 
 
-    // i_llvm_fpga_pipeline_keep_going_windowing1(EXTIFACE,4)@1
+    // i_llvm_fpga_pipeline_keep_going_windowing1(EXTIFACE,4)@23
     assign i_llvm_fpga_pipeline_keep_going_windowing1_data_in = in_data_in;
     assign i_llvm_fpga_pipeline_keep_going_windowing1_initeration_in = in_initeration_in;
     assign i_llvm_fpga_pipeline_keep_going_windowing1_initeration_valid_in = in_initeration_valid_in;
@@ -130,7 +130,7 @@ module streamer_i_llvm_fpga_pipeline_keep_going_windowing0 (
     // dupName_0_regfree_osync_x(GPOUT,2)
     assign out_exiting_valid_out = i_llvm_fpga_pipeline_keep_going_windowing1_exiting_valid_out;
 
-    // dupName_0_sync_out_x(GPOUT,3)@1
+    // dupName_0_sync_out_x(GPOUT,3)@23
     assign out_data_out = i_llvm_fpga_pipeline_keep_going_windowing1_data_out;
     assign out_valid_out = i_llvm_fpga_pipeline_keep_going_windowing1_valid_out;
 
@@ -148,7 +148,7 @@ module streamer_i_llvm_fpga_pipeline_keep_going_windowing0 (
     // regfree_osync(GPOUT,6)
     assign out_exiting_stall_out = passthru_buffer_out;
 
-    // sync_out(GPOUT,8)@1
+    // sync_out(GPOUT,8)@23
     assign out_stall_out = i_llvm_fpga_pipeline_keep_going_windowing1_stall_out;
 
     // unsched_sync_out(GPOUT,11)

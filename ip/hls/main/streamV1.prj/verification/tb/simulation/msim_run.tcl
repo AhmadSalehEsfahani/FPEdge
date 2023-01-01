@@ -13,11 +13,10 @@ if {$tcl_platform(platform) == "windows"} {
 }
 # Suppress warnings from the std arithmetic libraries
 set StdArithNoWarnings 1
-set USER_DEFINED_ELAB_OPTIONS "+nowarnTFMPC -dpioutoftheblue 1 -sv_lib $fname_svlib -nodpiexports -wlf ../../vsim.wlf -voptargs=+acc"
+set USER_DEFINED_ELAB_OPTIONS "+nowarnTFMPC -dpioutoftheblue 1 -sv_lib $fname_svlib -nodpiexports"
 elab
 onfinish {stop}
 quietly set StdArithNoWarnings 1
-log -r *
 run -all
 set failed [expr [coverage attribute -name TESTSTATUS -concise] > 1]
 exit -code ${failed}

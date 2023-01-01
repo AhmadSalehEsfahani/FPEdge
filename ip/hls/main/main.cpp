@@ -26,9 +26,6 @@
 #define TUPLE_DATA_SIZE             4
 #define WINDOWING_k                 4
 
-//#define AGGREGATION_FUNCTION_CODE   1
-//#define AGGREGATION_FIELD_CODE      0
-
 #define PROJECTION_CODE_1           1
 //</gen>
 
@@ -46,7 +43,111 @@ ihc::stream<Tuple> s0, s1, s2;
 //</gen>
 
 
-template <auto &stream_in_tuple, auto &stream_out_tuple> void projection(int code) {
+//<gen>
+struct proj1{
+    static bool f(Tuple &tuple){
+        return ((tuple.data[0] * tuple.data[1]) < 20000);
+    }
+};
+//</gen>
+
+struct count_struct{
+    template<typename T>
+    static T f(T step, bool eos){
+        static T count = 0;
+        static T result;
+        
+        count += step;
+        result = count;
+
+        if (eos){
+            count = 0;
+        }
+
+        return result;
+    }
+};
+
+struct sum_struct{
+    template<typename T>
+    static T f(T field, bool eos){
+        static T sum = 0;
+        static T result;
+
+        sum += field;
+        result = sum;
+
+        if (eos){
+            sum = 0;
+        }
+
+        return result;
+    }
+};
+
+struct avg_struct{
+    template <typename T>
+    static T f(T field, bool eos){
+        static T sum = 0;
+        static int count = 0;
+        static T result;
+        
+        sum += field;
+        count++;
+
+        result = sum / count;
+
+        if (eos){
+            sum = 0;
+            count = 0;
+        }
+
+        return result;
+    }
+};
+
+struct min_struct{
+    template <typename T>
+    static T f(T field, bool eos){
+        static T min = FLT_MAX;
+        static T result;
+
+        if (field < min){
+            min = field;
+        }
+
+        result = min;
+
+        if (eos){
+            min = 0;
+        }
+
+        return result;
+    }
+};
+
+struct max{
+    template <typename T>
+    static T f(T field, bool eos){
+        static T max = FLT_MIN;
+        static T result;
+
+        if (field > max){
+            max = field;
+        }
+
+        result = max;
+
+        if (eos){
+            max = 0;
+        }
+
+        return result;
+    }
+};
+
+
+template <auto &stream_in_tuple, auto &stream_out_tuple, typename T> void projection() {
 
         
     auto tuple = stream_in_tuple.read();
@@ -56,17 +157,9 @@ template <auto &stream_in_tuple, auto &stream_out_tuple> void projection(int cod
         return;
     }
 
-
-    int left_hand_cond, right_hand_cond;
     bool projection_result = true;
-
-    //<gen>
-    if(code == PROJECTION_CODE_1) {
-        left_hand_cond = (tuple.data[0] * tuple.data[1]);
-        right_hand_cond = 20000;
-        projection_result = projection_result & (left_hand_cond < right_hand_cond);
-    }    
-    // </gen>
+    
+    projection_result = projection_result & T::f(tuple);
 
     tuple.valid = tuple.valid & projection_result;
     stream_out_tuple.write(tuple);
@@ -74,61 +167,9 @@ template <auto &stream_in_tuple, auto &stream_out_tuple> void projection(int cod
     return;
 }
 
-Tuple aggregation (
-                        Tuple in_tuple,
-                        int function_code,
-                        int field_code,
-                        bool eos
-){
 
-    static float count=0.0, avg=0.0, min=0.0, max=0.0, sum=0.0;
-
-    if (in_tuple.valid) {
-        if (function_code == BUILDIN_AGGREGATION_FUNCTIONS_CODE_COUNT){
-            count = count + 1;
-        }
-        else if (function_code == BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG){
-            sum = sum + in_tuple.data[field_code];
-            count = count + 1;
-            avg = sum / count;
-        }
-        else if (function_code == BUILDIN_AGGREGATION_FUNCTIONS_CODE_MAX){
-            count = count + 1;
-            if (in_tuple.data[field_code] > max){
-                max = in_tuple.data[field_code];
-            }
-        }
-        else if (function_code == BUILDIN_AGGREGATION_FUNCTIONS_CODE_MIN){
-            count = count + 1;
-            if (in_tuple.data[field_code] < min){
-                min = in_tuple.data[field_code];
-            }
-        }
-        else if (function_code == BUILDIN_AGGREGATION_FUNCTIONS_CODE_SUM){
-            count = count + 1;
-            sum = sum + in_tuple.data[field_code];
-        }
-    }
-
-    in_tuple.aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_CODE_COUNT] = count;
-    in_tuple.aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG] = avg;
-    in_tuple.aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_CODE_MAX] = max;
-    in_tuple.aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_CODE_MIN] = min;
-    in_tuple.aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_CODE_SUM] = sum;
-
-    if (eos) {
-        count = 0;
-        avg = 0;
-        min = FLT_MAX;
-        max = FLT_MIN;
-        sum = 0;
-        in_tuple.aggregation_ready[function_code] = true;
-    }
-
-    return in_tuple;
-}
-
-template <auto &stream_in_tuple, auto &stream_out_tuple> void windowing (int aggr_function_code, int aggr_field_code) {
+template <auto &stream_in_tuple, auto &stream_out_tuple, typename AGGR, int FIELD, typename RTRN_TP, int AGGR_NUM>
+void windowing () {
 
     static int i = 1;
     auto tuple = stream_in_tuple.read();
@@ -137,8 +178,8 @@ template <auto &stream_in_tuple, auto &stream_out_tuple> void windowing (int agg
         return;
     }
 
-    ihc::launch<aggregation>(tuple, aggr_function_code, aggr_field_code, i%WINDOWING_k == 0);
-    tuple = ihc::collect<aggregation>();
+    tuple.aggregation_results[AGGR_NUM] = AGGR::template f<RTRN_TP>(tuple.data[FIELD], i%WINDOWING_k == 0);
+    tuple.aggregation_ready[AGGR_NUM] = i%WINDOWING_k == 0;
 
     stream_out_tuple.write(tuple);
     i++;
@@ -155,10 +196,10 @@ component Tuple streamer (hls_avalon_agent_register_argument Tuple tuple){
     
     //<gen>
     s0.write(tuple);
-    ihc::launch<projection<s0, s1>>(PROJECTION_CODE_1);
-    ihc::launch<windowing<s1, s2>>(BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG, 0);
-    ihc::collect<projection<s0, s1>>();
-    ihc::collect<windowing<s1, s2>>();
+    ihc::launch<projection<s0, s1, proj1>>();
+    ihc::launch<windowing<s1, s2, avg_struct, 0, float, BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG>>();
+    ihc::collect<projection<s0, s1, proj1>>();
+    ihc::collect<windowing<s1, s2, avg_struct, 0, float, BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG>>();
     tuple = s2.read();
     //</gen>
 

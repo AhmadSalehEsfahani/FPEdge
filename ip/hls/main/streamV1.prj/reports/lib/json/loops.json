@@ -12,7 +12,7 @@
         [
           {
             "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":147
+            , "line":195
           }
         ]
       ]
@@ -75,7 +75,22 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"147"
+                      , "line":"195"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"Stream Write Operation (%L > %L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                      , "line":"198"
+                    }
+                    , {
+                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
+                      , "line":"853"
                     }
                   ]
                 }
@@ -86,7 +101,7 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"149"
+                      , "line":"199"
                     }
                     , {
                       "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
@@ -109,7 +124,7 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"150"
+                      , "line":"200"
                     }
                     , {
                       "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
@@ -132,7 +147,7 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"151"
+                      , "line":"201"
                     }
                     , {
                       "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
@@ -155,7 +170,7 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"152"
+                      , "line":"202"
                     }
                     , {
                       "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
@@ -173,12 +188,16 @@
                 }
                 , {
                   "type":"text"
-                  , "text":"Stream Write Operation (%L)"
+                  , "text":"Stream Read Operation (%L > %L)"
                   , "links":
                   [
                     {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"154"
+                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                      , "line":"203"
+                    }
+                    , {
+                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
+                      , "line":"845"
                     }
                   ]
                 }
@@ -228,7 +247,7 @@
         [
           {
             "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":125
+            , "line":172
           }
         ]
       ]
@@ -244,17 +263,7 @@
         }
         , {
           "type":"text"
-          , "text":"Fmax bottlenck block: windowing.B1.start"
-        }
-        , {
-          "type":"text"
-          , "text":"Use the %L report to view more details"
-          , "links":
-          [
-            {
-              "view":"Fmax II Report"
-            }
-          ]
+          , "text":"Fmax bottlenck block: None"
         }
         , {
           "type":"text"
@@ -273,7 +282,7 @@
         {
           "name":"windowing.B1.start"
           , "data":
-          ["Yes", "~1", "n/a"]
+          ["Yes", "~23", "n/a"]
           , "debug":
           [
             [
@@ -287,7 +296,74 @@
           [
             {
               "type":"brief"
-              , "text":" "
+              , "text":"Data dependency"
+            }
+            , {
+              "type":"text"
+              , "text":"Compiler failed to schedule this loop with smaller II due to data dependency on variable(s):"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"sum (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                      , "line":"91"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Most critical loop feedback path during scheduling:"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"21.00 clock cycles 32-bit Floating-point Add Operation (%L > %L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                      , "line":"181"
+                    }
+                    , {
+                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                      , "line":"95"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"1.00 clock cycle 32-bit Select Operation (%L > %L, %L > %L, %L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                      , "line":"172"
+                    }
+                    , {
+                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                      , "line":"91"
+                    }
+                    , {
+                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                      , "line":"181"
+                    }
+                    , {
+                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                      , "line":"95"
+                    }
+                    , {
+                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                      , "line":"100"
+                    }
+                  ]
+                }
+              ]
             }
             , {
               "type":"text"
@@ -301,7 +377,7 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"125"
+                      , "line":"172"
                     }
                   ]
                 }
@@ -312,57 +388,11 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"128"
+                      , "line":"175"
                     }
                     , {
                       "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
                       , "line":"845"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"Stream Write Operation (%L > %L > %L > %L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"134"
-                    }
-                    , {
-                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
-                      , "line":"121"
-                    }
-                    , {
-                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
-                      , "line":"74"
-                    }
-                    , {
-                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
-                      , "line":"62"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"Stream Read Operation (%L > %L > %L > %L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"135"
-                    }
-                    , {
-                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
-                      , "line":"129"
-                    }
-                    , {
-                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
-                      , "line":"81"
-                    }
-                    , {
-                      "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
-                      , "line":"67"
                     }
                   ]
                 }
@@ -373,15 +403,15 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"130"
+                      , "line":"177"
                     }
                     , {
                       "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
-                      , "line":"725"
+                      , "line":"853"
                     }
                     , {
                       "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"137"
+                      , "line":"184"
                     }
                   ]
                 }
@@ -392,7 +422,7 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"141"
+                      , "line":"188"
                     }
                   ]
                 }
@@ -442,7 +472,7 @@
         [
           {
             "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":48
+            , "line":150
           }
         ]
       ]
@@ -505,7 +535,7 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"48"
+                      , "line":"150"
                     }
                   ]
                 }
@@ -516,11 +546,11 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"51"
+                      , "line":"153"
                     }
                     , {
                       "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
-                      , "line":"591"
+                      , "line":"845"
                     }
                   ]
                 }
@@ -531,7 +561,7 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"54"
+                      , "line":"156"
                     }
                     , {
                       "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
@@ -539,7 +569,7 @@
                     }
                     , {
                       "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"66"
+                      , "line":"165"
                     }
                   ]
                 }
@@ -550,429 +580,7 @@
                   [
                     {
                       "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"69"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Maximum concurrent iterations: Capacity of loop"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"Use the %L viewer to estimate capacity"
-                  , "links":
-                  [
-                    {
-                      "view":"Fmax II Report"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"See %L for more information"
-              , "links":
-              [
-                {
-                  "guide":"Reference Manual : Loops in Components"
-                  , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html#ewa1462826976357"
-                }
-              ]
-            }
-          ]
-          , "children":
-          [
-          ]
-        }
-      ]
-    }
-    , {
-      "name":"Task: aggregation"
-      , "data":
-      ["", "", ""]
-      , "debug":
-      [
-        [
-          {
-            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":71
-          }
-        ]
-      ]
-      , "details":
-      [
-        {
-          "type":"brief"
-          , "text":"Task function"
-        }
-        , {
-          "type":"text"
-          , "text":"Task function"
-        }
-        , {
-          "type":"text"
-          , "text":"Fmax bottlenck block: None"
-        }
-        , {
-          "type":"text"
-          , "text":"See %L for more information"
-          , "links":
-          [
-            {
-              "guide":"Reference Manual : Component"
-              , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html#ewa1462820640727"
-            }
-          ]
-        }
-      ]
-      , "children":
-      [
-        {
-          "name":"aggregation.B1.start"
-          , "data":
-          ["Yes", "~25", "n/a"]
-          , "debug":
-          [
-            [
-              {
-                "filename":"Component invocation"
-                , "line":0
-              }
-            ]
-          ]
-          , "details":
-          [
-            {
-              "type":"brief"
-              , "text":"Data dependency"
-            }
-            , {
-              "type":"text"
-              , "text":"Compiler failed to schedule this loop with smaller II due to data dependency on variable(s):"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"sum (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"78"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Most critical loop feedback path during scheduling:"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"21.00 clock cycles 32-bit Floating-point Add Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"85"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"21.00 clock cycles 32-bit Floating-point Add Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"82"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"1.00 clock cycle 32-bit Select Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"113"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"1.00 clock cycle llvm.fpga.case Operation (%L, %L, %L, %L, %L, %L > %L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"82"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"86"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"90"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"96"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"102"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"71"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"78"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"1.00 clock cycle llvm.fpga.case Operation (%L, %L, %L > %L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"85"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"103"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"71"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"78"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"1.00 clock cycle 32-bit Select Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"113"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"1.00 clock cycle 32-bit Select Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"Unknown location"
-                      , "line":"0"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"1.00 clock cycle 32-bit Select Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"Unknown location"
-                      , "line":"0"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Compiler failed to schedule this loop with smaller II due to data dependency on variable(s):"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"count (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"78"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"Most critical loop feedback path during scheduling:"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"21.00 clock cycles 32-bit Floating-point Add Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"85"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"21.00 clock cycles 32-bit Floating-point Add Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"82"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"1.00 clock cycle 32-bit Select Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"113"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"1.00 clock cycle llvm.fpga.case Operation (%L, %L, %L, %L, %L, %L > %L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"82"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"86"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"90"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"96"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"102"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"71"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"78"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"1.00 clock cycle llvm.fpga.case Operation (%L, %L, %L > %L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"85"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"103"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                      , "line":"71"
-                    }
-                    , {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"78"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"1.00 clock cycle 32-bit Select Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"113"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"1.00 clock cycle 32-bit Select Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"Unknown location"
-                      , "line":"0"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"1.00 clock cycle 32-bit Select Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"Unknown location"
-                      , "line":"0"
-                    }
-                  ]
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"II is an approximation due to the following stallable instructions:"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":"Stream Read Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"71"
-                    }
-                  ]
-                }
-                , {
-                  "type":"text"
-                  , "text":"Stream Write Operation (%L)"
-                  , "links":
-                  [
-                    {
-                      "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                      , "line":"122"
+                      , "line":"168"
                     }
                   ]
                 }

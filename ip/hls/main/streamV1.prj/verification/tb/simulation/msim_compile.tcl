@@ -11,6 +11,6 @@ if {$tcl_platform(platform) == "windows"} {
 } else {
   set fname_svlib "C:/intelFPGA_pro/22.3/hls/host/linux64/lib/libhls_cosim_msim32"
 }
-set USER_DEFINED_ELAB_OPTIONS "-dpioutoftheblue 1 -sv_lib $fname_svlib -nodpiexports -voptargs=+acc"
+set USER_DEFINED_ELAB_OPTIONS "-dpioutoftheblue 1 -sv_lib $fname_svlib -nodpiexports"
 elab
 exit -code 0

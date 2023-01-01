@@ -16,7 +16,7 @@
 
 // SystemVerilog created from i_iord_bl_call_windowing_unnamed_windowing1_windowing0
 // Created for function/kernel streamer
-// SystemVerilog created on Sun Dec 11 14:23:30 2022
+// SystemVerilog created on Sun Jan  1 13:31:30 2023
 
 
 (* altera_attribute = "-name AUTO_SHIFT_REGISTER_RECOGNITION OFF; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 10037; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 15400; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 12020; -name MESSAGE_DISABLE 12030; -name MESSAGE_DISABLE 12010; -name MESSAGE_DISABLE 12110; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 13410; -name MESSAGE_DISABLE 113007; -name MESSAGE_DISABLE 10958" *)
@@ -99,7 +99,7 @@ module streamer_i_iord_bl_call_windowing_unnamed_windowing1_windowing0 (
         .CAPACITY_FROM_CHANNEL(0),
         .DISCONNECT_UPSTREAM(0),
         .INTER_KERNEL_PIPELINING(0),
-        .STAGING_CAPACITY(1),
+        .STAGING_CAPACITY(0),
         .USE_STALL_LATENCY_SIDEPATH(0),
         .ALLOW_HIGH_SPEED_FIFO_USAGE(0),
         .ASYNC_RESET(1),
@@ -136,7 +136,7 @@ module streamer_i_iord_bl_call_windowing_unnamed_windowing1_windowing0 (
     assign adapt_scalar_trunc1_in = iord_o_data;
     assign adapt_scalar_trunc1_q = adapt_scalar_trunc1_in[0:0];
 
-    // dupName_0_sync_out_x(GPOUT,3)@1
+    // dupName_0_sync_out_x(GPOUT,3)@23
     assign out_o_data = adapt_scalar_trunc1_q;
     assign out_o_valid = iord_o_valid;
 

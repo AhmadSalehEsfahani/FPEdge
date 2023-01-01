@@ -4,1038 +4,22 @@
   , "debug_enabled":"true"
   , "type":"module"
   , "total_percent":
-  [12.5235, 7.98744, 5.27096, 3.11284, 5.35714]
+  [8.04236, 5.24495, 3.29646, 2.72374, 5.35714]
   , "total":
-  [7692, 11551, 16, 6, 53]
+  [3927, 7224, 14, 6, 91]
   , "name":"System"
   , "max_resources":
   [109572, 219144, 514, 112, 5478]
   , "children":
   [
     {
-      "name":"aggregation"
-      , "compute_units":1
-      , "type":"function"
-      , "total_percent":
-      [10.2298, 6.52539, 4.30493, 3.11284, 3.57143]
-      , "total_kernel_resources":
-      [6450, 9434, 16, 3.5, 35]
-      , "details":
-      [
-        {
-          "type":"text"
-          , "text":"Number of compute units: 1"
-        }
-        , {
-          "type":"brief"
-          , "text":"1 compute unit."
-        }
-      ]
-      , "children":
-      [
-        {
-          "name":"Task call"
-          , "type":"resource"
-          , "data":
-          [0, 0, 0, 0, 0]
-          , "details":
-          [
-            {
-              "type":"text"
-              , "text":"Stream implemented 448 bits wide with a buffer size of 0 elements."
-            }
-            , {
-              "type":"brief"
-              , "text":"448b wide with 0 elements."
-            }
-          ]
-        }
-        , {
-          "name":"Task return"
-          , "type":"resource"
-          , "data":
-          [0, 0, 0, 0, 0]
-          , "details":
-          [
-            {
-              "type":"text"
-              , "text":"Stream implemented 352 bits wide with a buffer size of 0 elements."
-            }
-            , {
-              "type":"brief"
-              , "text":"352b wide with 0 elements."
-            }
-          ]
-        }
-        , {
-          "name":"Variable: \n - 'avg' (main.cpp:78)"
-          , "type":"resource"
-          , "data":
-          [0, 0, 0, 0, 2]
-          , "debug":
-          [
-            [
-              {
-                "filename":"main.cpp"
-                , "line":78
-              }
-            ]
-          ]
-          , "details":
-          [
-            {
-              "type":"text"
-              , "text":"Type: Register"
-            }
-            , {
-              "type":"text"
-              , "text":"1 register of width 32 bits and depth 25"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":" Depth was increased by a factor of 25 due to a loop initiation interval of 25."
-                }
-              ]
-            }
-            , {
-              "type":"brief"
-              , "text":"Register,\n1 reg, 32 width by 25 depth"
-            }
-          ]
-        }
-        , {
-          "name":"Variable: \n - 'count' (main.cpp:78)"
-          , "type":"resource"
-          , "data":
-          [85, 156, 0, 0, 2]
-          , "debug":
-          [
-            [
-              {
-                "filename":"main.cpp"
-                , "line":78
-              }
-            ]
-          ]
-          , "details":
-          [
-            {
-              "type":"text"
-              , "text":"Type: Register"
-            }
-            , {
-              "type":"text"
-              , "text":"1 register of width 32 bits and depth 25"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":" Depth was increased by a factor of 25 due to a loop initiation interval of 25."
-                }
-              ]
-            }
-            , {
-              "type":"brief"
-              , "text":"Register,\n1 reg, 32 width by 25 depth"
-            }
-          ]
-        }
-        , {
-          "name":"Variable: \n - 'max' (main.cpp:78)"
-          , "type":"resource"
-          , "data":
-          [0, 0, 0, 0, 2]
-          , "debug":
-          [
-            [
-              {
-                "filename":"main.cpp"
-                , "line":78
-              }
-            ]
-          ]
-          , "details":
-          [
-            {
-              "type":"text"
-              , "text":"Type: Register"
-            }
-            , {
-              "type":"text"
-              , "text":"1 register of width 32 bits and depth 25"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":" Depth was increased by a factor of 25 due to a loop initiation interval of 25."
-                }
-              ]
-            }
-            , {
-              "type":"brief"
-              , "text":"Register,\n1 reg, 32 width by 25 depth"
-            }
-          ]
-        }
-        , {
-          "name":"Variable: \n - 'min' (main.cpp:78)"
-          , "type":"resource"
-          , "data":
-          [0, 0, 0, 0, 2]
-          , "debug":
-          [
-            [
-              {
-                "filename":"main.cpp"
-                , "line":78
-              }
-            ]
-          ]
-          , "details":
-          [
-            {
-              "type":"text"
-              , "text":"Type: Register"
-            }
-            , {
-              "type":"text"
-              , "text":"1 register of width 32 bits and depth 25"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":" Depth was increased by a factor of 25 due to a loop initiation interval of 25."
-                }
-              ]
-            }
-            , {
-              "type":"brief"
-              , "text":"Register,\n1 reg, 32 width by 25 depth"
-            }
-          ]
-        }
-        , {
-          "name":"Variable: \n - 'sum' (main.cpp:78)"
-          , "type":"resource"
-          , "data":
-          [85, 156, 0, 0, 2]
-          , "debug":
-          [
-            [
-              {
-                "filename":"main.cpp"
-                , "line":78
-              }
-            ]
-          ]
-          , "details":
-          [
-            {
-              "type":"text"
-              , "text":"Type: Register"
-            }
-            , {
-              "type":"text"
-              , "text":"1 register of width 32 bits and depth 25"
-              , "details":
-              [
-                {
-                  "type":"text"
-                  , "text":" Depth was increased by a factor of 25 due to a loop initiation interval of 25."
-                }
-              ]
-            }
-            , {
-              "type":"brief"
-              , "text":"Register,\n1 reg, 32 width by 25 depth"
-            }
-          ]
-        }
-        , {
-          "name":"aggregation.B1.start"
-          , "type":"basicblock"
-          , "children":
-          [
-            {
-              "name":"State"
-              , "type":"resource"
-              , "data":
-              [492, 2222, 4, 0, 14]
-              , "details":
-              [
-                {
-                  "type":"brief"
-                  , "text":"Live values and control logic"
-                }
-                , {
-                  "type":"text"
-                  , "text":"Resources for live values and control logic. To reduce this area:"
-                  , "details":
-                  [
-                    {
-                      "type":"text"
-                      , "text":"reduce size of local variables"
-                    }
-                    , {
-                      "type":"text"
-                      , "text":"reduce scope of local variables, localizing them as much as possible"
-                    }
-                    , {
-                      "type":"text"
-                      , "text":"reduce number of nested loops"
-                    }
-                  ]
-                }
-              ]
-              , "children":
-              [
-                {
-                  "name":"No Source Line"
-                  , "type":"resource"
-                  , "data":
-                  [492, 2222, 4, 0, 14]
-                }
-              ]
-            }
-            , {
-              "name":"Feedback"
-              , "type":"resource"
-              , "data":
-              [44, 48, 0, 0, 1]
-              , "details":
-              [
-                {
-                  "type":"brief"
-                  , "text":"Loop-carried dependencies"
-                }
-                , {
-                  "type":"text"
-                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
-                  , "details":
-                  [
-                    {
-                      "type":"text"
-                      , "text":"reduce number and size of loop-carried variables"
-                    }
-                  ]
-                }
-              ]
-              , "children":
-              [
-                {
-                  "name":"main.cpp:71 > main.cpp:78"
-                  , "type":"resource"
-                  , "data":
-                  [44, 48, 0, 0, 1]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":71
-                      }
-                      , {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":78
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-            , {
-              "name":"Cluster logic"
-              , "type":"resource"
-              , "data":
-              [33, 22, 8, 0, 0]
-              , "details":
-              [
-                {
-                  "type":"brief"
-                  , "text":"Logic required to efficiently support sets of operations that do not stall"
-                }
-                , {
-                  "type":"text"
-                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
-                }
-              ]
-            }
-            , {
-              "name":"Computation"
-              , "type":"resource"
-              , "children":
-              [
-                {
-                  "name":"No Source Line"
-                  , "type":"resource"
-                  , "data":
-                  [96, 96, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":""
-                        , "line":0
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"32-bit Select"
-                      , "type":"resource"
-                      , "count":3
-                      , "data":
-                      [96, 96, 0, 0, 0]
-                    }
-                  ]
-                }
-                , {
-                  "name":"main.cpp:71 > main.cpp:78"
-                  , "type":"resource"
-                  , "data":
-                  [81.0833, 17.75, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":71
-                      }
-                      , {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":78
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"1-bit And"
-                      , "type":"resource"
-                      , "count":5
-                      , "data":
-                      [1.25, 1.25, 0, 0, 0]
-                    }
-                    , {
-                      "name":"1-bit Or"
-                      , "type":"resource"
-                      , "count":3
-                      , "data":
-                      [1.5, 0.5, 0, 0, 0]
-                    }
-                    , {
-                      "name":"32-bit Select"
-                      , "type":"resource"
-                      , "count":3
-                      , "data":
-                      [30.3333, 0, 0, 0, 0]
-                    }
-                    , {
-                      "name":"llvm.fpga.case"
-                      , "type":"resource"
-                      , "count":2
-                      , "data":
-                      [48, 16, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:71"
-                  , "type":"resource"
-                  , "data":
-                  [1, 0, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":71
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"Stream Read"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [1, 0, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:80"
-                  , "type":"resource"
-                  , "data":
-                  [0.5, 0.5, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":80
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"1-bit And"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [0.5, 0.5, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:81"
-                  , "type":"resource"
-                  , "data":
-                  [1, 1, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":81
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"1-bit And"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [1, 1, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:82"
-                  , "type":"resource"
-                  , "data":
-                  [991, 1113.33, 0, 0, 3]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":82
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"32-bit Floating-point Add"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [975, 1108, 0, 0, 3]
-                    }
-                    , {
-                      "name":"llvm.fpga.case"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [16, 5.33333, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:84"
-                  , "type":"resource"
-                  , "data":
-                  [0.5, 0.5, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":84
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"1-bit And"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [0.5, 0.5, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:85"
-                  , "type":"resource"
-                  , "data":
-                  [1373, 1722.67, 0, 0, 3]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":85
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"32-bit Floating-point Add"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [975, 1108, 0, 0, 3]
-                    }
-                    , {
-                      "name":"32-bit Integer to Floating-point Conversion"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [366, 604, 0, 0, 0]
-                    }
-                    , {
-                      "name":"llvm.fpga.case"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [32, 10.6667, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:86"
-                  , "type":"resource"
-                  , "data":
-                  [16, 5.33333, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":86
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"llvm.fpga.case"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [16, 5.33333, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:87"
-                  , "type":"resource"
-                  , "data":
-                  [540, 863, 4, 3.5, 1]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":87
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"32-bit Floating-point Divide"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [527, 863, 4, 3.5, 1]
-                    }
-                    , {
-                      "name":"32-bit Select"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [13, 0, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:89"
-                  , "type":"resource"
-                  , "data":
-                  [1.5, 1.5, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":89
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"1-bit And"
-                      , "type":"resource"
-                      , "count":3
-                      , "data":
-                      [1.5, 1.5, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:90"
-                  , "type":"resource"
-                  , "data":
-                  [16, 5.33333, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":90
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"llvm.fpga.case"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [16, 5.33333, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:91"
-                  , "type":"resource"
-                  , "data":
-                  [556.833, 649, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":91
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"1-bit And"
-                      , "type":"resource"
-                      , "count":4
-                      , "data":
-                      [1, 1, 0, 0, 0]
-                    }
-                    , {
-                      "name":"1-bit Or"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [0.5, 0, 0, 0, 0]
-                    }
-                    , {
-                      "name":"32-bit Floating-point Compare"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [108, 12, 0, 0, 0]
-                    }
-                    , {
-                      "name":"32-bit Integer to Floating-point Conversion"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [366, 604, 0, 0, 0]
-                    }
-                    , {
-                      "name":"32-bit Select"
-                      , "type":"resource"
-                      , "count":2
-                      , "data":
-                      [17.3333, 0, 0, 0, 0]
-                    }
-                    , {
-                      "name":"llvm.fpga.case"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [64, 32, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:95"
-                  , "type":"resource"
-                  , "data":
-                  [0.75, 0.75, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":95
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"1-bit And"
-                      , "type":"resource"
-                      , "count":3
-                      , "data":
-                      [0.75, 0.75, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:96"
-                  , "type":"resource"
-                  , "data":
-                  [16, 5.33333, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":96
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"llvm.fpga.case"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [16, 5.33333, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:97"
-                  , "type":"resource"
-                  , "data":
-                  [493.833, 618, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":97
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"1-bit And"
-                      , "type":"resource"
-                      , "count":6
-                      , "data":
-                      [1.5, 1.5, 0, 0, 0]
-                    }
-                    , {
-                      "name":"1-bit Or"
-                      , "type":"resource"
-                      , "count":2
-                      , "data":
-                      [1, 0.5, 0, 0, 0]
-                    }
-                    , {
-                      "name":"32-bit Floating-point Compare"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [108, 12, 0, 0, 0]
-                    }
-                    , {
-                      "name":"32-bit Integer to Floating-point Conversion"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [366, 604, 0, 0, 0]
-                    }
-                    , {
-                      "name":"32-bit Select"
-                      , "type":"resource"
-                      , "count":2
-                      , "data":
-                      [17.3333, 0, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:102"
-                  , "type":"resource"
-                  , "data":
-                  [16, 5.33333, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":102
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"llvm.fpga.case"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [16, 5.33333, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:103"
-                  , "type":"resource"
-                  , "data":
-                  [1373, 1722.67, 0, 0, 3]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":103
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"32-bit Floating-point Add"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [975, 1108, 0, 0, 3]
-                    }
-                    , {
-                      "name":"32-bit Integer to Floating-point Conversion"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [366, 604, 0, 0, 0]
-                    }
-                    , {
-                      "name":"llvm.fpga.case"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [32, 10.6667, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:113"
-                  , "type":"resource"
-                  , "data":
-                  [134, 0, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":113
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"32-bit Select"
-                      , "type":"resource"
-                      , "count":5
-                      , "data":
-                      [130, 0, 0, 0, 0]
-                    }
-                    , {
-                      "name":"8-bit Select"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [4, 0, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:122"
-                  , "type":"resource"
-                  , "data":
-                  [3, 2, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":122
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"Stream Write"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [3, 2, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-    , {
       "name":"projection"
       , "compute_units":1
       , "type":"function"
       , "total_percent":
-      [1.0695, 0.773008, 0.380572, 0, 1.78571]
+      [1.19292, 0.843281, 0.438981, 0, 1.78571]
       , "total_kernel_resources":
-      [487, 834, 0, 2, 18]
+      [564, 962, 0, 2, 18]
       , "details":
       [
         {
@@ -1058,16 +42,16 @@
           [
             {
               "type":"text"
-              , "text":"Stream implemented 352 bits wide with a buffer size of 0 elements."
+              , "text":"Stream implemented 384 bits wide with a buffer size of 0 elements."
             }
             , {
               "type":"brief"
-              , "text":"352b wide with 0 elements."
+              , "text":"384b wide with 0 elements."
             }
           ]
         }
         , {
-          "name":"Stream 's_in'"
+          "name":"Stream 's1'"
           , "type":"resource"
           , "data":
           [0, 0, 0, 0, 0]
@@ -1075,11 +59,11 @@
           [
             {
               "type":"text"
-              , "text":"Stream implemented 352 bits wide with a buffer size of 0 elements."
+              , "text":"Stream implemented 384 bits wide with a buffer size of 0 elements."
             }
             , {
               "type":"brief"
-              , "text":"352b wide with 0 elements."
+              , "text":"384b wide with 0 elements."
             }
           ]
         }
@@ -1126,7 +110,7 @@
               "name":"State"
               , "type":"resource"
               , "data":
-              [117, 787, 0, 0, 18]
+              [165, 915, 0, 0, 18]
               , "details":
               [
                 {
@@ -1159,7 +143,7 @@
                   "name":"No Source Line"
                   , "type":"resource"
                   , "data":
-                  [117, 787, 0, 0, 18]
+                  [165, 915, 0, 0, 18]
                 }
               ]
             }
@@ -1189,7 +173,7 @@
               , "children":
               [
                 {
-                  "name":"main.cpp:48"
+                  "name":"main.cpp:150"
                   , "type":"resource"
                   , "data":
                   [7, 7, 0, 0, 0]
@@ -1198,7 +182,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":48
+                        , "line":150
                       }
                     ]
                   ]
@@ -1231,7 +215,7 @@
                   "name":"No Source Line"
                   , "type":"resource"
                   , "data":
-                  [248, 0, 0, 0, 0]
+                  [276, 0, 0, 0, 0]
                   , "debug":
                   [
                     [
@@ -1248,12 +232,12 @@
                       , "type":"resource"
                       , "count":1
                       , "data":
-                      [248, 0, 0, 0, 0]
+                      [276, 0, 0, 0, 0]
                     }
                   ]
                 }
                 , {
-                  "name":"main.cpp:51 > _stream.h:591"
+                  "name":"main.cpp:153 > _stream.h:845"
                   , "type":"resource"
                   , "data":
                   [3, 0, 0, 0, 0]
@@ -1262,11 +246,11 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":51
+                        , "line":153
                       }
                       , {
                         "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
-                        , "line":591
+                        , "line":845
                       }
                     ]
                   ]
@@ -1283,7 +267,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:54 > _stream.h:853"
+                  "name":"main.cpp:156 > _stream.h:853"
                   , "type":"resource"
                   , "data":
                   [1.5, 1, 0, 0, 0]
@@ -1292,7 +276,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":54
+                        , "line":156
                       }
                       , {
                         "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
@@ -1313,7 +297,44 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:66 > _stream.h:853"
+                  "name":"main.cpp:162 > main.cpp:49"
+                  , "type":"resource"
+                  , "data":
+                  [103, 36, 0, 2, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                        , "line":162
+                      }
+                      , {
+                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                        , "line":49
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [35, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Multiply"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [68, 35, 0, 2, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"main.cpp:165 > _stream.h:853"
                   , "type":"resource"
                   , "data":
                   [1.5, 1, 0, 0, 0]
@@ -1322,7 +343,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":66
+                        , "line":165
                       }
                       , {
                         "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
@@ -1343,7 +364,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:48"
+                  "name":"main.cpp:150"
                   , "type":"resource"
                   , "data":
                   [1, 0, 0, 0, 0]
@@ -1352,7 +373,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":48
+                        , "line":150
                       }
                     ]
                   ]
@@ -1369,59 +390,33 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:60"
+                  "name":"main.cpp:164"
                   , "type":"resource"
                   , "data":
-                  [68, 35, 0, 2, 0]
+                  [1, 0, 0, 0, 0]
                   , "debug":
                   [
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":60
+                        , "line":164
                       }
                     ]
                   ]
                   , "children":
                   [
                     {
-                      "name":"32-bit Integer Multiply"
+                      "name":"8-bit And"
                       , "type":"resource"
                       , "count":1
                       , "data":
-                      [68, 35, 0, 2, 0]
+                      [1, 0, 0, 0, 0]
                     }
                   ]
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:62"
-                  , "type":"resource"
-                  , "data":
-                  [35, 1, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":62
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"32-bit Integer Compare"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [35, 1, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:69"
+                  "name":"main.cpp:168"
                   , "type":"resource"
                   , "data":
                   [3, 2, 0, 0, 0]
@@ -1430,7 +425,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":69
+                        , "line":168
                       }
                     ]
                   ]
@@ -1457,9 +452,9 @@
       , "compute_units":1
       , "type":"function"
       , "total_percent":
-      [0.0241996, 0.0209908, 0.00593217, 0, 0]
+      [0.0265049, 0.0237287, 0.00593217, 0, 0]
       , "total_kernel_resources":
-      [23, 13, 0, 0, 0]
+      [26, 13, 0, 0, 0]
       , "details":
       [
         {
@@ -1482,11 +477,11 @@
           [
             {
               "type":"text"
-              , "text":"Stream implemented 1 bit wide with a buffer size of 0 elements."
+              , "text":"Stream implemented 384 bits wide with a buffer size of 0 elements."
             }
             , {
               "type":"brief"
-              , "text":"1b wide with 0 elements."
+              , "text":"384b wide with 0 elements."
             }
           ]
         }
@@ -1499,11 +494,45 @@
           [
             {
               "type":"text"
-              , "text":"Stream implemented 1 bit wide with a buffer size of 0 elements."
+              , "text":"Stream implemented 384 bits wide with a buffer size of 0 elements."
             }
             , {
               "type":"brief"
-              , "text":"1b wide with 0 elements."
+              , "text":"384b wide with 0 elements."
+            }
+          ]
+        }
+        , {
+          "name":"Stream 's0'"
+          , "type":"resource"
+          , "data":
+          [0, 0, 0, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Stream implemented 384 bits wide with a buffer size of 0 elements."
+            }
+            , {
+              "type":"brief"
+              , "text":"384b wide with 0 elements."
+            }
+          ]
+        }
+        , {
+          "name":"Stream 's2'"
+          , "type":"resource"
+          , "data":
+          [0, 0, 0, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Stream implemented 384 bits wide with a buffer size of 0 elements."
+            }
+            , {
+              "type":"brief"
+              , "text":"384b wide with 0 elements."
             }
           ]
         }
@@ -1538,7 +567,7 @@
               , "children":
               [
                 {
-                  "name":"main.cpp:147"
+                  "name":"main.cpp:195"
                   , "type":"resource"
                   , "data":
                   [7, 7, 0, 0, 0]
@@ -1547,7 +576,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":147
+                        , "line":195
                       }
                     ]
                   ]
@@ -1577,7 +606,7 @@
               , "children":
               [
                 {
-                  "name":"main.cpp:149 > _task.h:121 > \n_task.h:74 > _task_FPGA.h:62"
+                  "name":"main.cpp:198 > _stream.h:853"
                   , "type":"resource"
                   , "data":
                   [3, 2, 0, 0, 0]
@@ -1586,7 +615,37 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":149
+                        , "line":198
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
+                        , "line":853
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Stream Write"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 2, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"main.cpp:199 > _task.h:121 > \n_task.h:74 > _task_FPGA.h:62"
+                  , "type":"resource"
+                  , "data":
+                  [3, 2, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                        , "line":199
                       }
                       , {
                         "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
@@ -1615,7 +674,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:150 > _task.h:121 > \n_task.h:74 > _task_FPGA.h:62"
+                  "name":"main.cpp:200 > _task.h:121 > \n_task.h:74 > _task_FPGA.h:62"
                   , "type":"resource"
                   , "data":
                   [3, 2, 0, 0, 0]
@@ -1624,7 +683,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":150
+                        , "line":200
                       }
                       , {
                         "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
@@ -1653,16 +712,16 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:151 > _task.h:129 > \n_task.h:81 > _task_FPGA.h:67"
+                  "name":"main.cpp:201 > _task.h:129 > \n_task.h:81 > _task_FPGA.h:67"
                   , "type":"resource"
                   , "data":
-                  [1.5, 0, 0, 0, 0]
+                  [3, 0, 0, 0, 0]
                   , "debug":
                   [
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":151
+                        , "line":201
                       }
                       , {
                         "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
@@ -1681,58 +740,6 @@
                   , "children":
                   [
                     {
-                      "name":"1-bit Or"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [0.5, 0, 0, 0, 0]
-                    }
-                    , {
-                      "name":"Stream Read"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [1, 0, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:152 > _task.h:129 > \n_task.h:81 > _task_FPGA.h:67"
-                  , "type":"resource"
-                  , "data":
-                  [3.5, 0, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":152
-                      }
-                      , {
-                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
-                        , "line":129
-                      }
-                      , {
-                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
-                        , "line":81
-                      }
-                      , {
-                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
-                        , "line":67
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"1-bit Or"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [0.5, 0, 0, 0, 0]
-                    }
-                    , {
                       "name":"Stream Read"
                       , "type":"resource"
                       , "count":1
@@ -1743,7 +750,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:147"
+                  "name":"main.cpp:202 > _task.h:129 > \n_task.h:81 > _task_FPGA.h:67"
                   , "type":"resource"
                   , "data":
                   [1, 0, 0, 0, 0]
@@ -1751,8 +758,20 @@
                   [
                     [
                       {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":147
+                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                        , "line":202
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
+                        , "line":129
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
+                        , "line":81
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
+                        , "line":67
                       }
                     ]
                   ]
@@ -1769,27 +788,83 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:154"
+                  "name":"main.cpp:203 > _stream.h:845"
                   , "type":"resource"
                   , "data":
-                  [3, 2, 0, 0, 0]
+                  [1, 0, 0, 0, 0]
                   , "debug":
                   [
                     [
                       {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":154
+                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                        , "line":203
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
+                        , "line":845
                       }
                     ]
                   ]
                   , "children":
                   [
                     {
-                      "name":"Stream Write"
+                      "name":"Stream Read"
                       , "type":"resource"
                       , "count":1
                       , "data":
-                      [3, 2, 0, 0, 0]
+                      [1, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"main.cpp:195"
+                  , "type":"resource"
+                  , "data":
+                  [1, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                        , "line":195
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Stream Read"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"main.cpp:206"
+                  , "type":"resource"
+                  , "data":
+                  [3, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                        , "line":206
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Non-Blocking Stream Write"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 0, 0, 0, 0]
                     }
                   ]
                   , "replace_name":"true"
@@ -1805,9 +880,9 @@
       , "compute_units":1
       , "type":"function"
       , "total_percent":
-      [1.19998, 0.668054, 0.579528, 0, 0]
+      [6.82293, 4.37794, 2.85155, 2.72374, 3.57143]
       , "total_kernel_resources":
-      [732, 1270, 0, 0, 0]
+      [3337, 6249, 14, 3.5, 73]
       , "details":
       [
         {
@@ -1822,7 +897,7 @@
       , "children":
       [
         {
-          "name":"Stream 's0'"
+          "name":"Stream 's1'"
           , "type":"resource"
           , "data":
           [0, 0, 0, 0, 0]
@@ -1830,16 +905,16 @@
           [
             {
               "type":"text"
-              , "text":"Stream implemented 352 bits wide with a buffer size of 0 elements."
+              , "text":"Stream implemented 384 bits wide with a buffer size of 0 elements."
             }
             , {
               "type":"brief"
-              , "text":"352b wide with 0 elements."
+              , "text":"384b wide with 0 elements."
             }
           ]
         }
         , {
-          "name":"Stream 's_out'"
+          "name":"Stream 's2'"
           , "type":"resource"
           , "data":
           [0, 0, 0, 0, 0]
@@ -1847,11 +922,11 @@
           [
             {
               "type":"text"
-              , "text":"Stream implemented 352 bits wide with a buffer size of 0 elements."
+              , "text":"Stream implemented 384 bits wide with a buffer size of 0 elements."
             }
             , {
               "type":"brief"
-              , "text":"352b wide with 0 elements."
+              , "text":"384b wide with 0 elements."
             }
           ]
         }
@@ -1890,16 +965,16 @@
           ]
         }
         , {
-          "name":"Variable: \n - 'i' (main.cpp:127)"
+          "name":"Variable: \n - 'count' (main.cpp:92)"
           , "type":"resource"
           , "data":
-          [7, 36, 0, 0, 0]
+          [0, 0, 0, 0, 2]
           , "debug":
           [
             [
               {
                 "filename":"main.cpp"
-                , "line":127
+                , "line":92
               }
             ]
           ]
@@ -1911,11 +986,92 @@
             }
             , {
               "type":"text"
-              , "text":"1 register of width 32 bits and depth 1"
+              , "text":"1 register of width 32 bits and depth 23"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":" Depth was increased by a factor of 23 due to a loop initiation interval of 23."
+                }
+              ]
             }
             , {
               "type":"brief"
-              , "text":"Register,\n1 reg, 32 width by 1 depth"
+              , "text":"Register,\n1 reg, 32 width by 23 depth"
+            }
+          ]
+        }
+        , {
+          "name":"Variable: \n - 'i' (main.cpp:174)"
+          , "type":"resource"
+          , "data":
+          [0, 0, 0, 0, 2]
+          , "debug":
+          [
+            [
+              {
+                "filename":"main.cpp"
+                , "line":174
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 32 bits and depth 23"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":" Depth was increased by a factor of 23 due to a loop initiation interval of 23."
+                }
+              ]
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n1 reg, 32 width by 23 depth"
+            }
+          ]
+        }
+        , {
+          "name":"Variable: \n - 'sum' (main.cpp:91)"
+          , "type":"resource"
+          , "data":
+          [85, 156, 0, 0, 2]
+          , "debug":
+          [
+            [
+              {
+                "filename":"main.cpp"
+                , "line":91
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 32 bits and depth 23"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":" Depth was increased by a factor of 23 due to a loop initiation interval of 23."
+                }
+              ]
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n1 reg, 32 width by 23 depth"
             }
           ]
         }
@@ -1928,7 +1084,7 @@
               "name":"State"
               , "type":"resource"
               , "data":
-              [452, 1221, 0, 0, 0]
+              [504, 2511, 1, 0, 62]
               , "details":
               [
                 {
@@ -1961,7 +1117,7 @@
                   "name":"No Source Line"
                   , "type":"resource"
                   , "data":
-                  [452, 1221, 0, 0, 0]
+                  [504, 2511, 1, 0, 62]
                 }
               ]
             }
@@ -1969,7 +1125,7 @@
               "name":"Feedback"
               , "type":"resource"
               , "data":
-              [8, 7, 0, 0, 0]
+              [42, 48, 0, 0, 1]
               , "details":
               [
                 {
@@ -1991,26 +1147,64 @@
               , "children":
               [
                 {
-                  "name":"main.cpp:125 > main.cpp:127"
+                  "name":"main.cpp:172 > main.cpp:174"
                   , "type":"resource"
                   , "data":
-                  [7.5, 7, 0, 0, 0]
+                  [0.5, 0, 0, 0, 0]
                   , "debug":
                   [
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":125
+                        , "line":172
                       }
                       , {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":127
+                        , "line":174
                       }
                     ]
                   ]
                 }
                 , {
-                  "name":"main.cpp:138"
+                  "name":"main.cpp:172 > main.cpp:91"
+                  , "type":"resource"
+                  , "data":
+                  [40, 48, 0, 0, 1]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                        , "line":172
+                      }
+                      , {
+                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                        , "line":91
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"main.cpp:172 > main.cpp:92"
+                  , "type":"resource"
+                  , "data":
+                  [1, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                        , "line":172
+                      }
+                      , {
+                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                        , "line":92
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"main.cpp:185"
                   , "type":"resource"
                   , "data":
                   [0.5, 0, 0, 0, 0]
@@ -2019,7 +1213,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":138
+                        , "line":185
                       }
                     ]
                   ]
@@ -2030,7 +1224,7 @@
               "name":"Cluster logic"
               , "type":"resource"
               , "data":
-              [2, 0, 0, 0, 0]
+              [33, 22, 9, 0, 0]
               , "details":
               [
                 {
@@ -2052,7 +1246,7 @@
                   "name":"No Source Line"
                   , "type":"resource"
                   , "data":
-                  [248, 0, 0, 0, 0]
+                  [329, 296, 0, 0, 0]
                   , "debug":
                   [
                     [
@@ -2069,12 +1263,72 @@
                       , "type":"resource"
                       , "count":1
                       , "data":
-                      [248, 0, 0, 0, 0]
+                      [329, 296, 0, 0, 0]
                     }
                   ]
                 }
                 , {
-                  "name":"main.cpp:128 > _stream.h:845"
+                  "name":"main.cpp:172 > main.cpp:91"
+                  , "type":"resource"
+                  , "data":
+                  [24.6667, 16, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                        , "line":172
+                      }
+                      , {
+                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                        , "line":91
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [24.6667, 16, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"main.cpp:172 > main.cpp:92"
+                  , "type":"resource"
+                  , "data":
+                  [16.6667, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                        , "line":172
+                      }
+                      , {
+                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                        , "line":92
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [16.6667, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"main.cpp:175 > _stream.h:845"
                   , "type":"resource"
                   , "data":
                   [1, 0, 0, 0, 0]
@@ -2083,7 +1337,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":128
+                        , "line":175
                       }
                       , {
                         "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
@@ -2104,7 +1358,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:130 > _stream.h:725"
+                  "name":"main.cpp:177 > _stream.h:853"
                   , "type":"resource"
                   , "data":
                   [1.5, 1, 0, 0, 0]
@@ -2113,11 +1367,11 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":130
+                        , "line":177
                       }
                       , {
                         "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
-                        , "line":725
+                        , "line":853
                       }
                     ]
                   ]
@@ -2134,83 +1388,141 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:134 > _task.h:121 > \n_task.h:74 > _task_FPGA.h:62"
+                  "name":"main.cpp:181 > main.cpp:95"
                   , "type":"resource"
                   , "data":
-                  [3, 2, 0, 0, 0]
+                  [983.667, 1108, 0, 0, 3]
                   , "debug":
                   [
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":134
+                        , "line":181
                       }
                       , {
-                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
-                        , "line":121
-                      }
-                      , {
-                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
-                        , "line":74
-                      }
-                      , {
-                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
-                        , "line":62
+                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                        , "line":95
                       }
                     ]
                   ]
                   , "children":
                   [
                     {
-                      "name":"Stream Write"
+                      "name":"32-bit Floating-point Add"
                       , "type":"resource"
                       , "count":1
                       , "data":
-                      [3, 2, 0, 0, 0]
+                      [975, 1108, 0, 0, 3]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [8.66667, 0, 0, 0, 0]
                     }
                   ]
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:135 > _task.h:129 > \n_task.h:81 > _task_FPGA.h:67"
+                  "name":"main.cpp:181 > main.cpp:96"
                   , "type":"resource"
                   , "data":
-                  [3, 0, 0, 0, 0]
+                  [8.66667, 0, 0, 0, 0]
                   , "debug":
                   [
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":135
+                        , "line":181
                       }
                       , {
-                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
-                        , "line":129
-                      }
-                      , {
-                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
-                        , "line":81
-                      }
-                      , {
-                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
-                        , "line":67
+                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                        , "line":96
                       }
                     ]
                   ]
                   , "children":
                   [
                     {
-                      "name":"Stream Read"
+                      "name":"32-bit Select"
                       , "type":"resource"
                       , "count":1
                       , "data":
-                      [3, 0, 0, 0, 0]
+                      [8.66667, 0, 0, 0, 0]
                     }
                   ]
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:137 > _stream.h:725"
+                  "name":"main.cpp:181 > main.cpp:98"
+                  , "type":"resource"
+                  , "data":
+                  [893, 1467, 4, 3.5, 1]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                        , "line":181
+                      }
+                      , {
+                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                        , "line":98
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Floating-point Divide"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [527, 863, 4, 3.5, 1]
+                    }
+                    , {
+                      "name":"32-bit Integer to Floating-point Conversion"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [366, 604, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"main.cpp:181 > main.cpp:100"
+                  , "type":"resource"
+                  , "data":
+                  [41.3333, 16, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                        , "line":181
+                      }
+                      , {
+                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                        , "line":100
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":4
+                      , "data":
+                      [41.3333, 16, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"main.cpp:184 > _stream.h:853"
                   , "type":"resource"
                   , "data":
                   [1.5, 1, 0, 0, 0]
@@ -2219,11 +1531,11 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":137
+                        , "line":184
                       }
                       , {
                         "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
-                        , "line":725
+                        , "line":853
                       }
                     ]
                   ]
@@ -2240,7 +1552,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:125"
+                  "name":"main.cpp:172"
                   , "type":"resource"
                   , "data":
                   [1, 0, 0, 0, 0]
@@ -2249,7 +1561,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":125
+                        , "line":172
                       }
                     ]
                   ]
@@ -2266,33 +1578,73 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:134"
+                  "name":"main.cpp:176"
                   , "type":"resource"
                   , "data":
-                  [1, 0, 0, 0, 0]
+                  [0.5, 0, 0, 0, 0]
                   , "debug":
                   [
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":134
+                        , "line":176
                       }
                     ]
                   ]
                   , "children":
                   [
                     {
+                      "name":"1-bit Or"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [0.5, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"main.cpp:181"
+                  , "type":"resource"
+                  , "data":
+                  [367.5, 605, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                        , "line":181
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit Or"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [0.5, 0, 0, 0, 0]
+                    }
+                    , {
                       "name":"32-bit Integer Compare"
                       , "type":"resource"
                       , "count":1
                       , "data":
-                      [1, 0, 0, 0, 0]
+                      [1, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer to Floating-point Conversion"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [366, 604, 0, 0, 0]
                     }
                   ]
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:141"
+                  "name":"main.cpp:188"
                   , "type":"resource"
                   , "data":
                   [3, 2, 0, 0, 0]
@@ -2301,7 +1653,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":141
+                        , "line":188
                       }
                     ]
                   ]

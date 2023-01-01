@@ -1,41 +1,32 @@
 module quartus_compile (
 	  input logic resetn
 	, input logic clock
-	, input logic [351:0] streamer_s_in_data
-	, output logic [0:0] streamer_s_in_ready
-	, input logic [0:0] streamer_s_in_valid
-	, output logic [351:0] streamer_s_out_data
-	, input logic [0:0] streamer_s_out_ready
-	, output logic [0:0] streamer_s_out_valid
-	, input logic [0:0] streamer_start
-	, output logic [0:0] streamer_busy
-	, output logic [0:0] streamer_done
-	, input logic [0:0] streamer_stall
+	, output logic [0:0] streamer_done_irq
+	, input logic [0:0] streamer_avs_cra_read
+	, output logic [63:0] streamer_avs_cra_readdata
+	, input logic [0:0] streamer_avs_cra_write
+	, input logic [63:0] streamer_avs_cra_writedata
+	, input logic [3:0] streamer_avs_cra_address
+	, input logic [7:0] streamer_avs_cra_byteenable
 	);
 
-	logic [351:0] streamer_s_in_data_reg;
-	logic [0:0] streamer_s_in_ready_reg;
-	logic [0:0] streamer_s_in_valid_reg;
-	logic [351:0] streamer_s_out_data_reg;
-	logic [0:0] streamer_s_out_ready_reg;
-	logic [0:0] streamer_s_out_valid_reg;
-	logic [0:0] streamer_start_reg;
-	logic [0:0] streamer_busy_reg;
-	logic [0:0] streamer_done_reg;
-	logic [0:0] streamer_stall_reg;
+	logic [0:0] streamer_done_irq_reg;
+	logic [0:0] streamer_avs_cra_read_reg;
+	logic [63:0] streamer_avs_cra_readdata_reg;
+	logic [0:0] streamer_avs_cra_write_reg;
+	logic [63:0] streamer_avs_cra_writedata_reg;
+	logic [3:0] streamer_avs_cra_address_reg;
+	logic [7:0] streamer_avs_cra_byteenable_reg;
 
 
 	always @(posedge clock) begin
-		streamer_s_in_data_reg <= streamer_s_in_data;
-		streamer_s_in_ready <= streamer_s_in_ready_reg;
-		streamer_s_in_valid_reg <= streamer_s_in_valid;
-		streamer_s_out_data <= streamer_s_out_data_reg;
-		streamer_s_out_ready_reg <= streamer_s_out_ready;
-		streamer_s_out_valid <= streamer_s_out_valid_reg;
-		streamer_start_reg <= streamer_start;
-		streamer_busy <= streamer_busy_reg;
-		streamer_done <= streamer_done_reg;
-		streamer_stall_reg <= streamer_stall;
+		streamer_done_irq <= streamer_done_irq_reg;
+		streamer_avs_cra_read_reg <= streamer_avs_cra_read;
+		streamer_avs_cra_readdata <= streamer_avs_cra_readdata_reg;
+		streamer_avs_cra_write_reg <= streamer_avs_cra_write;
+		streamer_avs_cra_writedata_reg <= streamer_avs_cra_writedata;
+		streamer_avs_cra_address_reg <= streamer_avs_cra_address;
+		streamer_avs_cra_byteenable_reg <= streamer_avs_cra_byteenable;
 	end
 
 
@@ -52,16 +43,13 @@ module quartus_compile (
 	streamer streamer_inst (
 		  .resetn(sync_resetn[2])
 		, .clock(clock)
-		, .s_in_data(streamer_s_in_data_reg)
-		, .s_in_ready(streamer_s_in_ready_reg)
-		, .s_in_valid(streamer_s_in_valid_reg)
-		, .s_out_data(streamer_s_out_data_reg)
-		, .s_out_ready(streamer_s_out_ready_reg)
-		, .s_out_valid(streamer_s_out_valid_reg)
-		, .start(streamer_start_reg)
-		, .busy(streamer_busy_reg)
-		, .done(streamer_done_reg)
-		, .stall(streamer_stall_reg)
+		, .done_irq(streamer_done_irq_reg)
+		, .avs_cra_read(streamer_avs_cra_read_reg)
+		, .avs_cra_readdata(streamer_avs_cra_readdata_reg)
+		, .avs_cra_write(streamer_avs_cra_write_reg)
+		, .avs_cra_writedata(streamer_avs_cra_writedata_reg)
+		, .avs_cra_address(streamer_avs_cra_address_reg)
+		, .avs_cra_byteenable(streamer_avs_cra_byteenable_reg)
 	);
 
 
