@@ -1,0 +1,41 @@
+--altera_syncram ACF_BLOCK_RAM_AND_MLAB_EQUIVALENT_PAUSED_READ_CAPABILITIES="CARE" CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" CLOCK_ENABLE_INPUT_A="NORMAL" DEVICE_FAMILY="Cyclone V" INIT_FILE="streamer_flt_i_sfc_logic_s_c1_in_wt_entr0000117_invTables_lutmem.hex" INIT_FILE_LAYOUT="PORT_A" LOW_POWER_MODE="AUTO" NUMWORDS_A=512 OPERATION_MODE="ROM" OUTDATA_ACLR_A="CLEAR0" OUTDATA_REG_A="CLOCK0" POWER_UP_UNINITIALIZED="FALSE" RAM_BLOCK_TYPE="M10K" WIDTH_A=20 WIDTH_BYTEENA_A=1 WIDTHAD_A=9 aclr0 address_a clock0 q_a CARRY_CHAIN="MANUAL" CARRY_CHAIN_LENGTH=48 CYCLONEII_M4K_COMPATIBILITY="ON"
+--VERSION_BEGIN 21.1 cbx_altera_syncram 2022:06:23:22:03:44:SJ cbx_altera_syncram_nd_impl 2022:06:23:22:03:44:SJ cbx_altsyncram 2022:06:23:22:03:45:SJ cbx_cycloneii 2022:06:23:22:03:45:SJ cbx_lpm_add_sub 2022:06:23:22:03:45:SJ cbx_lpm_compare 2022:06:23:22:03:45:SJ cbx_lpm_decode 2022:06:23:22:03:40:SJ cbx_lpm_mux 2022:06:23:22:03:45:SJ cbx_mgl 2022:06:23:22:04:21:SJ cbx_nadder 2022:06:23:22:03:45:SJ cbx_stratix 2022:06:23:22:03:45:SJ cbx_stratixii 2022:06:23:22:03:45:SJ cbx_stratixiii 2022:06:23:22:03:45:SJ cbx_stratixv 2022:06:23:22:03:45:SJ cbx_util_mgl 2022:06:23:22:03:45:SJ  VERSION_END
+
+
+-- Copyright (C) 2022  Intel Corporation. All rights reserved.
+--  Your use of Intel Corporation's design tools, logic functions 
+--  and other software and tools, and any partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Intel Program License 
+--  Subscription Agreement, the Intel Quartus Prime License Agreement,
+--  the Intel FPGA IP License Agreement, or other applicable license
+--  agreement, including, without limitation, that your use is for
+--  the sole purpose of programming logic devices manufactured by
+--  Intel and sold by Intel or its authorized distributors.  Please
+--  refer to the applicable agreement for further details, at
+--  https://fpgasoftware.intel.com/eula.
+
+
+FUNCTION altsyncram_84d4 (aclr0, address_a[8..0], clock0)
+RETURNS ( q_a[19..0]);
+
+--synthesis_resources = M10K 1 
+SUBDESIGN altera_syncram_a7m1
+( 
+	aclr0	:	input;
+	address_a[8..0]	:	input;
+	clock0	:	input;
+	q_a[19..0]	:	output;
+) 
+VARIABLE 
+	altsyncram1 : altsyncram_84d4;
+
+BEGIN 
+	altsyncram1.aclr0 = aclr0;
+	altsyncram1.address_a[] = address_a[];
+	altsyncram1.clock0 = clock0;
+	q_a[] = altsyncram1.q_a[];
+END;
+--VALID FILE
