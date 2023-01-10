@@ -25,8 +25,6 @@
 //<gen>
 #define TUPLE_DATA_SIZE             4
 #define WINDOWING_k                 4
-
-#define PROJECTION_CODE_1           1
 //</gen>
 
 
