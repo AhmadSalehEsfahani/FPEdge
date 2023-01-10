@@ -12,17 +12,21 @@ struct sockaddr_in address;
 int opt = 1;
 int addrlen = sizeof(address);
 char messageFromClient[BUFFER_SIZE] = { 0 };
-char* messageToClient = (char*) malloc(BUFFER_SIZE * sizeof(char));
+char* messageToClient;
 
 bool server_init(){
+
+    printf("server initialization begin ...\n");
+
+    messageToClient = (char*) malloc(BUFFER_SIZE * sizeof(char));
     
     if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
-        perror("socket failed");
+        printf("socket failed");
         return false;
     }
  
     if (setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT , &opt, sizeof(opt))) {
-        perror("setsockopt");
+        printf("setsockopt");
         return false;
     }
     address.sin_family = AF_INET;
@@ -31,17 +35,19 @@ bool server_init(){
  
  
     if (bind(server_fd, (struct sockaddr*)&address, sizeof(address)) < 0) {
-        perror("bind failed");
+        printf("bind failed");
         return false;
     }
     if (listen(server_fd, 3) < 0) {
-        perror("listen");
+        printf("listen");
         return false;
     }
     if ((new_socket = accept(server_fd, (struct sockaddr*)&address, (socklen_t*)&addrlen)) < 0) {
-        perror("accept");
+        printf("accept");
         return false;
     }
+
+    printf("server initialized successfully\n");
 
     return true;
 }
@@ -54,16 +60,18 @@ void server_close(){
 
 int server_read_int(){
     read(new_socket, messageFromClient, 1024);
-    //printf("client says: %s\n", messageFromClient);
+    printf("client says: %s\n", messageFromClient);
     return (int) strtol(messageFromClient, (char **)NULL, 10);
 }
 
 void server_send_str(char* message){
     sprintf(messageToClient, "%s\n", message);
     send(new_socket, messageToClient, strlen(messageToClient), 0);
+    printf("%s sent to client", messageToClient);
 }
 
 void server_send_float(float number){
     sprintf(messageToClient, "%f\n", number);
     send(new_socket, messageToClient, strlen(messageToClient), 0);
+    printf("%s sent to client", messageToClient);
 }

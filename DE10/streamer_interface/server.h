@@ -1,6 +1,8 @@
 #ifndef SERVER_HEADER
 #define SERVER_HEADER
 
+#include <stdbool.h>
+
 #define PORT            8090
 #define BUFFER_SIZE     1024
 

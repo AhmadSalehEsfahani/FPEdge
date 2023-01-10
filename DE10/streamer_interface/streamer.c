@@ -13,8 +13,9 @@
 
 int main(int argc, char **argv) {
 
+    printf("program begin ...\n");
     if (!server_init()){
-        printf("server initialization error !!! \n")
+        printf("server initialization error !!! \n");
         return 1;
     }
     
@@ -27,14 +28,14 @@ int main(int argc, char **argv) {
     fd = open("/dev/mem", O_RDWR | O_SYNC);
 
     if (fd < 0) {
-        perror("Couldn't open /dev/mem\n");
+        printf("Couldn't open /dev/mem\n");
         return -2;
     }
 
     bridge_map = (uint8_t *)mmap(NULL, BRIDGE_SPAN, PROT_READ | PROT_WRITE, MAP_SHARED, fd, BRIDGE);
 
     if (bridge_map == MAP_FAILED) {
-        perror("mmap failed.");
+        printf("mmap failed.");
         close(fd);
         return -3;
     }
@@ -58,7 +59,7 @@ int main(int argc, char **argv) {
         if (tuple.valid){
             if (tuple.aggregation_ready[BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG]){
                 server_send_str(SIGN_ACCEPT_READY_ARRG_RESULT);
-                server_send_float(tuple.aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG])
+                server_send_float(tuple.aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG]);
             }
             else{
                 server_send_str(SIGN_ACCEPT_NOT_READY_ARRG_RESULT);
