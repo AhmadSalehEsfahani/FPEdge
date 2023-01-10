@@ -1,0 +1,30 @@
+
+##################### thingsboard edge #######################
+
+----------------- edge config file ----------------
+sudo nano /etc/tb-edge/conf/tb-edge.conf
+---------------------------------------------------
+
+########
+
+--------------- main configs directory ------------
+sudo nano /usr/share/tb-edge/conf/
+---------------------------------------------------
+
+########
+
+---------------- important default ports -----------------
+on demand server port: 8080
+edge port: 18080
+--------------------------------------------------
+
+########
+
+---------------- primary users ---------------------------
+System Administrator: sysadmin@thingsboard.org / sysadmin
+Tenant Administrator: tenant@thingsboard.org / tenant
+Customer User: customer@thingsboard.org / customer
+------------------------------------------------------------
+
+
+##############################################################
