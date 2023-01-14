@@ -9,6 +9,7 @@ public class TCPClient {
 
     private static final String serverAddress = "127.0.0.1";
     private static final int port = 8090;
+    private static final String ACK_STR = "ACK";
     public static Socket socket;
     public static Scanner socketScanner;
     public static Formatter socketFormatter;
@@ -26,15 +27,13 @@ public class TCPClient {
     public void sendInteger(int value){
         socketFormatter.format(String.valueOf(value));
         socketFormatter.flush();
-    }
-
-    public void sendBool(boolean value) {
-        socketFormatter.format(String.valueOf(value));
-        socketFormatter.flush();
+        while(!socketScanner.nextLine().equals(ACK_STR));
     }
 
     public float readInteger(){
         String response = socketScanner.nextLine();
+        socketFormatter.format(ACK_STR);
+        socketFormatter.flush();
 
         return Integer.parseInt(response);
     }
@@ -42,12 +41,14 @@ public class TCPClient {
 
     public float readFloat(){
         String response = socketScanner.nextLine();
+        socketFormatter.format(ACK_STR);
+        socketFormatter.flush();
 
         return Float.parseFloat(response);
     }
 
     public void sendTuple(DataTuple tuple){
-        this.sendBool(tuple.valid);
+        this.sendInteger(tuple.valid ? 1 : 0);
         this.sendInteger(tuple.price);
         this.sendInteger(tuple.volume);
         this.sendInteger(tuple.code);
@@ -56,6 +57,8 @@ public class TCPClient {
 
     public void responseOnTuple(DataTuple tuple){
         String response = socketScanner.nextLine();
+        socketFormatter.format(ACK_STR);
+        socketFormatter.flush();
 
         switch (response) {
             case "0":

@@ -38,6 +38,7 @@ public class StreamerOverTCP implements TbNode{
     String inputKey;
     String outputKey;
     TCPClient tcpClient;
+    boolean serverIsInitialized;
 
     @Override
     public void init(TbContext ctx, TbNodeConfiguration configuration) throws TbNodeException {
@@ -45,10 +46,17 @@ public class StreamerOverTCP implements TbNode{
         inputKey = config.getInputKey();
         outputKey = config.getOutputKey();
         tcpClient = new TCPClient();
+        serverIsInitialized = true;
     }
 
     @Override
     public void onMsg(TbContext ctx, TbMsg msg) throws ExecutionException, InterruptedException, TbNodeException {
+
+        if (!serverIsInitialized){
+            tcpClient = new TCPClient();
+            serverIsInitialized = true;
+        }
+
         boolean hasRecords = false;
         int price = 0, volume = 0, code = 0, stock = 0;
         boolean valid = false;
@@ -112,5 +120,6 @@ public class StreamerOverTCP implements TbNode{
 
     @Override
     public void destroy() {
+        tcpClient.close();
     }
 }

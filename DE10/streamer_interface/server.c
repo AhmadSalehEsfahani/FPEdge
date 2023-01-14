@@ -26,7 +26,7 @@ bool server_init(){
     }
  
     if (setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT , &opt, sizeof(opt))) {
-        printf("setsockopt");
+        printf("setsockopt failed");
         return false;
     }
     address.sin_family = AF_INET;
@@ -39,11 +39,11 @@ bool server_init(){
         return false;
     }
     if (listen(server_fd, 3) < 0) {
-        printf("listen");
+        printf("listen failed");
         return false;
     }
     if ((new_socket = accept(server_fd, (struct sockaddr*)&address, (socklen_t*)&addrlen)) < 0) {
-        printf("accept");
+        printf("accept failed");
         return false;
     }
 
@@ -61,17 +61,39 @@ void server_close(){
 int server_read_int(){
     read(new_socket, messageFromClient, 1024);
     printf("client says: %s\n", messageFromClient);
-    return (int) strtol(messageFromClient, (char **)NULL, 10);
+    send_ACK();
+    int res = (int) strtol(messageFromClient, (char **)NULL, 10);
+    memset(messageFromClient, 0, BUFFER_SIZE);
+    return res;
 }
 
 void server_send_str(char* message){
     sprintf(messageToClient, "%s\n", message);
     send(new_socket, messageToClient, strlen(messageToClient), 0);
-    printf("%s sent to client", messageToClient);
+    printf("sent to client %s", messageToClient);
+    receive_ACK();
+    memset(messageToClient, 0, BUFFER_SIZE);
 }
 
 void server_send_float(float number){
     sprintf(messageToClient, "%f\n", number);
     send(new_socket, messageToClient, strlen(messageToClient), 0);
-    printf("%s sent to client", messageToClient);
+    printf("sent to client %s", messageToClient);
+    receive_ACK();
+    memset(messageToClient, 0, BUFFER_SIZE);
+}
+
+void send_ACK() {
+    sprintf(messageToClient, "%s\n", ACK_STR);
+    send(new_socket, messageToClient, strlen(messageToClient), 0);
+    printf("sent to client %s", messageToClient);
+    memset(messageToClient, 0, BUFFER_SIZE);
+}
+
+void receive_ACK() {
+    while (memcmp(messageFromClient, "ACK", 3) != 0) {
+        read(new_socket, messageFromClient, 1024);
+    }
+    printf("ACK received \n");
+    memset(messageFromClient, 0, BUFFER_SIZE);
 }
