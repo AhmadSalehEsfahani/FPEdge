@@ -29,212 +29,199 @@
 
 
 struct Tuple {
-    bool valid = false;
-    int data[TUPLE_DATA_SIZE] = {0};
-    bool aggregation_ready[BUILDIN_AGGREGATION_FUNCTIONS_NUMBER_OF_SUPPORTED] = {0};
-    float aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_NUMBER_OF_SUPPORTED] = {0.0};
+    int a = 0;
+    int b = 0;
+    int res = 0;
 };
+
 
 
 //<gen>
 ihc::stream<Tuple> s0, s1, s2;
 //</gen>
 
-
-//<gen>
-struct proj1{
-    static bool f(Tuple &tuple){
-        return ((tuple.data[0] * tuple.data[1]) < 20000);
-    }
-};
-//</gen>
-
-struct count_struct{
-    template<typename T>
-    static T f(T step, bool eos){
-        static T count = 0;
-        static T result;
-        
-        count += step;
-        result = count;
-
-        if (eos){
-            count = 0;
-        }
-
-        return result;
-    }
-};
-
-struct sum_struct{
-    template<typename T>
-    static T f(T field, bool eos){
-        static T sum = 0;
-        static T result;
-
-        sum += field;
-        result = sum;
-
-        if (eos){
-            sum = 0;
-        }
-
-        return result;
-    }
-};
-
-struct avg_struct{
-    template <typename T>
-    static T f(T field, bool eos){
-        static T sum = 0;
-        static int count = 0;
-        static T result;
-        
-        sum += field;
-        count++;
-
-        result = sum / count;
-
-        if (eos){
-            sum = 0;
-            count = 0;
-        }
-
-        return result;
-    }
-};
-
-struct min_struct{
-    template <typename T>
-    static T f(T field, bool eos){
-        static T min = FLT_MAX;
-        static T result;
-
-        if (field < min){
-            min = field;
-        }
-
-        result = min;
-
-        if (eos){
-            min = 0;
-        }
-
-        return result;
-    }
-};
-
-struct max{
-    template <typename T>
-    static T f(T field, bool eos){
-        static T max = FLT_MIN;
-        static T result;
-
-        if (field > max){
-            max = field;
-        }
-
-        result = max;
-
-        if (eos){
-            max = 0;
-        }
-
-        return result;
-    }
-};
-
-
-template <auto &stream_in_tuple, auto &stream_out_tuple, typename T> void projection() {
-
-        
-    auto tuple = stream_in_tuple.read();
-
-    if (!tuple.valid){
-        stream_out_tuple.write(tuple);
-        return;
-    }
-
-    bool projection_result = true;
+void adder(){
     
-    projection_result = projection_result & T::f(tuple);
+    Tuple tuple = s0.read();
 
-    tuple.valid = tuple.valid & projection_result;
-    stream_out_tuple.write(tuple);
+    tuple.res = tuple.a + tuple.b;
 
-    return;
+    s1.write(tuple);   
 }
 
 
-template <auto &stream_in_tuple, auto &stream_out_tuple, typename AGGR, int FIELD, typename RTRN_TP, int AGGR_NUM>
-void windowing () {
+// //<gen>
+// struct proj1{
+//     static bool f(Tuple &tuple){
+//         return ((tuple.data[0] * tuple.data[1]) < 20000);
+//     }
+// };
+// //</gen>
 
-    static int i = 1;
-    auto tuple = stream_in_tuple.read();
-    if (!tuple.valid){
-        stream_out_tuple.write(tuple);
-        return;
-    }
+// struct count_struct{
+//     template<typename T>
+//     static T f(T step, bool eos){
+//         static T count = 0;
+//         static T result;
+        
+//         count += step;
+//         result = count;
 
-    tuple.aggregation_results[AGGR_NUM] = AGGR::template f<RTRN_TP>(tuple.data[FIELD], i%WINDOWING_k == 0);
-    tuple.aggregation_ready[AGGR_NUM] = i%WINDOWING_k == 0;
+//         if (eos){
+//             count = 0;
+//         }
 
-    stream_out_tuple.write(tuple);
-    i++;
+//         return result;
+//     }
+// };
 
-    return;
-}
+// struct sum_struct{
+//     template<typename T>
+//     static T f(T field, bool eos){
+//         static T sum = 0;
+//         static T result;
 
-// component void groupBy (){
+//         sum += field;
+//         result = sum;
 
-// } 
+//         if (eos){
+//             sum = 0;
+//         }
+
+//         return result;
+//     }
+// };
+
+// struct avg_struct{
+//     template <typename T>
+//     static T f(T field, bool eos){
+//         static T sum = 0;
+//         static int count = 0;
+//         static T result;
+        
+//         sum += field;
+//         count++;
+
+//         result = sum / count;
+
+//         if (eos){
+//             sum = 0;
+//             count = 0;
+//         }
+
+//         return result;
+//     }
+// };
+
+// struct min_struct{
+//     template <typename T>
+//     static T f(T field, bool eos){
+//         static T min = FLT_MAX;
+//         static T result;
+
+//         if (field < min){
+//             min = field;
+//         }
+
+//         result = min;
+
+//         if (eos){
+//             min = 0;
+//         }
+
+//         return result;
+//     }
+// };
+
+// struct max{
+//     template <typename T>
+//     static T f(T field, bool eos){
+//         static T max = FLT_MIN;
+//         static T result;
+
+//         if (field > max){
+//             max = field;
+//         }
+
+//         result = max;
+
+//         if (eos){
+//             max = 0;
+//         }
+
+//         return result;
+//     }
+// };
+
+
+// template <auto &stream_in_tuple, auto &stream_out_tuple, typename T> void projection() {
+
+        
+//     auto tuple = stream_in_tuple.read();
+
+//     if (!tuple.valid){
+//         stream_out_tuple.write(tuple);
+//         return;
+//     }
+
+//     bool projection_result = true;
+    
+//     projection_result = projection_result & T::f(tuple);
+
+//     tuple.valid = tuple.valid & projection_result;
+//     stream_out_tuple.write(tuple);
+
+//     return;
+// }
+
+
+// template <auto &stream_in_tuple, auto &stream_out_tuple, typename AGGR, int FIELD, typename RTRN_TP, int AGGR_NUM>
+// void windowing () {
+
+//     static int i = 1;
+//     auto tuple = stream_in_tuple.read();
+//     if (!tuple.valid){
+//         stream_out_tuple.write(tuple);
+//         return;
+//     }
+
+//     tuple.aggregation_results[AGGR_NUM] = AGGR::template f<RTRN_TP>(tuple.data[FIELD], i%WINDOWING_k == 0);
+//     tuple.aggregation_ready[AGGR_NUM] = i%WINDOWING_k == 0;
+
+//     stream_out_tuple.write(tuple);
+//     i++;
+
+//     return;
+// }
+
+// // component void groupBy (){
+
+// // } 
 
 hls_avalon_agent_component
 component Tuple streamer (hls_avalon_agent_register_argument Tuple tuple){
     
     //<gen>
     s0.write(tuple);
-    ihc::launch<projection<s0, s1, proj1>>();
-    ihc::launch<windowing<s1, s2, avg_struct, 0, float, BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG>>();
-    ihc::collect<projection<s0, s1, proj1>>();
-    ihc::collect<windowing<s1, s2, avg_struct, 0, float, BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG>>();
-    tuple = s2.read();
+
+    adder();
+
+    tuple = s1.read();
     //</gen>
 
     return tuple;
+    //return tuple;
 }
 
 int main() {
 
-    Tuple tuples[BUILDIN_NUMBER_OF_TESTS];
-    Tuple results[BUILDIN_NUMBER_OF_TESTS];
+    Tuple tuple;
+    tuple.a = 5;
+    tuple.b = 6;
 
-    for (int i = 0; i < BUILDIN_NUMBER_OF_TESTS; i++) {
+    Tuple res = streamer(tuple);
 
-        tuples[i].valid = true;
-        tuples[i].data[0] = (rand() % BUILDIN_ORDER_OF_TESTS);       //price
-        tuples[i].data[1] = (rand() % BUILDIN_ORDER_OF_TESTS);       //volume
-        tuples[i].data[2] = (rand() % BUILDIN_ORDER_OF_TESTS);       //code
-        tuples[i].data[3] = (rand() % BUILDIN_ORDER_OF_TESTS);       //stock
-
-        results[i] = streamer(tuples[i]);
-        
-
-        if (results[i].valid) {
-            printf("accepted: price:%d, volume:%d, code:%d, stock:%d, count:%f, avg:%f, min:%f, max:%f, sum:%f, readyag:%d \n",
-             results[i].data[0], results[i].data[1], results[i].data[2], results[i].data[3],
-             results[i].aggregation_results[0], results[i].aggregation_results[1], 
-             results[i].aggregation_results[2], results[i].aggregation_results[3],
-             results[i].aggregation_results[4], results[i].aggregation_ready[BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG]);
-        }     
-        else {
-            printf("rejected: price:%d, volume:%d, code:%d, stock:%d, count:%f, avg:%f, min:%f, max:%f, sum:%f, readyag:%d \n",
-             results[i].data[0], results[i].data[1], results[i].data[2], results[i].data[3],
-             results[i].aggregation_results[0], results[i].aggregation_results[1], 
-             results[i].aggregation_results[2], results[i].aggregation_results[3],
-             results[i].aggregation_results[4], results[i].aggregation_ready[BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG]);
-        }
-    }
+    printf("%d\n", res.res);
     
 
     return 0;
