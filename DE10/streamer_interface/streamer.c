@@ -52,9 +52,12 @@ int main(int argc, char **argv) {
             tuple.data[i] = (int32_t) server_read_int();
         }
 
+        printf("before process ----> valid:%d, data1:%d, data2:%d, data3:%d, data4:%d\n", tuple.valid, tuple.data[0], tuple.data[1], tuple.data[2], tuple.data[3]);
         *((struct Tuple *)tuple_map) = tuple;
 
         tuple = *((struct Tuple *)tuple_map);
+
+        printf("after process ----> valid:%d, data1:%d, data2:%d, data3:%d, data4:%d\n", tuple.valid, tuple.data[0], tuple.data[1], tuple.data[2], tuple.data[3]);
 
         if (tuple.valid){
             if (tuple.aggregation_ready[BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG]){
