@@ -27,6 +27,10 @@
 #define WINDOWING_k                 4
 //</gen>
 
+#define MEM_SIZE 1
+
+typedef ihc::stream_in<uint32_t> int_in_t;
+
 
 struct Tuple {
     int a = 0;
@@ -37,17 +41,12 @@ struct Tuple {
 
 
 //<gen>
-ihc::stream<Tuple> s0, s1, s2;
+//ihc::stream<int> s0, s1, s2;
 //</gen>
 
-void adder(){
-    
-    Tuple tuple = s0.read();
+//ihc::stream_in<int> s_in;
+//ihc::stream_out<int> s_out;
 
-    tuple.res = tuple.a + tuple.b;
-
-    s1.write(tuple);   
-}
 
 
 // //<gen>
@@ -196,32 +195,43 @@ void adder(){
 
 // // component void groupBy (){
 
-// // } 
+// // }
 
-hls_avalon_agent_component
-component Tuple streamer (hls_avalon_agent_register_argument Tuple tuple){
+component void streamer (//hls_avalon_slave_memory_argument(MEM_SIZE*sizeof(int)) int* a,
+                          //hls_avalon_slave_memory_argument(MEM_SIZE*sizeof(int)) int* b,
+                          hls_avalon_slave_memory_argument(MEM_SIZE*sizeof(int)) int* c){
     
-    //<gen>
-    s0.write(tuple);
+    //uint32_t a = s_in.read();
 
-    adder();
+    //a = a + 5;
 
-    tuple = s1.read();
-    //</gen>
+    //c[0] = a[0] + b[0];
+    c[0] = 8;
+    
 
-    return tuple;
-    //return tuple;
+    //return a; 
 }
 
 int main() {
 
-    Tuple tuple;
-    tuple.a = 5;
-    tuple.b = 6;
+    //uint32_t a = 7;
+    int res;
 
-    Tuple res = streamer(tuple);
+    int A[MEM_SIZE];
+    int B[MEM_SIZE];
+    int C[MEM_SIZE];
 
-    printf("%d\n", res.res);
+    A[0] = 5;
+    B[0] = 10;
+    streamer( C);
+    res = C[0];
+    // /*
+    // int_in_t samp;
+    // samp.write(a);
+    // */
+    // res = streamer(/*samp*/);
+
+    printf("%d\n", res);
     
 
     return 0;
