@@ -19,7 +19,8 @@ int main(int argc, char **argv) {
         return 1;
     }
     
-    uint8_t *tuple_map = NULL;
+    uint8_t *in_map = NULL;
+    uint8_t *out_map = NULL;
     uint8_t *bridge_map = NULL;
 
     int fd = 0;
@@ -40,29 +41,29 @@ int main(int argc, char **argv) {
         return -3;
     }
 
-    tuple_map = bridge_map + TUPLE_BASE;
+    in_map = bridge_map + IN_TUPLE_BASE;
+    out_map = bridge_map + OUT_TUPLE_BASE;
 
 
     while (1) {
-    
-        struct Tuple tuple;
 
-        tuple.valid = (bool) server_read_int();
+        tuple_in.valid = (bool) server_read_int();
         for (int i = 0; i < TUPLE_DATA_SIZE; i++){
-            tuple.data[i] = (int32_t) server_read_int();
+            tuple_in.data[i] = (uint32_t) server_read_int();
         }
 
-        printf("before process ----> valid:%d, data1:%d, data2:%d, data3:%d, data4:%d\n", tuple.valid, tuple.data[0], tuple.data[1], tuple.data[2], tuple.data[3]);
-        *((struct Tuple *)tuple_map) = tuple;
+        printf("before process ----> valid:%d, data1:%d, data2:%d, data3:%d, data4:%d\n", tuple_in.valid, tuple_in.data[0], tuple_in.data[1], tuple_in.data[2], tuple_in.data[3]);
 
-        tuple = *((struct Tuple *)tuple_map);
+        *((struct Tuple *)in_map) = tuple_in;
 
-        printf("after process ----> valid:%d, data1:%d, data2:%d, data3:%d, data4:%d\n", tuple.valid, tuple.data[0], tuple.data[1], tuple.data[2], tuple.data[3]);
+        tuple_out = *((struct Tuple *)out_map);
 
-        if (tuple.valid){
-            if (tuple.aggregation_ready[BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG]){
+        printf("after process ----> valid:%d, data1:%d, data2:%d, data3:%d, data4:%d\n", tuple_out.valid, tuple_out.data[0], tuple_out.data[1], tuple_out.data[2], tuple_out.data[3]);
+
+        if (tuple_out.valid){
+            if (tuple_out.aggregation_ready[BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG]){
                 server_send_str(SIGN_ACCEPT_READY_ARRG_RESULT);
-                server_send_float(tuple.aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG]);
+                server_send_float(tuple_out.aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG]);
             }
             else{
                 server_send_str(SIGN_ACCEPT_NOT_READY_ARRG_RESULT);
@@ -73,10 +74,18 @@ int main(int argc, char **argv) {
             server_send_str(SIGN_REJECT_TUPLE);
         }
     }
-    
+
+    result = munmap(bridge_map, BRIDGE_SPAN);
+
+    if (result < 0) {
+        perror("Couldnt unmap bridge.");
+        close(fd);
+        return -4;
+    }
+
+    close(fd);
     server_close();
 
     return 0;
-
 }
 
