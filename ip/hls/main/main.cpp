@@ -198,16 +198,17 @@ struct Tuple {
 // // }
 
 component hls_always_run_component 
-void streamer (hls_avalon_slave_memory_argument(MEM_SIZE*sizeof(int)) int* a,
-                hls_avalon_slave_memory_argument(MEM_SIZE*sizeof(int)) int* b,
-                hls_avalon_slave_memory_argument(MEM_SIZE*sizeof(int)) int* c){
+void streamer (hls_avalon_slave_memory_argument(MEM_SIZE*sizeof(Tuple)) Tuple* in0,
+                hls_avalon_slave_memory_argument(MEM_SIZE*sizeof(Tuple)) Tuple* out0){
     
     //uint32_t a = s_in.read();
 
     //a = a + 5;
 
     //c[0] = a[0] + b[0];
-    c[0] = a[0] + b[0];
+    out0[0].a = in0[0].a;
+    out0[0].b = in0[0].b;
+    out0[0].res = in0[0].a + in0[0].b;
     
 
     //return a; 
@@ -218,14 +219,13 @@ int main() {
     //uint32_t a = 7;
     int res;
 
-    int A[MEM_SIZE];
-    int B[MEM_SIZE];
-    int C[MEM_SIZE];
+    Tuple in[MEM_SIZE];
+    Tuple out[MEM_SIZE];
 
-    A[0] = 5;
-    B[0] = 10;
-    streamer(A, B, C);
-    res = C[0];
+    in[0].a = 5;
+    in[0].b = 10;
+    streamer(in, out);
+    res = out[0].res;
     // /*
     // int_in_t samp;
     // samp.write(a);
