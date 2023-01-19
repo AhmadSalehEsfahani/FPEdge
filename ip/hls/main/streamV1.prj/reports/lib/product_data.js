@@ -1,1 +1,1 @@
-var infoJSON={"compileInfo":{"nodes":[{"command":"i++ -march=cycloneV main.cpp -o streamV1.5","family":"CycloneV, 5CGXFC7C7F23C8","id":1,"name":"./streamV1","product":"HLS","quartus":"21.1.1 Build 850 Standard","time":"Sun Jan  1 13:31:55 2023","version":"22.3.0 Build 116.1"}]}};
+var infoJSON={"compileInfo":{"nodes":[{"command":"i++ -march=cycloneV main.cpp -o streamV1.6 --simulator none","family":"CycloneV, 5CGXFC7C7F23C8","id":1,"name":"./streamV1","product":"HLS","quartus":"21.1.1 Build 850 Standard","time":"Thu Jan 19 21:02:22 2023","version":"22.3.0 Build 116.1"}]}};

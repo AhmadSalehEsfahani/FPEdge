@@ -16,34 +16,20 @@
 
 // SystemVerilog created from i_iowr_nb_return_streamer_unnamed_streamer9_streamer0
 // Created for function/kernel streamer
-// SystemVerilog created on Sun Jan  1 13:31:30 2023
+// SystemVerilog created on Thu Jan 19 21:02:10 2023
 
 
 (* altera_attribute = "-name AUTO_SHIFT_REGISTER_RECOGNITION OFF; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 10037; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 15400; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 12020; -name MESSAGE_DISABLE 12030; -name MESSAGE_DISABLE 12010; -name MESSAGE_DISABLE 12110; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 13410; -name MESSAGE_DISABLE 113007; -name MESSAGE_DISABLE 10958" *)
 module streamer_i_iowr_nb_return_unnamed_streamer9_streamer0 (
-    output wire [0:0] out_iowr_nb_return_streamer_o_fifovalid,
     output wire [0:0] out_o_ack,
     output wire [0:0] out_o_valid,
-    input wire [7:0] in_i_data_0_tpl,
-    input wire [31:0] in_i_data_1_tpl,
-    input wire [31:0] in_i_data_2_tpl,
-    input wire [31:0] in_i_data_3_tpl,
-    input wire [31:0] in_i_data_4_tpl,
-    input wire [7:0] in_i_data_5_tpl,
-    input wire [7:0] in_i_data_6_tpl,
-    input wire [7:0] in_i_data_7_tpl,
-    input wire [7:0] in_i_data_8_tpl,
-    input wire [7:0] in_i_data_9_tpl,
-    input wire [31:0] in_i_data_10_tpl,
-    input wire [31:0] in_i_data_11_tpl,
-    input wire [31:0] in_i_data_12_tpl,
-    input wire [31:0] in_i_data_13_tpl,
-    input wire [31:0] in_i_data_14_tpl,
-    input wire [0:0] in_i_dependence,
-    input wire [0:0] in_i_valid,
-    output wire [383:0] out_iowr_nb_return_streamer_o_fifodata,
+    output wire [0:0] out_iowr_nb_return_streamer_o_fifodata,
+    output wire [0:0] out_iowr_nb_return_streamer_o_fifovalid,
     input wire [0:0] in_i_stall,
     output wire [0:0] out_o_stall,
+    input wire [0:0] in_i_data,
+    input wire [0:0] in_i_dependence,
+    input wire [0:0] in_i_valid,
     input wire clock,
     input wire resetn
     );
@@ -51,12 +37,9 @@ module streamer_i_iowr_nb_return_unnamed_streamer9_streamer0 (
     wire [0:0] GND_q;
     wire [0:0] VCC_q;
     wire [31:0] dupName_0_const_0_x_q;
-    wire [23:0] c_i24_010_q;
-    wire [383:0] dsdk_ip_adapt_bitjoin1_q;
-    wire [159:0] dsdk_ip_array_adapt_bitjoin11_q;
-    wire [127:0] dsdk_ip_array_adapt_bitjoin4_q;
-    wire [39:0] dsdk_ip_array_adapt_bitjoin7_q;
-    wire [383:0] iowr_nb_i_data;
+    wire [6:0] c_i7_02_q;
+    wire [7:0] element_extension1_q;
+    wire [0:0] iowr_nb_i_data;
     wire [0:0] iowr_nb_i_endofpacket;
     wire iowr_nb_i_endofpacket_bitsignaltemp;
     wire [0:0] iowr_nb_i_fifoready;
@@ -73,7 +56,7 @@ module streamer_i_iowr_nb_return_unnamed_streamer9_streamer0 (
     wire iowr_nb_i_valid_bitsignaltemp;
     wire [0:0] iowr_nb_o_ack;
     wire iowr_nb_o_ack_bitsignaltemp;
-    wire [383:0] iowr_nb_o_fifodata;
+    wire [0:0] iowr_nb_o_fifodata;
     wire [0:0] iowr_nb_o_fifoempty;
     wire [0:0] iowr_nb_o_fifovalid;
     wire iowr_nb_o_fifovalid_bitsignaltemp;
@@ -93,23 +76,14 @@ module streamer_i_iowr_nb_return_unnamed_streamer9_streamer0 (
     // GND(CONSTANT,0)
     assign GND_q = $unsigned(1'b0);
 
-    // dsdk_ip_array_adapt_bitjoin11(BITJOIN,26)
-    assign dsdk_ip_array_adapt_bitjoin11_q = {in_i_data_14_tpl, in_i_data_13_tpl, in_i_data_12_tpl, in_i_data_11_tpl, in_i_data_10_tpl};
+    // c_i7_02(CONSTANT,7)
+    assign c_i7_02_q = $unsigned(7'b0000000);
 
-    // dsdk_ip_array_adapt_bitjoin7(BITJOIN,28)
-    assign dsdk_ip_array_adapt_bitjoin7_q = {in_i_data_9_tpl, in_i_data_8_tpl, in_i_data_7_tpl, in_i_data_6_tpl, in_i_data_5_tpl};
+    // element_extension1(BITJOIN,9)@11
+    assign element_extension1_q = {c_i7_02_q, in_i_data};
 
-    // dsdk_ip_array_adapt_bitjoin4(BITJOIN,27)
-    assign dsdk_ip_array_adapt_bitjoin4_q = {in_i_data_4_tpl, in_i_data_3_tpl, in_i_data_2_tpl, in_i_data_1_tpl};
-
-    // c_i24_010(CONSTANT,22)
-    assign c_i24_010_q = $unsigned(24'b000000000000000000000000);
-
-    // dsdk_ip_adapt_bitjoin1(BITJOIN,25)
-    assign dsdk_ip_adapt_bitjoin1_q = {dsdk_ip_array_adapt_bitjoin11_q, c_i24_010_q, dsdk_ip_array_adapt_bitjoin7_q, dsdk_ip_array_adapt_bitjoin4_q, c_i24_010_q, in_i_data_0_tpl};
-
-    // iowr_nb(EXTIFACE,29)
-    assign iowr_nb_i_data = dsdk_ip_adapt_bitjoin1_q;
+    // iowr_nb(EXTIFACE,11)@11
+    assign iowr_nb_i_data = element_extension1_q[0:0];
     assign iowr_nb_i_endofpacket = GND_q;
     assign iowr_nb_i_fifoready = VCC_q;
     assign iowr_nb_i_fifosize = dupName_0_const_0_x_q;
@@ -137,14 +111,14 @@ module streamer_i_iowr_nb_return_unnamed_streamer9_streamer0 (
         .ALLOW_HIGH_SPEED_FIFO_USAGE(0),
         .ASYNC_RESET(1),
         .CUTPATHS(0),
-        .DATA_WIDTH(384),
+        .DATA_WIDTH(1),
         .EMPTY_WIDTH(0),
         .ENABLED(0),
         .NON_BLOCKING(1),
         .NO_PREDICATION(1),
         .SYNCHRONIZE_RESET(0)
     ) theiowr_nb (
-        .i_data(dsdk_ip_adapt_bitjoin1_q),
+        .i_data(element_extension1_q[0:0]),
         .i_endofpacket(iowr_nb_i_endofpacket_bitsignaltemp),
         .i_fifoready(iowr_nb_i_fifoready_bitsignaltemp),
         .i_fifosize(dupName_0_const_0_x_q),
@@ -164,17 +138,15 @@ module streamer_i_iowr_nb_return_unnamed_streamer9_streamer0 (
         .resetn(resetn)
     );
 
-    // dupName_0_regfree_osync_x(GPOUT,3)
-    assign out_iowr_nb_return_streamer_o_fifovalid = iowr_nb_o_fifovalid;
-
-    // dupName_0_sync_out_x(GPOUT,4)@1
+    // dupName_0_sync_out_x(GPOUT,3)@11
     assign out_o_ack = iowr_nb_o_ack;
     assign out_o_valid = iowr_nb_o_valid;
 
-    // regfree_osync(GPOUT,30)
+    // ext_sig_sync_out(GPOUT,10)
     assign out_iowr_nb_return_streamer_o_fifodata = iowr_nb_o_fifodata;
+    assign out_iowr_nb_return_streamer_o_fifovalid = iowr_nb_o_fifovalid;
 
-    // sync_out(GPOUT,32)@20000000
+    // sync_out(GPOUT,13)@11
     assign out_o_stall = iowr_nb_o_stall;
 
 endmodule

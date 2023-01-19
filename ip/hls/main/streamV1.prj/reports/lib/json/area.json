@@ -4,9 +4,9 @@
   , "debug_enabled":"true"
   , "type":"module"
   , "total_percent":
-  [8.04236, 5.24495, 3.29646, 2.72374, 5.35714]
+  [10.0454, 7.07297, 3.7181, 2.72374, 5.35714]
   , "total":
-  [3927, 7224, 14, 6, 91]
+  [4270, 8148, 14, 6, 174]
   , "name":"System"
   , "max_resources":
   [109572, 219144, 514, 112, 5478]
@@ -173,7 +173,7 @@
               , "children":
               [
                 {
-                  "name":"main.cpp:150"
+                  "name":"main.cpp:148"
                   , "type":"resource"
                   , "data":
                   [7, 7, 0, 0, 0]
@@ -182,7 +182,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":150
+                        , "line":148
                       }
                     ]
                   ]
@@ -237,7 +237,7 @@
                   ]
                 }
                 , {
-                  "name":"main.cpp:153 > _stream.h:845"
+                  "name":"main.cpp:151 > _stream.h:845"
                   , "type":"resource"
                   , "data":
                   [3, 0, 0, 0, 0]
@@ -246,7 +246,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":153
+                        , "line":151
                       }
                       , {
                         "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
@@ -267,7 +267,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:156 > _stream.h:853"
+                  "name":"main.cpp:154 > _stream.h:853"
                   , "type":"resource"
                   , "data":
                   [1.5, 1, 0, 0, 0]
@@ -276,7 +276,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":156
+                        , "line":154
                       }
                       , {
                         "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
@@ -297,7 +297,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:162 > main.cpp:49"
+                  "name":"main.cpp:160 > main.cpp:47"
                   , "type":"resource"
                   , "data":
                   [103, 36, 0, 2, 0]
@@ -306,11 +306,11 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":162
+                        , "line":160
                       }
                       , {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":49
+                        , "line":47
                       }
                     ]
                   ]
@@ -334,7 +334,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:165 > _stream.h:853"
+                  "name":"main.cpp:163 > _stream.h:853"
                   , "type":"resource"
                   , "data":
                   [1.5, 1, 0, 0, 0]
@@ -343,7 +343,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":165
+                        , "line":163
                       }
                       , {
                         "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
@@ -364,7 +364,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:150"
+                  "name":"main.cpp:148"
                   , "type":"resource"
                   , "data":
                   [1, 0, 0, 0, 0]
@@ -373,7 +373,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":150
+                        , "line":148
                       }
                     ]
                   ]
@@ -390,7 +390,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:164"
+                  "name":"main.cpp:162"
                   , "type":"resource"
                   , "data":
                   [1, 0, 0, 0, 0]
@@ -399,7 +399,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":164
+                        , "line":162
                       }
                     ]
                   ]
@@ -416,7 +416,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:168"
+                  "name":"main.cpp:166"
                   , "type":"resource"
                   , "data":
                   [3, 2, 0, 0, 0]
@@ -425,7 +425,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":168
+                        , "line":166
                       }
                     ]
                   ]
@@ -452,9 +452,9 @@
       , "compute_units":1
       , "type":"function"
       , "total_percent":
-      [0.0265049, 0.0237287, 0.00593217, 0, 0]
+      [2.0295, 1.85175, 0.427573, 0, 0]
       , "total_kernel_resources":
-      [26, 13, 0, 0, 0]
+      [369, 937, 0, 0, 83]
       , "details":
       [
         {
@@ -469,6 +469,51 @@
       , "children":
       [
         {
+          "name":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h:214 (arg)"
+          , "type":"resource"
+          , "data":
+          [0, 0, 0, 0, 32]
+          , "debug":
+          [
+            [
+              {
+                "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
+                , "line":214
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Memory system":"Stall-free"
+              , "Requested size":"48 bytes"
+              , "Implemented size":"64 bytes"
+              , "Memory Usage":"32 MLABs"
+              , "Number of banks":"1"
+              , "Bank width":"512 bits"
+              , "Bank depth":"1 word"
+              , "Number of replicates":"1"
+              , "Number of private copies":"1"
+              , "Additional information":
+              [
+                {
+                  "type":"text"
+                  , "text":"Requested size 48 bytes, implemented size 64 bytes, stall-free, 2 reads and 1 write. "
+                }
+                , {
+                  "type":"text"
+                  , "text":"Reducing accesses to exactly one read and one write for all on-chip memory systems may increase overall system performance."
+                }
+              ]
+            }
+            , {
+              "type":"brief"
+              , "text":"Stall-free,\n48B requested,\n64B implemented."
+            }
+          ]
+        }
+        , {
           "name":"Component call"
           , "type":"resource"
           , "data":
@@ -477,11 +522,11 @@
           [
             {
               "type":"text"
-              , "text":"Stream implemented 384 bits wide with a buffer size of 0 elements."
+              , "text":"Stream implemented 1 bit wide with a buffer size of 0 elements."
             }
             , {
               "type":"brief"
-              , "text":"384b wide with 0 elements."
+              , "text":"1b wide with 0 elements."
             }
           ]
         }
@@ -494,11 +539,11 @@
           [
             {
               "type":"text"
-              , "text":"Stream implemented 384 bits wide with a buffer size of 0 elements."
+              , "text":"Stream implemented 1 bit wide with a buffer size of 0 elements."
             }
             , {
               "type":"brief"
-              , "text":"384b wide with 0 elements."
+              , "text":"1b wide with 0 elements."
             }
           ]
         }
@@ -537,11 +582,97 @@
           ]
         }
         , {
+          "name":"main.cpp:194 (tuple_out)"
+          , "type":"resource"
+          , "data":
+          [0, 0, 0, 0, 32]
+          , "debug":
+          [
+            [
+              {
+                "filename":"main.cpp"
+                , "line":194
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Memory system":"Stall-free"
+              , "Requested size":"48 bytes"
+              , "Implemented size":"64 bytes"
+              , "Memory Usage":"32 MLABs"
+              , "Number of banks":"1"
+              , "Bank width":"512 bits"
+              , "Bank depth":"1 word"
+              , "Number of replicates":"1"
+              , "Number of private copies":"1"
+              , "Additional information":
+              [
+                {
+                  "type":"text"
+                  , "text":"Requested size 48 bytes, implemented size 64 bytes, stall-free, 1 read and 2 writes. "
+                }
+                , {
+                  "type":"text"
+                  , "text":"Reducing accesses to exactly one read and one write for all on-chip memory systems may increase overall system performance."
+                }
+              ]
+            }
+            , {
+              "type":"brief"
+              , "text":"Stall-free,\n48B requested,\n64B implemented."
+            }
+          ]
+        }
+        , {
           "name":"streamer.B1.start"
           , "type":"basicblock"
           , "children":
           [
             {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [28, 367, 0, 0, 1]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [28, 367, 0, 0, 1]
+                }
+              ]
+            }
+            , {
               "name":"Feedback"
               , "type":"resource"
               , "data":
@@ -567,19 +698,10 @@
               , "children":
               [
                 {
-                  "name":"main.cpp:195"
+                  "name":"No Source Line"
                   , "type":"resource"
                   , "data":
                   [7, 7, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":195
-                      }
-                    ]
-                  ]
                 }
               ]
             }
@@ -587,7 +709,7 @@
               "name":"Cluster logic"
               , "type":"resource"
               , "data":
-              [1, 0, 0, 0, 0]
+              [17, 12, 0, 0, 18]
               , "details":
               [
                 {
@@ -606,7 +728,84 @@
               , "children":
               [
                 {
-                  "name":"main.cpp:198 > _stream.h:853"
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [266, 521, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [266, 521, 0, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Stall-free read from memory declared on %L."
+                          , "links":
+                          [
+                            {
+                              "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
+                              , "line":"214"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+                , {
+                  "name":"main.cpp:197 > _stream.h:853"
+                  , "type":"resource"
+                  , "data":
+                  [3, 2, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
+                        , "line":197
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
+                        , "line":853
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Stream Write"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 2, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"main.cpp:198 > _task.h:121 > \n_task.h:74 > _task_FPGA.h:62"
                   , "type":"resource"
                   , "data":
                   [3, 2, 0, 0, 0]
@@ -618,8 +817,16 @@
                         , "line":198
                       }
                       , {
-                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
-                        , "line":853
+                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
+                        , "line":121
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
+                        , "line":74
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
+                        , "line":62
                       }
                     ]
                   ]
@@ -674,10 +881,10 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:200 > _task.h:121 > \n_task.h:74 > _task_FPGA.h:62"
+                  "name":"main.cpp:200 > _task.h:129 > \n_task.h:81 > _task_FPGA.h:67"
                   , "type":"resource"
                   , "data":
-                  [3, 2, 0, 0, 0]
+                  [2, 0, 0, 0, 0]
                   , "debug":
                   [
                     [
@@ -687,26 +894,33 @@
                       }
                       , {
                         "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
-                        , "line":121
+                        , "line":129
                       }
                       , {
                         "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
-                        , "line":74
+                        , "line":81
                       }
                       , {
                         "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
-                        , "line":62
+                        , "line":67
                       }
                     ]
                   ]
                   , "children":
                   [
                     {
-                      "name":"Stream Write"
+                      "name":"1-bit Or"
                       , "type":"resource"
                       , "count":1
                       , "data":
-                      [3, 2, 0, 0, 0]
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Stream Read"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
                     }
                   ]
                   , "replace_name":"true"
@@ -715,7 +929,7 @@
                   "name":"main.cpp:201 > _task.h:129 > \n_task.h:81 > _task_FPGA.h:67"
                   , "type":"resource"
                   , "data":
-                  [3, 0, 0, 0, 0]
+                  [1, 0, 0, 0, 0]
                   , "debug":
                   [
                     [
@@ -744,13 +958,13 @@
                       , "type":"resource"
                       , "count":1
                       , "data":
-                      [3, 0, 0, 0, 0]
+                      [1, 0, 0, 0, 0]
                     }
                   ]
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:202 > _task.h:129 > \n_task.h:81 > _task_FPGA.h:67"
+                  "name":"main.cpp:202 > _stream.h:845"
                   , "type":"resource"
                   , "data":
                   [1, 0, 0, 0, 0]
@@ -760,44 +974,6 @@
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
                         , "line":202
-                      }
-                      , {
-                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
-                        , "line":129
-                      }
-                      , {
-                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task.h"
-                        , "line":81
-                      }
-                      , {
-                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_task_FPGA.h"
-                        , "line":67
-                      }
-                    ]
-                  ]
-                  , "children":
-                  [
-                    {
-                      "name":"Stream Read"
-                      , "type":"resource"
-                      , "count":1
-                      , "data":
-                      [1, 0, 0, 0, 0]
-                    }
-                  ]
-                  , "replace_name":"true"
-                }
-                , {
-                  "name":"main.cpp:203 > _stream.h:845"
-                  , "type":"resource"
-                  , "data":
-                  [1, 0, 0, 0, 0]
-                  , "debug":
-                  [
-                    [
-                      {
-                        "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":203
                       }
                       , {
                         "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
@@ -818,7 +994,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:195"
+                  "name":"main.cpp:193"
                   , "type":"resource"
                   , "data":
                   [1, 0, 0, 0, 0]
@@ -827,7 +1003,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":195
+                        , "line":193
                       }
                     ]
                   ]
@@ -844,7 +1020,55 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:206"
+                  "name":"main.cpp:202"
+                  , "type":"resource"
+                  , "data":
+                  [34, 24, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                        , "line":202
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [34, 24, 0, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Stall-free write to memory declared on %L."
+                          , "links":
+                          [
+                            {
+                              "filename":"main.cpp"
+                              , "line":"194"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"main.cpp:205"
                   , "type":"resource"
                   , "data":
                   [3, 0, 0, 0, 0]
@@ -853,7 +1077,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":206
+                        , "line":205
                       }
                     ]
                   ]
@@ -965,7 +1189,7 @@
           ]
         }
         , {
-          "name":"Variable: \n - 'count' (main.cpp:92)"
+          "name":"Variable: \n - 'count' (main.cpp:90)"
           , "type":"resource"
           , "data":
           [0, 0, 0, 0, 2]
@@ -974,7 +1198,7 @@
             [
               {
                 "filename":"main.cpp"
-                , "line":92
+                , "line":90
               }
             ]
           ]
@@ -1002,7 +1226,7 @@
           ]
         }
         , {
-          "name":"Variable: \n - 'i' (main.cpp:174)"
+          "name":"Variable: \n - 'i' (main.cpp:172)"
           , "type":"resource"
           , "data":
           [0, 0, 0, 0, 2]
@@ -1011,7 +1235,7 @@
             [
               {
                 "filename":"main.cpp"
-                , "line":174
+                , "line":172
               }
             ]
           ]
@@ -1039,7 +1263,7 @@
           ]
         }
         , {
-          "name":"Variable: \n - 'sum' (main.cpp:91)"
+          "name":"Variable: \n - 'sum' (main.cpp:89)"
           , "type":"resource"
           , "data":
           [85, 156, 0, 0, 2]
@@ -1048,7 +1272,7 @@
             [
               {
                 "filename":"main.cpp"
-                , "line":91
+                , "line":89
               }
             ]
           ]
@@ -1147,7 +1371,7 @@
               , "children":
               [
                 {
-                  "name":"main.cpp:172 > main.cpp:174"
+                  "name":"main.cpp:170 > main.cpp:172"
                   , "type":"resource"
                   , "data":
                   [0.5, 0, 0, 0, 0]
@@ -1156,17 +1380,17 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":172
+                        , "line":170
                       }
                       , {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":174
+                        , "line":172
                       }
                     ]
                   ]
                 }
                 , {
-                  "name":"main.cpp:172 > main.cpp:91"
+                  "name":"main.cpp:170 > main.cpp:89"
                   , "type":"resource"
                   , "data":
                   [40, 48, 0, 0, 1]
@@ -1175,17 +1399,17 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":172
+                        , "line":170
                       }
                       , {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":91
+                        , "line":89
                       }
                     ]
                   ]
                 }
                 , {
-                  "name":"main.cpp:172 > main.cpp:92"
+                  "name":"main.cpp:170 > main.cpp:90"
                   , "type":"resource"
                   , "data":
                   [1, 0, 0, 0, 0]
@@ -1194,17 +1418,17 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":172
+                        , "line":170
                       }
                       , {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":92
+                        , "line":90
                       }
                     ]
                   ]
                 }
                 , {
-                  "name":"main.cpp:185"
+                  "name":"main.cpp:183"
                   , "type":"resource"
                   , "data":
                   [0.5, 0, 0, 0, 0]
@@ -1213,7 +1437,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":185
+                        , "line":183
                       }
                     ]
                   ]
@@ -1268,7 +1492,7 @@
                   ]
                 }
                 , {
-                  "name":"main.cpp:172 > main.cpp:91"
+                  "name":"main.cpp:170 > main.cpp:89"
                   , "type":"resource"
                   , "data":
                   [24.6667, 16, 0, 0, 0]
@@ -1277,11 +1501,11 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":172
+                        , "line":170
                       }
                       , {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":91
+                        , "line":89
                       }
                     ]
                   ]
@@ -1298,7 +1522,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:172 > main.cpp:92"
+                  "name":"main.cpp:170 > main.cpp:90"
                   , "type":"resource"
                   , "data":
                   [16.6667, 0, 0, 0, 0]
@@ -1307,11 +1531,11 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":172
+                        , "line":170
                       }
                       , {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":92
+                        , "line":90
                       }
                     ]
                   ]
@@ -1328,7 +1552,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:175 > _stream.h:845"
+                  "name":"main.cpp:173 > _stream.h:845"
                   , "type":"resource"
                   , "data":
                   [1, 0, 0, 0, 0]
@@ -1337,7 +1561,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":175
+                        , "line":173
                       }
                       , {
                         "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
@@ -1358,7 +1582,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:177 > _stream.h:853"
+                  "name":"main.cpp:175 > _stream.h:853"
                   , "type":"resource"
                   , "data":
                   [1.5, 1, 0, 0, 0]
@@ -1367,7 +1591,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":177
+                        , "line":175
                       }
                       , {
                         "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
@@ -1388,7 +1612,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:181 > main.cpp:95"
+                  "name":"main.cpp:179 > main.cpp:93"
                   , "type":"resource"
                   , "data":
                   [983.667, 1108, 0, 0, 3]
@@ -1397,11 +1621,11 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":181
+                        , "line":179
                       }
                       , {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":95
+                        , "line":93
                       }
                     ]
                   ]
@@ -1425,7 +1649,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:181 > main.cpp:96"
+                  "name":"main.cpp:179 > main.cpp:94"
                   , "type":"resource"
                   , "data":
                   [8.66667, 0, 0, 0, 0]
@@ -1434,11 +1658,11 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":181
+                        , "line":179
                       }
                       , {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":96
+                        , "line":94
                       }
                     ]
                   ]
@@ -1455,7 +1679,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:181 > main.cpp:98"
+                  "name":"main.cpp:179 > main.cpp:96"
                   , "type":"resource"
                   , "data":
                   [893, 1467, 4, 3.5, 1]
@@ -1464,11 +1688,11 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":181
+                        , "line":179
                       }
                       , {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":98
+                        , "line":96
                       }
                     ]
                   ]
@@ -1492,7 +1716,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:181 > main.cpp:100"
+                  "name":"main.cpp:179 > main.cpp:98"
                   , "type":"resource"
                   , "data":
                   [41.3333, 16, 0, 0, 0]
@@ -1501,11 +1725,11 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":181
+                        , "line":179
                       }
                       , {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":100
+                        , "line":98
                       }
                     ]
                   ]
@@ -1522,7 +1746,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:184 > _stream.h:853"
+                  "name":"main.cpp:182 > _stream.h:853"
                   , "type":"resource"
                   , "data":
                   [1.5, 1, 0, 0, 0]
@@ -1531,7 +1755,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main/main.cpp"
-                        , "line":184
+                        , "line":182
                       }
                       , {
                         "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
@@ -1552,7 +1776,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:172"
+                  "name":"main.cpp:170"
                   , "type":"resource"
                   , "data":
                   [1, 0, 0, 0, 0]
@@ -1561,7 +1785,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":172
+                        , "line":170
                       }
                     ]
                   ]
@@ -1578,7 +1802,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:176"
+                  "name":"main.cpp:174"
                   , "type":"resource"
                   , "data":
                   [0.5, 0, 0, 0, 0]
@@ -1587,7 +1811,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":176
+                        , "line":174
                       }
                     ]
                   ]
@@ -1604,7 +1828,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:181"
+                  "name":"main.cpp:179"
                   , "type":"resource"
                   , "data":
                   [367.5, 605, 0, 0, 0]
@@ -1613,7 +1837,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":181
+                        , "line":179
                       }
                     ]
                   ]
@@ -1644,7 +1868,7 @@
                   , "replace_name":"true"
                 }
                 , {
-                  "name":"main.cpp:188"
+                  "name":"main.cpp:186"
                   , "type":"resource"
                   , "data":
                   [3, 2, 0, 0, 0]
@@ -1653,7 +1877,7 @@
                     [
                       {
                         "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                        , "line":188
+                        , "line":186
                       }
                     ]
                   ]

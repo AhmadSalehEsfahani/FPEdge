@@ -1,0 +1,71 @@
+{
+  "functionNameMapping":
+  {
+    "name":"Synthesized Function Name Mapping"
+    , "columns":
+    ["User-defined Function Name", "Mapped Function Name"]
+    , "children":
+    [
+      {
+        "name":"void __cdecl streamer(struct Tuple *, struct Tuple *)"
+        , "data":
+        ["streamer"]
+        , "debug":
+        [
+          [
+            {
+              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+              , "line":201
+            }
+          ]
+        ]
+      }
+    ]
+  }
+  , "estimatedResources":
+  {
+    "name":"Estimated Resource Usage"
+    , "columns":
+    ["Function Name", "ALUTs ", "FFs  ", "RAMs ", "DSPs ", "MLABs"]
+    , "children":
+    [
+      {
+        "name":"streamer"
+        , "data":
+        [132, 120, 0, 0, 13]
+        , "debug":
+        [
+          [
+            {
+              "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+              , "line":201
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Total"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [132, 120, 0, 0, 13]
+        , "data_percent":
+        [0.120469, 0.0547585, 0, 0]
+      }
+      , {
+        "name":"Available"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [109572, 219144, 514, 112, 0]
+      }
+    ]
+  }
+  , "compileWarnings":
+  {
+    "name":"Compile Warnings"
+    , "children":
+    [
+    ]
+  }
+}

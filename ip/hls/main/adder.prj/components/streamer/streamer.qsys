@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags="INTERNAL_COMPONENT=false"
+   categories="HLS" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element streamer_internal_inst
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="5CGXFC7C7F23C8" />
+ <parameter name="deviceFamily" value="Cyclone V" />
+ <parameter name="deviceSpeedGrade" value="8_H7" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="false" />
+ <parameter name="lockedInterfaceDefinition" value="" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName" value="" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface
+   name="avs_in0"
+   internal="streamer_internal_inst.avs_in0"
+   type="avalon"
+   dir="end">
+  <port name="avs_in0_read" internal="avs_in0_read" />
+  <port name="avs_in0_readdata" internal="avs_in0_readdata" />
+  <port name="avs_in0_write" internal="avs_in0_write" />
+  <port name="avs_in0_writedata" internal="avs_in0_writedata" />
+  <port name="avs_in0_address" internal="avs_in0_address" />
+  <port name="avs_in0_byteenable" internal="avs_in0_byteenable" />
+ </interface>
+ <interface
+   name="avs_out0"
+   internal="streamer_internal_inst.avs_out0"
+   type="avalon"
+   dir="end">
+  <port name="avs_out0_read" internal="avs_out0_read" />
+  <port name="avs_out0_readdata" internal="avs_out0_readdata" />
+  <port name="avs_out0_write" internal="avs_out0_write" />
+  <port name="avs_out0_writedata" internal="avs_out0_writedata" />
+  <port name="avs_out0_address" internal="avs_out0_address" />
+  <port name="avs_out0_byteenable" internal="avs_out0_byteenable" />
+ </interface>
+ <interface
+   name="clock"
+   internal="streamer_internal_inst.clock"
+   type="clock"
+   dir="end">
+  <port name="clock" internal="clock" />
+ </interface>
+ <interface
+   name="reset"
+   internal="streamer_internal_inst.reset"
+   type="reset"
+   dir="end">
+  <port name="resetn" internal="resetn" />
+ </interface>
+ <module
+   name="streamer_internal_inst"
+   kind="streamer_internal"
+   version="1.0"
+   enabled="1"
+   autoexport="1" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>

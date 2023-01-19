@@ -41,6 +41,10 @@ module DE10_NANO_SoC_GHRD(
 wire hps_fpga_reset_n;
 wire                fpga_clk_50;
 wire [6:0]	fpga_led_internal;
+wire call_v, call_s, return_v, return_s;
+
+assign call_v = 1'b1;
+assign return_s = 1'b1;
 
 // connection of internal logics
 assign LED[7: 1] = fpga_led_internal;
@@ -71,7 +75,10 @@ soc_system u0(
                .memory_mem_odt(HPS_DDR3_ODT),                               //                               .mem_odt
                .memory_mem_dm(HPS_DDR3_DM),                                 //                               .mem_dm
                .memory_oct_rzqin(HPS_DDR3_RZQ),                             //                               .oct_rzqin
-
+					//.call_valid(call_v),
+					//.call_stall(call_s),
+					//.return_valid(return_v),
+					//.return_stall(return_s)
                //.hps_0_h2f_reset_reset_n(hps_fpga_reset_n)                  //                hps_0_h2f_reset.reset_n
 
            );

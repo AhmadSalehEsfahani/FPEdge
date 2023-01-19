@@ -1,8 +1,394 @@
 {
   "nodes":
   [
+    {
+      "type":"component"
+      , "id":2
+      , "name":"streamer"
+      , "children":
+      [
+        {
+          "type":"inst"
+          , "id":7
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":""
+                , "line":0
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"arg, tuple_in"
+              , "Start Cycle":"2"
+              , "Latency":"3"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Reference Manual"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":20
+          , "name":"Store"
+          , "debug":
+          [
+            [
+              {
+                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                , "line":202
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Stores to":"tuple_out"
+              , "Start Cycle":"10"
+              , "Latency":"1"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Reference Manual"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"memtype"
+          , "id":27
+          , "name":"Local Memory"
+          , "children":
+          [
+            {
+              "type":"memsys"
+              , "id":28
+              , "name":"arg, tuple_in"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
+                    , "line":214
+                  }
+                ]
+              ]
+              , "children":
+              [
+                {
+                  "type":"bank"
+                  , "id":29
+                  , "name":"Bank 0"
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"C:/intelFPGA_pro\\22.3\\hls\\include\\HLS\\internal\\_stream.h"
+                        , "line":214
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "type":"port"
+                      , "id":30
+                      , "name":"RW"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":32
+                      , "name":"RW"
+                    }
+                  ]
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"2 total ports/bank\n0 read ports/bank\n0 write ports/bank"
+                        }
+                      ]
+                      , "Total number of ports per bank":"2"
+                      , "Number of read ports per bank":"0"
+                      , "Number of write ports per bank":"0"
+                      , "Number of shared ports per bank":"2"
+                      , "Total replication":"1"
+                    }
+                  ]
+                }
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Requested size":"48 bytes"
+                  , "Implemented size":"64 bytes"
+                  , "Number of banks":"1"
+                  , "Bank width":"512 bits"
+                  , "Bank depth":"1 word"
+                  , "Number of replicates":"1"
+                  , "Number of private copies":"1"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Reference Manual : Local Variables in Components"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html#xzx1468871996419"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"memsys"
+              , "id":33
+              , "name":"tuple_out"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"main.cpp"
+                    , "line":194
+                  }
+                ]
+              ]
+              , "children":
+              [
+                {
+                  "type":"bank"
+                  , "id":34
+                  , "name":"Bank 0"
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"main.cpp"
+                        , "line":194
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "type":"port"
+                      , "id":35
+                      , "name":"RW"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":37
+                      , "name":"RW"
+                    }
+                  ]
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"2 total ports/bank\n0 read ports/bank\n0 write ports/bank"
+                        }
+                      ]
+                      , "Total number of ports per bank":"2"
+                      , "Number of read ports per bank":"0"
+                      , "Number of write ports per bank":"0"
+                      , "Number of shared ports per bank":"2"
+                      , "Total replication":"1"
+                    }
+                  ]
+                }
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Requested size":"48 bytes"
+                  , "Implemented size":"64 bytes"
+                  , "Number of banks":"1"
+                  , "Bank width":"512 bits"
+                  , "Bank depth":"1 word"
+                  , "Number of replicates":"1"
+                  , "Number of private copies":"1"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Reference Manual : Local Variables in Components"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html#xzx1468871996419"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"arb"
+          , "id":31
+          , "name":"SHARE"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Mutually exclusive accesses, no stalls"
+            }
+          ]
+        }
+        , {
+          "type":"arb"
+          , "id":36
+          , "name":"SHARE"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Mutually exclusive accesses, no stalls"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "type":"interface"
+      , "id":25
+      , "name":"tuple_in LD/ST"
+      , "debug":
+      [
+        [
+          {
+            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+            , "line":193
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Datawidth":"512 bits"
+          , "Size":"64 bytes (user requested 48 bytes, rounded up to the nearest power of two)"
+          , "Latency":"3"
+          , "Component":"streamer"
+        }
+      ]
+    }
+    , {
+      "type":"interface"
+      , "id":26
+      , "name":"tuple_out LD/ST"
+      , "debug":
+      [
+        [
+          {
+            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+            , "line":193
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Datawidth":"512 bits"
+          , "Size":"64 bytes (user requested 48 bytes, rounded up to the nearest power of two)"
+          , "Latency":"3"
+          , "Component":"streamer"
+        }
+      ]
+    }
   ]
   , "links":
   [
+    {
+      "from":31
+      , "to":7
+    }
+    , {
+      "from":25
+      , "to":31
+    }
+    , {
+      "from":31
+      , "to":30
+    }
+    , {
+      "from":30
+      , "to":31
+    }
+    , {
+      "from":25
+      , "to":32
+    }
+    , {
+      "from":20
+      , "to":36
+    }
+    , {
+      "from":26
+      , "to":36
+    }
+    , {
+      "from":36
+      , "to":35
+    }
+    , {
+      "from":35
+      , "to":36
+    }
+    , {
+      "from":26
+      , "to":37
+    }
   ]
 }

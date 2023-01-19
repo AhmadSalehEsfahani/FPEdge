@@ -1,0 +1,496 @@
+{
+  "nodes":
+  [
+    {
+      "name":"streamer"
+      , "id":1485901992
+      , "type":"component"
+      , "children":
+      [
+        {
+          "name":"Local Memory"
+          , "id":1
+          , "type":"memtype"
+          , "children":
+          [
+            {
+              "name":"in0"
+              , "id":2
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                          , "line":"201"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Requested size":"12 bytes"
+                  , "Implemented size":"16 bytes = (2 words per bank) x (8 bytes per word)"
+                  , "Memory Usage":"4 MLABs"
+                  , "Number of banks":"1"
+                  , "Bank width (word size)":"8 bytes"
+                  , "Bank depth":"2 words"
+                  , "Number of replicates":"1"
+                  , "Number of private copies":"1"
+                  , "RAM Mode":"Simple dual-port"
+                  , "Pump configuration":"Single-pumped"
+                  , "Additional information":"In each private copy:</br>  Variable 'in0' occupies memory words [0-1]."
+                  , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bit</td><td>b<sub>3</sub></td><td></td><td></td><td></td></tr></table>"
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                    , "line":201
+                  }
+                ]
+              ]
+              , "type":"memsys"
+              , "children":
+              [
+                {
+                  "name":"Bank 0"
+                  , "id":3
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "Memory Usage":"4 MLABs"
+                      , "Bank width":"8 bytes"
+                      , "Bank depth":"2 words"
+                      , "Implemented bank size":"16 bytes = (2 words) x (8 bytes per word)"
+                      , "Number of active ports":"2"
+                      , "Number of read ports":"1"
+                      , "Number of write ports":"1"
+                      , "Additional information":"In each private copy:</br>  Variable 'in0' occupies memory words [0-1]."
+                      , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bit</td><td>b<sub>3</sub></td><td></td><td></td><td></td></tr></table>"
+                    }
+                  ]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                        , "line":201
+                      }
+                    ]
+                  ]
+                  , "type":"bank"
+                  , "children":
+                  [
+                    {
+                      "name":"Replicate 0"
+                      , "id":4
+                      , "padding":"0"
+                      , "depth":"2"
+                      , "details":
+                      [
+                        {
+                          "type":"table"
+                          , "Implemented size":"16 bytes = (2 words) x (8 bytes per word)"
+                          , "Memory Usage":"4 MLABs"
+                          , "Number of physical ports":"2"
+                          , "Number of read ports":"1"
+                          , "Number of write ports":"1"
+                          , "Additional information":"In each private copy:</br>  Variable 'in0' occupies memory words [0-1]."
+                          , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bit</td><td>b<sub>3</sub></td><td></td><td></td><td></td></tr></table>"
+                        }
+                      ]
+                      , "debug":
+                      [
+                        [
+                          {
+                            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                            , "line":201
+                          }
+                        ]
+                      ]
+                      , "type":"replicate"
+                      , "children":
+                      [
+                        {
+                          "name":"R"
+                          , "id":5
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"W"
+                          , "id":8
+                          , "type":"port"
+                        }
+                      ]
+                      , "copies":
+                      {
+                        "num":1
+                        , "details":
+                        [
+                          {
+                            "type":"table"
+                            , "Width":"8 bytes"
+                            , "Depth per copy (including padding)":"2 words"
+                            , "Number of private copies":"1"
+                            , "Additional information":"In each private copy:</br>  Variable 'in0' occupies memory words [0-1]."
+                            , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bit</td><td>b<sub>3</sub></td><td></td><td></td><td></td></tr></table>"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"out0"
+              , "id":10
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                          , "line":"202"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Requested size":"12 bytes"
+                  , "Implemented size":"16 bytes = (1 word per bank) x (16 bytes per word)"
+                  , "Memory Usage":"8 MLABs"
+                  , "Number of banks":"1"
+                  , "Bank width (word size)":"16 bytes"
+                  , "Bank depth":"1 word"
+                  , "Number of replicates":"1"
+                  , "Number of private copies":"1"
+                  , "RAM Mode":"Simple dual-port"
+                  , "Pump configuration":"Single-pumped"
+                  , "Additional information":"In each private copy:</br>  Variable 'out0' occupies memory words [0-0]."
+                  , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td>0</td><td>0</td><td>0</td><td>0</td></tr></table>"
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                    , "line":202
+                  }
+                ]
+              ]
+              , "type":"memsys"
+              , "children":
+              [
+                {
+                  "name":"Bank 0"
+                  , "id":11
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "Memory Usage":"8 MLABs"
+                      , "Bank width":"16 bytes"
+                      , "Bank depth":"1 word"
+                      , "Implemented bank size":"16 bytes = (1 word) x (16 bytes per word)"
+                      , "Number of active ports":"2"
+                      , "Number of read ports":"1"
+                      , "Number of write ports":"1"
+                      , "Additional information":"In each private copy:</br>  Variable 'out0' occupies memory words [0-0]."
+                      , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td>0</td><td>0</td><td>0</td><td>0</td></tr></table>"
+                    }
+                  ]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                        , "line":202
+                      }
+                    ]
+                  ]
+                  , "type":"bank"
+                  , "children":
+                  [
+                    {
+                      "name":"Replicate 0"
+                      , "id":12
+                      , "padding":"0"
+                      , "depth":"1"
+                      , "details":
+                      [
+                        {
+                          "type":"table"
+                          , "Implemented size":"16 bytes = (1 word) x (16 bytes per word)"
+                          , "Memory Usage":"8 MLABs"
+                          , "Number of physical ports":"2"
+                          , "Number of read ports":"1"
+                          , "Number of write ports":"1"
+                          , "Additional information":"In each private copy:</br>  Variable 'out0' occupies memory words [0-0]."
+                          , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td>0</td><td>0</td><td>0</td><td>0</td></tr></table>"
+                        }
+                      ]
+                      , "debug":
+                      [
+                        [
+                          {
+                            "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                            , "line":202
+                          }
+                        ]
+                      ]
+                      , "type":"replicate"
+                      , "children":
+                      [
+                        {
+                          "name":"W"
+                          , "id":13
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"R"
+                          , "id":16
+                          , "type":"port"
+                        }
+                      ]
+                      , "copies":
+                      {
+                        "num":1
+                        , "details":
+                        [
+                          {
+                            "type":"table"
+                            , "Width":"16 bytes"
+                            , "Depth per copy (including padding)":"1 word"
+                            , "Number of private copies":"1"
+                            , "Additional information":"In each private copy:</br>  Variable 'out0' occupies memory words [0-0]."
+                            , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td>0</td><td>0</td><td>0</td><td>0</td></tr></table>"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"Load"
+          , "id":1486618424
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"64 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"in0"
+              , "Start cycle":"2"
+              , "Latency":"3"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Reference Manual"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                , "line":209
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"SHARE"
+          , "id":6
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Mutually exclusive accesses, no stalls"
+            }
+          ]
+          , "type":"arb"
+        }
+        , {
+          "name":"in0 LD"
+          , "id":7
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Data width":"64 bits"
+              , "Size":"12 bytes"
+              , "Latency":"3"
+              , "Component":"streamer"
+            }
+          ]
+          , "type":"interface"
+        }
+        , {
+          "name":"in0 ST"
+          , "id":9
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Data width":"64 bits"
+              , "Size":"12 bytes"
+              , "Latency":"3"
+              , "Component":"streamer"
+            }
+          ]
+          , "type":"interface"
+        }
+        , {
+          "name":"Store"
+          , "id":1489888408
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"128 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Stores to":"out0"
+              , "Start cycle":"6"
+              , "Latency":"1"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Reference Manual"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/ewa1462824960255.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
+                , "line":209
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"SHARE"
+          , "id":14
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Mutually exclusive accesses, no stalls"
+            }
+          ]
+          , "type":"arb"
+        }
+        , {
+          "name":"out0 LD"
+          , "id":17
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Data width":"128 bits"
+              , "Size":"12 bytes"
+              , "Latency":"3"
+              , "Component":"streamer"
+            }
+          ]
+          , "type":"interface"
+        }
+        , {
+          "name":"out0 ST"
+          , "id":15
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Data width":"128 bits"
+              , "Size":"12 bytes"
+              , "Latency":"3"
+              , "Component":"streamer"
+            }
+          ]
+          , "type":"interface"
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+    {
+      "from":5
+      , "to":6
+    }
+    , {
+      "from":6
+      , "to":1486618424
+    }
+    , {
+      "from":7
+      , "to":6
+    }
+    , {
+      "from":9
+      , "to":8
+    }
+    , {
+      "from":14
+      , "to":13
+    }
+    , {
+      "from":1489888408
+      , "to":14
+    }
+    , {
+      "from":15
+      , "to":14
+    }
+    , {
+      "from":17
+      , "to":16
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "nodes":
+  [
+    {
+      "name":"streamer"
+      , "id":1485901992
+      , "type":"component"
+      , "children":
+      [
+        {
+          "name":"streamer.B0.runOnce"
+          , "id":1486665328
+          , "type":"bb"
+        }
+        , {
+          "name":"streamer.B1.start"
+          , "id":1486664656
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 0"
+              , "id":1492484112
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 1"
+              , "id":1492490528
+              , "type":"cluster"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+  ]
+}

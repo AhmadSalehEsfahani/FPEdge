@@ -16,7 +16,7 @@
 
 // SystemVerilog created from streamer_function
 // Created for function/kernel streamer
-// SystemVerilog created on Sun Jan  1 13:31:30 2023
+// SystemVerilog created on Thu Jan 19 21:02:10 2023
 
 
 (* altera_attribute = "-name AUTO_SHIFT_REGISTER_RECOGNITION OFF; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 10037; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 15400; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 12020; -name MESSAGE_DISABLE 12030; -name MESSAGE_DISABLE 12010; -name MESSAGE_DISABLE 12110; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 13410; -name MESSAGE_DISABLE 113007; -name MESSAGE_DISABLE 10958" *)
@@ -25,7 +25,9 @@ module streamer_function (
     input wire [63:0] in_arg_return,
     input wire [63:0] in_arg_s0_global,
     input wire [63:0] in_arg_s2_global,
-    input wire [383:0] in_iord_bl_call_streamer_i_fifodata,
+    input wire [63:0] in_arg_tuple_in,
+    input wire [63:0] in_arg_tuple_out,
+    input wire [0:0] in_iord_bl_call_streamer_i_fifodata,
     input wire [0:0] in_iord_bl_call_streamer_i_fifovalid,
     input wire [0:0] in_iord_bl_return_projection_i_fifodata,
     input wire [0:0] in_iord_bl_return_projection_i_fifovalid,
@@ -36,7 +38,16 @@ module streamer_function (
     input wire [0:0] in_iowr_bl_call_projection_i_fifoready,
     input wire [0:0] in_iowr_bl_call_windowing_i_fifoready,
     input wire [0:0] in_iowr_bl_s0_i_fifoready,
+    input wire [511:0] in_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_readdata,
+    input wire [0:0] in_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_readdatavalid,
+    input wire [0:0] in_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_waitrequest,
+    input wire [0:0] in_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_writeack,
+    input wire [511:0] in_memdep_14_streamer_avm_readdata,
+    input wire [0:0] in_memdep_14_streamer_avm_readdatavalid,
+    input wire [0:0] in_memdep_14_streamer_avm_waitrequest,
+    input wire [0:0] in_memdep_14_streamer_avm_writeack,
     input wire [0:0] in_stall_in,
+    input wire [0:0] in_start,
     input wire [0:0] in_valid_in,
     output wire [0:0] out_iord_bl_call_streamer_o_fifoalmost_full,
     output wire [0:0] out_iord_bl_call_streamer_o_fifoready,
@@ -52,8 +63,22 @@ module streamer_function (
     output wire [0:0] out_iowr_bl_call_windowing_o_fifovalid,
     output wire [383:0] out_iowr_bl_s0_o_fifodata,
     output wire [0:0] out_iowr_bl_s0_o_fifovalid,
-    output wire [383:0] out_iowr_nb_return_streamer_o_fifodata,
+    output wire [0:0] out_iowr_nb_return_streamer_o_fifodata,
     output wire [0:0] out_iowr_nb_return_streamer_o_fifovalid,
+    output wire [31:0] out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_address,
+    output wire [0:0] out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_burstcount,
+    output wire [63:0] out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_byteenable,
+    output wire [0:0] out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_enable,
+    output wire [0:0] out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_read,
+    output wire [0:0] out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_write,
+    output wire [511:0] out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_writedata,
+    output wire [31:0] out_memdep_14_streamer_avm_address,
+    output wire [0:0] out_memdep_14_streamer_avm_burstcount,
+    output wire [63:0] out_memdep_14_streamer_avm_byteenable,
+    output wire [0:0] out_memdep_14_streamer_avm_enable,
+    output wire [0:0] out_memdep_14_streamer_avm_read,
+    output wire [0:0] out_memdep_14_streamer_avm_write,
+    output wire [511:0] out_memdep_14_streamer_avm_writedata,
     output wire [0:0] out_stall_out,
     output wire [0:0] out_valid_out,
     input wire clock,
@@ -77,15 +102,29 @@ module streamer_function (
     wire [0:0] bb_streamer_B1_start_out_iowr_bl_call_windowing_o_fifovalid;
     wire [383:0] bb_streamer_B1_start_out_iowr_bl_s0_o_fifodata;
     wire [0:0] bb_streamer_B1_start_out_iowr_bl_s0_o_fifovalid;
-    wire [383:0] bb_streamer_B1_start_out_iowr_nb_return_streamer_o_fifodata;
+    wire [0:0] bb_streamer_B1_start_out_iowr_nb_return_streamer_o_fifodata;
     wire [0:0] bb_streamer_B1_start_out_iowr_nb_return_streamer_o_fifovalid;
+    wire [31:0] bb_streamer_B1_start_out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_address;
+    wire [0:0] bb_streamer_B1_start_out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_burstcount;
+    wire [63:0] bb_streamer_B1_start_out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_byteenable;
+    wire [0:0] bb_streamer_B1_start_out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_enable;
+    wire [0:0] bb_streamer_B1_start_out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_read;
+    wire [0:0] bb_streamer_B1_start_out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_write;
+    wire [511:0] bb_streamer_B1_start_out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_writedata;
+    wire [31:0] bb_streamer_B1_start_out_memdep_14_streamer_avm_address;
+    wire [0:0] bb_streamer_B1_start_out_memdep_14_streamer_avm_burstcount;
+    wire [63:0] bb_streamer_B1_start_out_memdep_14_streamer_avm_byteenable;
+    wire [0:0] bb_streamer_B1_start_out_memdep_14_streamer_avm_enable;
+    wire [0:0] bb_streamer_B1_start_out_memdep_14_streamer_avm_read;
+    wire [0:0] bb_streamer_B1_start_out_memdep_14_streamer_avm_write;
+    wire [511:0] bb_streamer_B1_start_out_memdep_14_streamer_avm_writedata;
     wire [0:0] bb_streamer_B1_start_out_pipeline_valid_out;
     wire [0:0] bb_streamer_B1_start_out_stall_in_0;
     wire [0:0] bb_streamer_B1_start_out_stall_out_0;
     wire [0:0] bb_streamer_B1_start_out_valid_in_0;
     wire [0:0] bb_streamer_B1_start_out_valid_in_1;
     wire [0:0] bb_streamer_B1_start_out_valid_out_0;
-    wire [1:0] c_i2_06_q;
+    wire [1:0] c_i2_08_q;
     wire [0:0] i_llvm_fpga_pipeline_keep_going_streamer1_sr_out_o_stall;
     wire [0:0] i_llvm_fpga_pipeline_keep_going_streamer1_sr_out_o_valid;
     wire [0:0] i_llvm_fpga_pipeline_keep_going_streamer1_valid_fifo_out_stall_out;
@@ -110,12 +149,12 @@ module streamer_function (
     wire streamer_B1_start_x_i_valid_succ_bitsignaltemp;
 
 
-    // c_i2_06(CONSTANT,9)
-    assign c_i2_06_q = $unsigned(2'b00);
+    // c_i2_08(CONSTANT,9)
+    assign c_i2_08_q = $unsigned(2'b00);
 
     // i_llvm_fpga_pipeline_keep_going_streamer1_valid_fifo(BLACKBOX,12)
     streamer_i_llvm_fpga_pipeline_keep_going_1_valid_fifo thei_llvm_fpga_pipeline_keep_going_streamer1_valid_fifo (
-        .in_data_in(c_i2_06_q),
+        .in_data_in(c_i2_08_q),
         .in_stall_in(bb_streamer_B1_start_out_stall_out_0),
         .in_valid_in(i_llvm_fpga_pipeline_keep_going_streamer1_sr_out_o_valid),
         .out_almost_full(),
@@ -143,6 +182,7 @@ module streamer_function (
 
     // bb_streamer_B1_start(BLACKBOX,3)
     streamer_bb_B1_start thebb_streamer_B1_start (
+        .in_flush(in_start),
         .in_iord_bl_call_streamer_i_fifodata(in_iord_bl_call_streamer_i_fifodata),
         .in_iord_bl_call_streamer_i_fifovalid(in_iord_bl_call_streamer_i_fifovalid),
         .in_iord_bl_return_projection_i_fifodata(in_iord_bl_return_projection_i_fifodata),
@@ -154,8 +194,18 @@ module streamer_function (
         .in_iowr_bl_call_projection_i_fifoready(in_iowr_bl_call_projection_i_fifoready),
         .in_iowr_bl_call_windowing_i_fifoready(in_iowr_bl_call_windowing_i_fifoready),
         .in_iowr_bl_s0_i_fifoready(in_iowr_bl_s0_i_fifoready),
+        .in_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_readdata(in_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_readdata),
+        .in_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_readdatavalid(in_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_readdatavalid),
+        .in_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_waitrequest(in_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_waitrequest),
+        .in_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_writeack(in_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_writeack),
+        .in_memdep_14_streamer_avm_readdata(in_memdep_14_streamer_avm_readdata),
+        .in_memdep_14_streamer_avm_readdatavalid(in_memdep_14_streamer_avm_readdatavalid),
+        .in_memdep_14_streamer_avm_waitrequest(in_memdep_14_streamer_avm_waitrequest),
+        .in_memdep_14_streamer_avm_writeack(in_memdep_14_streamer_avm_writeack),
         .in_pipeline_stall_in(i_llvm_fpga_pipeline_keep_going_streamer1_sr_out_o_stall),
         .in_stall_in_0(GND_q),
+        .in_tuple_in(in_arg_tuple_in),
+        .in_tuple_out(in_arg_tuple_out),
         .in_valid_in_0(i_llvm_fpga_pipeline_keep_going_streamer1_valid_fifo_out_valid_out),
         .in_valid_in_1(in_valid_in),
         .out_exiting_stall_out(),
@@ -176,6 +226,20 @@ module streamer_function (
         .out_iowr_bl_s0_o_fifovalid(bb_streamer_B1_start_out_iowr_bl_s0_o_fifovalid),
         .out_iowr_nb_return_streamer_o_fifodata(bb_streamer_B1_start_out_iowr_nb_return_streamer_o_fifodata),
         .out_iowr_nb_return_streamer_o_fifovalid(bb_streamer_B1_start_out_iowr_nb_return_streamer_o_fifovalid),
+        .out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_address(bb_streamer_B1_start_out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_address),
+        .out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_burstcount(bb_streamer_B1_start_out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_burstcount),
+        .out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_byteenable(bb_streamer_B1_start_out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_byteenable),
+        .out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_enable(bb_streamer_B1_start_out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_enable),
+        .out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_read(bb_streamer_B1_start_out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_read),
+        .out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_write(bb_streamer_B1_start_out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_write),
+        .out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_writedata(bb_streamer_B1_start_out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_writedata),
+        .out_memdep_14_streamer_avm_address(bb_streamer_B1_start_out_memdep_14_streamer_avm_address),
+        .out_memdep_14_streamer_avm_burstcount(bb_streamer_B1_start_out_memdep_14_streamer_avm_burstcount),
+        .out_memdep_14_streamer_avm_byteenable(bb_streamer_B1_start_out_memdep_14_streamer_avm_byteenable),
+        .out_memdep_14_streamer_avm_enable(bb_streamer_B1_start_out_memdep_14_streamer_avm_enable),
+        .out_memdep_14_streamer_avm_read(bb_streamer_B1_start_out_memdep_14_streamer_avm_read),
+        .out_memdep_14_streamer_avm_write(bb_streamer_B1_start_out_memdep_14_streamer_avm_write),
+        .out_memdep_14_streamer_avm_writedata(bb_streamer_B1_start_out_memdep_14_streamer_avm_writedata),
         .out_pipeline_valid_out(bb_streamer_B1_start_out_pipeline_valid_out),
         .out_stall_in_0(bb_streamer_B1_start_out_stall_in_0),
         .out_stall_out_0(bb_streamer_B1_start_out_stall_out_0),
@@ -187,57 +251,101 @@ module streamer_function (
         .resetn(resetn)
     );
 
-    // out_iord_bl_call_streamer_o_fifoalmost_full(GPOUT,30)
+    // out_iord_bl_call_streamer_o_fifoalmost_full(GPOUT,41)
     assign out_iord_bl_call_streamer_o_fifoalmost_full = bb_streamer_B1_start_out_iord_bl_call_streamer_o_fifoalmost_full;
 
-    // out_iord_bl_call_streamer_o_fifoready(GPOUT,31)
+    // out_iord_bl_call_streamer_o_fifoready(GPOUT,42)
     assign out_iord_bl_call_streamer_o_fifoready = bb_streamer_B1_start_out_iord_bl_call_streamer_o_fifoready;
 
-    // out_iord_bl_return_projection_o_fifoalmost_full(GPOUT,32)
+    // out_iord_bl_return_projection_o_fifoalmost_full(GPOUT,43)
     assign out_iord_bl_return_projection_o_fifoalmost_full = bb_streamer_B1_start_out_iord_bl_return_projection_o_fifoalmost_full;
 
-    // out_iord_bl_return_projection_o_fifoready(GPOUT,33)
+    // out_iord_bl_return_projection_o_fifoready(GPOUT,44)
     assign out_iord_bl_return_projection_o_fifoready = bb_streamer_B1_start_out_iord_bl_return_projection_o_fifoready;
 
-    // out_iord_bl_return_windowing_o_fifoalmost_full(GPOUT,34)
+    // out_iord_bl_return_windowing_o_fifoalmost_full(GPOUT,45)
     assign out_iord_bl_return_windowing_o_fifoalmost_full = bb_streamer_B1_start_out_iord_bl_return_windowing_o_fifoalmost_full;
 
-    // out_iord_bl_return_windowing_o_fifoready(GPOUT,35)
+    // out_iord_bl_return_windowing_o_fifoready(GPOUT,46)
     assign out_iord_bl_return_windowing_o_fifoready = bb_streamer_B1_start_out_iord_bl_return_windowing_o_fifoready;
 
-    // out_iord_bl_s2_o_fifoalmost_full(GPOUT,36)
+    // out_iord_bl_s2_o_fifoalmost_full(GPOUT,47)
     assign out_iord_bl_s2_o_fifoalmost_full = bb_streamer_B1_start_out_iord_bl_s2_o_fifoalmost_full;
 
-    // out_iord_bl_s2_o_fifoready(GPOUT,37)
+    // out_iord_bl_s2_o_fifoready(GPOUT,48)
     assign out_iord_bl_s2_o_fifoready = bb_streamer_B1_start_out_iord_bl_s2_o_fifoready;
 
-    // out_iowr_bl_call_projection_o_fifodata(GPOUT,38)
+    // out_iowr_bl_call_projection_o_fifodata(GPOUT,49)
     assign out_iowr_bl_call_projection_o_fifodata = bb_streamer_B1_start_out_iowr_bl_call_projection_o_fifodata;
 
-    // out_iowr_bl_call_projection_o_fifovalid(GPOUT,39)
+    // out_iowr_bl_call_projection_o_fifovalid(GPOUT,50)
     assign out_iowr_bl_call_projection_o_fifovalid = bb_streamer_B1_start_out_iowr_bl_call_projection_o_fifovalid;
 
-    // out_iowr_bl_call_windowing_o_fifodata(GPOUT,40)
+    // out_iowr_bl_call_windowing_o_fifodata(GPOUT,51)
     assign out_iowr_bl_call_windowing_o_fifodata = bb_streamer_B1_start_out_iowr_bl_call_windowing_o_fifodata;
 
-    // out_iowr_bl_call_windowing_o_fifovalid(GPOUT,41)
+    // out_iowr_bl_call_windowing_o_fifovalid(GPOUT,52)
     assign out_iowr_bl_call_windowing_o_fifovalid = bb_streamer_B1_start_out_iowr_bl_call_windowing_o_fifovalid;
 
-    // out_iowr_bl_s0_o_fifodata(GPOUT,42)
+    // out_iowr_bl_s0_o_fifodata(GPOUT,53)
     assign out_iowr_bl_s0_o_fifodata = bb_streamer_B1_start_out_iowr_bl_s0_o_fifodata;
 
-    // out_iowr_bl_s0_o_fifovalid(GPOUT,43)
+    // out_iowr_bl_s0_o_fifovalid(GPOUT,54)
     assign out_iowr_bl_s0_o_fifovalid = bb_streamer_B1_start_out_iowr_bl_s0_o_fifovalid;
 
-    // out_iowr_nb_return_streamer_o_fifodata(GPOUT,44)
+    // out_iowr_nb_return_streamer_o_fifodata(GPOUT,55)
     assign out_iowr_nb_return_streamer_o_fifodata = bb_streamer_B1_start_out_iowr_nb_return_streamer_o_fifodata;
 
-    // out_iowr_nb_return_streamer_o_fifovalid(GPOUT,45)
+    // out_iowr_nb_return_streamer_o_fifovalid(GPOUT,56)
     assign out_iowr_nb_return_streamer_o_fifovalid = bb_streamer_B1_start_out_iowr_nb_return_streamer_o_fifovalid;
+
+    // out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_address(GPOUT,57)
+    assign out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_address = bb_streamer_B1_start_out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_address;
+
+    // out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_burstcount(GPOUT,58)
+    assign out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_burstcount = bb_streamer_B1_start_out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_burstcount;
+
+    // out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_byteenable(GPOUT,59)
+    assign out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_byteenable = bb_streamer_B1_start_out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_byteenable;
+
+    // out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_enable(GPOUT,60)
+    assign out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_enable = bb_streamer_B1_start_out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_enable;
+
+    // out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_read(GPOUT,61)
+    assign out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_read = bb_streamer_B1_start_out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_read;
+
+    // out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_write(GPOUT,62)
+    assign out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_write = bb_streamer_B1_start_out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_write;
+
+    // out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_writedata(GPOUT,63)
+    assign out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_writedata = bb_streamer_B1_start_out_memcoalesce_load_streamer_fpgaunique_53_streamer_avm_writedata;
+
+    // out_memdep_14_streamer_avm_address(GPOUT,64)
+    assign out_memdep_14_streamer_avm_address = bb_streamer_B1_start_out_memdep_14_streamer_avm_address;
+
+    // out_memdep_14_streamer_avm_burstcount(GPOUT,65)
+    assign out_memdep_14_streamer_avm_burstcount = bb_streamer_B1_start_out_memdep_14_streamer_avm_burstcount;
+
+    // out_memdep_14_streamer_avm_byteenable(GPOUT,66)
+    assign out_memdep_14_streamer_avm_byteenable = bb_streamer_B1_start_out_memdep_14_streamer_avm_byteenable;
+
+    // out_memdep_14_streamer_avm_enable(GPOUT,67)
+    assign out_memdep_14_streamer_avm_enable = bb_streamer_B1_start_out_memdep_14_streamer_avm_enable;
+
+    // out_memdep_14_streamer_avm_read(GPOUT,68)
+    assign out_memdep_14_streamer_avm_read = bb_streamer_B1_start_out_memdep_14_streamer_avm_read;
+
+    // out_memdep_14_streamer_avm_write(GPOUT,69)
+    assign out_memdep_14_streamer_avm_write = bb_streamer_B1_start_out_memdep_14_streamer_avm_write;
+
+    // out_memdep_14_streamer_avm_writedata(GPOUT,70)
+    assign out_memdep_14_streamer_avm_writedata = bb_streamer_B1_start_out_memdep_14_streamer_avm_writedata;
 
     // bb_streamer_B0_runOnce(BLACKBOX,2)
     streamer_bb_B0_runOnce thebb_streamer_B0_runOnce (
         .in_stall_in_0(GND_q),
+        .in_tuple_in(in_arg_tuple_in),
+        .in_tuple_out(in_arg_tuple_out),
         .in_valid_in_0(in_valid_in),
         .out_stall_out_0(bb_streamer_B0_runOnce_out_stall_out_0),
         .out_valid_out_0(),
@@ -245,16 +353,16 @@ module streamer_function (
         .resetn(resetn)
     );
 
-    // out_stall_out(GPOUT,46)
+    // out_stall_out(GPOUT,71)
     assign out_stall_out = bb_streamer_B0_runOnce_out_stall_out_0;
 
-    // out_valid_out(GPOUT,47)
+    // out_valid_out(GPOUT,72)
     assign out_valid_out = GND_q;
 
     // VCC(CONSTANT,1)
     assign VCC_q = $unsigned(1'b1);
 
-    // streamer_B1_start_x(EXTIFACE,48)
+    // streamer_B1_start_x(EXTIFACE,73)
     assign streamer_B1_start_x_i_capture = GND_q;
     assign streamer_B1_start_x_i_clear = GND_q;
     assign streamer_B1_start_x_i_enable = VCC_q;

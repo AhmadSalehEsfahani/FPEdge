@@ -39,16 +39,28 @@
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface
-   name="avs_cra"
-   internal="streamer_internal_inst.avs_cra"
+   name="avs_tuple_in"
+   internal="streamer_internal_inst.avs_tuple_in"
    type="avalon"
    dir="end">
-  <port name="avs_cra_read" internal="avs_cra_read" />
-  <port name="avs_cra_readdata" internal="avs_cra_readdata" />
-  <port name="avs_cra_write" internal="avs_cra_write" />
-  <port name="avs_cra_writedata" internal="avs_cra_writedata" />
-  <port name="avs_cra_address" internal="avs_cra_address" />
-  <port name="avs_cra_byteenable" internal="avs_cra_byteenable" />
+  <port name="avs_tuple_in_read" internal="avs_tuple_in_read" />
+  <port name="avs_tuple_in_readdata" internal="avs_tuple_in_readdata" />
+  <port name="avs_tuple_in_write" internal="avs_tuple_in_write" />
+  <port name="avs_tuple_in_writedata" internal="avs_tuple_in_writedata" />
+  <port name="avs_tuple_in_address" internal="avs_tuple_in_address" />
+  <port name="avs_tuple_in_byteenable" internal="avs_tuple_in_byteenable" />
+ </interface>
+ <interface
+   name="avs_tuple_out"
+   internal="streamer_internal_inst.avs_tuple_out"
+   type="avalon"
+   dir="end">
+  <port name="avs_tuple_out_read" internal="avs_tuple_out_read" />
+  <port name="avs_tuple_out_readdata" internal="avs_tuple_out_readdata" />
+  <port name="avs_tuple_out_write" internal="avs_tuple_out_write" />
+  <port name="avs_tuple_out_writedata" internal="avs_tuple_out_writedata" />
+  <port name="avs_tuple_out_address" internal="avs_tuple_out_address" />
+  <port name="avs_tuple_out_byteenable" internal="avs_tuple_out_byteenable" />
  </interface>
  <interface
    name="clock"
@@ -56,13 +68,6 @@
    type="clock"
    dir="end">
   <port name="clock" internal="clock" />
- </interface>
- <interface
-   name="irq"
-   internal="streamer_internal_inst.irq"
-   type="interrupt"
-   dir="end">
-  <port name="done_irq" internal="done_irq" />
  </interface>
  <interface
    name="reset"

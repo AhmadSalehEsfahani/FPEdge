@@ -16,29 +16,15 @@
 
 // SystemVerilog created from i_iord_bl_call_streamer_unnamed_streamer2_streamer0
 // Created for function/kernel streamer
-// SystemVerilog created on Sun Jan  1 13:31:30 2023
+// SystemVerilog created on Thu Jan 19 21:02:10 2023
 
 
 (* altera_attribute = "-name AUTO_SHIFT_REGISTER_RECOGNITION OFF; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 10037; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 15400; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 12020; -name MESSAGE_DISABLE 12030; -name MESSAGE_DISABLE 12010; -name MESSAGE_DISABLE 12110; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 13410; -name MESSAGE_DISABLE 113007; -name MESSAGE_DISABLE 10958" *)
 module streamer_i_iord_bl_call_unnamed_streamer2_streamer0 (
-    output wire [7:0] out_o_data_0_tpl,
-    output wire [31:0] out_o_data_1_tpl,
-    output wire [31:0] out_o_data_2_tpl,
-    output wire [31:0] out_o_data_3_tpl,
-    output wire [31:0] out_o_data_4_tpl,
-    output wire [7:0] out_o_data_5_tpl,
-    output wire [7:0] out_o_data_6_tpl,
-    output wire [7:0] out_o_data_7_tpl,
-    output wire [7:0] out_o_data_8_tpl,
-    output wire [7:0] out_o_data_9_tpl,
-    output wire [31:0] out_o_data_10_tpl,
-    output wire [31:0] out_o_data_11_tpl,
-    output wire [31:0] out_o_data_12_tpl,
-    output wire [31:0] out_o_data_13_tpl,
-    output wire [31:0] out_o_data_14_tpl,
-    output wire [0:0] out_o_valid,
     output wire [0:0] out_iord_bl_call_streamer_o_fifoready,
-    input wire [383:0] in_iord_bl_call_streamer_i_fifodata,
+    output wire [0:0] out_o_data,
+    output wire [0:0] out_o_valid,
+    input wire [0:0] in_iord_bl_call_streamer_i_fifodata,
     input wire [0:0] in_iord_bl_call_streamer_i_fifovalid,
     output wire [0:0] out_iord_bl_call_streamer_o_fifoalmost_full,
     input wire [0:0] in_i_stall,
@@ -49,8 +35,10 @@ module streamer_i_iord_bl_call_unnamed_streamer2_streamer0 (
     );
 
     wire [0:0] GND_q;
+    wire [0:0] adapt_scalar_trunc1_in;
+    wire [0:0] adapt_scalar_trunc1_q;
     wire [31:0] c32_0_q;
-    wire [383:0] iord_i_fifodata;
+    wire [0:0] iord_i_fifodata;
     wire [0:0] iord_i_fifoempty;
     wire iord_i_fifoempty_bitsignaltemp;
     wire [0:0] iord_i_fifoendofpacket;
@@ -66,7 +54,7 @@ module streamer_i_iord_bl_call_unnamed_streamer2_streamer0 (
     wire iord_i_stall_bitsignaltemp;
     wire [0:0] iord_i_valid;
     wire iord_i_valid_bitsignaltemp;
-    wire [383:0] iord_o_data;
+    wire [0:0] iord_o_data;
     wire [0:0] iord_o_fifoalmost_full;
     wire iord_o_fifoalmost_full_bitsignaltemp;
     wire [0:0] iord_o_fifoready;
@@ -76,33 +64,15 @@ module streamer_i_iord_bl_call_unnamed_streamer2_streamer0 (
     wire [0:0] iord_o_valid;
     wire iord_o_valid_bitsignaltemp;
     wire [31:0] iord_profile_total_fifo_size_incr;
-    wire [31:0] ip_dsdk_adapt_bitselect10_b;
-    wire [31:0] ip_dsdk_adapt_bitselect12_b;
-    wire [31:0] ip_dsdk_adapt_bitselect14_b;
-    wire [39:0] ip_dsdk_adapt_bitselect16_b;
-    wire [7:0] ip_dsdk_adapt_bitselect18_b;
-    wire [7:0] ip_dsdk_adapt_bitselect20_b;
-    wire [7:0] ip_dsdk_adapt_bitselect22_b;
-    wire [7:0] ip_dsdk_adapt_bitselect24_b;
-    wire [7:0] ip_dsdk_adapt_bitselect26_b;
-    wire [159:0] ip_dsdk_adapt_bitselect28_b;
-    wire [31:0] ip_dsdk_adapt_bitselect30_b;
-    wire [31:0] ip_dsdk_adapt_bitselect32_b;
-    wire [31:0] ip_dsdk_adapt_bitselect34_b;
-    wire [31:0] ip_dsdk_adapt_bitselect36_b;
-    wire [31:0] ip_dsdk_adapt_bitselect38_b;
-    wire [7:0] ip_dsdk_adapt_bitselect4_b;
-    wire [127:0] ip_dsdk_adapt_bitselect6_b;
-    wire [31:0] ip_dsdk_adapt_bitselect8_b;
 
 
-    // c32_0(CONSTANT,5)
+    // c32_0(CONSTANT,6)
     assign c32_0_q = $unsigned(32'b00000000000000000000000000000000);
 
     // GND(CONSTANT,0)
     assign GND_q = $unsigned(1'b0);
 
-    // iord(EXTIFACE,7)
+    // iord(EXTIFACE,8)
     assign iord_i_fifodata = in_iord_bl_call_streamer_i_fifodata;
     assign iord_i_fifoempty = GND_q;
     assign iord_i_fifoendofpacket = GND_q;
@@ -134,7 +104,7 @@ module streamer_i_iord_bl_call_unnamed_streamer2_streamer0 (
         .ALLOW_HIGH_SPEED_FIFO_USAGE(0),
         .ASYNC_RESET(1),
         .CUTPATHS(0),
-        .DATA_WIDTH(384),
+        .DATA_WIDTH(1),
         .EMPTY_WIDTH(0),
         .NON_BLOCKING(0),
         .NO_PREDICATION(1),
@@ -159,85 +129,21 @@ module streamer_i_iord_bl_call_unnamed_streamer2_streamer0 (
         .resetn(resetn)
     );
 
-    // ip_dsdk_adapt_bitselect28(BITSELECT,18)
-    assign ip_dsdk_adapt_bitselect28_b = iord_o_data[383:224];
-
-    // ip_dsdk_adapt_bitselect38(BITSELECT,23)
-    assign ip_dsdk_adapt_bitselect38_b = ip_dsdk_adapt_bitselect28_b[159:128];
-
-    // ip_dsdk_adapt_bitselect36(BITSELECT,22)
-    assign ip_dsdk_adapt_bitselect36_b = ip_dsdk_adapt_bitselect28_b[127:96];
-
-    // ip_dsdk_adapt_bitselect34(BITSELECT,21)
-    assign ip_dsdk_adapt_bitselect34_b = ip_dsdk_adapt_bitselect28_b[95:64];
-
-    // ip_dsdk_adapt_bitselect32(BITSELECT,20)
-    assign ip_dsdk_adapt_bitselect32_b = ip_dsdk_adapt_bitselect28_b[63:32];
-
-    // ip_dsdk_adapt_bitselect30(BITSELECT,19)
-    assign ip_dsdk_adapt_bitselect30_b = ip_dsdk_adapt_bitselect28_b[31:0];
-
-    // ip_dsdk_adapt_bitselect16(BITSELECT,11)
-    assign ip_dsdk_adapt_bitselect16_b = iord_o_data[199:160];
-
-    // ip_dsdk_adapt_bitselect26(BITSELECT,17)
-    assign ip_dsdk_adapt_bitselect26_b = ip_dsdk_adapt_bitselect16_b[39:32];
-
-    // ip_dsdk_adapt_bitselect24(BITSELECT,16)
-    assign ip_dsdk_adapt_bitselect24_b = ip_dsdk_adapt_bitselect16_b[31:24];
-
-    // ip_dsdk_adapt_bitselect22(BITSELECT,15)
-    assign ip_dsdk_adapt_bitselect22_b = ip_dsdk_adapt_bitselect16_b[23:16];
-
-    // ip_dsdk_adapt_bitselect20(BITSELECT,14)
-    assign ip_dsdk_adapt_bitselect20_b = ip_dsdk_adapt_bitselect16_b[15:8];
-
-    // ip_dsdk_adapt_bitselect18(BITSELECT,12)
-    assign ip_dsdk_adapt_bitselect18_b = ip_dsdk_adapt_bitselect16_b[7:0];
-
-    // ip_dsdk_adapt_bitselect6(BITSELECT,25)
-    assign ip_dsdk_adapt_bitselect6_b = iord_o_data[159:32];
-
-    // ip_dsdk_adapt_bitselect14(BITSELECT,10)
-    assign ip_dsdk_adapt_bitselect14_b = ip_dsdk_adapt_bitselect6_b[127:96];
-
-    // ip_dsdk_adapt_bitselect12(BITSELECT,9)
-    assign ip_dsdk_adapt_bitselect12_b = ip_dsdk_adapt_bitselect6_b[95:64];
-
-    // ip_dsdk_adapt_bitselect10(BITSELECT,8)
-    assign ip_dsdk_adapt_bitselect10_b = ip_dsdk_adapt_bitselect6_b[63:32];
-
-    // ip_dsdk_adapt_bitselect8(BITSELECT,26)
-    assign ip_dsdk_adapt_bitselect8_b = ip_dsdk_adapt_bitselect6_b[31:0];
-
-    // ip_dsdk_adapt_bitselect4(BITSELECT,24)
-    assign ip_dsdk_adapt_bitselect4_b = iord_o_data[7:0];
-
-    // dupName_0_sync_out_aunroll_x(GPOUT,2)@1
-    assign out_o_data_0_tpl = ip_dsdk_adapt_bitselect4_b;
-    assign out_o_data_1_tpl = ip_dsdk_adapt_bitselect8_b;
-    assign out_o_data_2_tpl = ip_dsdk_adapt_bitselect10_b;
-    assign out_o_data_3_tpl = ip_dsdk_adapt_bitselect12_b;
-    assign out_o_data_4_tpl = ip_dsdk_adapt_bitselect14_b;
-    assign out_o_data_5_tpl = ip_dsdk_adapt_bitselect18_b;
-    assign out_o_data_6_tpl = ip_dsdk_adapt_bitselect20_b;
-    assign out_o_data_7_tpl = ip_dsdk_adapt_bitselect22_b;
-    assign out_o_data_8_tpl = ip_dsdk_adapt_bitselect24_b;
-    assign out_o_data_9_tpl = ip_dsdk_adapt_bitselect26_b;
-    assign out_o_data_10_tpl = ip_dsdk_adapt_bitselect30_b;
-    assign out_o_data_11_tpl = ip_dsdk_adapt_bitselect32_b;
-    assign out_o_data_12_tpl = ip_dsdk_adapt_bitselect34_b;
-    assign out_o_data_13_tpl = ip_dsdk_adapt_bitselect36_b;
-    assign out_o_data_14_tpl = ip_dsdk_adapt_bitselect38_b;
-    assign out_o_valid = iord_o_valid;
-
-    // dupName_0_regfree_osync_x(GPOUT,3)
+    // dupName_0_regfree_osync_x(GPOUT,2)
     assign out_iord_bl_call_streamer_o_fifoready = iord_o_fifoready;
 
-    // regfree_osync(GPOUT,44)
+    // adapt_scalar_trunc1(ROUND,4)
+    assign adapt_scalar_trunc1_in = iord_o_data;
+    assign adapt_scalar_trunc1_q = adapt_scalar_trunc1_in[0:0];
+
+    // dupName_0_sync_out_x(GPOUT,3)@1
+    assign out_o_data = adapt_scalar_trunc1_q;
+    assign out_o_valid = iord_o_valid;
+
+    // regfree_osync(GPOUT,11)
     assign out_iord_bl_call_streamer_o_fifoalmost_full = iord_o_fifoalmost_full;
 
-    // sync_out(GPOUT,46)@20000000
+    // sync_out(GPOUT,13)@20000000
     assign out_o_stall = iord_o_stall;
 
 endmodule

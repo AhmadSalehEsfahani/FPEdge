@@ -16,7 +16,7 @@
 
 // SystemVerilog created from i_llvm_fpga_push_i32_i_1_windowing_e_s1_3v_stream_utuple_v_ihc_a_e_s2_3v23_auavg_struct_0a_m_00_yaxxz_4ha_static_0_push5_windowing0
 // Created for function/kernel streamer
-// SystemVerilog created on Sun Jan  1 13:31:30 2023
+// SystemVerilog created on Thu Jan 19 21:02:10 2023
 
 
 (* altera_attribute = "-name AUTO_SHIFT_REGISTER_RECOGNITION OFF; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 10037; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 15400; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 12020; -name MESSAGE_DISABLE 12030; -name MESSAGE_DISABLE 12010; -name MESSAGE_DISABLE 12110; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 13410; -name MESSAGE_DISABLE 113007; -name MESSAGE_DISABLE 10958" *)

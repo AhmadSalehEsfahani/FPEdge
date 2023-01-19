@@ -4,27 +4,37 @@
 
 `timescale 1 ps / 1 ps
 module soc_system_streamer_0 (
-		input  wire        avs_cra_read,       // avs_cra.read
-		output wire [63:0] avs_cra_readdata,   //        .readdata
-		input  wire        avs_cra_write,      //        .write
-		input  wire [63:0] avs_cra_writedata,  //        .writedata
-		input  wire [3:0]  avs_cra_address,    //        .address
-		input  wire [7:0]  avs_cra_byteenable, //        .byteenable
-		input  wire        clock,              //   clock.clk
-		output wire        done_irq,           //     irq.irq
-		input  wire        resetn              //   reset.reset_n
+		input  wire         avs_tuple_in_read,        //  avs_tuple_in.read
+		output wire [511:0] avs_tuple_in_readdata,    //              .readdata
+		input  wire         avs_tuple_in_write,       //              .write
+		input  wire [511:0] avs_tuple_in_writedata,   //              .writedata
+		input  wire         avs_tuple_in_address,     //              .address
+		input  wire [63:0]  avs_tuple_in_byteenable,  //              .byteenable
+		input  wire         avs_tuple_out_read,       // avs_tuple_out.read
+		output wire [511:0] avs_tuple_out_readdata,   //              .readdata
+		input  wire         avs_tuple_out_write,      //              .write
+		input  wire [511:0] avs_tuple_out_writedata,  //              .writedata
+		input  wire         avs_tuple_out_address,    //              .address
+		input  wire [63:0]  avs_tuple_out_byteenable, //              .byteenable
+		input  wire         clock,                    //         clock.clk
+		input  wire         resetn                    //         reset.reset_n
 	);
 
 	streamer_internal streamer_internal_inst (
-		.clock              (clock),              //   clock.clk
-		.resetn             (resetn),             //   reset.reset_n
-		.done_irq           (done_irq),           //     irq.irq
-		.avs_cra_read       (avs_cra_read),       // avs_cra.read
-		.avs_cra_readdata   (avs_cra_readdata),   //        .readdata
-		.avs_cra_write      (avs_cra_write),      //        .write
-		.avs_cra_writedata  (avs_cra_writedata),  //        .writedata
-		.avs_cra_address    (avs_cra_address),    //        .address
-		.avs_cra_byteenable (avs_cra_byteenable)  //        .byteenable
+		.clock                    (clock),                    //         clock.clk
+		.resetn                   (resetn),                   //         reset.reset_n
+		.avs_tuple_in_read        (avs_tuple_in_read),        //  avs_tuple_in.read
+		.avs_tuple_in_readdata    (avs_tuple_in_readdata),    //              .readdata
+		.avs_tuple_in_write       (avs_tuple_in_write),       //              .write
+		.avs_tuple_in_writedata   (avs_tuple_in_writedata),   //              .writedata
+		.avs_tuple_in_address     (avs_tuple_in_address),     //              .address
+		.avs_tuple_in_byteenable  (avs_tuple_in_byteenable),  //              .byteenable
+		.avs_tuple_out_read       (avs_tuple_out_read),       // avs_tuple_out.read
+		.avs_tuple_out_readdata   (avs_tuple_out_readdata),   //              .readdata
+		.avs_tuple_out_write      (avs_tuple_out_write),      //              .write
+		.avs_tuple_out_writedata  (avs_tuple_out_writedata),  //              .writedata
+		.avs_tuple_out_address    (avs_tuple_out_address),    //              .address
+		.avs_tuple_out_byteenable (avs_tuple_out_byteenable)  //              .byteenable
 	);
 
 endmodule

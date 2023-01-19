@@ -2,87 +2,97 @@
   "nodes":
   [
     {
-      "name":"projection"
-      , "id":106529016
+      "name":"streamer"
+      , "id":2911684040
       , "type":"component"
       , "children":
       [
         {
-          "name":"projection.B1.start"
-          , "id":107332992
+          "name":"streamer.B0.runOnce"
+          , "id":2909936816
           , "type":"bb"
-          , "children":
-          [
-            {
-              "name":"Cluster 3"
-              , "id":116049488
-              , "type":"cluster"
-            }
-            , {
-              "name":"Cluster 4"
-              , "id":116333968
-              , "type":"cluster"
-            }
-          ]
         }
         , {
-          "name":"projection.B0.runOnce"
-          , "id":107332704
-          , "type":"bb"
-        }
-      ]
-    }
-    , {
-      "name":"windowing"
-      , "id":106526456
-      , "type":"component"
-      , "children":
-      [
-        {
-          "name":"windowing.B1.start"
-          , "id":107331456
+          "name":"streamer.B1.start"
+          , "id":2909937584
           , "type":"bb"
           , "children":
           [
             {
               "name":"Cluster 2"
-              , "id":115080336
+              , "id":2916117376
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 0"
+              , "id":2914481088
               , "type":"cluster"
             }
             , {
               "name":"Cluster 1"
-              , "id":114829520
+              , "id":2914485456
+              , "type":"cluster"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"windowing"
+      , "id":2909116968
+      , "type":"component"
+      , "children":
+      [
+        {
+          "name":"windowing.B1.start"
+          , "id":2909933456
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 3"
+              , "id":2917101584
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 4"
+              , "id":2917358736
               , "type":"cluster"
             }
           ]
         }
         , {
           "name":"windowing.B0.runOnce"
-          , "id":107329152
+          , "id":2909938352
           , "type":"bb"
         }
       ]
     }
     , {
-      "name":"streamer"
-      , "id":106431720
+      "name":"projection"
+      , "id":2911686280
       , "type":"component"
       , "children":
       [
         {
-          "name":"streamer.B0.runOnce"
-          , "id":107329632
+          "name":"projection.B0.runOnce"
+          , "id":2909938640
           , "type":"bb"
         }
         , {
-          "name":"streamer.B1.start"
-          , "id":107332416
+          "name":"projection.B1.start"
+          , "id":2909933552
           , "type":"bb"
           , "children":
           [
             {
-              "name":"Cluster 0"
-              , "id":113328784
+              "name":"Cluster 5"
+              , "id":2918132640
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 6"
+              , "id":2918133792
               , "type":"cluster"
             }
           ]

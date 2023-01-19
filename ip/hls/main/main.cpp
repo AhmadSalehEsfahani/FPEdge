@@ -8,7 +8,7 @@
 #include "HLS/hls_float.h"
 #include <stdlib.h>
 
-
+#define MEM_SIZE 1
 
 // SUPPORTED AGGREGATIN FUNCTIONS: COUNT, AVERAGE, MIN, MAX
 #define BUILDIN_AGGREGATION_FUNCTIONS_NUMBER_OF_SUPPORTED 5
@@ -18,7 +18,7 @@
 #define BUILDIN_AGGREGATION_FUNCTIONS_CODE_MAX   3
 #define BUILDIN_AGGREGATION_FUNCTIONS_CODE_SUM   4
 
-#define BUILDIN_NUMBER_OF_TESTS 100
+#define BUILDIN_NUMBER_OF_TESTS MEM_SIZE
 #define BUILDIN_ORDER_OF_TESTS  500
 
 
@@ -189,19 +189,19 @@ void windowing () {
 
 // } 
 
-hls_avalon_agent_component
-component Tuple streamer (hls_avalon_agent_register_argument Tuple tuple){
+component hls_always_run_component 
+void streamer (hls_avalon_slave_memory_argument(MEM_SIZE*sizeof(Tuple)) Tuple* tuple_in,
+               hls_avalon_slave_memory_argument(MEM_SIZE*sizeof(Tuple)) Tuple* tuple_out){
     
     //<gen>
-    s0.write(tuple);
+    s0.write(tuple_in[0]);
     ihc::launch<projection<s0, s1, proj1>>();
     ihc::launch<windowing<s1, s2, avg_struct, 0, float, BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG>>();
     ihc::collect<projection<s0, s1, proj1>>();
     ihc::collect<windowing<s1, s2, avg_struct, 0, float, BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG>>();
-    tuple = s2.read();
+    tuple_out[0] = s2.read();
     //</gen>
 
-    return tuple;
 }
 
 int main() {
@@ -217,26 +217,27 @@ int main() {
         tuples[i].data[2] = (rand() % BUILDIN_ORDER_OF_TESTS);       //code
         tuples[i].data[3] = (rand() % BUILDIN_ORDER_OF_TESTS);       //stock
 
-        results[i] = streamer(tuples[i]);
-        
+    }    
 
-        if (results[i].valid) {
+    streamer(tuples, results);
+        
+    for (int i = 0; i < BUILDIN_NUMBER_OF_TESTS; i++) {
+        if (results[0].valid) {
             printf("accepted: price:%d, volume:%d, code:%d, stock:%d, count:%f, avg:%f, min:%f, max:%f, sum:%f, readyag:%d \n",
-             results[i].data[0], results[i].data[1], results[i].data[2], results[i].data[3],
-             results[i].aggregation_results[0], results[i].aggregation_results[1], 
-             results[i].aggregation_results[2], results[i].aggregation_results[3],
-             results[i].aggregation_results[4], results[i].aggregation_ready[BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG]);
+            results[i].data[0], results[i].data[1], results[i].data[2], results[i].data[3],
+            results[i].aggregation_results[0], results[i].aggregation_results[1], 
+            results[i].aggregation_results[2], results[i].aggregation_results[3],
+            results[i].aggregation_results[4], results[i].aggregation_ready[BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG]);
         }     
         else {
             printf("rejected: price:%d, volume:%d, code:%d, stock:%d, count:%f, avg:%f, min:%f, max:%f, sum:%f, readyag:%d \n",
-             results[i].data[0], results[i].data[1], results[i].data[2], results[i].data[3],
-             results[i].aggregation_results[0], results[i].aggregation_results[1], 
-             results[i].aggregation_results[2], results[i].aggregation_results[3],
-             results[i].aggregation_results[4], results[i].aggregation_ready[BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG]);
+            results[i].data[0], results[i].data[1], results[i].data[2], results[i].data[3],
+            results[i].aggregation_results[0], results[i].aggregation_results[1], 
+            results[i].aggregation_results[2], results[i].aggregation_results[3],
+            results[i].aggregation_results[4], results[i].aggregation_ready[BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG]);
         }
-    }
+    }    
     
-
     return 0;
 
 }

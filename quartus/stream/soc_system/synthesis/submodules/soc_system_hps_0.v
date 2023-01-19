@@ -8,7 +8,7 @@
 `timescale 1 ps / 1 ps
 module soc_system_hps_0 #(
 		parameter F2S_Width = 0,
-		parameter S2F_Width = 2
+		parameter S2F_Width = 1
 	) (
 		output wire        h2f_rst_n,   //      h2f_reset.reset_n
 		input  wire        h2f_axi_clk, //  h2f_axi_clock.clk
@@ -23,8 +23,8 @@ module soc_system_hps_0 #(
 		output wire        h2f_AWVALID, //               .awvalid
 		input  wire        h2f_AWREADY, //               .awready
 		output wire [11:0] h2f_WID,     //               .wid
-		output wire [63:0] h2f_WDATA,   //               .wdata
-		output wire [7:0]  h2f_WSTRB,   //               .wstrb
+		output wire [31:0] h2f_WDATA,   //               .wdata
+		output wire [3:0]  h2f_WSTRB,   //               .wstrb
 		output wire        h2f_WLAST,   //               .wlast
 		output wire        h2f_WVALID,  //               .wvalid
 		input  wire        h2f_WREADY,  //               .wready
@@ -43,7 +43,7 @@ module soc_system_hps_0 #(
 		output wire        h2f_ARVALID, //               .arvalid
 		input  wire        h2f_ARREADY, //               .arready
 		input  wire [11:0] h2f_RID,     //               .rid
-		input  wire [63:0] h2f_RDATA,   //               .rdata
+		input  wire [31:0] h2f_RDATA,   //               .rdata
 		input  wire [1:0]  h2f_RRESP,   //               .rresp
 		input  wire        h2f_RLAST,   //               .rlast
 		input  wire        h2f_RVALID,  //               .rvalid
@@ -81,7 +81,7 @@ module soc_system_hps_0 #(
 			instantiated_with_wrong_parameters_error_see_comment_above
 					f2s_width_check ( .error(1'b1) );
 		end
-		if (S2F_Width != 2)
+		if (S2F_Width != 1)
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");

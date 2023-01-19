@@ -5,7 +5,7 @@
   [
     {
       "name":"projection"
-      , "id":114272448
+      , "id":2918135632
       , "clk":"No"
       , "fmax":"240.00"
       , "debug":
@@ -13,7 +13,7 @@
         [
           {
             "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":150
+            , "line":148
           }
         ]
       ]
@@ -22,7 +22,7 @@
       [
         {
           "name":"projection.B0.runOnce"
-          , "id":107332704
+          , "id":2909938640
           , "af":"240.00"
           , "br":"0"
           , "ci":"0"
@@ -38,7 +38,7 @@
         }
         , {
           "name":"projection.B1.start"
-          , "id":107332992
+          , "id":2909933552
           , "af":"240.00"
           , "br":"0"
           , "ci":"1"
@@ -62,7 +62,7 @@
             [
               {
                 "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":150
+                , "line":148
               }
             ]
           ]
@@ -72,7 +72,7 @@
     }
     , {
       "name":"windowing"
-      , "id":114451280
+      , "id":2916626272
       , "clk":"No"
       , "fmax":"240.00"
       , "debug":
@@ -80,7 +80,7 @@
         [
           {
             "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":172
+            , "line":170
           }
         ]
       ]
@@ -89,7 +89,7 @@
       [
         {
           "name":"windowing.B0.runOnce"
-          , "id":107329152
+          , "id":2909938352
           , "af":"240.00"
           , "br":"0"
           , "ci":"0"
@@ -105,7 +105,7 @@
         }
         , {
           "name":"windowing.B1.start"
-          , "id":107331456
+          , "id":2909933456
           , "af":"240.00"
           , "br":"0"
           , "ci":"1"
@@ -129,7 +129,7 @@
             [
               {
                 "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":172
+                , "line":170
               }
             ]
           ]
@@ -139,7 +139,7 @@
     }
     , {
       "name":"streamer"
-      , "id":111052368
+      , "id":2912515136
       , "clk":"No"
       , "fmax":"240.00"
       , "debug":
@@ -147,7 +147,7 @@
         [
           {
             "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-            , "line":195
+            , "line":194
           }
         ]
       ]
@@ -156,7 +156,7 @@
       [
         {
           "name":"streamer.B0.runOnce"
-          , "id":107329632
+          , "id":2909936816
           , "af":"240.00"
           , "br":"0"
           , "ci":"0"
@@ -172,14 +172,14 @@
         }
         , {
           "name":"streamer.B1.start"
-          , "id":107332416
+          , "id":2909937584
           , "af":"240.00"
           , "br":"0"
           , "ci":"1"
           , "fo":"Disabled"
           , "ii":"1"
           , "ll":"1"
-          , "lt":"1.000000"
+          , "lt":"14.000000"
           , "mi":"1"
           , "pl":"Yes"
           , "tc":"0"
@@ -196,7 +196,7 @@
             [
               {
                 "filename":"D:\\project\\ip\\hls\\main\\main.cpp"
-                , "line":195
+                , "line":194
               }
             ]
           ]

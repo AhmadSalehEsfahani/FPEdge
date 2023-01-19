@@ -28,8 +28,8 @@ module soc_system_hps_0_fpga_interfaces(
  ,output wire [1 - 1 : 0 ] h2f_AWVALID
  ,input wire [1 - 1 : 0 ] h2f_AWREADY
  ,output wire [12 - 1 : 0 ] h2f_WID
- ,output wire [64 - 1 : 0 ] h2f_WDATA
- ,output wire [8 - 1 : 0 ] h2f_WSTRB
+ ,output wire [32 - 1 : 0 ] h2f_WDATA
+ ,output wire [4 - 1 : 0 ] h2f_WSTRB
  ,output wire [1 - 1 : 0 ] h2f_WLAST
  ,output wire [1 - 1 : 0 ] h2f_WVALID
  ,input wire [1 - 1 : 0 ] h2f_WREADY
@@ -48,7 +48,7 @@ module soc_system_hps_0_fpga_interfaces(
  ,output wire [1 - 1 : 0 ] h2f_ARVALID
  ,input wire [1 - 1 : 0 ] h2f_ARREADY
  ,input wire [12 - 1 : 0 ] h2f_RID
- ,input wire [64 - 1 : 0 ] h2f_RDATA
+ ,input wire [32 - 1 : 0 ] h2f_RDATA
  ,input wire [2 - 1 : 0 ] h2f_RRESP
  ,input wire [1 - 1 : 0 ] h2f_RLAST
  ,input wire [1 - 1 : 0 ] h2f_RVALID
@@ -123,7 +123,7 @@ cyclonev_hps_interface_fpga2hps fpga2hps(
 
 cyclonev_hps_interface_hps2fpga hps2fpga(
  .port_size_config({
-    2'b01 // 1:0
+    2'b00 // 1:0
   })
 ,.arsize({
     h2f_ARSIZE[2:0] // 2:0
@@ -168,7 +168,7 @@ cyclonev_hps_interface_hps2fpga hps2fpga(
     h2f_AWVALID[0:0] // 0:0
   })
 ,.wdata({
-    h2f_WDATA[63:0] // 63:0
+    h2f_WDATA[31:0] // 31:0
   })
 ,.rid({
     h2f_RID[11:0] // 11:0
@@ -201,7 +201,7 @@ cyclonev_hps_interface_hps2fpga hps2fpga(
     h2f_AWID[11:0] // 11:0
   })
 ,.rdata({
-    h2f_RDATA[63:0] // 63:0
+    h2f_RDATA[31:0] // 31:0
   })
 ,.awready({
     h2f_AWREADY[0:0] // 0:0
@@ -234,7 +234,7 @@ cyclonev_hps_interface_hps2fpga hps2fpga(
     h2f_RREADY[0:0] // 0:0
   })
 ,.wstrb({
-    h2f_WSTRB[7:0] // 7:0
+    h2f_WSTRB[3:0] // 3:0
   })
 );
 
