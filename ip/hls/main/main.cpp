@@ -197,16 +197,17 @@ struct Tuple {
 
 // // }
 
-component void streamer (//hls_avalon_slave_memory_argument(MEM_SIZE*sizeof(int)) int* a,
-                          //hls_avalon_slave_memory_argument(MEM_SIZE*sizeof(int)) int* b,
-                          hls_avalon_slave_memory_argument(MEM_SIZE*sizeof(int)) int* c){
+component hls_always_run_component 
+void streamer (hls_avalon_slave_memory_argument(MEM_SIZE*sizeof(int)) int* a,
+                hls_avalon_slave_memory_argument(MEM_SIZE*sizeof(int)) int* b,
+                hls_avalon_slave_memory_argument(MEM_SIZE*sizeof(int)) int* c){
     
     //uint32_t a = s_in.read();
 
     //a = a + 5;
 
     //c[0] = a[0] + b[0];
-    c[0] = 8;
+    c[0] = a[0] + b[0];
     
 
     //return a; 
@@ -223,7 +224,7 @@ int main() {
 
     A[0] = 5;
     B[0] = 10;
-    streamer( C);
+    streamer(A, B, C);
     res = C[0];
     // /*
     // int_in_t samp;
