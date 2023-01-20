@@ -16,7 +16,7 @@
 
 // SystemVerilog created from i_sfc_s_c1_in_wt_entry_windowings_c1_enter_windowing6
 // Created for function/kernel streamer
-// SystemVerilog created on Thu Jan 19 21:02:10 2023
+// SystemVerilog created on Fri Jan 20 22:48:10 2023
 
 
 (* altera_attribute = "-name AUTO_SHIFT_REGISTER_RECOGNITION OFF; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 10037; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 15400; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 12020; -name MESSAGE_DISABLE 12030; -name MESSAGE_DISABLE 12010; -name MESSAGE_DISABLE 12110; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 13410; -name MESSAGE_DISABLE 113007; -name MESSAGE_DISABLE 10958" *)
@@ -118,24 +118,24 @@ module streamer_i_sfc_s_c1_in_wt_entry_windowings_c1_enter_windowing6 (
     assign input_accepted_and_q = in_i_valid & not_stall_out_q;
 
     // i_sfc_logic_s_c1_in_wt_entry_windowings_c1_enter_windowing0_aunroll_x(BLACKBOX,4)@23
-    // out out_c1_exi1_0_tpl@71
-    // out out_c1_exi1_1_tpl@71
-    // out out_c1_exi1_2_tpl@71
-    // out out_c1_exi1_3_tpl@71
-    // out out_c1_exi1_4_tpl@71
-    // out out_c1_exi1_5_tpl@71
-    // out out_c1_exi1_6_tpl@71
-    // out out_c1_exi1_7_tpl@71
-    // out out_c1_exi1_8_tpl@71
-    // out out_c1_exi1_9_tpl@71
-    // out out_c1_exi1_10_tpl@71
-    // out out_c1_exi1_11_tpl@71
-    // out out_c1_exi1_12_tpl@71
-    // out out_c1_exi1_13_tpl@71
-    // out out_c1_exi1_14_tpl@71
-    // out out_c1_exi1_15_tpl@71
-    // out out_o_valid@71
-    // out out_unnamed_windowing0@71
+    // out out_c1_exi1_0_tpl@64
+    // out out_c1_exi1_1_tpl@64
+    // out out_c1_exi1_2_tpl@64
+    // out out_c1_exi1_3_tpl@64
+    // out out_c1_exi1_4_tpl@64
+    // out out_c1_exi1_5_tpl@64
+    // out out_c1_exi1_6_tpl@64
+    // out out_c1_exi1_7_tpl@64
+    // out out_c1_exi1_8_tpl@64
+    // out out_c1_exi1_9_tpl@64
+    // out out_c1_exi1_10_tpl@64
+    // out out_c1_exi1_11_tpl@64
+    // out out_c1_exi1_12_tpl@64
+    // out out_c1_exi1_13_tpl@64
+    // out out_c1_exi1_14_tpl@64
+    // out out_c1_exi1_15_tpl@64
+    // out out_o_valid@64
+    // out out_unnamed_windowing0@64
     streamer_i_sfc_logic_s_c1_in_wt_entry_wi0000_c1_enter_windowing0 thei_sfc_logic_s_c1_in_wt_entry_windowings_c1_enter_windowing0_aunroll_x (
         .in_c1_eni2_0_tpl(in_c1_eni2_0_tpl),
         .in_c1_eni2_1_tpl(in_c1_eni2_1_tpl),
@@ -177,27 +177,27 @@ module streamer_i_sfc_s_c1_in_wt_entry_windowings_c1_enter_windowing6 (
         .resetn(resetn)
     );
 
-    // i_llvm_fpga_sfc_exit_s_c1_out_wt_entry_windowings_c1_exit_windowing1_aunroll_x(BLACKBOX,3)@71
+    // i_llvm_fpga_sfc_exit_s_c1_out_wt_entry_windowings_c1_exit_windowing1_aunroll_x(BLACKBOX,3)@64
     // in in_mask_valid@20000000
     // in in_stall_in@20000000
-    // out out_data_out_0_tpl@74
-    // out out_data_out_1_tpl@74
-    // out out_data_out_2_tpl@74
-    // out out_data_out_3_tpl@74
-    // out out_data_out_4_tpl@74
-    // out out_data_out_5_tpl@74
-    // out out_data_out_6_tpl@74
-    // out out_data_out_7_tpl@74
-    // out out_data_out_8_tpl@74
-    // out out_data_out_9_tpl@74
-    // out out_data_out_10_tpl@74
-    // out out_data_out_11_tpl@74
-    // out out_data_out_12_tpl@74
-    // out out_data_out_13_tpl@74
-    // out out_data_out_14_tpl@74
-    // out out_data_out_15_tpl@74
+    // out out_data_out_0_tpl@67
+    // out out_data_out_1_tpl@67
+    // out out_data_out_2_tpl@67
+    // out out_data_out_3_tpl@67
+    // out out_data_out_4_tpl@67
+    // out out_data_out_5_tpl@67
+    // out out_data_out_6_tpl@67
+    // out out_data_out_7_tpl@67
+    // out out_data_out_8_tpl@67
+    // out out_data_out_9_tpl@67
+    // out out_data_out_10_tpl@67
+    // out out_data_out_11_tpl@67
+    // out out_data_out_12_tpl@67
+    // out out_data_out_13_tpl@67
+    // out out_data_out_14_tpl@67
+    // out out_data_out_15_tpl@67
     // out out_stall_entry@20000000
-    // out out_valid_out@74
+    // out out_valid_out@67
     streamer_i_llvm_fpga_sfc_exit_s_c1_out_w0000s_c1_exit_windowing0 thei_llvm_fpga_sfc_exit_s_c1_out_wt_entry_windowings_c1_exit_windowing1_aunroll_x (
         .in_data_in_0_tpl(i_sfc_logic_s_c1_in_wt_entry_windowings_c1_enter_windowing0_aunroll_x_out_c1_exi1_0_tpl),
         .in_data_in_1_tpl(i_sfc_logic_s_c1_in_wt_entry_windowings_c1_enter_windowing0_aunroll_x_out_c1_exi1_1_tpl),
@@ -243,7 +243,7 @@ module streamer_i_sfc_s_c1_in_wt_entry_windowings_c1_enter_windowing6 (
         .resetn(resetn)
     );
 
-    // dupName_0_sync_out_aunroll_x(GPOUT,2)@74
+    // dupName_0_sync_out_aunroll_x(GPOUT,2)@67
     assign out_c1_exit_0_tpl = i_llvm_fpga_sfc_exit_s_c1_out_wt_entry_windowings_c1_exit_windowing1_aunroll_x_out_data_out_0_tpl;
     assign out_c1_exit_1_tpl = i_llvm_fpga_sfc_exit_s_c1_out_wt_entry_windowings_c1_exit_windowing1_aunroll_x_out_data_out_1_tpl;
     assign out_c1_exit_2_tpl = i_llvm_fpga_sfc_exit_s_c1_out_wt_entry_windowings_c1_exit_windowing1_aunroll_x_out_data_out_2_tpl;

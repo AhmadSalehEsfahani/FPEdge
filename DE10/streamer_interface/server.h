@@ -11,6 +11,7 @@
 bool server_init();
 void server_close();
 int server_read_int();
+float server_read_float();
 void server_send_str(char* message);
 void server_send_float(float number);
 void send_ACK();

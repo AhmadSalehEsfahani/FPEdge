@@ -16,7 +16,7 @@
 
 // SystemVerilog created from bb_windowing_B1_start_stall_region
 // Created for function/kernel streamer
-// SystemVerilog created on Thu Jan 19 21:02:10 2023
+// SystemVerilog created on Fri Jan 20 22:48:10 2023
 
 
 (* altera_attribute = "-name AUTO_SHIFT_REGISTER_RECOGNITION OFF; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 10037; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 15400; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 12020; -name MESSAGE_DISABLE 12030; -name MESSAGE_DISABLE 12010; -name MESSAGE_DISABLE 12110; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 13410; -name MESSAGE_DISABLE 113007; -name MESSAGE_DISABLE 10958" *)
@@ -210,7 +210,7 @@ module streamer_bb_windowing_B1_start_stall_region (
     // bubble_select_i_iowr_bl_s2_or_6_windowing8_aunroll_x(BITSELECT,49)
     assign bubble_select_i_iowr_bl_s2_or_6_windowing8_aunroll_x_b = $unsigned(bubble_join_i_iowr_bl_s2_or_6_windowing8_aunroll_x_q[0:0]);
 
-    // i_iowr_bl_return_windowing_unnamed_windowing3_windowing9(BLACKBOX,22)@74
+    // i_iowr_bl_return_windowing_unnamed_windowing3_windowing9(BLACKBOX,22)@67
     // in in_i_stall@20000000
     // out out_iowr_bl_return_windowing_o_fifodata@20000000
     // out out_iowr_bl_return_windowing_o_fifovalid@20000000
@@ -258,7 +258,7 @@ module streamer_bb_windowing_B1_start_stall_region (
     assign bubble_select_i_sfc_s_c1_in_wt_entry_windowings_c1_enter_windowing6_aunroll_x_o = $unsigned(bubble_join_i_sfc_s_c1_in_wt_entry_windowings_c1_enter_windowing6_aunroll_x_q[303:272]);
     assign bubble_select_i_sfc_s_c1_in_wt_entry_windowings_c1_enter_windowing6_aunroll_x_p = $unsigned(bubble_join_i_sfc_s_c1_in_wt_entry_windowings_c1_enter_windowing6_aunroll_x_q[335:304]);
 
-    // i_iowr_bl_s2_or_6_windowing8_aunroll_x(BLACKBOX,11)@74
+    // i_iowr_bl_s2_or_6_windowing8_aunroll_x(BLACKBOX,11)@67
     // in in_i_stall@20000000
     // out out_iowr_bl_s2_o_fifodata@20000000
     // out out_iowr_bl_s2_o_fifovalid@20000000
@@ -356,24 +356,24 @@ module streamer_bb_windowing_B1_start_stall_region (
 
     // i_sfc_s_c1_in_wt_entry_windowings_c1_enter_windowing6_aunroll_x(BLACKBOX,13)@23
     // in in_i_stall@20000000
-    // out out_c1_exit_0_tpl@74
-    // out out_c1_exit_1_tpl@74
-    // out out_c1_exit_2_tpl@74
-    // out out_c1_exit_3_tpl@74
-    // out out_c1_exit_4_tpl@74
-    // out out_c1_exit_5_tpl@74
-    // out out_c1_exit_6_tpl@74
-    // out out_c1_exit_7_tpl@74
-    // out out_c1_exit_8_tpl@74
-    // out out_c1_exit_9_tpl@74
-    // out out_c1_exit_10_tpl@74
-    // out out_c1_exit_11_tpl@74
-    // out out_c1_exit_12_tpl@74
-    // out out_c1_exit_13_tpl@74
-    // out out_c1_exit_14_tpl@74
-    // out out_c1_exit_15_tpl@74
+    // out out_c1_exit_0_tpl@67
+    // out out_c1_exit_1_tpl@67
+    // out out_c1_exit_2_tpl@67
+    // out out_c1_exit_3_tpl@67
+    // out out_c1_exit_4_tpl@67
+    // out out_c1_exit_5_tpl@67
+    // out out_c1_exit_6_tpl@67
+    // out out_c1_exit_7_tpl@67
+    // out out_c1_exit_8_tpl@67
+    // out out_c1_exit_9_tpl@67
+    // out out_c1_exit_10_tpl@67
+    // out out_c1_exit_11_tpl@67
+    // out out_c1_exit_12_tpl@67
+    // out out_c1_exit_13_tpl@67
+    // out out_c1_exit_14_tpl@67
+    // out out_c1_exit_15_tpl@67
     // out out_o_stall@20000000
-    // out out_o_valid@74
+    // out out_o_valid@67
     streamer_i_sfc_s_c1_in_wt_entry_windowings_c1_enter_windowing6 thei_sfc_s_c1_in_wt_entry_windowings_c1_enter_windowing6_aunroll_x (
         .in_c1_eni2_0_tpl(GND_q),
         .in_c1_eni2_1_tpl(bubble_select_i_iord_bl_s1_unnamed_windowing2_windowing4_aunroll_x_b),
@@ -603,7 +603,7 @@ module streamer_bb_windowing_B1_start_stall_region (
     assign out_iord_bl_call_windowing_o_fifoready = i_iord_bl_call_windowing_unnamed_windowing1_windowing3_out_iord_bl_call_windowing_o_fifoready;
     assign out_iord_bl_call_windowing_o_fifoalmost_full = i_iord_bl_call_windowing_unnamed_windowing1_windowing3_out_iord_bl_call_windowing_o_fifoalmost_full;
 
-    // dupName_0_sync_out_x(GPOUT,4)@74
+    // dupName_0_sync_out_x(GPOUT,4)@67
     assign out_valid_out = SE_out_i_sfc_s_c1_in_wt_entry_windowings_c1_enter_windowing6_aunroll_x_V0;
 
     // dupName_1_ext_sig_sync_out_x(GPOUT,6)

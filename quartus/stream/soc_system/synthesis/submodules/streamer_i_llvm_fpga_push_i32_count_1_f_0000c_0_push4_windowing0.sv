@@ -16,7 +16,7 @@
 
 // SystemVerilog created from i_llvm_fpga_push_i32_count_1_f_m_avg_struct_samm_n_z_4ha_static_0_push4_windowing0
 // Created for function/kernel streamer
-// SystemVerilog created on Thu Jan 19 21:02:10 2023
+// SystemVerilog created on Fri Jan 20 22:48:10 2023
 
 
 (* altera_attribute = "-name AUTO_SHIFT_REGISTER_RECOGNITION OFF; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 10037; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 15400; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 12020; -name MESSAGE_DISABLE 12030; -name MESSAGE_DISABLE 12010; -name MESSAGE_DISABLE 12110; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 13410; -name MESSAGE_DISABLE 113007; -name MESSAGE_DISABLE 10958" *)
@@ -63,7 +63,7 @@ module streamer_i_llvm_fpga_push_i32_count_1_f_0000c_0_push4_windowing0 (
     // VCC(CONSTANT,1)
     assign VCC_q = $unsigned(1'b1);
 
-    // i_llvm_fpga_push_i32_count_1_f_m_avg_struct_samm_n_z_4ha_static_0_push4_windowing1(EXTIFACE,7)@33
+    // i_llvm_fpga_push_i32_count_1_f_m_avg_struct_samm_n_z_4ha_static_0_push4_windowing1(EXTIFACE,7)@26
     assign i_llvm_fpga_push_i32_count_1_f_m_avg_struct_samm_n_z_4ha_static_0_push4_windowing1_data_in = in_data_in;
     assign i_llvm_fpga_push_i32_count_1_f_m_avg_struct_samm_n_z_4ha_static_0_push4_windowing1_dir = VCC_q;
     assign i_llvm_fpga_push_i32_count_1_f_m_avg_struct_samm_n_z_4ha_static_0_push4_windowing1_feedback_stall_in = in_feedback_stall_in_4;
@@ -106,7 +106,7 @@ module streamer_i_llvm_fpga_push_i32_count_1_f_0000c_0_push4_windowing0 (
         .resetn(resetn)
     );
 
-    // dupName_0_sync_out_x(GPOUT,2)@33
+    // dupName_0_sync_out_x(GPOUT,2)@26
     assign out_data_out = i_llvm_fpga_push_i32_count_1_f_m_avg_struct_samm_n_z_4ha_static_0_push4_windowing1_data_out;
     assign out_valid_out = i_llvm_fpga_push_i32_count_1_f_m_avg_struct_samm_n_z_4ha_static_0_push4_windowing1_valid_out;
 
@@ -114,7 +114,7 @@ module streamer_i_llvm_fpga_push_i32_count_1_f_0000c_0_push4_windowing0 (
     assign out_feedback_out_4 = i_llvm_fpga_push_i32_count_1_f_m_avg_struct_samm_n_z_4ha_static_0_push4_windowing1_feedback_out;
     assign out_feedback_valid_out_4 = i_llvm_fpga_push_i32_count_1_f_m_avg_struct_samm_n_z_4ha_static_0_push4_windowing1_feedback_valid_out;
 
-    // sync_out(GPOUT,10)@33
+    // sync_out(GPOUT,10)@26
     assign out_stall_out = i_llvm_fpga_push_i32_count_1_f_m_avg_struct_samm_n_z_4ha_static_0_push4_windowing1_stall_out;
 
 endmodule

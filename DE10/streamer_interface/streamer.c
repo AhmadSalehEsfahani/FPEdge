@@ -49,16 +49,16 @@ int main(int argc, char **argv) {
 
         tuple_in.valid = (bool) server_read_int();
         for (int i = 0; i < TUPLE_DATA_SIZE; i++){
-            tuple_in.data[i] = (uint32_t) server_read_int();
+            tuple_in.data[i] = server_read_float();
         }
 
-        printf("before process ----> valid:%d, data1:%d, data2:%d, data3:%d, data4:%d\n", tuple_in.valid, tuple_in.data[0], tuple_in.data[1], tuple_in.data[2], tuple_in.data[3]);
+        printf("before process ----> valid:%d, data1:%f, data2:%f, data3:%f, data4:%f\n", tuple_in.valid, tuple_in.data[0], tuple_in.data[1], tuple_in.data[2], tuple_in.data[3]);
 
         *((struct Tuple *)in_map) = tuple_in;
 
         tuple_out = *((struct Tuple *)out_map);
 
-        printf("after process ----> valid:%d, data1:%d, data2:%d, data3:%d, data4:%d\n", tuple_out.valid, tuple_out.data[0], tuple_out.data[1], tuple_out.data[2], tuple_out.data[3]);
+        printf("after process ----> valid:%d, data1:%f, data2:%f, data3:%f, data4:%f\n", tuple_out.valid, tuple_out.data[0], tuple_out.data[1], tuple_out.data[2], tuple_out.data[3]);
 
         if (tuple_out.valid){
             if (tuple_out.aggregation_ready[BUILDIN_AGGREGATION_FUNCTIONS_CODE_AVG]){

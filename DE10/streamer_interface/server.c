@@ -67,6 +67,15 @@ int server_read_int(){
     return res;
 }
 
+float server_read_float(){
+    read(new_socket, messageFromClient, 1024);
+    printf("client says: %s\n", messageFromClient);
+    send_ACK();
+    float res = strtof(messageFromClient, NULL);
+    memset(messageFromClient, 0, BUFFER_SIZE);
+    return res;
+}
+
 void server_send_str(char* message){
     sprintf(messageToClient, "%s\n", message);
     send(new_socket, messageToClient, strlen(messageToClient), 0);

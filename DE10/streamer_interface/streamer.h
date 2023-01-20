@@ -25,7 +25,7 @@
 
 struct Tuple {
     bool valid;
-    uint32_t data[TUPLE_DATA_SIZE];
+    float data[TUPLE_DATA_SIZE];
     bool aggregation_ready[BUILDIN_AGGREGATION_FUNCTIONS_NUMBER_OF_SUPPORTED];
     float aggregation_results[BUILDIN_AGGREGATION_FUNCTIONS_NUMBER_OF_SUPPORTED];
 }tuple_in, tuple_out;

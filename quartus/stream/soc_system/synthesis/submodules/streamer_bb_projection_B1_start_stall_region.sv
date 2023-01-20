@@ -16,7 +16,7 @@
 
 // SystemVerilog created from bb_projection_B1_start_stall_region
 // Created for function/kernel streamer
-// SystemVerilog created on Thu Jan 19 21:02:10 2023
+// SystemVerilog created on Fri Jan 20 22:48:10 2023
 
 
 (* altera_attribute = "-name AUTO_SHIFT_REGISTER_RECOGNITION OFF; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 10037; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 15400; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 12020; -name MESSAGE_DISABLE 12030; -name MESSAGE_DISABLE 12010; -name MESSAGE_DISABLE 12110; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 13410; -name MESSAGE_DISABLE 113007; -name MESSAGE_DISABLE 10958" *)
@@ -253,7 +253,7 @@ module streamer_bb_projection_B1_start_stall_region (
     // bubble_select_i_iowr_bl_s1_or_4_projection6_aunroll_x(BITSELECT,51)
     assign bubble_select_i_iowr_bl_s1_or_4_projection6_aunroll_x_b = $unsigned(bubble_join_i_iowr_bl_s1_or_4_projection6_aunroll_x_q[0:0]);
 
-    // i_iowr_bl_return_projection_unnamed_projection4_projection7(BLACKBOX,22)@7
+    // i_iowr_bl_return_projection_unnamed_projection4_projection7(BLACKBOX,22)@8
     // in in_i_stall@20000000
     // out out_iowr_bl_return_projection_o_fifodata@20000000
     // out out_iowr_bl_return_projection_o_fifovalid@20000000
@@ -301,7 +301,7 @@ module streamer_bb_projection_B1_start_stall_region (
     assign bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_o = $unsigned(bubble_join_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_q[303:272]);
     assign bubble_select_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_p = $unsigned(bubble_join_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x_q[335:304]);
 
-    // i_iowr_bl_s1_or_4_projection6_aunroll_x(BLACKBOX,11)@7
+    // i_iowr_bl_s1_or_4_projection6_aunroll_x(BLACKBOX,11)@8
     // in in_i_stall@20000000
     // out out_iowr_bl_s1_o_fifodata@20000000
     // out out_iowr_bl_s1_o_fifovalid@20000000
@@ -364,24 +364,24 @@ module streamer_bb_projection_B1_start_stall_region (
 
     // i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x(BLACKBOX,13)@1
     // in in_i_stall@20000000
-    // out out_c1_exit_0_tpl@7
-    // out out_c1_exit_1_tpl@7
-    // out out_c1_exit_2_tpl@7
-    // out out_c1_exit_3_tpl@7
-    // out out_c1_exit_4_tpl@7
-    // out out_c1_exit_5_tpl@7
-    // out out_c1_exit_6_tpl@7
-    // out out_c1_exit_7_tpl@7
-    // out out_c1_exit_8_tpl@7
-    // out out_c1_exit_9_tpl@7
-    // out out_c1_exit_10_tpl@7
-    // out out_c1_exit_11_tpl@7
-    // out out_c1_exit_12_tpl@7
-    // out out_c1_exit_13_tpl@7
-    // out out_c1_exit_14_tpl@7
-    // out out_c1_exit_15_tpl@7
+    // out out_c1_exit_0_tpl@8
+    // out out_c1_exit_1_tpl@8
+    // out out_c1_exit_2_tpl@8
+    // out out_c1_exit_3_tpl@8
+    // out out_c1_exit_4_tpl@8
+    // out out_c1_exit_5_tpl@8
+    // out out_c1_exit_6_tpl@8
+    // out out_c1_exit_7_tpl@8
+    // out out_c1_exit_8_tpl@8
+    // out out_c1_exit_9_tpl@8
+    // out out_c1_exit_10_tpl@8
+    // out out_c1_exit_11_tpl@8
+    // out out_c1_exit_12_tpl@8
+    // out out_c1_exit_13_tpl@8
+    // out out_c1_exit_14_tpl@8
+    // out out_c1_exit_15_tpl@8
     // out out_o_stall@20000000
-    // out out_o_valid@7
+    // out out_o_valid@8
     streamer_i_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4 thei_sfc_s_c1_in_wt_entry_projections_c1_enter_projection4_aunroll_x (
         .in_c1_eni1_0_tpl(GND_q),
         .in_c1_eni1_1_tpl(bubble_select_i_iord_bl_s0_unnamed_projection3_projection2_aunroll_x_b),

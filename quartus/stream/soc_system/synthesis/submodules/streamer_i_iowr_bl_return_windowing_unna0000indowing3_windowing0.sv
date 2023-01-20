@@ -16,7 +16,7 @@
 
 // SystemVerilog created from i_iowr_bl_return_windowing_unnamed_windowing3_windowing0
 // Created for function/kernel streamer
-// SystemVerilog created on Thu Jan 19 21:02:10 2023
+// SystemVerilog created on Fri Jan 20 22:48:10 2023
 
 
 (* altera_attribute = "-name AUTO_SHIFT_REGISTER_RECOGNITION OFF; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 10037; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 15400; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 12020; -name MESSAGE_DISABLE 12030; -name MESSAGE_DISABLE 12010; -name MESSAGE_DISABLE 12110; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 13410; -name MESSAGE_DISABLE 113007; -name MESSAGE_DISABLE 10958" *)
@@ -138,7 +138,7 @@ module streamer_i_iowr_bl_return_windowing_unna0000indowing3_windowing0 (
     // dupName_0_regfree_osync_x(GPOUT,3)
     assign out_iowr_bl_return_windowing_o_fifovalid = iowr_o_fifovalid;
 
-    // dupName_0_sync_out_x(GPOUT,4)@74
+    // dupName_0_sync_out_x(GPOUT,4)@67
     assign out_o_ack = iowr_o_ack;
     assign out_o_valid = iowr_o_valid;
 

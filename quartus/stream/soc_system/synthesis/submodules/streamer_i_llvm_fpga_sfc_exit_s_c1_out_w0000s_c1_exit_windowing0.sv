@@ -16,7 +16,7 @@
 
 // SystemVerilog created from i_llvm_fpga_sfc_exit_s_c1_out_wt_entry_windowings_c1_exit_windowing0
 // Created for function/kernel streamer
-// SystemVerilog created on Thu Jan 19 21:02:10 2023
+// SystemVerilog created on Fri Jan 20 22:48:10 2023
 
 
 (* altera_attribute = "-name AUTO_SHIFT_REGISTER_RECOGNITION OFF; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 10037; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 15400; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 12020; -name MESSAGE_DISABLE 12030; -name MESSAGE_DISABLE 12010; -name MESSAGE_DISABLE 12110; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 13410; -name MESSAGE_DISABLE 113007; -name MESSAGE_DISABLE 10958" *)
@@ -155,7 +155,7 @@ module streamer_i_llvm_fpga_sfc_exit_s_c1_out_w0000s_c1_exit_windowing0 (
         .resetn(resetn)
     );
 
-    // dupName_0_sync_out_aunroll_x(GPOUT,2)@74
+    // dupName_0_sync_out_aunroll_x(GPOUT,2)@67
     assign out_data_out_0_tpl = i_llvm_fpga_sfc_exit_s_c1_out_wt_entry_windowings_c1_exit_windowing1_data_fifo_aunroll_x_out_o_data_0_tpl;
     assign out_data_out_1_tpl = i_llvm_fpga_sfc_exit_s_c1_out_wt_entry_windowings_c1_exit_windowing1_data_fifo_aunroll_x_out_o_data_1_tpl;
     assign out_data_out_2_tpl = i_llvm_fpga_sfc_exit_s_c1_out_wt_entry_windowings_c1_exit_windowing1_data_fifo_aunroll_x_out_o_data_2_tpl;

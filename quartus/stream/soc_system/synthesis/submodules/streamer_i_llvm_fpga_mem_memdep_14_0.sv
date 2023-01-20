@@ -16,7 +16,7 @@
 
 // SystemVerilog created from i_llvm_fpga_mem_memdep_14_streamer0
 // Created for function/kernel streamer
-// SystemVerilog created on Thu Jan 19 21:02:10 2023
+// SystemVerilog created on Fri Jan 20 22:48:10 2023
 
 
 (* altera_attribute = "-name AUTO_SHIFT_REGISTER_RECOGNITION OFF; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 10037; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 15400; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 12020; -name MESSAGE_DISABLE 12030; -name MESSAGE_DISABLE 12010; -name MESSAGE_DISABLE 12110; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 13410; -name MESSAGE_DISABLE 113007; -name MESSAGE_DISABLE 10958" *)
@@ -67,10 +67,10 @@ module streamer_i_llvm_fpga_mem_memdep_14_0 (
 
     wire [0:0] GND_q;
     wire [31:0] addr_trunc_sel_x_b;
-    wire [31:0] c_i32_018_q;
-    wire [2:0] c_i3_020_q;
-    wire [511:0] c_i512_021_q;
-    wire [63:0] c_i64_28147474182961716_q;
+    wire [31:0] c_i32_026_q;
+    wire [2:0] c_i3_028_q;
+    wire [511:0] c_i512_029_q;
+    wire [63:0] c_i64_28147474182961724_q;
     wire [511:0] dsdk_ip_adapt_bitjoin4_q;
     wire [511:0] i_llvm_fpga_mem_memdep_14_streamer1_avm_readdata;
     wire [0:0] i_llvm_fpga_mem_memdep_14_streamer1_avm_readdatavalid;
@@ -122,20 +122,20 @@ module streamer_i_llvm_fpga_mem_memdep_14_0 (
     wire [31:0] i_llvm_fpga_mem_memdep_14_streamer1_profile_bw_incr;
 
 
-    // dsdk_ip_adapt_bitjoin4(BITJOIN,24)@10
+    // dsdk_ip_adapt_bitjoin4(BITJOIN,32)@10
     assign dsdk_ip_adapt_bitjoin4_q = {in_i_writedata_20_tpl, in_i_writedata_19_tpl, in_i_writedata_18_tpl, in_i_writedata_17_tpl, in_i_writedata_16_tpl, in_i_writedata_15_tpl, in_i_writedata_14_tpl, in_i_writedata_13_tpl, in_i_writedata_12_tpl, in_i_writedata_11_tpl, in_i_writedata_10_tpl, in_i_writedata_9_tpl, in_i_writedata_8_tpl, in_i_writedata_7_tpl, in_i_writedata_6_tpl, in_i_writedata_5_tpl, in_i_writedata_4_tpl, in_i_writedata_3_tpl, in_i_writedata_2_tpl, in_i_writedata_1_tpl, in_i_writedata_0_tpl};
 
-    // c_i512_021(CONSTANT,22)
-    assign c_i512_021_q = $unsigned(512'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000);
+    // c_i512_029(CONSTANT,30)
+    assign c_i512_029_q = $unsigned(512'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000);
 
-    // c_i64_28147474182961716(CONSTANT,23)
-    assign c_i64_28147474182961716_q = $unsigned(64'b0000000000000000111111111111111111110001111111111111111111110001);
+    // c_i64_28147474182961724(CONSTANT,31)
+    assign c_i64_28147474182961724_q = $unsigned(64'b0000000000000000111111111111111111110001111111111111111111110001);
 
-    // c_i32_018(CONSTANT,18)
-    assign c_i32_018_q = $unsigned(32'b00000000000000000000000000000000);
+    // c_i32_026(CONSTANT,26)
+    assign c_i32_026_q = $unsigned(32'b00000000000000000000000000000000);
 
-    // c_i3_020(CONSTANT,21)
-    assign c_i3_020_q = $unsigned(3'b000);
+    // c_i3_028(CONSTANT,29)
+    assign c_i3_028_q = $unsigned(3'b000);
 
     // addr_trunc_sel_x(BITSELECT,2)@10
     assign addr_trunc_sel_x_b = in_i_address[31:0];
@@ -143,7 +143,7 @@ module streamer_i_llvm_fpga_mem_memdep_14_0 (
     // GND(CONSTANT,0)
     assign GND_q = $unsigned(1'b0);
 
-    // i_llvm_fpga_mem_memdep_14_streamer1(EXTIFACE,27)@10 + 1
+    // i_llvm_fpga_mem_memdep_14_streamer1(EXTIFACE,35)@10 + 1
     assign i_llvm_fpga_mem_memdep_14_streamer1_avm_readdata = in_memdep_14_streamer_avm_readdata;
     assign i_llvm_fpga_mem_memdep_14_streamer1_avm_readdatavalid = in_memdep_14_streamer_avm_readdatavalid;
     assign i_llvm_fpga_mem_memdep_14_streamer1_avm_waitrequest = in_memdep_14_streamer_avm_waitrequest;
@@ -151,17 +151,17 @@ module streamer_i_llvm_fpga_mem_memdep_14_0 (
     assign i_llvm_fpga_mem_memdep_14_streamer1_clock2x = GND_q;
     assign i_llvm_fpga_mem_memdep_14_streamer1_flush = in_flush;
     assign i_llvm_fpga_mem_memdep_14_streamer1_i_address = addr_trunc_sel_x_b;
-    assign i_llvm_fpga_mem_memdep_14_streamer1_i_atomic_op = c_i3_020_q;
-    assign i_llvm_fpga_mem_memdep_14_streamer1_i_bitwiseor = c_i32_018_q;
-    assign i_llvm_fpga_mem_memdep_14_streamer1_i_byteenable = c_i64_28147474182961716_q;
-    assign i_llvm_fpga_mem_memdep_14_streamer1_i_cmpdata = c_i512_021_q;
+    assign i_llvm_fpga_mem_memdep_14_streamer1_i_atomic_op = c_i3_028_q;
+    assign i_llvm_fpga_mem_memdep_14_streamer1_i_bitwiseor = c_i32_026_q;
+    assign i_llvm_fpga_mem_memdep_14_streamer1_i_byteenable = c_i64_28147474182961724_q;
+    assign i_llvm_fpga_mem_memdep_14_streamer1_i_cmpdata = c_i512_029_q;
     assign i_llvm_fpga_mem_memdep_14_streamer1_i_predicate = GND_q;
     assign i_llvm_fpga_mem_memdep_14_streamer1_i_stall = in_i_stall;
     assign i_llvm_fpga_mem_memdep_14_streamer1_i_valid = in_i_valid;
     assign i_llvm_fpga_mem_memdep_14_streamer1_i_writedata = dsdk_ip_adapt_bitjoin4_q;
-    assign i_llvm_fpga_mem_memdep_14_streamer1_stream_base_addr = c_i32_018_q;
+    assign i_llvm_fpga_mem_memdep_14_streamer1_stream_base_addr = c_i32_026_q;
     assign i_llvm_fpga_mem_memdep_14_streamer1_stream_reset = GND_q;
-    assign i_llvm_fpga_mem_memdep_14_streamer1_stream_size = c_i32_018_q;
+    assign i_llvm_fpga_mem_memdep_14_streamer1_stream_size = c_i32_026_q;
     assign i_llvm_fpga_mem_memdep_14_streamer1_avm_readdatavalid_bitsignaltemp = i_llvm_fpga_mem_memdep_14_streamer1_avm_readdatavalid[0];
     assign i_llvm_fpga_mem_memdep_14_streamer1_avm_waitrequest_bitsignaltemp = i_llvm_fpga_mem_memdep_14_streamer1_avm_waitrequest[0];
     assign i_llvm_fpga_mem_memdep_14_streamer1_avm_writeack_bitsignaltemp = i_llvm_fpga_mem_memdep_14_streamer1_avm_writeack[0];
@@ -221,17 +221,17 @@ module streamer_i_llvm_fpga_mem_memdep_14_0 (
         .clock2x(i_llvm_fpga_mem_memdep_14_streamer1_clock2x_bitsignaltemp),
         .flush(i_llvm_fpga_mem_memdep_14_streamer1_flush_bitsignaltemp),
         .i_address(addr_trunc_sel_x_b),
-        .i_atomic_op(c_i3_020_q),
-        .i_bitwiseor(c_i32_018_q),
-        .i_byteenable(c_i64_28147474182961716_q),
-        .i_cmpdata(c_i512_021_q),
+        .i_atomic_op(c_i3_028_q),
+        .i_bitwiseor(c_i32_026_q),
+        .i_byteenable(c_i64_28147474182961724_q),
+        .i_cmpdata(c_i512_029_q),
         .i_predicate(i_llvm_fpga_mem_memdep_14_streamer1_i_predicate_bitsignaltemp),
         .i_stall(i_llvm_fpga_mem_memdep_14_streamer1_i_stall_bitsignaltemp),
         .i_valid(i_llvm_fpga_mem_memdep_14_streamer1_i_valid_bitsignaltemp),
         .i_writedata(dsdk_ip_adapt_bitjoin4_q),
-        .stream_base_addr(c_i32_018_q),
+        .stream_base_addr(c_i32_026_q),
         .stream_reset(i_llvm_fpga_mem_memdep_14_streamer1_stream_reset_bitsignaltemp),
-        .stream_size(c_i32_018_q),
+        .stream_size(c_i32_026_q),
         .avm_address(i_llvm_fpga_mem_memdep_14_streamer1_avm_address),
         .avm_burstcount(i_llvm_fpga_mem_memdep_14_streamer1_avm_burstcount_bitsignaltemp),
         .avm_byteenable(i_llvm_fpga_mem_memdep_14_streamer1_avm_byteenable),
@@ -254,7 +254,7 @@ module streamer_i_llvm_fpga_mem_memdep_14_0 (
     assign out_o_valid = i_llvm_fpga_mem_memdep_14_streamer1_o_valid;
     assign out_o_writeack = i_llvm_fpga_mem_memdep_14_streamer1_o_writeack;
 
-    // ext_sig_sync_out(GPOUT,26)
+    // ext_sig_sync_out(GPOUT,34)
     assign out_memdep_14_streamer_avm_address = i_llvm_fpga_mem_memdep_14_streamer1_avm_address;
     assign out_memdep_14_streamer_avm_enable = i_llvm_fpga_mem_memdep_14_streamer1_avm_enable;
     assign out_memdep_14_streamer_avm_read = i_llvm_fpga_mem_memdep_14_streamer1_avm_read;
@@ -263,7 +263,7 @@ module streamer_i_llvm_fpga_mem_memdep_14_0 (
     assign out_memdep_14_streamer_avm_byteenable = i_llvm_fpga_mem_memdep_14_streamer1_avm_byteenable;
     assign out_memdep_14_streamer_avm_burstcount = i_llvm_fpga_mem_memdep_14_streamer1_avm_burstcount;
 
-    // sync_out(GPOUT,30)@11
+    // sync_out(GPOUT,38)@11
     assign out_o_stall = i_llvm_fpga_mem_memdep_14_streamer1_o_stall;
 
 endmodule

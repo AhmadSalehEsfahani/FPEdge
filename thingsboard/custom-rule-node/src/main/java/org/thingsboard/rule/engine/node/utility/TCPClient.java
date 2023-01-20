@@ -30,6 +30,12 @@ public class TCPClient {
         while(!socketScanner.nextLine().equals(ACK_STR));
     }
 
+    public void sendFloat(float value){
+        socketFormatter.format(String.valueOf(value));
+        socketFormatter.flush();
+        while(!socketScanner.nextLine().equals(ACK_STR));
+    }
+
     public float readInteger(){
         String response = socketScanner.nextLine();
         socketFormatter.format(ACK_STR);
@@ -49,10 +55,10 @@ public class TCPClient {
 
     public void sendTuple(DataTuple tuple){
         this.sendInteger(tuple.valid ? 1 : 0);
-        this.sendInteger(tuple.price);
-        this.sendInteger(tuple.volume);
-        this.sendInteger(tuple.code);
-        this.sendInteger(tuple.stock);
+        this.sendFloat(tuple.id);
+        this.sendFloat(tuple.age);
+        this.sendFloat(tuple.bmi);
+        this.sendFloat(tuple.car);
     }
 
     public void responseOnTuple(DataTuple tuple){

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="soc_system" kind="soc_system" version="1.0" fabric="QSYS">
  <!-- Format version 21.1 850 (Future versions may contain additional information.) -->
- <!-- 2023.01.19.21:06:53 -->
+ <!-- 2023.01.20.22:51:21 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1674149812</value>
+  <value>1674242480</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -70755,7 +70755,7 @@ parameters are a RESULT of the module parameters. -->
 the requested settings for a module instance. -->
   <parameter name="AUTO_GENERATION_ID">
    <type>java.lang.Integer</type>
-   <value>1674149812</value>
+   <value>1674242480</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>

@@ -26,7 +26,7 @@ import java.util.concurrent.ExecutionException;
         name = "streamer over TCP",
         configClazz = StreamerOverTCPConfiguration.class,
         nodeDescription = "the node gets the tuple, sends it over TCP to the FPGA interface program, and will receive the return value.",
-        nodeDetails = "input tuple format (it is just a simple test case) : [price:%d, volume:%d, code:%d, stock:%d] " +
+        nodeDetails = "input tuple format (it is just a simple test case): [valid:%b ID:%d, age:%d, BMI:%d, clinically-at-risk(CAR) :%d] " +
                 "\n the output results are accepted tuples with aggregation results.",
         uiResources = {"static/rulenode/custom-nodes-config.js"},
         configDirective = "StreamerOverTCPConfiguration")
@@ -58,7 +58,7 @@ public class StreamerOverTCP implements TbNode{
         }
 
         boolean hasRecords = false;
-        int price = 0, volume = 0, code = 0, stock = 0;
+        float id = 0, age = 0, bmi = 0, car = 0;
         boolean valid = false;
         try {
             JsonNode jsonNode = mapper.readTree(msg.getData());
@@ -69,35 +69,35 @@ public class StreamerOverTCP implements TbNode{
                     hasRecords = true;
                     valid = jsonNode.get(field).asBoolean();
                 }
-                if (field.startsWith(DataTuple.priceLabel)) {
+                if (field.startsWith(DataTuple.IDLabel)) {
                     hasRecords = true;
-                    price = jsonNode.get(field).asInt();
+                    id = (float) jsonNode.get(field).asDouble();
                 }
-                if (field.startsWith(DataTuple.volumeLabel)) {
+                if (field.startsWith(DataTuple.ageLabel)) {
                     hasRecords = true;
-                    volume = jsonNode.get(field).asInt();
+                    age = (float) jsonNode.get(field).asDouble();
                 }
-                if(field.startsWith(DataTuple.codeLabel)){
+                if(field.startsWith(DataTuple.BMILabel)){
                     hasRecords = true;
-                    code = jsonNode.get(field).asInt();
+                    bmi = (float) jsonNode.get(field).asDouble();
                 }
-                if(field.startsWith(DataTuple.stockLabel)){
+                if(field.startsWith(DataTuple.CARLabel)){
                     hasRecords = true;
-                    stock = jsonNode.get(field).asInt();
+                    car = (float) jsonNode.get(field).asDouble();
                 }
             }
             if (hasRecords) {
-                DataTuple tuple = new DataTuple(valid, price, volume, code, stock);
+                DataTuple tuple = new DataTuple(valid, id, age, bmi, car);
                 tcpClient.sendTuple(tuple);
                 tcpClient.responseOnTuple(tuple);
 
                 if (tuple.valid){
                     ObjectNode objectNode = mapper.createObjectNode();
                     objectNode.put(DataTuple.validLabel, tuple.valid);
-                    objectNode.put(DataTuple.priceLabel, tuple.price);
-                    objectNode.put(DataTuple.volumeLabel, tuple.volume);
-                    objectNode.put(DataTuple.codeLabel, tuple.code);
-                    objectNode.put(DataTuple.stockLabel, tuple.stock);
+                    objectNode.put(DataTuple.IDLabel, tuple.id);
+                    objectNode.put(DataTuple.ageLabel, tuple.age);
+                    objectNode.put(DataTuple.BMILabel, tuple.bmi);
+                    objectNode.put(DataTuple.CARLabel, tuple.car);
 
                     if(tuple.avgReady){
                         tuple.avg = tcpClient.readFloat();

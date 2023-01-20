@@ -16,7 +16,7 @@
 
 // SystemVerilog created from i_sfc_logic_s_c2_in_wt_entry_streamers_c2_enter_streamer0
 // Created for function/kernel streamer
-// SystemVerilog created on Thu Jan 19 21:02:10 2023
+// SystemVerilog created on Fri Jan 20 22:48:10 2023
 
 
 (* altera_attribute = "-name AUTO_SHIFT_REGISTER_RECOGNITION OFF; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 10037; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 15400; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 12020; -name MESSAGE_DISABLE 12030; -name MESSAGE_DISABLE 12010; -name MESSAGE_DISABLE 12110; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 13410; -name MESSAGE_DISABLE 113007; -name MESSAGE_DISABLE 10958" *)
@@ -73,7 +73,7 @@ module streamer_i_sfc_logic_s_c2_in_wt_entry_s_c2_enter_streamer0 (
     wire [511:0] i_llvm_fpga_mem_memdep_14_streamer20_aunroll_x_out_memdep_14_streamer_avm_writedata;
     wire [0:0] i_llvm_fpga_mem_memdep_14_streamer20_aunroll_x_out_o_writeack;
     wire [15:0] c_i16_029_q;
-    wire [63:0] c_i64_032_q;
+    wire [63:0] c_i64_031_q;
     wire [7:0] c_i8_028_q;
     wire [0:0] i_iowr_nb_return_streamer_unnamed_streamer9_streamer22_out_iowr_nb_return_streamer_o_fifodata;
     wire [0:0] i_iowr_nb_return_streamer_unnamed_streamer9_streamer22_out_iowr_nb_return_streamer_o_fifovalid;
@@ -88,40 +88,40 @@ module streamer_i_sfc_logic_s_c2_in_wt_entry_s_c2_enter_streamer0 (
     (* dont_merge *) reg [0:0] valid_fanout_reg1_q;
     (* dont_merge *) reg [0:0] valid_fanout_reg2_q;
     (* dont_merge *) reg [0:0] valid_fanout_reg3_q;
-    reg [7:0] redist0_sync_together36_aunroll_x_in_c2_eni3_1_tpl_1_q;
-    reg [31:0] redist1_sync_together36_aunroll_x_in_c2_eni3_2_tpl_1_q;
-    reg [31:0] redist2_sync_together36_aunroll_x_in_c2_eni3_3_tpl_1_q;
-    reg [31:0] redist3_sync_together36_aunroll_x_in_c2_eni3_4_tpl_1_q;
-    reg [31:0] redist4_sync_together36_aunroll_x_in_c2_eni3_5_tpl_1_q;
-    reg [7:0] redist5_sync_together36_aunroll_x_in_c2_eni3_6_tpl_1_q;
-    reg [7:0] redist6_sync_together36_aunroll_x_in_c2_eni3_7_tpl_1_q;
-    reg [7:0] redist7_sync_together36_aunroll_x_in_c2_eni3_8_tpl_1_q;
-    reg [7:0] redist8_sync_together36_aunroll_x_in_c2_eni3_9_tpl_1_q;
-    reg [7:0] redist9_sync_together36_aunroll_x_in_c2_eni3_10_tpl_1_q;
-    reg [31:0] redist10_sync_together36_aunroll_x_in_c2_eni3_11_tpl_1_q;
-    reg [31:0] redist11_sync_together36_aunroll_x_in_c2_eni3_12_tpl_1_q;
-    reg [31:0] redist12_sync_together36_aunroll_x_in_c2_eni3_13_tpl_1_q;
-    reg [31:0] redist13_sync_together36_aunroll_x_in_c2_eni3_14_tpl_1_q;
-    reg [31:0] redist14_sync_together36_aunroll_x_in_c2_eni3_15_tpl_1_q;
-    reg [0:0] redist15_sync_together36_aunroll_x_in_c2_eni3_16_tpl_1_q;
-    reg [0:0] redist16_sync_together36_aunroll_x_in_c2_eni3_17_tpl_2_q;
-    reg [0:0] redist16_sync_together36_aunroll_x_in_c2_eni3_17_tpl_2_delay_0;
-    reg [0:0] redist17_sync_together36_aunroll_x_in_i_valid_1_q;
+    reg [7:0] redist0_sync_together35_aunroll_x_in_c2_eni3_1_tpl_1_q;
+    reg [31:0] redist1_sync_together35_aunroll_x_in_c2_eni3_2_tpl_1_q;
+    reg [31:0] redist2_sync_together35_aunroll_x_in_c2_eni3_3_tpl_1_q;
+    reg [31:0] redist3_sync_together35_aunroll_x_in_c2_eni3_4_tpl_1_q;
+    reg [31:0] redist4_sync_together35_aunroll_x_in_c2_eni3_5_tpl_1_q;
+    reg [7:0] redist5_sync_together35_aunroll_x_in_c2_eni3_6_tpl_1_q;
+    reg [7:0] redist6_sync_together35_aunroll_x_in_c2_eni3_7_tpl_1_q;
+    reg [7:0] redist7_sync_together35_aunroll_x_in_c2_eni3_8_tpl_1_q;
+    reg [7:0] redist8_sync_together35_aunroll_x_in_c2_eni3_9_tpl_1_q;
+    reg [7:0] redist9_sync_together35_aunroll_x_in_c2_eni3_10_tpl_1_q;
+    reg [31:0] redist10_sync_together35_aunroll_x_in_c2_eni3_11_tpl_1_q;
+    reg [31:0] redist11_sync_together35_aunroll_x_in_c2_eni3_12_tpl_1_q;
+    reg [31:0] redist12_sync_together35_aunroll_x_in_c2_eni3_13_tpl_1_q;
+    reg [31:0] redist13_sync_together35_aunroll_x_in_c2_eni3_14_tpl_1_q;
+    reg [31:0] redist14_sync_together35_aunroll_x_in_c2_eni3_15_tpl_1_q;
+    reg [0:0] redist15_sync_together35_aunroll_x_in_c2_eni3_16_tpl_1_q;
+    reg [0:0] redist16_sync_together35_aunroll_x_in_c2_eni3_17_tpl_2_q;
+    reg [0:0] redist16_sync_together35_aunroll_x_in_c2_eni3_17_tpl_2_delay_0;
+    reg [0:0] redist17_sync_together35_aunroll_x_in_i_valid_1_q;
 
 
     // VCC(CONSTANT,1)
     assign VCC_q = $unsigned(1'b1);
 
-    // redist17_sync_together36_aunroll_x_in_i_valid_1(DELAY,48)
+    // redist17_sync_together35_aunroll_x_in_i_valid_1(DELAY,48)
     always @ (posedge clock or negedge resetn)
     begin
         if (!resetn)
         begin
-            redist17_sync_together36_aunroll_x_in_i_valid_1_q <= '0;
+            redist17_sync_together35_aunroll_x_in_i_valid_1_q <= '0;
         end
         else
         begin
-            redist17_sync_together36_aunroll_x_in_i_valid_1_q <= $unsigned(in_i_valid);
+            redist17_sync_together35_aunroll_x_in_i_valid_1_q <= $unsigned(in_i_valid);
         end
     end
 
@@ -134,22 +134,22 @@ module streamer_i_sfc_logic_s_c2_in_wt_entry_s_c2_enter_streamer0 (
         end
         else
         begin
-            valid_fanout_reg3_q <= $unsigned(redist17_sync_together36_aunroll_x_in_i_valid_1_q);
+            valid_fanout_reg3_q <= $unsigned(redist17_sync_together35_aunroll_x_in_i_valid_1_q);
         end
     end
 
-    // redist16_sync_together36_aunroll_x_in_c2_eni3_17_tpl_2(DELAY,47)
+    // redist16_sync_together35_aunroll_x_in_c2_eni3_17_tpl_2(DELAY,47)
     always @ (posedge clock or negedge resetn)
     begin
         if (!resetn)
         begin
-            redist16_sync_together36_aunroll_x_in_c2_eni3_17_tpl_2_delay_0 <= '0;
-            redist16_sync_together36_aunroll_x_in_c2_eni3_17_tpl_2_q <= '0;
+            redist16_sync_together35_aunroll_x_in_c2_eni3_17_tpl_2_delay_0 <= '0;
+            redist16_sync_together35_aunroll_x_in_c2_eni3_17_tpl_2_q <= '0;
         end
         else
         begin
-            redist16_sync_together36_aunroll_x_in_c2_eni3_17_tpl_2_delay_0 <= $unsigned(in_c2_eni3_17_tpl);
-            redist16_sync_together36_aunroll_x_in_c2_eni3_17_tpl_2_q <= redist16_sync_together36_aunroll_x_in_c2_eni3_17_tpl_2_delay_0;
+            redist16_sync_together35_aunroll_x_in_c2_eni3_17_tpl_2_delay_0 <= $unsigned(in_c2_eni3_17_tpl);
+            redist16_sync_together35_aunroll_x_in_c2_eni3_17_tpl_2_q <= redist16_sync_together35_aunroll_x_in_c2_eni3_17_tpl_2_delay_0;
         end
     end
 
@@ -179,16 +179,16 @@ module streamer_i_sfc_logic_s_c2_in_wt_entry_s_c2_enter_streamer0 (
         end
     end
 
-    // redist15_sync_together36_aunroll_x_in_c2_eni3_16_tpl_1(DELAY,46)
+    // redist15_sync_together35_aunroll_x_in_c2_eni3_16_tpl_1(DELAY,46)
     always @ (posedge clock or negedge resetn)
     begin
         if (!resetn)
         begin
-            redist15_sync_together36_aunroll_x_in_c2_eni3_16_tpl_1_q <= '0;
+            redist15_sync_together35_aunroll_x_in_c2_eni3_16_tpl_1_q <= '0;
         end
         else
         begin
-            redist15_sync_together36_aunroll_x_in_c2_eni3_16_tpl_1_q <= $unsigned(in_c2_eni3_16_tpl);
+            redist15_sync_together35_aunroll_x_in_c2_eni3_16_tpl_1_q <= $unsigned(in_c2_eni3_16_tpl);
         end
     end
 
@@ -199,7 +199,7 @@ module streamer_i_sfc_logic_s_c2_in_wt_entry_s_c2_enter_streamer0 (
     // out out_valid_out@10
     streamer_i_llvm_fpga_sync_buffer_p65s_st0000le_out_sync_buffer_0 thei_llvm_fpga_sync_buffer_p65s_struct_tuples_tuple_out_sync_buffer_streamer18 (
         .in_buffer_in(in_tuple_out),
-        .in_i_dependence(redist15_sync_together36_aunroll_x_in_c2_eni3_16_tpl_1_q),
+        .in_i_dependence(redist15_sync_together35_aunroll_x_in_c2_eni3_16_tpl_1_q),
         .in_stall_in(GND_q),
         .in_valid_in(valid_fanout_reg1_q),
         .out_buffer_out(i_llvm_fpga_sync_buffer_p65s_struct_tuples_tuple_out_sync_buffer_streamer18_out_buffer_out),
@@ -224,188 +224,188 @@ module streamer_i_sfc_logic_s_c2_in_wt_entry_s_c2_enter_streamer0 (
     // i_memcoalesce_bitcast_streamer_fpgaunique_20_streamer19_vt_join(BITJOIN,21)@10
     assign i_memcoalesce_bitcast_streamer_fpgaunique_20_streamer19_vt_join_q = {i_memcoalesce_bitcast_streamer_fpgaunique_20_streamer19_vt_select_63_b, i_llvm_fpga_sync_buffer_p65s_struct_tuples_tuple_out_sync_buffer_streamer18_vt_const_5_q};
 
-    // c_i64_032(CONSTANT,11)
-    assign c_i64_032_q = $unsigned(64'b0000000000000000000000000000000000000000000000000000000000000000);
+    // c_i64_031(CONSTANT,11)
+    assign c_i64_031_q = $unsigned(64'b0000000000000000000000000000000000000000000000000000000000000000);
 
-    // redist14_sync_together36_aunroll_x_in_c2_eni3_15_tpl_1(DELAY,45)
+    // redist14_sync_together35_aunroll_x_in_c2_eni3_15_tpl_1(DELAY,45)
     always @ (posedge clock or negedge resetn)
     begin
         if (!resetn)
         begin
-            redist14_sync_together36_aunroll_x_in_c2_eni3_15_tpl_1_q <= '0;
+            redist14_sync_together35_aunroll_x_in_c2_eni3_15_tpl_1_q <= '0;
         end
         else
         begin
-            redist14_sync_together36_aunroll_x_in_c2_eni3_15_tpl_1_q <= $unsigned(in_c2_eni3_15_tpl);
+            redist14_sync_together35_aunroll_x_in_c2_eni3_15_tpl_1_q <= $unsigned(in_c2_eni3_15_tpl);
         end
     end
 
-    // redist13_sync_together36_aunroll_x_in_c2_eni3_14_tpl_1(DELAY,44)
+    // redist13_sync_together35_aunroll_x_in_c2_eni3_14_tpl_1(DELAY,44)
     always @ (posedge clock or negedge resetn)
     begin
         if (!resetn)
         begin
-            redist13_sync_together36_aunroll_x_in_c2_eni3_14_tpl_1_q <= '0;
+            redist13_sync_together35_aunroll_x_in_c2_eni3_14_tpl_1_q <= '0;
         end
         else
         begin
-            redist13_sync_together36_aunroll_x_in_c2_eni3_14_tpl_1_q <= $unsigned(in_c2_eni3_14_tpl);
+            redist13_sync_together35_aunroll_x_in_c2_eni3_14_tpl_1_q <= $unsigned(in_c2_eni3_14_tpl);
         end
     end
 
-    // redist12_sync_together36_aunroll_x_in_c2_eni3_13_tpl_1(DELAY,43)
+    // redist12_sync_together35_aunroll_x_in_c2_eni3_13_tpl_1(DELAY,43)
     always @ (posedge clock or negedge resetn)
     begin
         if (!resetn)
         begin
-            redist12_sync_together36_aunroll_x_in_c2_eni3_13_tpl_1_q <= '0;
+            redist12_sync_together35_aunroll_x_in_c2_eni3_13_tpl_1_q <= '0;
         end
         else
         begin
-            redist12_sync_together36_aunroll_x_in_c2_eni3_13_tpl_1_q <= $unsigned(in_c2_eni3_13_tpl);
+            redist12_sync_together35_aunroll_x_in_c2_eni3_13_tpl_1_q <= $unsigned(in_c2_eni3_13_tpl);
         end
     end
 
-    // redist11_sync_together36_aunroll_x_in_c2_eni3_12_tpl_1(DELAY,42)
+    // redist11_sync_together35_aunroll_x_in_c2_eni3_12_tpl_1(DELAY,42)
     always @ (posedge clock or negedge resetn)
     begin
         if (!resetn)
         begin
-            redist11_sync_together36_aunroll_x_in_c2_eni3_12_tpl_1_q <= '0;
+            redist11_sync_together35_aunroll_x_in_c2_eni3_12_tpl_1_q <= '0;
         end
         else
         begin
-            redist11_sync_together36_aunroll_x_in_c2_eni3_12_tpl_1_q <= $unsigned(in_c2_eni3_12_tpl);
+            redist11_sync_together35_aunroll_x_in_c2_eni3_12_tpl_1_q <= $unsigned(in_c2_eni3_12_tpl);
         end
     end
 
-    // redist10_sync_together36_aunroll_x_in_c2_eni3_11_tpl_1(DELAY,41)
+    // redist10_sync_together35_aunroll_x_in_c2_eni3_11_tpl_1(DELAY,41)
     always @ (posedge clock or negedge resetn)
     begin
         if (!resetn)
         begin
-            redist10_sync_together36_aunroll_x_in_c2_eni3_11_tpl_1_q <= '0;
+            redist10_sync_together35_aunroll_x_in_c2_eni3_11_tpl_1_q <= '0;
         end
         else
         begin
-            redist10_sync_together36_aunroll_x_in_c2_eni3_11_tpl_1_q <= $unsigned(in_c2_eni3_11_tpl);
+            redist10_sync_together35_aunroll_x_in_c2_eni3_11_tpl_1_q <= $unsigned(in_c2_eni3_11_tpl);
         end
     end
 
-    // redist9_sync_together36_aunroll_x_in_c2_eni3_10_tpl_1(DELAY,40)
+    // redist9_sync_together35_aunroll_x_in_c2_eni3_10_tpl_1(DELAY,40)
     always @ (posedge clock or negedge resetn)
     begin
         if (!resetn)
         begin
-            redist9_sync_together36_aunroll_x_in_c2_eni3_10_tpl_1_q <= '0;
+            redist9_sync_together35_aunroll_x_in_c2_eni3_10_tpl_1_q <= '0;
         end
         else
         begin
-            redist9_sync_together36_aunroll_x_in_c2_eni3_10_tpl_1_q <= $unsigned(in_c2_eni3_10_tpl);
+            redist9_sync_together35_aunroll_x_in_c2_eni3_10_tpl_1_q <= $unsigned(in_c2_eni3_10_tpl);
         end
     end
 
-    // redist8_sync_together36_aunroll_x_in_c2_eni3_9_tpl_1(DELAY,39)
+    // redist8_sync_together35_aunroll_x_in_c2_eni3_9_tpl_1(DELAY,39)
     always @ (posedge clock or negedge resetn)
     begin
         if (!resetn)
         begin
-            redist8_sync_together36_aunroll_x_in_c2_eni3_9_tpl_1_q <= '0;
+            redist8_sync_together35_aunroll_x_in_c2_eni3_9_tpl_1_q <= '0;
         end
         else
         begin
-            redist8_sync_together36_aunroll_x_in_c2_eni3_9_tpl_1_q <= $unsigned(in_c2_eni3_9_tpl);
+            redist8_sync_together35_aunroll_x_in_c2_eni3_9_tpl_1_q <= $unsigned(in_c2_eni3_9_tpl);
         end
     end
 
-    // redist7_sync_together36_aunroll_x_in_c2_eni3_8_tpl_1(DELAY,38)
+    // redist7_sync_together35_aunroll_x_in_c2_eni3_8_tpl_1(DELAY,38)
     always @ (posedge clock or negedge resetn)
     begin
         if (!resetn)
         begin
-            redist7_sync_together36_aunroll_x_in_c2_eni3_8_tpl_1_q <= '0;
+            redist7_sync_together35_aunroll_x_in_c2_eni3_8_tpl_1_q <= '0;
         end
         else
         begin
-            redist7_sync_together36_aunroll_x_in_c2_eni3_8_tpl_1_q <= $unsigned(in_c2_eni3_8_tpl);
+            redist7_sync_together35_aunroll_x_in_c2_eni3_8_tpl_1_q <= $unsigned(in_c2_eni3_8_tpl);
         end
     end
 
-    // redist6_sync_together36_aunroll_x_in_c2_eni3_7_tpl_1(DELAY,37)
+    // redist6_sync_together35_aunroll_x_in_c2_eni3_7_tpl_1(DELAY,37)
     always @ (posedge clock or negedge resetn)
     begin
         if (!resetn)
         begin
-            redist6_sync_together36_aunroll_x_in_c2_eni3_7_tpl_1_q <= '0;
+            redist6_sync_together35_aunroll_x_in_c2_eni3_7_tpl_1_q <= '0;
         end
         else
         begin
-            redist6_sync_together36_aunroll_x_in_c2_eni3_7_tpl_1_q <= $unsigned(in_c2_eni3_7_tpl);
+            redist6_sync_together35_aunroll_x_in_c2_eni3_7_tpl_1_q <= $unsigned(in_c2_eni3_7_tpl);
         end
     end
 
-    // redist5_sync_together36_aunroll_x_in_c2_eni3_6_tpl_1(DELAY,36)
+    // redist5_sync_together35_aunroll_x_in_c2_eni3_6_tpl_1(DELAY,36)
     always @ (posedge clock or negedge resetn)
     begin
         if (!resetn)
         begin
-            redist5_sync_together36_aunroll_x_in_c2_eni3_6_tpl_1_q <= '0;
+            redist5_sync_together35_aunroll_x_in_c2_eni3_6_tpl_1_q <= '0;
         end
         else
         begin
-            redist5_sync_together36_aunroll_x_in_c2_eni3_6_tpl_1_q <= $unsigned(in_c2_eni3_6_tpl);
+            redist5_sync_together35_aunroll_x_in_c2_eni3_6_tpl_1_q <= $unsigned(in_c2_eni3_6_tpl);
         end
     end
 
-    // redist4_sync_together36_aunroll_x_in_c2_eni3_5_tpl_1(DELAY,35)
+    // redist4_sync_together35_aunroll_x_in_c2_eni3_5_tpl_1(DELAY,35)
     always @ (posedge clock or negedge resetn)
     begin
         if (!resetn)
         begin
-            redist4_sync_together36_aunroll_x_in_c2_eni3_5_tpl_1_q <= '0;
+            redist4_sync_together35_aunroll_x_in_c2_eni3_5_tpl_1_q <= '0;
         end
         else
         begin
-            redist4_sync_together36_aunroll_x_in_c2_eni3_5_tpl_1_q <= $unsigned(in_c2_eni3_5_tpl);
+            redist4_sync_together35_aunroll_x_in_c2_eni3_5_tpl_1_q <= $unsigned(in_c2_eni3_5_tpl);
         end
     end
 
-    // redist3_sync_together36_aunroll_x_in_c2_eni3_4_tpl_1(DELAY,34)
+    // redist3_sync_together35_aunroll_x_in_c2_eni3_4_tpl_1(DELAY,34)
     always @ (posedge clock or negedge resetn)
     begin
         if (!resetn)
         begin
-            redist3_sync_together36_aunroll_x_in_c2_eni3_4_tpl_1_q <= '0;
+            redist3_sync_together35_aunroll_x_in_c2_eni3_4_tpl_1_q <= '0;
         end
         else
         begin
-            redist3_sync_together36_aunroll_x_in_c2_eni3_4_tpl_1_q <= $unsigned(in_c2_eni3_4_tpl);
+            redist3_sync_together35_aunroll_x_in_c2_eni3_4_tpl_1_q <= $unsigned(in_c2_eni3_4_tpl);
         end
     end
 
-    // redist2_sync_together36_aunroll_x_in_c2_eni3_3_tpl_1(DELAY,33)
+    // redist2_sync_together35_aunroll_x_in_c2_eni3_3_tpl_1(DELAY,33)
     always @ (posedge clock or negedge resetn)
     begin
         if (!resetn)
         begin
-            redist2_sync_together36_aunroll_x_in_c2_eni3_3_tpl_1_q <= '0;
+            redist2_sync_together35_aunroll_x_in_c2_eni3_3_tpl_1_q <= '0;
         end
         else
         begin
-            redist2_sync_together36_aunroll_x_in_c2_eni3_3_tpl_1_q <= $unsigned(in_c2_eni3_3_tpl);
+            redist2_sync_together35_aunroll_x_in_c2_eni3_3_tpl_1_q <= $unsigned(in_c2_eni3_3_tpl);
         end
     end
 
-    // redist1_sync_together36_aunroll_x_in_c2_eni3_2_tpl_1(DELAY,32)
+    // redist1_sync_together35_aunroll_x_in_c2_eni3_2_tpl_1(DELAY,32)
     always @ (posedge clock or negedge resetn)
     begin
         if (!resetn)
         begin
-            redist1_sync_together36_aunroll_x_in_c2_eni3_2_tpl_1_q <= '0;
+            redist1_sync_together35_aunroll_x_in_c2_eni3_2_tpl_1_q <= '0;
         end
         else
         begin
-            redist1_sync_together36_aunroll_x_in_c2_eni3_2_tpl_1_q <= $unsigned(in_c2_eni3_2_tpl);
+            redist1_sync_together35_aunroll_x_in_c2_eni3_2_tpl_1_q <= $unsigned(in_c2_eni3_2_tpl);
         end
     end
 
@@ -415,16 +415,16 @@ module streamer_i_sfc_logic_s_c2_in_wt_entry_s_c2_enter_streamer0 (
     // c_i8_028(CONSTANT,12)
     assign c_i8_028_q = $unsigned(8'b00000000);
 
-    // redist0_sync_together36_aunroll_x_in_c2_eni3_1_tpl_1(DELAY,31)
+    // redist0_sync_together35_aunroll_x_in_c2_eni3_1_tpl_1(DELAY,31)
     always @ (posedge clock or negedge resetn)
     begin
         if (!resetn)
         begin
-            redist0_sync_together36_aunroll_x_in_c2_eni3_1_tpl_1_q <= '0;
+            redist0_sync_together35_aunroll_x_in_c2_eni3_1_tpl_1_q <= '0;
         end
         else
         begin
-            redist0_sync_together36_aunroll_x_in_c2_eni3_1_tpl_1_q <= $unsigned(in_c2_eni3_1_tpl);
+            redist0_sync_together35_aunroll_x_in_c2_eni3_1_tpl_1_q <= $unsigned(in_c2_eni3_1_tpl);
         end
     end
 
@@ -440,27 +440,27 @@ module streamer_i_sfc_logic_s_c2_in_wt_entry_s_c2_enter_streamer0 (
     // out out_o_valid@11
     // out out_o_writeack@11
     streamer_i_llvm_fpga_mem_memdep_14_0 thei_llvm_fpga_mem_memdep_14_streamer20_aunroll_x (
-        .in_i_writedata_0_tpl(redist0_sync_together36_aunroll_x_in_c2_eni3_1_tpl_1_q),
+        .in_i_writedata_0_tpl(redist0_sync_together35_aunroll_x_in_c2_eni3_1_tpl_1_q),
         .in_i_writedata_1_tpl(c_i8_028_q),
         .in_i_writedata_2_tpl(c_i16_029_q),
-        .in_i_writedata_3_tpl(redist1_sync_together36_aunroll_x_in_c2_eni3_2_tpl_1_q),
-        .in_i_writedata_4_tpl(redist2_sync_together36_aunroll_x_in_c2_eni3_3_tpl_1_q),
-        .in_i_writedata_5_tpl(redist3_sync_together36_aunroll_x_in_c2_eni3_4_tpl_1_q),
-        .in_i_writedata_6_tpl(redist4_sync_together36_aunroll_x_in_c2_eni3_5_tpl_1_q),
-        .in_i_writedata_7_tpl(redist5_sync_together36_aunroll_x_in_c2_eni3_6_tpl_1_q),
-        .in_i_writedata_8_tpl(redist6_sync_together36_aunroll_x_in_c2_eni3_7_tpl_1_q),
-        .in_i_writedata_9_tpl(redist7_sync_together36_aunroll_x_in_c2_eni3_8_tpl_1_q),
-        .in_i_writedata_10_tpl(redist8_sync_together36_aunroll_x_in_c2_eni3_9_tpl_1_q),
-        .in_i_writedata_11_tpl(redist9_sync_together36_aunroll_x_in_c2_eni3_10_tpl_1_q),
+        .in_i_writedata_3_tpl(redist1_sync_together35_aunroll_x_in_c2_eni3_2_tpl_1_q),
+        .in_i_writedata_4_tpl(redist2_sync_together35_aunroll_x_in_c2_eni3_3_tpl_1_q),
+        .in_i_writedata_5_tpl(redist3_sync_together35_aunroll_x_in_c2_eni3_4_tpl_1_q),
+        .in_i_writedata_6_tpl(redist4_sync_together35_aunroll_x_in_c2_eni3_5_tpl_1_q),
+        .in_i_writedata_7_tpl(redist5_sync_together35_aunroll_x_in_c2_eni3_6_tpl_1_q),
+        .in_i_writedata_8_tpl(redist6_sync_together35_aunroll_x_in_c2_eni3_7_tpl_1_q),
+        .in_i_writedata_9_tpl(redist7_sync_together35_aunroll_x_in_c2_eni3_8_tpl_1_q),
+        .in_i_writedata_10_tpl(redist8_sync_together35_aunroll_x_in_c2_eni3_9_tpl_1_q),
+        .in_i_writedata_11_tpl(redist9_sync_together35_aunroll_x_in_c2_eni3_10_tpl_1_q),
         .in_i_writedata_12_tpl(c_i8_028_q),
         .in_i_writedata_13_tpl(c_i16_029_q),
-        .in_i_writedata_14_tpl(redist10_sync_together36_aunroll_x_in_c2_eni3_11_tpl_1_q),
-        .in_i_writedata_15_tpl(redist11_sync_together36_aunroll_x_in_c2_eni3_12_tpl_1_q),
-        .in_i_writedata_16_tpl(redist12_sync_together36_aunroll_x_in_c2_eni3_13_tpl_1_q),
-        .in_i_writedata_17_tpl(redist13_sync_together36_aunroll_x_in_c2_eni3_14_tpl_1_q),
-        .in_i_writedata_18_tpl(redist14_sync_together36_aunroll_x_in_c2_eni3_15_tpl_1_q),
-        .in_i_writedata_19_tpl(c_i64_032_q),
-        .in_i_writedata_20_tpl(c_i64_032_q),
+        .in_i_writedata_14_tpl(redist10_sync_together35_aunroll_x_in_c2_eni3_11_tpl_1_q),
+        .in_i_writedata_15_tpl(redist11_sync_together35_aunroll_x_in_c2_eni3_12_tpl_1_q),
+        .in_i_writedata_16_tpl(redist12_sync_together35_aunroll_x_in_c2_eni3_13_tpl_1_q),
+        .in_i_writedata_17_tpl(redist13_sync_together35_aunroll_x_in_c2_eni3_14_tpl_1_q),
+        .in_i_writedata_18_tpl(redist14_sync_together35_aunroll_x_in_c2_eni3_15_tpl_1_q),
+        .in_i_writedata_19_tpl(c_i64_031_q),
+        .in_i_writedata_20_tpl(c_i64_031_q),
         .in_flush(in_flush),
         .in_i_address(i_memcoalesce_bitcast_streamer_fpgaunique_20_streamer19_vt_join_q),
         .in_i_predicate(GND_q),
@@ -485,7 +485,7 @@ module streamer_i_sfc_logic_s_c2_in_wt_entry_s_c2_enter_streamer0 (
     );
 
     // i_or56_streamer21(LOGICAL,23)@11
-    assign i_or56_streamer21_q = i_llvm_fpga_mem_memdep_14_streamer20_aunroll_x_out_o_writeack | redist16_sync_together36_aunroll_x_in_c2_eni3_17_tpl_2_q;
+    assign i_or56_streamer21_q = i_llvm_fpga_mem_memdep_14_streamer20_aunroll_x_out_o_writeack | redist16_sync_together35_aunroll_x_in_c2_eni3_17_tpl_2_q;
 
     // GND(CONSTANT,0)
     assign GND_q = $unsigned(1'b0);
@@ -520,7 +520,7 @@ module streamer_i_sfc_logic_s_c2_in_wt_entry_s_c2_enter_streamer0 (
         end
         else
         begin
-            valid_fanout_reg0_q <= $unsigned(redist17_sync_together36_aunroll_x_in_i_valid_1_q);
+            valid_fanout_reg0_q <= $unsigned(redist17_sync_together35_aunroll_x_in_i_valid_1_q);
         end
     end
 
